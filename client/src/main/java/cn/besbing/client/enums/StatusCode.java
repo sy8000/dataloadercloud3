@@ -1,0 +1,41 @@
+package cn.besbing.client.enums;
+
+
+/**
+ * 状态码
+ */
+public enum StatusCode {
+
+    SUCCESS(200,"操作成功"),
+    FAILED(-1,"操作失败"),
+    INVALIDPARAMS(201,"非法参数"),
+    USERNOTEXIST(-2,"用户不存在"),
+    PASSWDERROR(-3,"密码错误"),
+    OTHERUNKOWERROR(-4,"其它未知错误")
+    ;
+
+    private Integer code;
+    private String msg;
+
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    StatusCode(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+}
