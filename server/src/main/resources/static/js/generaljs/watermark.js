@@ -98,15 +98,17 @@ function getNow() {
     var time = year + '年' + month + '月' + day + '日 ' + hour + '时' + minute + '分' + second + '秒';
     return time;
 
-    function initpro(){
-        jQuery.i18n.properties({// 加载properties文件
-            name:'application.properties', // properties文件名称
-            mode:'map', // 用 Map 的方式使用资源文件中的值
-            path:'../../../', // properties文件路径
-            callback: function() {// 加载成功后设置显示内容
-                company=$.i18n.prop("company");//其中isp_index为properties文件中需要查找到的数据的key值
-                return company;
-            }
-        });
-    }
+
+}
+function initpro(){
+    let company = "DataLoader Cloud";
+    jQuery.i18n.properties({// 加载properties文件
+        name:'messages', // properties文件名称
+        mode:'map', // 用 Map 的方式使用资源文件中的值
+        path:'../../../i18n/', // properties文件路径
+        callback: function() {// 加载成功后设置显示内容
+            company=$.i18n.prop("company");//其中isp_index为properties文件中需要查找到的数据的key值
+        }
+    });
+    return $.i18n.prop("company");
 }
