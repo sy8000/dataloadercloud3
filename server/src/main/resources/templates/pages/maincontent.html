@@ -11,26 +11,25 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="../../static/struct/layui/css/layui.css" media="all">
-    <script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
+    <script src="../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
     <script src="../../static/struct/layui/layui.js" charset="utf-8"></script>
-    <script src="../../static/js/generaljs/jquery.i18n.properties.js"></script>
-    <script src="../../static/js/generaljs/watermark.js"></script>
+    <script src="../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
+
 </head>
-<body >
+<body onload="addWaterMarker()">
 <!--
 <p>Hello, <shiro:principal/>, how are you today?</p>
 <p><shiro:user>guest</shiro:user></p>
 <span th:text="${session.usercode}">人员工号</span>
 -->
 
-
-
 </body>
-
+<!--
 <script type="text/javascript">
     watermark({"watermark_txt": initpro()});
 </script>
-
+-->
 
 
 </html>
