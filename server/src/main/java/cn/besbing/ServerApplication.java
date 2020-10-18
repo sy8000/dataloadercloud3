@@ -25,8 +25,9 @@ public class ServerApplication extends WebMvcConfigurationSupport {
 
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-        //registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        //registry.addResourceHandler("/static/***").addResourceLocations("classpath:/static/");
         registry.addResourceHandler("/static/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX + "/static/");
+        registry.addResourceHandler("/i18n/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX + "/i18n/");
         registry.addResourceHandler("/fileReport/**").addResourceLocations("file:D:/Lims_COA_ShareMenu/frreport/source/");
         registry.addResourceHandler("/resignReport/**").addResourceLocations("file:D:/resignreport/");
         registry.addResourceHandler("/finalReport/**").addResourceLocations("file:D:/resignreport/finalresign/");

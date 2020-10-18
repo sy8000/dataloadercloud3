@@ -92,6 +92,7 @@
 <div class="OverWindows"></div>
 
 <link href="../static/struct/layui/css/layui.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="../static/icons/favicon1.ico">
 
 <script type="text/javascript" src="../static/js/login/jquery.min.js"></script>
 <script type="text/javascript" src="../static/js/login/jquery-ui.min.js"></script>
@@ -100,7 +101,6 @@
 <script type="text/javascript" src="../static/js/login/Particleground.js"></script>
 <script type="text/javascript" src="../static/js/login/Treatment.js"></script>
 <script type="text/javascript" src="../static/js/login/jquery.mockjax.js"></script>
-<script src="../../static/js/generaljs/watermark.js"></script>
 <script type="text/javascript">
     var canGetCookie = 0;//是否支持存储Cookie 0 不支持 1 支持
     var ajaxmockjax = 1;//是否启用虚拟Ajax的请求响 0 不启用  1 启用
@@ -245,7 +245,7 @@
                                     $('.success').fadeIn(1000);
                                     $('.success').html(data.Text);
                                     //跳转操作
-                                    window.location.href="http://news.sina.com.cn";
+                                    window.location.href="/welcome";
                                     /*setTimeout(function () {
                                         window.location.href="http://news.sina.com.cn";
                                     },3000);*/
@@ -347,7 +347,4 @@
 <div id="footer">Copyright 2019-2020 besbing.cn All rights Reserved.</div>
 </body>
 
-<script type="text/javascript">
-    watermark({"watermark_txt":""});
-</script>
 </html>

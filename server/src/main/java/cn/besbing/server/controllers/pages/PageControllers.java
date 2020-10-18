@@ -23,5 +23,20 @@ public class PageControllers {
         return "index";
     }
 
+    /**
+     * 用户名密码页跳转至欢迎页
+     */
+    @GetMapping("/welcome")
+    public String loginToMain(){
+        return "main/main";
+    }
+
+    /**
+     * 框架的主页内容
+     */
+    @GetMapping("maincontenet")
+    public String maincontent(){
+        return "pages/maincontent";
+    }
 
 }

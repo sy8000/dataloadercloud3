@@ -18,6 +18,7 @@ import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.mgt.DefaultSecurityManager;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,6 +42,10 @@ public class LoginCheckShiroImpl implements ILoginCheckShiro {
             String encryptionPwd = generatedEncryptionAndDecryption.getUserPasswordEncryption(userinfo);
             UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(userinfo.get("username").toString(), encryptionPwd);
             subject.login(usernamePasswordToken);
+            //将subject存进session
+            Session session = subject.getSession();
+            session.touch();
+            session.setAttribute("usercode",userinfo.get("username").toString());
         }catch (
                 UnknownAccountException e){
             //用户名不存在
