@@ -56,6 +56,7 @@
             <optional>true</optional>
         </dependency>
 
+
     </dependencies>
 
     <!--   由于父模块不需要打包，所以注掉

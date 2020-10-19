@@ -6,6 +6,7 @@ import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.entities.primary.Dual;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
 import cn.besbing.server.service.primary.PrimaryDualServiceImpl;
+import cn.besbing.wechat.test.TestPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,8 @@ public class TestController {
     @Autowired
     PrimaryDlPermissionServiceImpl permissionService;
 
+    TestPojo testPojo = new TestPojo();
+
     @Value("${token}")
     private String token;
 
@@ -33,7 +36,8 @@ public class TestController {
 
         BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
         try {
-            baseResponse.setData(token);
+            testPojo.setName("abc");
+            baseResponse.setData(token + "++++++" + testPojo.getName());
 
         }catch (Exception e){
             baseResponse = new BaseResponse(StatusCode.FAILED.getCode(),e.getMessage());
