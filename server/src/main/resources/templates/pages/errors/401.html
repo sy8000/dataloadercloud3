@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <html>
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="../../static/struct/layui/css/layui.css" media="all">
-    <script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../../static/struct/layui/css/layui.css" media="all">
+    <script type="text/javascript" src="../../../static/js/login/jquery.min.js"></script>
     <style>
         .error .clip .shadow {height:180px;}
         .error .clip:nth-of-type(2) .shadow {width:130px;}
@@ -43,8 +43,12 @@
             .error .container-error-404 {height:150px;}
         }
     </style>
+
+    <script src="../../../static/js/generaljs/jquery.i18n.properties.js"></script>
+    <script src="../../../static/js/generaljs/watermark.js"></script>
 </head>
 <body>
+
 <div class="error">
     <div class="container-floud">
         <div style="text-align: center">
@@ -68,13 +72,11 @@
                     <span class="triangle"></span>
                 </div>
             </div>
-            <h2 class="h1">很抱歉，您没有访问该页面的权限</h2>
+            <h2 class="h1">很抱歉，没有提供认证信息</h2>
         </div>
     </div>
 </div>
-<script src="../../static/js/generaljs/jquery.i18n.properties.js"></script>
-<script src="../../static/js/generaljs/watermark.js"></script>
-<script src="../../static/struct/layui/layui.js" charset="utf-8"></script>
+<script src="../../../static/struct/layui/layui.js" charset="utf-8"></script>
 <script>
     function randomNum() {
         return Math.floor(Math.random() * 9) + 1;
@@ -102,7 +104,7 @@
     loop1 = setInterval(function () {
         if (i > 100) {
             clearInterval(loop1);
-            document.querySelector('.firstDigit').textContent = 3;
+            document.querySelector('.firstDigit').textContent = 1;
         } else {
             document.querySelector('.firstDigit').textContent = randomNum();
             i++;
@@ -110,6 +112,7 @@
     }, time);
 </script>
 </body>
+
 <script type="text/javascript">
     watermark({"watermark_txt":initpro()});
 </script>

@@ -2,428 +2,72 @@
   "homeInfo": {
     "title": "首页",
     "href": "/maincontenet"
-
   },
   "logoInfo": {
     "title": "DataLoader",
     "image": "../../static/img/logo/logo.png",
-    "href": "http://besbing.cn"
+    "href": "https://besbing.cn"
   },
   "menuInfo": [
     {
-      "title": "原生应用",
+      "title": "检测中心LIMS",
       "icon": "fa fa-address-book",
       "href": "",
       "target": "_self",
       "child": [
         {
-          "title": "客户化",
-          "href": "",
-          "icon": "fa fa-home",
-          "target": "_self",
-          "child": [
-            {
-              "title": "报告重签",
-              "href": "/limsflow/reportReSign",
-              "icon": "fa fa-tachometer",
-              "target": "_self"
-            },
-            {
-              "title": "任务管理",
-              "href": "/task",
-              "icon": "fa fa-tachometer",
-              "target": "_self"
-            },
-            {
-              "title": "移动端委托管理",
-              "href": "/limsflow/mobile",
-              "icon": "fa fa-tachometer",
-              "target": "_self"
-            },
-            {
-              "title": "委托单变更",
-              "href": "/limsflow/projModify",
-              "icon": "fa fa-tachometer",
-              "target": "_self"
-            },
-            {
-              "title": "手工委托审批",
-              "href": "/limsflow/projApprove",
-              "icon": "fa fa-tachometer",
-              "target": "_self"
-            },
-            {
-              "title": "仪器管理",
-              "href": "/instruments",
-              "icon": "fa fa-tachometer",
-              "target": "_self"
-            }
-          ]
-        },
-
+          "title": "快捷方式",
+          "href": "/analysis",
+          "icon": "fa fa-list-alt",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "title": "DataLoader通用功能",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
         {
-          "title": "模板同步",
+          "title": "进销存",
+          "href": "/analysis",
+          "icon": "fa fa-list-alt",
+          "target": "_self"
+        }
+      ]
+    },
+    {
+      "title": "DataLoader系统设置",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "权限控制",
           "href": "",
-          "icon": "fa fa-calendar",
+          "icon": "fa fa-list-alt",
           "target": "_self",
           "child": [
             {
-              "title": "分析同步",
-              "href": "/analysis",
+              "title": "权限管理",
+              "href": "/dlcsystem/permissionsmanage",
               "icon": "fa fa-list-alt",
               "target": "_self"
             },
             {
-              "title": "产品同步",
-              "href": "page/form-step.html",
-              "icon": "fa fa-navicon",
+              "title": "角色管理",
+              "href": "/dlcsystem/rolesmanage",
+              "icon": "fa fa-list-alt",
               "target": "_self"
             },
             {
-              "title": "测试单同步",
-              "href": "page/form-step.html",
-              "icon": "fa fa-navicon",
+              "title": "用户管理",
+              "href": "/dlcsystem/usersmanage",
+              "icon": "fa fa-list-alt",
               "target": "_self"
             }
           ]
-        },
-        {
-          "title": "库存管理",
-          "href": "",
-          "icon": "fa fa-flag-o",
-          "target": "_self",
-          "child": [
-            {
-              "title": "物料维护",
-              "href": "page/login-1.html",
-              "icon": "fa fa-stumbleupon-circle",
-              "target": "_blank"
-            },
-            {
-              "title": "库位管理",
-              "href": "page/login-2.html",
-              "icon": "fa fa-viacoin",
-              "target": "_blank"
-            },
-            {
-              "title": "出库维护",
-              "href": "page/login-1.html",
-              "icon": "fa fa-stumbleupon-circle",
-              "target": "_blank"
-            },
-            {
-              "title": "入库维护",
-              "href": "page/login-1.html",
-              "icon": "fa fa-stumbleupon-circle",
-              "target": "_blank"
-            },
-            {
-              "title": "现存量",
-              "href": "page/login-1.html",
-              "icon": "fa fa-stumbleupon-circle",
-              "target": "_blank"
-            }
-          ]
-        },
-        {
-          "title": "lims web",
-          "href": "",
-          "icon": "fa fa-home",
-          "target": "_self",
-          "child": [
-            {
-              "title": "委托单维护",
-              "href": "/limsflow/CustomerWorkFlow",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "客户主管审核",
-              "href": "/limsflow/CustomerManger",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "技术主管审核",
-              "href": "/limsflow/TechManger",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "报价单维护",
-              "href": "/limsflow/QuoteManager",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "样品管理员",
-              "href": "/limsflow/SampleManager",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "计划排程",
-              "href": "/limsflow/PlanArrangementManager",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "任务分配",
-              "href": "/limsflow/TaskDistributionManager",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "测试结果维护",
-              "href": "/limsflow/AnalysisManager",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "工程师复核",
-              "href": "/limsflow/TechEngineerManager",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "报告签发",
-              "href": "/limsflow/ReportSignManager",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "计费单维护",
-              "href": "/limsflow/ChargeManager",
-              "icon": "fa fa-hourglass-end",
-              "target": "_self"
-            },
-            {
-              "title": "lims web查询",
-              "href": "",
-              "icon": "fa fa-home",
-              "target": "_self",
-              "child": [
-                {
-                  "title": "委托单预览",
-                  "href": "/limsflow/ProjectPreview",
-                  "icon": "fa fa-hourglass-end",
-                  "target": "_self"
-                },
-                {
-                  "title": "任务清单ForLims",
-                  "href": "/limsflow/LimsTaskProcess",
-                  "icon": "fa fa-hourglass-end",
-                  "target": "_self"
-                }
-              ]
-            }
-            ]
-        },
-        {
-          "title": "辅助工具",
-          "href": "",
-          "icon": "fa fa-snowflake-o",
-          "target": "",
-          "child": [
-            {
-              "title": "图片处理",
-              "href": "/processImage",
-              "icon": "fa fa-snowflake-o",
-              "target": "_self"
-            },
-            {
-              "title": "联机调试",
-              "href": "/uploadImage1",
-              "icon": "fa fa-shield",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "内部服务",
-          "href": "",
-          "icon": "fa fa-snowflake-o",
-          "target": "",
-          "child": [
-            {
-              "title": "参数管理系统",
-              "href": "/uploadImage",
-              "icon": "fa fa-snowflake-o",
-              "target": "_self"
-            },
-            {
-              "title": "上位机调试",
-              "href": "/uploadImage1",
-              "icon": "fa fa-shield",
-              "target": "_self"
-            },
-            {
-              "title": "测试模块",
-              "href": "http://10.0.11.82:8080/webroot/decision/view/report?viewlet=HFReport_new.cpt&taskid=A-200720-1109-02",
-              "icon": "fa fa-shield",
-              "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "查询统计",
-          "href": "",
-          "icon": "fa fa-snowflake-o",
-          "target": "",
-          "child": [
-            {
-              "title": "任务明细查询",
-              "href": "/taskProcess",
-              "icon": "fa fa-snowflake-o",
-              "target": "_self"
-            },
-            {
-              "title": "任务管理看板",
-              "href": "http://10.0.11.82:8080/webroot/decision/view/form?viewlet=Laboratory_Kanban.frm",
-              "icon": "fa fa-shield",
-              "target": "_self"
-            },
-            {
-              "title": "报告审核看板",
-              "href": "http://10.0.11.82:8080/webroot/decision/view/form?viewlet=Engineer_Kanban.frm",
-              "icon": "fa fa-shield",
-              "target": "_self"
-            },
-            {
-              "title": "任务积压列表",
-              "href": "http://10.0.11.82:8080/webroot/decision/view/report?viewlet=Taskoverstock_Kanban.cpt",
-              "icon": "fa fa-shield",
-              "target": "_self"
-            },
-            {
-              "title": "测试员看板",
-              "href": "http://10.0.11.82:8080/webroot/decision/view/form?viewlet=Testor_Kanban.frm",
-              "icon": "fa fa-shield",
-              "target": "_self"
-            }
-
-          ]
-        },
-        {
-          "title": "AI智能",
-          "href": "",
-          "icon": "fa fa-snowflake-o",
-          "target": "",
-          "child": [
-            {
-              "title": "智能联查",
-              "href": "/limsflow/AISearch",
-              "icon": "fa fa-snowflake-o",
-              "target": "_self"
-            },
-            {
-              "title": "智能单据分析",
-              "href": "/limsflow/aibillanalysis",
-              "icon": "fa fa-shield",
-              "target": "_self"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "系统集成",
-      "icon": "fa fa-lemon-o",
-      "href": "",
-      "target": "_self",
-      "child": [
-        {
-          "title": "图标列表",
-          "href": "page/icon.html",
-          "icon": "fa fa-dot-circle-o",
-          "target": "_self"
-        },
-        {
-          "title": "图标选择",
-          "href": "page/icon-picker.html",
-          "icon": "fa fa-adn",
-          "target": "_self"
-        },
-        {
-          "title": "颜色选择",
-          "href": "page/color-select.html",
-          "icon": "fa fa-dashboard",
-          "target": "_self"
-        },
-        {
-          "title": "下拉选择",
-          "href": "page/table-select.html",
-          "icon": "fa fa-angle-double-down",
-          "target": "_self"
-        },
-        {
-          "title": "文件上传",
-          "href": "page/upload.html",
-          "icon": "fa fa-arrow-up",
-          "target": "_self"
-        },
-        {
-          "title": "富文本编辑器",
-          "href": "page/editor.html",
-          "icon": "fa fa-edit",
-          "target": "_self"
-        },
-        {
-          "title": "省市县区选择器",
-          "href": "page/area.html",
-          "icon": "fa fa-rocket",
-          "target": "_self"
-        }
-      ]
-    },
-    {
-      "title": "图形化编程",
-      "icon": "fa fa-slideshare",
-      "href": "",
-      "target": "_self",
-      "child": [
-        {
-          "title": "多级菜单",
-          "href": "",
-          "icon": "fa fa-meetup",
-          "target": "",
-          "child": [
-            {
-              "title": "按钮1",
-              "href": "page/button.html?v=1",
-              "icon": "fa fa-calendar",
-              "target": "_self",
-              "child": [
-                {
-                  "title": "按钮2",
-                  "href": "page/button.html?v=2",
-                  "icon": "fa fa-snowflake-o",
-                  "target": "_self",
-                  "child": [
-                    {
-                      "title": "按钮3",
-                      "href": "page/button.html?v=3",
-                      "icon": "fa fa-snowflake-o",
-                      "target": "_self"
-                    },
-                    {
-                      "title": "表单4",
-                      "href": "page/form.html?v=1",
-                      "icon": "fa fa-calendar",
-                      "target": "_self"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-
-        {
-          "title": "失效菜单",
-          "href": "page/error.html",
-          "icon": "fa fa-superpowers",
-          "target": "_self"
         }
       ]
     }
