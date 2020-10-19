@@ -1,4 +1,4 @@
-package cn.besbing.server.service.primary.impl;/*
+package cn.besbing.server.service.primary;/*
 *   Xiamen HLYY Network Technology Co., Ltd.
 *       DataLoader Cloud
 *   @Author sheny
@@ -10,12 +10,11 @@ package cn.besbing.server.service.primary.impl;/*
 
 import cn.besbing.model.entities.primary.SmUser;
 import cn.besbing.model.mapper.primary.SmUserMapper;
-import cn.besbing.server.service.primary.IPrimarySmuserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PrimarySmuserServiceImpl implements IPrimarySmuserService {
+public class PrimarySmuserServiceImpl {
 
     @Autowired(required = false)
     private SmUserMapper smUserMapper;

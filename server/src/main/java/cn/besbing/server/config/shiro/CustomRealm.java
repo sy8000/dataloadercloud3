@@ -2,8 +2,7 @@ package cn.besbing.server.config.shiro;
 
 
 import cn.besbing.model.entities.primary.SmUser;
-import cn.besbing.server.service.primary.impl.PrimarySmuserServiceImpl;
-import org.apache.catalina.User;
+import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -12,15 +11,7 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-import org.springframework.web.context.ContextLoader;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class CustomRealm extends AuthorizingRealm {

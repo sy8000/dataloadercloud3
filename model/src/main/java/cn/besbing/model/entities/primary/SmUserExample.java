@@ -1,10 +1,11 @@
 package cn.besbing.model.entities.primary;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SmUserExample {
+public class SmUserExample implements Serializable {
     protected String orderByClause;
 
     protected boolean distinct;

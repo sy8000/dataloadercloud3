@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class SystemControllers implements ErrorController {
+public class SystemControllers  {
 
     /*druid sql监控界面，当前失效*/
     @GetMapping("/druid/monitor")
@@ -14,15 +14,7 @@ public class SystemControllers implements ErrorController {
         return "sql";
     }
 
-    @Override
-    public String getErrorPath() {
-        return "pages/errors/404";
-    }
 
-    @RequestMapping
-    public String error() {
-        return getErrorPath();
-    }
 
 
 

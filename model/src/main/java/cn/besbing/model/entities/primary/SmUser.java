@@ -1,8 +1,9 @@
 package cn.besbing.model.entities.primary;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class SmUser {
+public class SmUser implements Serializable {
     private String cuserid;
 
     private String abledate;

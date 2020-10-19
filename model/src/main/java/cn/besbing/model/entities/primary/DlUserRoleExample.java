@@ -1,9 +1,10 @@
 package cn.besbing.model.entities.primary;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DlUserRoleExample {
+public class DlUserRoleExample implements Serializable {
     protected String orderByClause;
 
     protected boolean distinct;

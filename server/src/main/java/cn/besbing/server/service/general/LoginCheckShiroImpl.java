@@ -1,4 +1,4 @@
-package cn.besbing.server.service.general.impl;/*
+package cn.besbing.server.service.general;/*
 *   Xiamen HLYY Network Technology Co., Ltd.
 *       DataLoader Cloud
 *   @Author sheny
@@ -11,7 +11,6 @@ package cn.besbing.server.service.general.impl;/*
 import cn.besbing.client.enums.BaseResponse;
 import cn.besbing.client.enums.StatusCode;
 import cn.besbing.server.config.shiro.CustomRealm;
-import cn.besbing.server.service.general.ILoginCheckShiro;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -26,7 +25,7 @@ import org.springframework.stereotype.Service;
 import java.util.Map;
 
 @Service
-public class LoginCheckShiroImpl implements ILoginCheckShiro {
+public class LoginCheckShiroImpl {
 
     @Autowired(required = false)
     private GeneratedEncryptionAndDecryptionImpl generatedEncryptionAndDecryption;

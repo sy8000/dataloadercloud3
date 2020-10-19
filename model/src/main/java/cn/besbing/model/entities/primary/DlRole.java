@@ -1,8 +1,9 @@
 package cn.besbing.model.entities.primary;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class DlRole {
+public class DlRole implements Serializable {
     private String roleid;
 
     private BigDecimal available;

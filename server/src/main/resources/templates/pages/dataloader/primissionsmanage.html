@@ -23,7 +23,69 @@
 <p><shiro:user>guest</shiro:user></p>
 <span th:text="${session.usercode}">人员工号</span>
 -->
+<div class="demoTable">
+    搜索ID：
+    <div class="layui-inline">
+        <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+    </div>
+    <button class="layui-btn" data-type="reload">搜索</button>
+</div>
 
+<table class="layui-hide" id="LAY_table_user" lay-filter="user"></table>
+
+
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+        //方法级渲染
+        table.render({
+            elem: '#LAY_table_user'
+            ,url: '/permissionList'
+            ,cols: [
+                //PERMISSIONID, NAME, PERMISSION,URL, VDEF1, VDEF2,VDEF3, VDEF4, VDEF5
+                [
+                {checkbox: true, fixed: true}
+                ,{field:'permissionid', title: 'ID', width:80, sort: true, fixed: true}
+                ,{field:'name', title: '用户名', width:80}
+                ,{field:'permission', title: '性别', width:80, sort: true}
+                ,{field:'url', title: '城市', width:80}
+                ,{field:'vdef1', title: '签名'}
+                ,{field:'vdef2', title: '积分', sort: true, width:80}
+                ,{field:'vdef3', title: '评分', sort: true, width:80}
+                ,{field:'vdef4', title: '职业', width:80}
+                ,{field:'vdef5', title: '财富', sort: true, width:135}
+            ]
+            ]
+            ,id: 'testReload'
+            ,page: true
+            ,height: 310
+        });
+
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
+
+                //执行重载
+                table.reload('testReload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        key: {
+                            id: demoReload.val()
+                        }
+                    }
+                }, 'data');
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+</script>
 
 </body>
 <!--

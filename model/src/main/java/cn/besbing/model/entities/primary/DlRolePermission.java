@@ -1,6 +1,8 @@
 package cn.besbing.model.entities.primary;
 
-public class DlRolePermission {
+import java.io.Serializable;
+
+public class DlRolePermission implements Serializable {
     private String roleid;
 
     private String permissionid;

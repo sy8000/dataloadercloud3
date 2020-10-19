@@ -2,8 +2,10 @@ package cn.besbing.server.controllers.test;
 
 import cn.besbing.client.enums.BaseResponse;
 import cn.besbing.client.enums.StatusCode;
+import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.entities.primary.Dual;
-import cn.besbing.server.service.primary.impl.PrimaryDualServiceImpl;
+import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
+import cn.besbing.server.service.primary.PrimaryDualServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,6 +21,9 @@ public class TestController {
     @Autowired
     PrimaryDualServiceImpl primaryDualService;
 
+    @Autowired
+    PrimaryDlPermissionServiceImpl permissionService;
+
     @RequestMapping(value = "restful",method = RequestMethod.GET)
     public BaseResponse info(){
 
@@ -32,10 +37,10 @@ public class TestController {
         return baseResponse;
     }
 
-    @RequestMapping(value = "three",method = RequestMethod.GET)
-    public List<Dual> threeDb(){
+    @RequestMapping(value = "permission",method = RequestMethod.GET)
+    public List<DlPermission> primaryDb(){
 
-        return primaryDualService.getDualDemo(null);
+        return permissionService.allPermission(null);
     }
 
 }

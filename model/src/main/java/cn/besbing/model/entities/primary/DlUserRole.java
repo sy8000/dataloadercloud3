@@ -1,6 +1,8 @@
 package cn.besbing.model.entities.primary;
 
-public class DlUserRole {
+import java.io.Serializable;
+
+public class DlUserRole implements Serializable {
     private String cuserid;
 
     private String roleid;

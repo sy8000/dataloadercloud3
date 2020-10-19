@@ -4,6 +4,7 @@ import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.entities.primary.DlPermissionExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.RequestParam;
 
 public interface DlPermissionMapper {
     long countByExample(DlPermissionExample example);
@@ -27,4 +28,6 @@ public interface DlPermissionMapper {
     int updateByPrimaryKeySelective(DlPermission record);
 
     int updateByPrimaryKey(DlPermission record);
+
+    List<DlPermission> selectPermissions(@RequestParam(value = "name", required = false) String name);
 }

@@ -2,7 +2,9 @@ package cn.besbing.model.entities.primary;
 
 import lombok.Data;
 
-public class Dual {
+import java.io.Serializable;
+
+public class Dual implements Serializable {
     private String dummy;
 
     public String getDummy() {

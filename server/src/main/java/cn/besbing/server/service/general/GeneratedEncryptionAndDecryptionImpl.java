@@ -1,4 +1,4 @@
-package cn.besbing.server.service.general.impl;/*
+package cn.besbing.server.service.general;/*
 *   Xiamen HLYY Network Technology Co., Ltd.
 *       DataLoader Cloud
 *   @Author sheny
@@ -9,9 +9,7 @@ package cn.besbing.server.service.general.impl;/*
 */
 
 import cn.besbing.model.entities.primary.SmUser;
-import cn.besbing.model.mapper.primary.SmUserMapper;
-import cn.besbing.server.service.general.IGeneratedEncryptionAndDecryption;
-import cn.besbing.server.service.primary.impl.PrimarySmuserServiceImpl;
+import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.geasy.NC6PasswordUtil;
@@ -19,7 +17,7 @@ import com.geasy.NC6PasswordUtil;
 import java.util.Map;
 
 @Service
-public class GeneratedEncryptionAndDecryptionImpl implements IGeneratedEncryptionAndDecryption {
+public class GeneratedEncryptionAndDecryptionImpl {
 
     @Autowired(required = false)
     PrimarySmuserServiceImpl primarySmuserService;

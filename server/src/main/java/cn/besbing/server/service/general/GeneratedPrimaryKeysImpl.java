@@ -1,4 +1,4 @@
-package cn.besbing.server.service.general.impl;/*
+package cn.besbing.server.service.general;/*
 *   Xiamen HLYY Network Technology Co., Ltd.
 *       DataLoader Cloud
 *   @Author sheny
@@ -8,7 +8,6 @@ package cn.besbing.server.service.general.impl;/*
     @Address Xiamen Bazaar U.S. District, 326 South Road, A Dong A209.
 */
 
-import cn.besbing.server.service.general.IGeneratedPrimaryKeys;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
@@ -18,7 +17,7 @@ import java.util.Random;
  */
 
 @Service
-public class GeneratedPrimaryKeysImpl implements IGeneratedPrimaryKeys {
+public class GeneratedPrimaryKeysImpl {
 
 
     private  final String  base = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

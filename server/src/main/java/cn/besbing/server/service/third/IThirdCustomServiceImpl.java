@@ -1,13 +1,11 @@
-package cn.besbing.server.service.third.impl;
+package cn.besbing.server.service.third;
 
-import cn.besbing.model.mapper.slave.SlaveCustom;
 import cn.besbing.model.mapper.third.ThirdCustom;
-import cn.besbing.server.service.slave.ISlaveCustomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class IThirdCustomServiceImpl implements ISlaveCustomService {
+public class IThirdCustomServiceImpl {
 
     @Autowired(required = false)
     ThirdCustom thirdCustom;

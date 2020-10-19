@@ -180,6 +180,13 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+  <select id="selectPermissions" resultMap="BaseResultMap" parameterType="cn.besbing.model.utils.SearchDTO">
+      select PERMISSIONID, NAME, PERMISSION,URL, VDEF1, VDEF2,VDEF3, VDEF4, VDEF5
+      from dl_permission where 1=1
+      <if test="_parameter != null">
+       and name like '%'||#{_parameter}||'%'
+      </if>
+    </select>
   <update id="updateByExampleSelective" parameterType="map">
     update DL_PERMISSION
     <set>

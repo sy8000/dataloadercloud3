@@ -27,7 +27,8 @@ public class ShiroConfig {
         // 配置不会被拦截的链接 顺序判断
         filterChainDefinitionMap.put("/static/**", "anon");
         filterChainDefinitionMap.put("/action/login", "anon");
-        filterChainDefinitionMap.put("/druid/monitor", "anon");
+        filterChainDefinitionMap.put("/test/**", "anon");
+        filterChainDefinitionMap.put("/permissionList", "anon");
 
         filterChainDefinitionMap.put("/forgetPass", "anon");
         filterChainDefinitionMap.put("/resetPwd", "anon");

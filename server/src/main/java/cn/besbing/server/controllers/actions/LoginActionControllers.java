@@ -2,9 +2,7 @@ package cn.besbing.server.controllers.actions;
 
 
 import cn.besbing.client.enums.BaseResponse;
-import cn.besbing.server.service.general.ILoginCheckShiro;
-import cn.besbing.server.service.general.impl.GeneratedEncryptionAndDecryptionImpl;
-import cn.besbing.server.service.general.impl.LoginCheckShiroImpl;
+import cn.besbing.server.service.general.LoginCheckShiroImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("action")
-public class LoginActionController {
+public class LoginActionControllers {
 
     @Autowired
     LoginCheckShiroImpl loginCheckShiro;

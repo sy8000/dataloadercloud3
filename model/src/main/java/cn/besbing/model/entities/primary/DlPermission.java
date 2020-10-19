@@ -1,6 +1,8 @@
 package cn.besbing.model.entities.primary;
 
-public class DlPermission {
+import java.io.Serializable;
+
+public class DlPermission implements Serializable {
     private String permissionid;
 
     private String name;
