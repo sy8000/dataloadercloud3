@@ -23,7 +23,8 @@ import org.springframework.web.bind.annotation.*;
  * 系统数据加载
  */
 
-@Controller
+@RestController
+@RequestMapping("loading")
 public class SystemLoadControllers {
 
 
@@ -36,8 +37,7 @@ public class SystemLoadControllers {
     /**
      * 权限列表加载
      */
-    @RequestMapping(value = "permissionList",method = RequestMethod.GET)
-    @ResponseBody
+    @GetMapping("/dataloaderpermission")
     public PageDataResult permissionList(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit, @RequestParam(value = "keyword", required = false) String keyword) {
         if (null == page){
             page = 1;

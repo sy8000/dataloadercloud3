@@ -1,5 +1,4 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<html lang="en">
 <html>
 <head>
     <meta charset="UTF-8">
@@ -10,10 +9,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="../../../static/struct/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css " media="all">
     <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
     <script src="../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
-    <script src="../../../static/struct/layui/layui.js" charset="utf-8"></script>
     <script src="../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
 
 </head>
@@ -23,68 +21,104 @@
 <p><shiro:user>guest</shiro:user></p>
 <span th:text="${session.usercode}">人员工号</span>
 -->
-<div class="demoTable">
-    搜索ID：
-    <div class="layui-inline">
-        <input class="layui-input" name="id" id="demoReload" autocomplete="off">
-    </div>
-    <button class="layui-btn" data-type="reload">搜索</button>
-</div>
-
-<table class="layui-hide" id="LAY_table_user" lay-filter="user"></table>
 
 
+<table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter" style="width: 85%"></table>
+
+<script src="../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
 <script>
-    layui.use('table', function(){
-        var table = layui.table;
+        /**
+         *  {checkbox: true, fixed: true}
+         ,{field:'permissionid', title: 'ID', width:80, sort: true, fixed: true}
+         ,{field:'name', title: '用户名', width:80}
+         ,{field:'permission', title: '性别', width:80, sort: true}
+         ,{field:'url', title: '城市', width:80}
+         ,{field:'vdef1', title: '签名'}
+         ,{field:'vdef2', title: '积分', sort: true, width:80}
+         ,{field:'vdef3', title: '评分', sort: true, width:80}
+         ,{field:'vdef4', title: '职业', width:80}
+         ,{field:'vdef5', title: '财富', sort: true, width:135}
+         */
+        layui.use(['form', 'table','layer','laydate'], function () {
+            var $ = layui.jquery,
+                form = layui.form,
+                table = layui.table,
+                util = layui.util,
+                layer = layui.layer,
+                laydate = layui.laydate;
+            table.render({
+                elem: '#currentTableId',
+                url: '/loading/dataloaderpermission',
+                method: 'get',
+                toolbar: '#toolbarDemo',
+                request: {
+                    pageName: 'page' //页码的参数名称，默认：page
+                    , limitName: 'limit' //每页数据量的参数名，默认：limit
+                },
+                response: {
+                    statusName: 'code' //数据状态的字段名称，默认：code
+                    , statusCode: 0 //成功的状态码，默认：0
+                    , countName: 'totals' //数据总数的字段名称，默认：count
+                    , dataName: 'list' //数据列表的字段名称，默认：data
+                },
+                defaultToolbar: ['filter', 'exports', 'print', {
+                    title: '报告导出',
+                    layEvent: 'LAYTABLE_TIPS',
+                    icon: 'layui-icon-tips'
+                }],
+                cols: [
+                    [
+                        {field: 'permissionid', title: 'ID', width: 220, sort: true ,align:'center',templet:function(d){ return '<div style = "text-align:left">'+d.permissionid+'</div>'} }
+                        , {field: 'name', title: '权限名', width: 170}
+                        , {field: 'permission', title: '权限编码', width: 120, sort: true}
+                        , {field: 'url', title: '权限url', width: 170}
+                        , {field: 'vdef1', title: '自定义项1',  width: 100}
+                        , {field: 'vdef2', title: '自定义项2',  width: 100}
+                        , {field: 'vdef3', title: '自定义项3',  width: 100}
+                        , {field: 'vdef4', title: '自定义项4', width: 100}
+                        , {field: 'vdef5', title: '自定义项5', width: 100}
+                    ]
+                ],
+                limit: 10,
+                limits: [10, 20, 30, 40, 50, 100, 500, 1000, 2000, 3000],
+                page: true,
+                skin: 'line',
+                even: true
 
-        //方法级渲染
-        table.render({
-            elem: '#LAY_table_user'
-            ,url: '/permissionList'
-            ,cols: [
-                //PERMISSIONID, NAME, PERMISSION,URL, VDEF1, VDEF2,VDEF3, VDEF4, VDEF5
-                [
-                {checkbox: true, fixed: true}
-                ,{field:'permissionid', title: 'ID', width:80, sort: true, fixed: true}
-                ,{field:'name', title: '用户名', width:80}
-                ,{field:'permission', title: '性别', width:80, sort: true}
-                ,{field:'url', title: '城市', width:80}
-                ,{field:'vdef1', title: '签名'}
-                ,{field:'vdef2', title: '积分', sort: true, width:80}
-                ,{field:'vdef3', title: '评分', sort: true, width:80}
-                ,{field:'vdef4', title: '职业', width:80}
-                ,{field:'vdef5', title: '财富', sort: true, width:135}
-            ]
-            ]
-            ,id: 'testReload'
-            ,page: true
-            ,height: 310
-        });
+            });
 
-        var $ = layui.$, active = {
-            reload: function(){
-                var demoReload = $('#demoReload');
 
-                //执行重载
-                table.reload('testReload', {
+            // 监听搜索操作
+            form.on('submit(data-search-btn)', function (data) {
+                //var result = JSON.stringify(data.field);
+                //layer.alert(data.field);
+                /*var resultvalue = [];
+            resultvalue.push($("#createDate").val());
+            resultvalue.push($("#testName").val());
+            resultvalue.push($("#testGroup").val());
+            resultvalue.push($("#maker").val());
+            resultvalue.push($("#taskid").val());
+            var result = JSON.stringify(resultvalue);*/
+                var result = "{'createDate':'" + $("#createDate").val() + "',";
+                result += "'testName':'" + $("#testName").val() + "',";
+                result += "'testGroup':'" + $("#testGroup").val() + "',";
+                result += "'maker':'" + $("#maker").val() + "',";
+                result += "'taskid':'" + $("#taskid").val() + "'}";
+                //var result = JSON.stringify(resultvalue);
+                console.log(result);
+                //执行搜索重载
+                table.reload('currentTableId', {
                     page: {
-                        curr: 1 //重新从第 1 页开始
+                        curr: 1
                     }
-                    ,where: {
-                        key: {
-                            id: demoReload.val()
-                        }
+                    , where: {
+                        keyword: result
                     }
-                }, 'data');
-            }
-        };
+                }, 'list');
 
-        $('.demoTable .layui-btn').on('click', function(){
-            var type = $(this).data('type');
-            active[type] ? active[type].call(this) : '';
+                return false;
+            });
         });
-    });
 </script>
 
 </body>
