@@ -28,7 +28,6 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/static/**", "anon");
         filterChainDefinitionMap.put("/action/login", "anon");
         filterChainDefinitionMap.put("/test/**", "anon");
-        filterChainDefinitionMap.put("http://localhost/dataloaderpermission", "anon");
 
         filterChainDefinitionMap.put("/forgetPass", "anon");
         filterChainDefinitionMap.put("/resetPwd", "anon");
