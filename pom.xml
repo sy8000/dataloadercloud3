@@ -17,6 +17,7 @@
         <module>server</module>
         <module>model</module>
         <module>client</module>
+        <module>wechat</module>
     </modules>
 
     <name>dataloadercloud</name>
