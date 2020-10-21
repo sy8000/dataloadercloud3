@@ -1,0 +1,97 @@
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css " media="all">
+    <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
+    <script src="../../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="../../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../../../../static/css/generalcss/layuitablecheckboxfix.css">
+    <script src="../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+</head>
+<body onload="addWaterMarker()">
+<!--
+<p>Hello, <shiro:principal/>, how are you today?</p>
+<p><shiro:user>guest</shiro:user></p>
+<span th:text="${session.usercode}">人员工号</span>
+-->
+<br/>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">ID</label>
+        <div class="layui-col-xs9">
+            <input type="text" name="permissionid" id="permissionid"   placeholder="系统自动生成无需输入" autocomplete="off" class="layui-input" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">权限名称</label>
+        <div class="layui-col-xs9">
+            <input type="text" name="name" id="name" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input" >
+        </div>
+        </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">权限名称</label>
+        <div class="layui-col-xs9">
+            <input type="text" name="code" id="code" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">权限url</label>
+        <div class="layui-col-xs9">
+            <input type="text" name="url" id="url" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">DEF1</label>
+        <div class="layui-col-xs9">
+            <input type="text" name="vdef1" id="vdef1"    placeholder="" autocomplete="off" class="layui-input" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">DEF2</label>
+        <div class="layui-col-xs9">
+            <input type="text" name="vdef2" id="vdef2"    placeholder="" autocomplete="off" class="layui-input" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">DEF3</label>
+        <div class="layui-col-xs9">
+            <input type="text" name="vdef3" id="vdef3"    placeholder="" autocomplete="off" class="layui-input" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">DEF4</label>
+        <div class="layui-col-xs9">
+            <input type="text" name="vdef4" id="vdef4"    placeholder="" autocomplete="off" class="layui-input" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">DEF5</label>
+        <div class="layui-col-xs9">
+            <input type="text" name="vdef5" id="vdef5"    placeholder="" autocomplete="off" class="layui-input" >
+        </div>
+    </div>
+
+    <div class="layui-form-item" style="text-align: center">
+        <div class="layui-col-xs9">
+            <button class="layui-btn " lay-submit lay-filter="addper" id="addpermission">确认添加</button>
+        </div>
+    </div>
+
+<script>
+    $('#addpermission').click(function(){
+        //开始校验保存
+
+    });
+</script>
+
+</body>
+
+</html>

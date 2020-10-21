@@ -2,6 +2,7 @@ package cn.besbing.server.controllers.pages;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -46,5 +47,13 @@ public class DataloaderCloudSystemControllers {
         return "pages/dataloader/menusmanage";
     }
 
+    /**
+     * 新增、编辑权限控制器
+     * /dlcsystem/addeditpermission
+     */
+    @GetMapping("addpermission")
+    public String addeditpermission(){
+        return "pages/dataloader/permission/addpermission";
+    }
 
 }

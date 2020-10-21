@@ -13,7 +13,7 @@
     <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
     <script src="../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
     <script src="../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
-
+    <link rel="stylesheet" href="../../../static/css/generalcss/layuitablecheckboxfix.css">
 </head>
 <body onload="addWaterMarker()">
 <!--
@@ -21,112 +21,17 @@
 <p><shiro:user>guest</shiro:user></p>
 <span th:text="${session.usercode}">人员工号</span>
 -->
-
-
-<table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter" style="width: 85%"></table>
-
-<script src="../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
-<script>
-        /**
-         *  {checkbox: true, fixed: true}
-         ,{field:'permissionid', title: 'ID', width:80, sort: true, fixed: true}
-         ,{field:'name', title: '用户名', width:80}
-         ,{field:'permission', title: '性别', width:80, sort: true}
-         ,{field:'url', title: '城市', width:80}
-         ,{field:'vdef1', title: '签名'}
-         ,{field:'vdef2', title: '积分', sort: true, width:80}
-         ,{field:'vdef3', title: '评分', sort: true, width:80}
-         ,{field:'vdef4', title: '职业', width:80}
-         ,{field:'vdef5', title: '财富', sort: true, width:135}
-         */
-        layui.use(['form', 'table','layer','laydate'], function () {
-            var $ = layui.jquery,
-                form = layui.form,
-                table = layui.table,
-                util = layui.util,
-                layer = layui.layer,
-                laydate = layui.laydate;
-            table.render({
-                elem: '#currentTableId',
-                url: '/loading/dataloaderpermission',
-                method: 'get',
-                toolbar: '#toolbarDemo',
-                request: {
-                    pageName: 'page' //页码的参数名称，默认：page
-                    , limitName: 'limit' //每页数据量的参数名，默认：limit
-                },
-                response: {
-                    statusName: 'code' //数据状态的字段名称，默认：code
-                    , statusCode: 0 //成功的状态码，默认：0
-                    , countName: 'totals' //数据总数的字段名称，默认：count
-                    , dataName: 'list' //数据列表的字段名称，默认：data
-                },
-                defaultToolbar: ['filter', 'exports', 'print', {
-                    title: '报告导出',
-                    layEvent: 'LAYTABLE_TIPS',
-                    icon: 'layui-icon-tips'
-                }],
-                cols: [
-                    [
-                        {field: 'permissionid', title: 'ID', width: 220, sort: true ,align:'center',templet:function(d){ return '<div style = "text-align:left">'+d.permissionid+'</div>'} }
-                        , {field: 'name', title: '权限名', width: 170}
-                        , {field: 'permission', title: '权限编码', width: 120, sort: true}
-                        , {field: 'url', title: '权限url', width: 170}
-                        , {field: 'vdef1', title: '自定义项1',  width: 100}
-                        , {field: 'vdef2', title: '自定义项2',  width: 100}
-                        , {field: 'vdef3', title: '自定义项3',  width: 100}
-                        , {field: 'vdef4', title: '自定义项4', width: 100}
-                        , {field: 'vdef5', title: '自定义项5', width: 100}
-                    ]
-                ],
-                limit: 10,
-                limits: [10, 20, 30, 40, 50, 100, 500, 1000, 2000, 3000],
-                page: true,
-                skin: 'line',
-                even: true
-
-            });
-
-
-            // 监听搜索操作
-            form.on('submit(data-search-btn)', function (data) {
-                //var result = JSON.stringify(data.field);
-                //layer.alert(data.field);
-                /*var resultvalue = [];
-            resultvalue.push($("#createDate").val());
-            resultvalue.push($("#testName").val());
-            resultvalue.push($("#testGroup").val());
-            resultvalue.push($("#maker").val());
-            resultvalue.push($("#taskid").val());
-            var result = JSON.stringify(resultvalue);*/
-                var result = "{'createDate':'" + $("#createDate").val() + "',";
-                result += "'testName':'" + $("#testName").val() + "',";
-                result += "'testGroup':'" + $("#testGroup").val() + "',";
-                result += "'maker':'" + $("#maker").val() + "',";
-                result += "'taskid':'" + $("#taskid").val() + "'}";
-                //var result = JSON.stringify(resultvalue);
-                console.log(result);
-                //执行搜索重载
-                table.reload('currentTableId', {
-                    page: {
-                        curr: 1
-                    }
-                    , where: {
-                        keyword: result
-                    }
-                }, 'list');
-
-                return false;
-            });
-        });
+<br />
+<blockquote class="layui-elem-quote layui-quote-nm">DataLoader 权限管理</blockquote>
+<table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter" ></table>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
+<script src="../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../../../static/js/system/primission.js"></script>
 
 </body>
-<!--
-<script type="text/javascript">
-    watermark({"watermark_txt": initpro()});
-</script>
--->
-
 
 </html>
