@@ -179,6 +179,14 @@
             <version>1.18.12</version>
         </dependency>
 
+        <dependency>
+        <groupId>a</groupId>
+        <artifactId>b</artifactId>
+        <version>1</version>
+        <scope>system</scope>
+        <systemPath>${basedir}/src/lib/WechatSDK1.0.jar</systemPath>
+    </dependency>
+
 
     </dependencies>
 
@@ -187,6 +195,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
             </plugin>
         </plugins>
     </build>
