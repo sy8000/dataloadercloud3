@@ -40,4 +40,8 @@ public class PrimaryDlPermissionServiceImpl {
         return list;
     }
 
+    public int save(DlPermission dlPermission){
+        return permissionMapper.insert(dlPermission);
+    }
+
 }

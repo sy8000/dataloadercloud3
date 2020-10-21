@@ -23,74 +23,94 @@
 <span th:text="${session.usercode}">人员工号</span>
 -->
 <br/>
+<div class="layui-form">
+<form class="layui-form" action="#" method="post" id="permissionform">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">ID</label>
+            <div class="layui-input-inline">
+                <input type="text" name="permissionid" placeholder="系统自动生成" autocomplete="off" class="layui-input"  >
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">权限名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="name" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">权限编码</label>
+            <div class="layui-input-inline">
+                <input type="text" name="permission" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">权限url</label>
+            <div class="layui-input-inline">
+                <input type="text" name="url" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">自定义项1</label>
+            <div class="layui-input-inline">
+                <input type="text" name="vdef1"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">自定义项2</label>
+            <div class="layui-input-inline">
+                <input type="text" name="vdef2"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">自定义项3</label>
+            <div class="layui-input-inline">
+                <input type="text" name="vdef3"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">自定义项4</label>
+            <div class="layui-input-inline">
+                <input type="text" name="vdef4"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">自定义项5</label>
+            <div class="layui-input-inline">
+                <input type="text" name="vdef5"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button type="button"  class="layui-btn" lay-submit="" lay-filter="demo1" onclick="addpermission()">保存</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
 
-    <div class="layui-form-item">
-        <label class="layui-form-label">ID</label>
-        <div class="layui-col-xs9">
-            <input type="text" name="permissionid" id="permissionid"   placeholder="系统自动生成无需输入" autocomplete="off" class="layui-input" disabled>
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">权限名称</label>
-        <div class="layui-col-xs9">
-            <input type="text" name="name" id="name" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input" >
-        </div>
-        </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">权限名称</label>
-        <div class="layui-col-xs9">
-            <input type="text" name="code" id="code" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input" >
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">权限url</label>
-        <div class="layui-col-xs9">
-            <input type="text" name="url" id="url" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input" >
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">DEF1</label>
-        <div class="layui-col-xs9">
-            <input type="text" name="vdef1" id="vdef1"    placeholder="" autocomplete="off" class="layui-input" >
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">DEF2</label>
-        <div class="layui-col-xs9">
-            <input type="text" name="vdef2" id="vdef2"    placeholder="" autocomplete="off" class="layui-input" >
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">DEF3</label>
-        <div class="layui-col-xs9">
-            <input type="text" name="vdef3" id="vdef3"    placeholder="" autocomplete="off" class="layui-input" >
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">DEF4</label>
-        <div class="layui-col-xs9">
-            <input type="text" name="vdef4" id="vdef4"    placeholder="" autocomplete="off" class="layui-input" >
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">DEF5</label>
-        <div class="layui-col-xs9">
-            <input type="text" name="vdef5" id="vdef5"    placeholder="" autocomplete="off" class="layui-input" >
-        </div>
-    </div>
-
-    <div class="layui-form-item" style="text-align: center">
-        <div class="layui-col-xs9">
-            <button class="layui-btn " lay-submit lay-filter="addper" id="addpermission">确认添加</button>
-        </div>
-    </div>
-
+</form>
+</div>
 <script>
-    $('#addpermission').click(function(){
-        //开始校验保存
 
-    });
+    function addpermission() {
+            layui.use(['layer', 'form'], function () {
+                var form = layui.form;
+                var layer = layui.layer;
+                form.verify();
+                var formjson = $("#permissionform").serialize();
+                $.post("/action/addpermission",formjson,function (resultjson) {
+                    if (resultjson.code = 200){
+                        parent.layer.closeAll();
+                        parent.layer.msg("保存成功");
+                    }else {
+                        layer.msg("保存失败" + resultjson.msg);
+                    }
+                });
+            });
+
+    }
 </script>
+
 
 </body>
 
