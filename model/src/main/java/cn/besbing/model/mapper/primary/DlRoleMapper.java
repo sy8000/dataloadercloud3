@@ -29,5 +29,5 @@ public interface DlRoleMapper {
 
     int updateByPrimaryKey(DlRole record);
 
-    List<DlRole> selectRolesForTable(@RequestParam(value = "description", required = false) String description);
+    List<DlRole> selectRolesForTable();
 }

@@ -31,4 +31,93 @@ layui.use(['form', 'table','layer'], function () {
             ]
         ]
     });
+
+
+
+
+    //监听头工具栏事件
+    table.on('toolbar(rolesTableFilter)', function(obj){
+        var checkStatus = table.checkStatus(obj.config.id)
+            ,data = checkStatus.data; //获取选中的数据
+        switch(obj.event){
+            case 'add':
+                parent.layer.open({
+                    type: 2,
+                    title: '角色维护',
+                    anim: 2,
+                    area: ['1000px', '500px'],
+                    resize: false,
+                    content: "/dlcsystem/addrole", //注意，如果str是object，那么需要字符拼接。
+                    btn: '关闭全部',
+                    btnAlign: 'c',
+                    yes:function () {
+                        parent.layer.closeAll();
+                    }
+                });
+                break;
+            case 'update':
+                if(data.length === 0){
+                    layer.msg('请选择一行');
+                } else if(data.length > 1){
+                    layer.msg('只能同时编辑一个');
+                } else {
+                    //layer.alert('编辑 [permissionid]：'+ checkStatus.data[0].permissionid);
+                    parent.layer.open({
+                        type: 2,
+                        title: '角色编辑',
+                        anim: 2,
+                        area: ['1000px', '500px'],
+                        resize: false,
+                        content: "/dlcsystem/editrole?roleid=" + checkStatus.data[0].roleid,
+                        btn: '关闭全部',
+                        btnAlign: 'c',
+                        yes:function () {
+                            parent.layer.closeAll();
+                        }
+                    });
+                }
+                break;
+            case 'delete':
+                if(data.length === 0){
+                    layer.msg('请选择一行');
+                } else {
+                    //layer.msg('删除');
+                    $.ajax({
+                        url: "/action/delrole?roleid=" + checkStatus.data[0].roleid,
+                        type: 'delete',
+                        contentType:"application/json",
+                        success: function(data) {
+                            if (data.code == 200){
+                                layer.msg('删除成功');
+                                obj.del();
+                            }else {
+                                layer.msg('删除失败');
+                            }
+                        }
+                    })
+                }
+                break;
+        };
+    });
+
+    //监听行双击事件
+    table.on('rowDouble(rolesTableFilter)', function(obj){
+        parent.layer.open({
+            type: 2,
+            title: '权限预览',
+            anim: 2,
+            area: ['1000px', '500px'],
+            resize: false,
+            content: "/dlcsystem/viewrole?roleid=" + obj.data.roleid,
+            btn: '关闭全部',
+            btnAlign: 'c',
+            yes:function () {
+                parent.layer.closeAll();
+            }
+        });
+    });
+
+
+
+
 });

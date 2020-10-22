@@ -1,9 +1,9 @@
 package cn.besbing.server.controllers.pages;
 
-import cn.besbing.client.enums.BaseResponse;
-import cn.besbing.client.enums.StatusCode;
 import cn.besbing.model.entities.primary.DlPermission;
+import cn.besbing.model.entities.primary.DlRole;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
+import cn.besbing.server.service.primary.PrimaryDlRoleServiceImpl;
 import cn.besbing.server.utils.AbstractLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +16,9 @@ public class DataloaderCloudSystemControllers extends AbstractLog {
 
     @Autowired
     private PrimaryDlPermissionServiceImpl dlPermissionService;
+
+    @Autowired
+    private PrimaryDlRoleServiceImpl dlRoleService;
 
     /**
      * 权限跳转控制器
@@ -88,5 +91,43 @@ public class DataloaderCloudSystemControllers extends AbstractLog {
         }
         return "pages/dataloader/permission/editpermission";
     }
+
+
+    /**
+     * 新增角色控制器
+     * /dlcsystem/addrole
+     */
+    @GetMapping("addrole")
+    public String addrole(){
+        return "pages/dataloader/role/addrole";
+    }
+
+    /**
+     * 查看角色控制器
+     * /dlcsystem/viewrole
+     */
+    @GetMapping("viewrole")
+    public String viewrole(Model model, String roleid) {
+        try{
+            DlRole dlRole = dlRoleService.selectRolebyPrimary(roleid.trim());
+            model.addAttribute("role",dlRole);
+        }catch (Exception e){
+            logger.error(this.getClass() + "error:" + e.getStackTrace());
+        }
+        return "pages/dataloader/role/viewrole";
+    }
+
+    @GetMapping("editrole")
+    public String editrole(Model model, String roleid) {
+        try{
+            DlRole dlRole = dlRoleService.selectRolebyPrimary(roleid);
+            model.addAttribute("role",dlRole);
+        }catch (Exception e){
+            logger.error(this.getClass() + "error:" + e.getStackTrace());
+        }
+        return "pages/dataloader/role/editrole";
+    }
+
+
 
 }

@@ -29,7 +29,6 @@ public class GeneratedPageDataResult {
         PageDataResult pdr = new PageDataResult();
         try{
             //Type type = Class.forName("cn.besbing.model.entities.primary.DlPermission").getClass();
-            PageHelper.startPage(searchDTO.getPage(), searchDTO.getLimit(),true);
             PageInfo<?> pageInfo = new PageInfo<>(list);
             pdr.setTotals(Long.valueOf(pageInfo.getTotal()).intValue());
             pdr.setList(list);

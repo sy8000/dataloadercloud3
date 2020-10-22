@@ -2,6 +2,9 @@ package cn.besbing.model.config;
 
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInterceptor;
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -62,6 +65,10 @@ public class DataSourcePrimary {
     public SqlSessionFactory sqlSessionFactory(@Qualifier("primaryDataSource") DataSource dataSource) throws Exception{
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
+
+        /*Interceptor []plugins = new Interceptor[]{new PageInterceptor()};
+        bean.setPlugins(plugins);*/
+
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:/mappers/primary/*.xml"));
         //手动加载mybatis全局配置文件
         bean.setConfigLocation(new DefaultResourceLoader().getResource("classpath:mybatis-config.xml"));

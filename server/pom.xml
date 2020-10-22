@@ -250,31 +250,13 @@
             <version>2.0.0</version>
         </dependency>
 
-
+        <!--
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.10</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>HikariCP</artifactId>
-                    <groupId>com.zaxxer</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>mybatis</artifactId>
-                    <groupId>org.mybatis</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>mybatis-spring</artifactId>
-                    <groupId>org.mybatis</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-jdbc</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
-
+        -->
 
         <!-- 结束导入dataloader Cloud 1.0 的jar -->
 

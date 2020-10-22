@@ -12,6 +12,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -48,7 +49,6 @@ public class SystemLoadControllers {
      */
     @GetMapping("/dataloaderpermission")
     public PageDataResult permissionList(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit, @RequestParam(value = "keyword", required = false) String keyword) {
-        System.out.println("------------------------page="+page + ";limit=" + limit);
         if (null == page){
             page = 1;
         }
@@ -69,19 +69,25 @@ public class SystemLoadControllers {
         }
     }
 
+    /**
+     * !important ***************************************************************
+     * dataloaderrole中为第二种写法，列出来写，上面dataloaderpermission是抽出来的正常写法
+     * 此处保留仅供自己注意，效率可能相对较低，忍不了了到时候再review吧......
+     * PageHelper.startPage(page, limit,true);必须放在马上要执行的语句上方跑，注意执行顺序
+     * 老问题了，不是不知道，下次要小心
+     * 麻辣隔壁的，今天在这踩坑踩了一下午   2020.10.22
+     * **************************************************************************
+     * @param page
+     * @param limit
+     * @return
+     */
     @GetMapping("dataloaderrole")
-    public PageDataResult rolesList(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit, @RequestParam(value = "keyword", required = false) String keyword){
-        if (null == page){
-            page = 1;
-        }
-        if (null == limit){
-            limit = 10;
-        }
+    public PageDataResult rolesList(@RequestParam(value = "page",defaultValue = "1") int page, @RequestParam(value = "limit",defaultValue = "10") int limit){
         PageDataResult pdr = new PageDataResult();
-        SearchDTO searchDTO = new SearchDTO(page,limit,null);
-        List list = roleService.selectRolesForTable(null);
-        PageHelper.startPage(searchDTO.getPage(), searchDTO.getLimit(),true);
+        PageHelper.startPage(page, limit,true);
+        List list = roleService.selectRolesForTable();
         PageInfo<DlRole> pageInfo = new PageInfo<>(list);
+        /*model.addAttribute("page",pageInfo);*/
         pdr.setTotals(Long.valueOf(pageInfo.getTotal()).intValue());
         pdr.setList(list);
         return pdr;

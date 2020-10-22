@@ -14,6 +14,7 @@ import cn.besbing.model.entities.primary.DlPermissionExample;
 import cn.besbing.model.mapper.primary.DlPermissionMapper;
 import cn.besbing.model.utils.PageDataResult;
 import cn.besbing.model.utils.SearchDTO;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,6 +36,7 @@ public class PrimaryDlPermissionServiceImpl {
     @Transactional(rollbackFor = Exception.class)
     public List<DlPermission> getDataForTable(SearchDTO searchDTO){
         List<DlPermission> list = new ArrayList<DlPermission>();
+        PageHelper.startPage(searchDTO.getPage(), searchDTO.getLimit(),true);
         if(searchDTO.getKeyword() != null){
             list = permissionMapper.selectPermissions(searchDTO.getKeyword().toString());
         }else {

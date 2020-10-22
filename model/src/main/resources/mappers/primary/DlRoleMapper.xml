@@ -91,11 +91,11 @@
     select 
     <include refid="Base_Column_List" />
     from DL_ROLE
-    where ROLEID = #{roleid,jdbcType=CHAR}
+    where TRIM(ROLEID) = #{roleid,jdbcType=CHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from DL_ROLE
-    where ROLEID = #{roleid,jdbcType=CHAR}
+    where TRIM(ROLEID) = #{roleid,jdbcType=CHAR}
   </delete>
   <delete id="deleteByExample" parameterType="cn.besbing.model.entities.primary.DlRoleExample">
     delete from DL_ROLE
@@ -178,11 +178,8 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <select id="selectRolesForTable" parameterType="cn.besbing.model.utils.SearchDTO" resultMap="BaseResultMap">
-    select * from dl_role where 1=1
-    <if test="_parameter != null">
-      and description like '%'||#{_parameter}||'%'
-    </if>
+  <select id="selectRolesForTable"  resultMap="BaseResultMap">
+    select * from dl_role
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     update DL_ROLE
