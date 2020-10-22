@@ -1,0 +1,115 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css " media="all">
+    <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
+    <script src="../../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="../../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../../../../static/css/generalcss/layuitablecheckboxfix.css">
+    <script src="../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+</head>
+<body onload="addWaterMarker()">
+<!--
+<p>Hello, <shiro:principal/>, how are you today?</p>
+<p><shiro:user>guest</shiro:user></p>
+<span th:text="${session.usercode}">人员工号</span>
+-->
+<br/>
+<div class="layui-form">
+    <form class="layui-form" action="#" method="post" id="permissionform">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">ID</label>
+                <div class="layui-input-inline">
+                    <input type="text" th:value="${permission.permissionid}" name="permissionid" readonly  autocomplete="off" class="layui-input"  >
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">权限名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" th:value="${permission.name}" name="name"  lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">权限编码</label>
+                <div class="layui-input-inline">
+                    <input type="text" th:value="${permission.permission}" name="permission"  lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">权限url</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="url" th:value="${permission.url}"  lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">自定义项1</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="vdef1" th:value="${permission.vdef1}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">自定义项2</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="vdef2" th:value="${permission.vdef2}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">自定义项3</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="vdef3" th:value="${permission.vdef3}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">自定义项4</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="vdef4" th:value="${permission.vdef4}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">自定义项5</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="vdef5" th:value="${permission.vdef5}"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button"  class="layui-btn" lay-submit="" lay-filter="demo1" onclick="addpermission()">保存</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script>
+
+    function addpermission() {
+        layui.use(['layer', 'form'], function () {
+            var form = layui.form;
+            var layer = layui.layer;
+            form.verify();
+            var formjson = $("#permissionform").serialize();
+            $.post("/action/addpermission",formjson,function (resultjson) {
+                if (resultjson.code = 200){
+                    parent.layer.closeAll();
+                    parent.layer.msg("更新成功");
+                }else {
+                    layer.msg("更新失败" + resultjson.msg);
+                }
+            });
+        });
+
+    }
+</script>
+
+</body>
+
+</html>

@@ -4,6 +4,7 @@ import cn.besbing.model.entities.primary.DlRole;
 import cn.besbing.model.entities.primary.DlRoleExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.RequestParam;
 
 public interface DlRoleMapper {
     long countByExample(DlRoleExample example);
@@ -27,4 +28,6 @@ public interface DlRoleMapper {
     int updateByPrimaryKeySelective(DlRole record);
 
     int updateByPrimaryKey(DlRole record);
+
+    List<DlRole> selectRolesForTable(@RequestParam(value = "description", required = false) String description);
 }

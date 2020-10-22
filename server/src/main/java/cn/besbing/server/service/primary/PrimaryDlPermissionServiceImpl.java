@@ -16,6 +16,7 @@ import cn.besbing.model.utils.PageDataResult;
 import cn.besbing.model.utils.SearchDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,22 +27,40 @@ public class PrimaryDlPermissionServiceImpl {
     @Autowired(required = false)
     DlPermissionMapper permissionMapper;
 
+    @Transactional(rollbackFor = Exception.class)
     public List<DlPermission> allPermission(DlPermissionExample permissionExample){
         return permissionMapper.selectByExample(null);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public List<DlPermission> getDataForTable(SearchDTO searchDTO){
         List<DlPermission> list = new ArrayList<DlPermission>();
         if(searchDTO.getKeyword() != null){
             list = permissionMapper.selectPermissions(searchDTO.getKeyword().toString());
         }else {
             list = permissionMapper.selectPermissions(null);
+            //list = permissionMapper.selectByExample(null);
         }
         return list;
     }
-
+    @Transactional(rollbackFor = Exception.class)
     public int save(DlPermission dlPermission){
         return permissionMapper.insert(dlPermission);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public DlPermission selectPermissionbyPrimary(String dlPermissionid){
+        return permissionMapper.selectByPrimaryKey(dlPermissionid);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public int update(DlPermission dlPermission){
+        return permissionMapper.updateByPrimaryKey(dlPermission);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public int deletebyPrimary(String dlPermissionid){
+        return permissionMapper.deleteByPrimaryKey(dlPermissionid);
     }
 
 }

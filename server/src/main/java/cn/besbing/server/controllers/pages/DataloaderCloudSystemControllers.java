@@ -1,14 +1,21 @@
 package cn.besbing.server.controllers.pages;
 
+import cn.besbing.client.enums.BaseResponse;
+import cn.besbing.client.enums.StatusCode;
+import cn.besbing.model.entities.primary.DlPermission;
+import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
+import cn.besbing.server.utils.AbstractLog;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("dlcsystem")
 @Controller
-public class DataloaderCloudSystemControllers {
+public class DataloaderCloudSystemControllers extends AbstractLog {
+
+    @Autowired
+    private PrimaryDlPermissionServiceImpl dlPermissionService;
 
     /**
      * 权限跳转控制器
@@ -48,12 +55,38 @@ public class DataloaderCloudSystemControllers {
     }
 
     /**
-     * 新增、编辑权限控制器
-     * /dlcsystem/addeditpermission
+     * 新增权限控制器
+     * /dlcsystem/addpermission
      */
     @GetMapping("addpermission")
-    public String addeditpermission(){
+    public String addpermission(){
         return "pages/dataloader/permission/addpermission";
+    }
+
+    /**
+     * 查看权限控制器
+     * /dlcsystem/viewpermission
+     */
+    @GetMapping("viewpermission")
+    public String viewpermission(Model model, String dlpermissionid) {
+        try{
+            DlPermission dlPermission = dlPermissionService.selectPermissionbyPrimary(dlpermissionid);
+            model.addAttribute("permission",dlPermission);
+        }catch (Exception e){
+            logger.error(this.getClass() + "error:" + e.getStackTrace());
+        }
+        return "pages/dataloader/permission/viewpermission";
+    }
+
+    @GetMapping("editpermission")
+    public String editpermission(Model model, String dlpermissionid) {
+        try{
+            DlPermission dlPermission = dlPermissionService.selectPermissionbyPrimary(dlpermissionid);
+            model.addAttribute("permission",dlPermission);
+        }catch (Exception e){
+            logger.error(this.getClass() + "error:" + e.getStackTrace());
+        }
+        return "pages/dataloader/permission/editpermission";
     }
 
 }

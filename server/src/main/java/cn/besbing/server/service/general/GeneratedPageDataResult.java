@@ -1,5 +1,6 @@
 package cn.besbing.server.service.general;
 
+import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.utils.PageDataResult;
 import cn.besbing.model.utils.SearchDTO;
 import com.github.pagehelper.PageHelper;

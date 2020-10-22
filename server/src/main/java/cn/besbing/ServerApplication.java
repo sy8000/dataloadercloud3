@@ -1,5 +1,6 @@
 package cn.besbing;
 
+import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
@@ -14,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 import java.io.FileNotFoundException;
 
-@SpringBootApplication//(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication//(exclude = PageHelperAutoConfiguration.class)
 @EnableTransactionManagement
 @EnableScheduling
 @EnableAsync

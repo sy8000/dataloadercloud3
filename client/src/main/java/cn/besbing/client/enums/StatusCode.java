@@ -12,7 +12,10 @@ public enum StatusCode {
     USERNOTEXIST(-2,"用户不存在"),
     PASSWDERROR(-3,"密码错误"),
     OTHERUNKOWERROR(-4,"其它未知错误"),
-    DBINSERTFAILED(-5,"数据库写入失败")
+    DBINSERTFAILED(-5,"数据库写入失败"),
+    DBSELECTFAILED(-6,"数据库查询失败"),
+    DBUPDATEFAILED(-7,"数据库更新失败"),
+    DBDELETEFAILED(-8,"数据库更新失败")
     ;
 
     private Integer code;

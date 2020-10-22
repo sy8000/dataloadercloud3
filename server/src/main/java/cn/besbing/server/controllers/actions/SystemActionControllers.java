@@ -6,10 +6,8 @@ import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.server.service.general.GeneratedPrimaryKeysImpl;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -36,16 +34,43 @@ public class SystemActionControllers {
     @Autowired
     GeneratedPrimaryKeysImpl generatedPrimaryKeys;
 
+    /**
+     * 添加权限
+     * @param dlPermission
+     * @return
+     */
+
     @PostMapping("addpermission")
     public BaseResponse addpermission(DlPermission dlPermission){
         BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
+        if (dlPermission.getPermissionid() == null || "".equals(dlPermission.getPermissionid()) || dlPermission.getPermissionid() == ""){
+            try{
+                dlPermission.setPermissionid(generatedPrimaryKeys.getPrimary(20));
+                int i = permissionService.save(dlPermission);
+            }catch (Exception e){
+                baseResponse = new BaseResponse(StatusCode.DBINSERTFAILED.getCode(),e.getMessage());
+            }
+        }else {
+            try{
+                int i = permissionService.update(dlPermission);
+            }catch (Exception e){
+                baseResponse = new BaseResponse(StatusCode.DBUPDATEFAILED.getCode(),e.getMessage());
+            }
+        }
+
+        return baseResponse;
+    }
+
+    @DeleteMapping("delpermission")
+    public BaseResponse delpermission(String dlpermissionid){
+        BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
         try{
-            dlPermission.setPermissionid(generatedPrimaryKeys.getPrimary(20));
-            permissionService.save(dlPermission);
+            permissionService.deletebyPrimary(dlpermissionid);
         }catch (Exception e){
             baseResponse = new BaseResponse(StatusCode.DBINSERTFAILED.getCode(),e.getMessage());
         }
         return baseResponse;
     }
+
 
 }

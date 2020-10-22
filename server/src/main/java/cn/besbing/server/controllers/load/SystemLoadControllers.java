@@ -1,14 +1,20 @@
 package cn.besbing.server.controllers.load;
 
 import cn.besbing.model.entities.primary.DlPermission;
+import cn.besbing.model.entities.primary.DlRole;
 import cn.besbing.model.utils.PageDataResult;
 import cn.besbing.model.utils.SearchDTO;
 import cn.besbing.server.service.general.GeneratedPageDataResult;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
+import cn.besbing.server.service.primary.PrimaryDlRoleServiceImpl;
 import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Xiamen HLYY Network Technology Co., Ltd.
@@ -32,6 +38,9 @@ public class SystemLoadControllers {
     PrimaryDlPermissionServiceImpl permissionService;
 
     @Autowired
+    PrimaryDlRoleServiceImpl roleService;
+
+    @Autowired
     GeneratedPageDataResult generatedPageDataResult;
 
     /**
@@ -39,6 +48,7 @@ public class SystemLoadControllers {
      */
     @GetMapping("/dataloaderpermission")
     public PageDataResult permissionList(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit, @RequestParam(value = "keyword", required = false) String keyword) {
+        System.out.println("------------------------page="+page + ";limit=" + limit);
         if (null == page){
             page = 1;
         }
@@ -51,12 +61,30 @@ public class SystemLoadControllers {
         }
         SearchDTO searchDTO = new SearchDTO(page,limit,keyword);
         try {
-            return generatedPageDataResult.createFormatedTableData(searchDTO,permissionService.getDataForTable(searchDTO));
+            PageDataResult pdr = generatedPageDataResult.createFormatedTableData(searchDTO,permissionService.getDataForTable(searchDTO));
+            return pdr;
         }catch (Exception e){
             e.printStackTrace();
             return null;
         }
     }
 
+    @GetMapping("dataloaderrole")
+    public PageDataResult rolesList(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit, @RequestParam(value = "keyword", required = false) String keyword){
+        if (null == page){
+            page = 1;
+        }
+        if (null == limit){
+            limit = 10;
+        }
+        PageDataResult pdr = new PageDataResult();
+        SearchDTO searchDTO = new SearchDTO(page,limit,null);
+        List list = roleService.selectRolesForTable(null);
+        PageHelper.startPage(searchDTO.getPage(), searchDTO.getLimit(),true);
+        PageInfo<DlRole> pageInfo = new PageInfo<>(list);
+        pdr.setTotals(Long.valueOf(pageInfo.getTotal()).intValue());
+        pdr.setList(list);
+        return pdr;
+    }
 
 }
