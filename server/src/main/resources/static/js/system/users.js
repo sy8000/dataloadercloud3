@@ -1,7 +1,6 @@
 layui.use(['form', 'table','layer'], function () {
     let $ = layui.jquery,
         table = layui.table,
-        form = layui.form,
         layer = layui.layer;
         table.render({
             elem: '#usersTableId',

@@ -55,11 +55,9 @@
                 <label class="layui-form-label">是否锁定</label>
                 <div class="layui-input-inline">
 
-                    <select name="islocked" lay-verify="" lay-filter="test" id="islocked">
-                        <option value="">请选择一个城市</option>
-                        <option value="010">北京</option>
-                        <option value="021">上海</option>
-                        <option value="0571">杭州</option>
+                    <select name="islocked" lay-verify="" lay-filter="islocked" id="islocked">
+                        <option value="0" selected>是</option>
+                        <option value="1">否</option>
                     </select>
 
                 </div>
@@ -84,6 +82,7 @@
 </body>
 
 <script>
+    layui.use(['form'], function () {});
 
     function adduser() {
         layui.use(['layer', 'form'], function () {
