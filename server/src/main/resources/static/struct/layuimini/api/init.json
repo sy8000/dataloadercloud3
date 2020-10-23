@@ -20,6 +20,54 @@
           "href": "/analysis",
           "icon": "fa fa-list-alt",
           "target": "_self"
+        },
+        {
+          "title": "自助服务",
+          "href": "",
+          "icon": "fa fa-cutlery",
+          "target": "_self",
+          "child": [
+            {
+              "title": "委托单变更",
+              "href": "/projModify",
+              "icon": "fa fa-keyboard-o",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "DLP平台",
+          "href": "",
+          "icon": "fa fa-question",
+          "target": "_self",
+          "child": [
+            {
+              "title": "在线提问",
+              "href": "/",
+              "icon": "fa fa-comments",
+              "target": "_self",
+              "alt": "DLP在线提问"
+            },
+            {
+              "title": "问题反馈",
+              "href": "/",
+              "icon": "fa fa-edit",
+              "target": "_self"
+            },
+            {
+              "title": "问题处理",
+              "href": "/",
+              "icon": "fa fa-gears",
+              "target": "_self"
+            },
+            {
+              "title": "处理进度查询",
+              "href": "/analysis",
+              "icon": "fa fa-search",
+              "target": "_self",
+              "alt": "DLP问题处理进度查询"
+            }
+          ]
         }
       ]
     },
@@ -46,25 +94,25 @@
         {
           "title": "权限控制",
           "href": "",
-          "icon": "fa fa-list-alt",
+          "icon": "fa fa-cogs",
           "target": "_self",
           "child": [
             {
               "title": "权限管理",
               "href": "/dlcsystem/permissionsmanage",
-              "icon": "fa fa-list-alt",
+              "icon": "fa fa-cog",
               "target": "_self"
             },
             {
               "title": "角色管理",
               "href": "/dlcsystem/rolesmanage",
-              "icon": "fa fa-list-alt",
+              "icon": "fa fa-drivers-license",
               "target": "_self"
             },
             {
               "title": "用户管理",
               "href": "/dlcsystem/usersmanage",
-              "icon": "fa fa-list-alt",
+              "icon": "fa fa-user",
               "target": "_self"
             }
           ]

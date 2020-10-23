@@ -10,27 +10,46 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="../../../static/struct/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css" media="all">
     <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
     <script src="../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
     <script src="../../../static/struct/layui/layui.js" charset="utf-8"></script>
     <script src="../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../../../static/css/generalcss/layuitablecheckboxfix.css">
 
 </head>
-<body onload="addWaterMarker()">
+<body onload="addWaterMarker()" style="margin: 10px 10px 10px 10px">
 <!--
 <p>Hello, <shiro:principal/>, how are you today?</p>
 <p><shiro:user>guest</shiro:user></p>
 <span th:text="${session.usercode}">人员工号</span>
 -->
 
+<blockquote class="layui-elem-quote layui-quote-nm">
+    <div class="layui-btn-group">
+        <button type="button" class="layui-btn " id="adduserbtn">增加</button>
+        <button type="button" class="layui-btn layui-btn-disabled" disabled id="edituserbtn" >编辑</button>
+        <button type="button" class="layui-btn layui-btn-disabled" disabled id="deluserbtn" >删除</button>
+    </div>
+    <div class="layui-btn-group">
+        <button type="button" class="layui-btn layui-btn-disabled" disabled id="grantuserbtn" >用户授权</button>
+        <button type="button" class="layui-btn" id="searchuserbtn">查询</button>
+        <button type="button" class="layui-btn" id="exprotuserbtn">导出</button>
+    </div>
+</blockquote>
 
+<table class="layui-hide" id="usersTableId" lay-filter="usersTableFilter" ></table>
+<script src="../../../static/struct/layui256/layui.js" charset="utf-8"></script>
+<script src="../../../static/js/system/users.js"></script>
 </body>
 <!--
 <script type="text/javascript">
     watermark({"watermark_txt": initpro()});
 </script>
 -->
+
+<br/>
+
 
 
 </html>

@@ -23,7 +23,7 @@ body{font: 12px/1.5 PingFangSC-Regular,Tahoma,'Microsoft Yahei',sans-serif;}
   top: auto;
   bottom: 10px;
 }
-/*header*/
+/*header#e8ebf2*/
 .header_box{height: 80px; line-height: 80px; border-bottom: 1px  solid #e8ebf2;}
 .header{max-width: 1200px; margin:0 auto; position: relative; }
 .header h1{display: inline-block; padding-left: 35px;}

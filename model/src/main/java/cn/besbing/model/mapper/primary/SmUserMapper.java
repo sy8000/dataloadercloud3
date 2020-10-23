@@ -30,4 +30,6 @@ public interface SmUserMapper {
     int updateByPrimaryKeySelective(SmUser record);
 
     int updateByPrimaryKey(SmUser record);
+
+    List<SmUser> selectUserForTable(String keyword);
 }

@@ -759,4 +759,10 @@
       USER_TYPE = #{userType,jdbcType=DECIMAL}
     where CUSERID = #{cuserid,jdbcType=CHAR}
   </update>
+  <select id="selectUserForTable" parameterType="String" resultMap="BaseResultMap">
+    select * from sm_user where 1=1
+    <if test="_parameter != null">
+      and userName like '%'||#{_parameter}||'%' or userCode like '%'||#{_parameter}||'%'
+    </if>
+  </select>
 </mapper>

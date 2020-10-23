@@ -7,6 +7,7 @@ import cn.besbing.model.utils.SearchDTO;
 import cn.besbing.server.service.general.GeneratedPageDataResult;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
 import cn.besbing.server.service.primary.PrimaryDlRoleServiceImpl;
+import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -43,6 +44,9 @@ public class SystemLoadControllers {
 
     @Autowired
     GeneratedPageDataResult generatedPageDataResult;
+
+    @Autowired
+    PrimarySmuserServiceImpl primarySmuserService;
 
     /**
      * 权限列表加载
@@ -92,5 +96,37 @@ public class SystemLoadControllers {
         pdr.setList(list);
         return pdr;
     }
+
+    /**
+     *
+     * 用户管理表
+     * @param page
+     * @param limit
+     * @param keyword
+     * @return
+     */
+    @GetMapping("/dataloaderuser")
+    public PageDataResult userList(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit, @RequestParam(value = "keyword", required = false) String keyword) {
+        if (null == page){
+            page = 1;
+        }
+        if (null == limit){
+            limit = 10;
+        }
+        if (keyword != null && !"".equals(keyword)) {
+            JSONObject jsonObject = JSONObject.parseObject(keyword);
+            keyword = jsonObject.get("name").toString();
+        }
+        SearchDTO searchDTO = new SearchDTO(page,limit,keyword);
+        try {
+            PageDataResult pdr = generatedPageDataResult.createFormatedTableData(searchDTO,primarySmuserService.selectUserForTableFunc(searchDTO));
+            return pdr;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
 
 }
