@@ -2,8 +2,10 @@ package cn.besbing.server.controllers.pages;
 
 import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.entities.primary.DlRole;
+import cn.besbing.model.entities.primary.SmUser;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
 import cn.besbing.server.service.primary.PrimaryDlRoleServiceImpl;
+import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
 import cn.besbing.server.utils.AbstractLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,9 @@ public class DataloaderCloudSystemControllers extends AbstractLog {
 
     @Autowired
     private PrimaryDlRoleServiceImpl dlRoleService;
+
+    @Autowired
+    private PrimarySmuserServiceImpl smuserService;
 
     /**
      * 权限跳转控制器
@@ -136,6 +141,21 @@ public class DataloaderCloudSystemControllers extends AbstractLog {
     @GetMapping("adduser")
     public String adduser(){
         return "pages/dataloader/user/adduser";
+    }
+
+    /**
+     * 查看用户控制器
+     * /dlcsystem/viewuser
+     */
+    @GetMapping("viewuser")
+    public String viewuser(Model model, String cuserid) {
+        try{
+            SmUser smUser = smuserService.selectByPrimaryKey(cuserid);
+            model.addAttribute("user",smUser);
+        }catch (Exception e){
+            logger.error(this.getClass() + "error:" + e.getStackTrace());
+        }
+        return "pages/dataloader/permission/viewpermission";
     }
 
 }

@@ -66,7 +66,7 @@ public class PrimarySmuserServiceImpl implements  SmUserMapper{
 
     @Override
     public SmUser selectByPrimaryKey(String cuserid) {
-        return null;
+        return smUserMapper.selectByPrimaryKey(cuserid);
     }
 
     @Override
@@ -104,5 +104,13 @@ public class PrimarySmuserServiceImpl implements  SmUserMapper{
             //list = permissionMapper.selectByExample(null);
         }
         return list;
+    }
+
+    public int save(SmUser smUser) {
+        return smUserMapper.insert(smUser);
+    }
+
+    public int update(SmUser smUser) {
+        return smUserMapper.updateByPrimaryKey(smUser);
     }
 }

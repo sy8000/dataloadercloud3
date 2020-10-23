@@ -15,7 +15,8 @@ public enum StatusCode {
     DBINSERTFAILED(-5,"数据库写入失败"),
     DBSELECTFAILED(-6,"数据库查询失败"),
     DBUPDATEFAILED(-7,"数据库更新失败"),
-    DBDELETEFAILED(-8,"数据库更新失败")
+    DBDELETEFAILED(-8,"数据库更新失败"),
+    DBSELECTSEARCHFAILED(-9,"获取那个天才的人员信息失败^_^")
     ;
 
     private Integer code;

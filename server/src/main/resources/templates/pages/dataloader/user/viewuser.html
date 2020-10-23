@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <html>
 <head>
     <meta charset="UTF-8">
@@ -23,6 +23,45 @@
 <span th:text="${session.usercode}">人员工号</span>
 -->
 <br/>
+<div class="layui-form">
+    <form class="layui-form" action="#" method="post" id="userform">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">用户ID</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="cuserid" th:value="${user.cuserid}" readonly placeholder="系统自动生成" autocomplete="off" class="layui-input"  >
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">用户工号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="userCode" th:value="${user.userCode}" readonly id='usercode' lay-verify="required" autocomplete="off" class="layui-input" onblur="setmail()">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">用户名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="userName" readonly th:value="${user.userName}" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">电子邮件</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="mail" name="email" th:value="${user.email}" readonly lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">是否锁定</label>
+                <div class="layui-input-inline">
+
+                    <input type="text" id="lock" name="islocked" th:value="${user.islocked}" readonly lay-verify="required" autocomplete="off" class="layui-input">
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
 
 
 </body>

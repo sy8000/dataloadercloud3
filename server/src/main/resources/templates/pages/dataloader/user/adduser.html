@@ -36,7 +36,7 @@
             <div class="layui-inline">
                 <label class="layui-form-label">用户工号</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="userCode" lay-verify="required" autocomplete="off" class="layui-input">
+                    <input type="text" name="userCode" id='usercode' lay-verify="required" autocomplete="off" class="layui-input" onblur="setmail()">
                 </div>
             </div>
             <div class="layui-inline">
@@ -48,7 +48,7 @@
             <div class="layui-inline">
                 <label class="layui-form-label">电子邮件</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="email" lay-verify="required" autocomplete="off" class="layui-input">
+                    <input type="text" id="mail" name="email" lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-inline">
@@ -60,12 +60,6 @@
                         <option value="1">否</option>
                     </select>
 
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">用户角色</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="roleid"  autocomplete="off" class="layui-input">
                 </div>
             </div>
         </div>
@@ -82,13 +76,21 @@
 </body>
 
 <script>
-    layui.use(['form'], function () {});
+    let form;
+    layui.use(['form'], function () {
+            form = layui.form;
+        let layer = layui.layer;
+    });
+
+    function setmail() {
+        $('#mail').val($('#usercode').val() + '@hongfa.cn');
+    }
 
     function adduser() {
-        layui.use(['layer', 'form'], function () {
+        /*layui.use(['layer', 'form'], function () {
             let form = layui.form;
-            let layer = layui.layer;
-            form.verify();
+            let layer = layui.layer;*/
+            //form.verify();
             let formjson = $("#userform").serialize();
             //console.log(JSON.stringify(formjson));
             $.post("/action/adduser",formjson,function (resultjson) {
@@ -101,7 +103,7 @@
                     layer.msg("保存失败" + resultjson.msg);
                 }
             });
-        });
+        //});
 
     }
 </script>

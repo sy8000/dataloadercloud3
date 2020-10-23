@@ -27,6 +27,19 @@ layui.use(['form', 'table','layer'], function () {
     });
 
 
+    table.on('checkbox(usersTableFilter)', function(obj){
+        console.log(obj.checked); //当前是否选中状态
+        console.log(obj.data); //选中行的相关数据
+        console.log(obj.type); //如果触发的是全选，则为：all，如果触发的是单选，则为：one
+        if (obj.checked == true || obj.data.length == 1){
+            $("#edituserbtn").removeAttr("disabled");
+            $("#edituserbtn").removeClass("layui-btn-disabled");
+        }else {
+            $("#edituserbtn").attr("disabled", true);
+            $("#edituserbtn").addClass("layui-btn-disabled");
+        }
+    });
+
 
         //添加用户按钮点击
     $("#adduserbtn").click(function () {
@@ -41,7 +54,7 @@ layui.use(['form', 'table','layer'], function () {
     });
         //编辑用户按钮点击
     $("#edituserbtn").click(function () {
-
+        alert("aaa")
     });
         //删除用户按钮点击
     $("#deluserbtn").click(function () {

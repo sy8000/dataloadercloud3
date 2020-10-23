@@ -393,4 +393,5 @@ public class SmUser implements Serializable {
     public void setUserType(BigDecimal userType) {
         this.userType = userType;
     }
+
 }

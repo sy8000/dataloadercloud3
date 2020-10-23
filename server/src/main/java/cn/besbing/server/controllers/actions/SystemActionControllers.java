@@ -4,9 +4,11 @@ import cn.besbing.client.enums.BaseResponse;
 import cn.besbing.client.enums.StatusCode;
 import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.entities.primary.DlRole;
+import cn.besbing.model.entities.primary.SmUser;
 import cn.besbing.server.service.general.GeneratedPrimaryKeysImpl;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
 import cn.besbing.server.service.primary.PrimaryDlRoleServiceImpl;
+import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -39,6 +41,9 @@ public class SystemActionControllers {
 
     @Autowired
     GeneratedPrimaryKeysImpl generatedPrimaryKeys;
+
+    @Autowired
+    PrimarySmuserServiceImpl primarySmuserService;
 
     /**
      * 添加权限
@@ -118,6 +123,50 @@ public class SystemActionControllers {
         }catch (Exception e){
             baseResponse = new BaseResponse(StatusCode.DBINSERTFAILED.getCode(),e.getMessage());
         }
+        return baseResponse;
+    }
+
+    /**
+     * 添加用户
+     * @param smUserCommit
+     * @return
+     */
+
+    @PostMapping("adduser")
+    public BaseResponse addpermission(SmUser smUserCommit){
+        BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
+        //双条件验证，如果没有这用户，则去判断有没有这用户的工号
+        SmUser userbycode = primarySmuserService.selectByUserCode(smUserCommit.getUserCode().trim());
+        if (userbycode == null){
+            try{
+                //先去查找一个天才的信息为基础数据
+                SmUser smUser = primarySmuserService.selectUserByCode("1002437");
+                if (smUser != null){
+                    smUser.setCuserid(generatedPrimaryKeys.getPrimary(20));
+                    smUser.setEmail(smUserCommit.getEmail());
+                    smUser.setUserCode(smUserCommit.getUserCode());
+                    smUser.setUserName(smUserCommit.getUserName());
+                    smUser.setIslocked(smUserCommit.getIslocked());
+                    int i = primarySmuserService.save(smUser);
+                }else {
+                    baseResponse = new BaseResponse(StatusCode.DBSELECTSEARCHFAILED.getCode(),"获取sheny那个天才的信息失败，可能是你的网络挂了");
+                }
+            }catch (Exception e){
+                baseResponse = new BaseResponse(StatusCode.DBINSERTFAILED.getCode(),e.getMessage());
+            }
+        }else {
+            try{
+                SmUser smUser = primarySmuserService.selectByPrimaryKey(smUserCommit.getCuserid());
+                smUser.setEmail(smUserCommit.getEmail());
+                smUser.setUserCode(smUserCommit.getUserCode());
+                smUser.setUserName(smUserCommit.getUserName());
+                smUser.setIslocked(smUserCommit.getIslocked());
+                int i = primarySmuserService.update(smUser);
+            }catch (Exception e){
+                baseResponse = new BaseResponse(StatusCode.DBUPDATEFAILED.getCode(),e.getMessage());
+            }
+        }
+
         return baseResponse;
     }
 

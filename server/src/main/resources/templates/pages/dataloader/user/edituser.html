@@ -23,6 +23,53 @@
 <span th:text="${session.usercode}">人员工号</span>
 -->
 <br/>
+<div class="layui-form">
+    <form class="layui-form" action="#" method="post" id="userform">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">用户ID</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="cuserid" readonly placeholder="系统自动生成" autocomplete="off" class="layui-input"  >
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">用户工号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="userCode" id='usercode' lay-verify="required" autocomplete="off" class="layui-input" onblur="setmail()">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">用户名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="userName" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">电子邮件</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="mail" name="email" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">是否锁定</label>
+                <div class="layui-input-inline">
+
+                    <select name="islocked" lay-verify="" lay-filter="islocked" id="islocked">
+                        <option value="0" selected>是</option>
+                        <option value="1">否</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button"  class="layui-btn" lay-submit="" lay-filter="demo1" onclick="adduser()">保存</button>
+            </div>
+        </div>
+
+    </form>
+</div>
 
 
 </body>
