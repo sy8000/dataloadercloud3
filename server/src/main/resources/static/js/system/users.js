@@ -1,6 +1,7 @@
 layui.use(['form', 'table','layer'], function () {
     let $ = layui.jquery,
         table = layui.table,
+        form = layui.form,
         layer = layui.layer;
         table.render({
             elem: '#usersTableId',
@@ -26,9 +27,18 @@ layui.use(['form', 'table','layer'], function () {
             ]
     });
 
+
+
         //添加用户按钮点击
     $("#adduserbtn").click(function () {
-
+        parent.layer.open({
+            type: 2,
+            title: '用户添加',
+            anim: 2,
+            area: ['1000px', '500px'],
+            resize: false,
+            content: "/dlcsystem/adduser", //注意，如果str是object，那么需要字符拼接。
+        });
     });
         //编辑用户按钮点击
     $("#edituserbtn").click(function () {

@@ -129,5 +129,13 @@ public class DataloaderCloudSystemControllers extends AbstractLog {
     }
 
 
+    /**
+     * 新增用户控制器
+     * /dlcsystem/adduser
+     */
+    @GetMapping("adduser")
+    public String adduser(){
+        return "pages/dataloader/user/adduser";
+    }
 
 }
