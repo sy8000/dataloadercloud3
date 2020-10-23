@@ -21,9 +21,10 @@ public class GeneratedPrimaryKeysImpl {
 
 
     private  final String  base = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    StringBuffer sb = new StringBuffer();
+
 
     public  String getModulePrimary(String moduleName){
+        StringBuffer sb = new StringBuffer();
         int strOtherLength = 20 - moduleName.length();
 
         int number = 0;
@@ -36,6 +37,7 @@ public class GeneratedPrimaryKeysImpl {
     }
 
     public  String getPrimary(int num){
+        StringBuffer sb = new StringBuffer();
         int number = 0;
         Random random = new Random();
         for (int i=0;i<num;i++){

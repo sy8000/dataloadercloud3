@@ -86,10 +86,12 @@ layui.use(['form', 'table','layer'], function () {
                         url: "/action/delrole?roleid=" + checkStatus.data[0].roleid,
                         type: 'delete',
                         contentType:"application/json",
-                        success: function(data) {
-                            if (data.code == 200){
+                        success: function(result) {
+                            if (result.code == 200){
                                 layer.msg('删除成功');
-                                obj.del();
+                                checkStatus.data[0].del();
+                                console.log(obj);
+                                console.log(data[0]);
                             }else {
                                 layer.msg('删除失败');
                             }

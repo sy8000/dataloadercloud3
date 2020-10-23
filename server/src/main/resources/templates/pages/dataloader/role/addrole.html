@@ -94,16 +94,18 @@
 
     function addrole() {
             layui.use(['layer', 'form'], function () {
-                var form = layui.form;
-                var layer = layui.layer;
+                let form = layui.form;
+                let layer = layui.layer;
                 form.verify();
-                var formjson = $("#roleform").serialize();
-                console.log(JSON.stringify(formjson));
+                let formjson = $("#roleform").serialize();
+                //console.log(JSON.stringify(formjson));
                 $.post("/action/addrole",formjson,function (resultjson) {
                     if (resultjson.code == '200'){
                         parent.layer.closeAll();
+                        //location.reload();
                         parent.layer.msg("保存成功");
                     }else {
+                        console.log(resultjson.msg);
                         layer.msg("保存失败" + resultjson.msg);
                     }
                 });
