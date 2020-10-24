@@ -2,6 +2,7 @@
             top: 50%;
             transform: translateY(-50%);
 }
+
 .layui-input, .layui-select, .layui-textarea {
     BACKGROUND-COLOR: transparent;
     outline-style: none;

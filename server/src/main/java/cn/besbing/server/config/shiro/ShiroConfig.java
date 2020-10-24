@@ -26,6 +26,7 @@ public class ShiroConfig {
 
         // 配置不会被拦截的链接 顺序判断
         filterChainDefinitionMap.put("/static/**", "anon");
+        filterChainDefinitionMap.put("/loading/**", "anon");
         filterChainDefinitionMap.put("/action/login", "anon");
         filterChainDefinitionMap.put("/test/**", "anon");
 

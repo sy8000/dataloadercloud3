@@ -29,7 +29,7 @@
           "child": [
             {
               "title": "委托单变更",
-              "href": "/projModify",
+              "href": "/lims/projectmodify",
               "icon": "fa fa-keyboard-o",
               "target": "_self"
             }

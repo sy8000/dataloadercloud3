@@ -155,7 +155,18 @@ public class DataloaderCloudSystemControllers extends AbstractLog {
         }catch (Exception e){
             logger.error(this.getClass() + "error:" + e.getStackTrace());
         }
-        return "pages/dataloader/permission/viewpermission";
+        return "pages/dataloader/user/viewuser";
+    }
+
+    @GetMapping("edituser")
+    public String edituser(Model model, String cuserid) {
+        try{
+            SmUser smUser = smuserService.selectByPrimaryKey(cuserid);
+            model.addAttribute("user",smUser);
+        }catch (Exception e){
+            logger.error(this.getClass() + "error:" + e.getStackTrace());
+        }
+        return "pages/dataloader/user/edituser";
     }
 
 }

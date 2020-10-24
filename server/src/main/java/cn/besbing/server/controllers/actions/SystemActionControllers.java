@@ -110,7 +110,7 @@ public class SystemActionControllers {
         try{
             permissionService.deletebyPrimary(dlpermissionid);
         }catch (Exception e){
-            baseResponse = new BaseResponse(StatusCode.DBINSERTFAILED.getCode(),e.getMessage());
+            baseResponse = new BaseResponse(StatusCode.DBDELETEFAILED.getCode(),e.getMessage());
         }
         return baseResponse;
     }
@@ -121,7 +121,7 @@ public class SystemActionControllers {
         try{
             primaryDlRoleService.deletebyPrimary(roleid.trim());
         }catch (Exception e){
-            baseResponse = new BaseResponse(StatusCode.DBINSERTFAILED.getCode(),e.getMessage());
+            baseResponse = new BaseResponse(StatusCode.DBDELETEFAILED.getCode(),e.getMessage());
         }
         return baseResponse;
     }
@@ -133,10 +133,10 @@ public class SystemActionControllers {
      */
 
     @PostMapping("adduser")
-    public BaseResponse addpermission(SmUser smUserCommit){
+    public BaseResponse adduser(SmUser smUserCommit){
         BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
         //双条件验证，如果没有这用户，则去判断有没有这用户的工号
-        SmUser userbycode = primarySmuserService.selectByUserCode(smUserCommit.getUserCode().trim());
+        SmUser userbycode = primarySmuserService.selectUserByCode(smUserCommit.getUserCode().trim());
         if (userbycode == null){
             try{
                 //先去查找一个天才的信息为基础数据
@@ -170,5 +170,16 @@ public class SystemActionControllers {
         return baseResponse;
     }
 
+
+    @DeleteMapping("deluser")
+    public BaseResponse deluser(String cuserid){
+        BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
+        try{
+            primarySmuserService.deletebyPrimary(cuserid.trim());
+        }catch (Exception e){
+            baseResponse = new BaseResponse(StatusCode.DBDELETEFAILED.getCode(),e.getMessage());
+        }
+        return baseResponse;
+    }
 
 }
