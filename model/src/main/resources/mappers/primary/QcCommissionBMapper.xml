@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.besbing.model.mapper.primary.QcCommissionBMapper">
+  <resultMap id="BaseResultMap" type="cn.besbing.model.entities.primary.QcCommissionB">
+    <id column="PK_COMMISSION_B" jdbcType="CHAR" property="pkCommissionB" />
+    <result column="ROWNO" jdbcType="VARCHAR" property="rowno" />
+    <result column="UNIQUEID" jdbcType="VARCHAR" property="uniqueid" />
+    <result column="PK_PRODUCTSERIAL" jdbcType="VARCHAR" property="pkProductserial" />
+    <result column="PK_ENTERPRISESTANDARD" jdbcType="VARCHAR" property="pkEnterprisestandard" />
+    <result column="TYPENO" jdbcType="VARCHAR" property="typeno" />
+    <result column="PK_PRODUCTSPEC" jdbcType="VARCHAR" property="pkProductspec" />
+    <result column="PK_STRUCTURETYPE" jdbcType="VARCHAR" property="pkStructuretype" />
+    <result column="CONTACTTYPE" jdbcType="VARCHAR" property="contacttype" />
+    <result column="QUANTITY" jdbcType="DECIMAL" property="quantity" />
+    <result column="MANUFACTURER" jdbcType="VARCHAR" property="manufacturer" />
+    <result column="PK_CONTACTBRAND" jdbcType="VARCHAR" property="pkContactbrand" />
+    <result column="CONTACTMODEL" jdbcType="VARCHAR" property="contactmodel" />
+    <result column="PRODUCTSTAGE" jdbcType="VARCHAR" property="productstage" />
+    <result column="PK_SAMPLEGROUP" jdbcType="VARCHAR" property="pkSamplegroup" />
+    <result column="ANALYSISREF" jdbcType="VARCHAR" property="analysisref" />
+    <result column="OTHERINFO" jdbcType="VARCHAR" property="otherinfo" />
+    <result column="DEF1" jdbcType="VARCHAR" property="def1" />
+    <result column="DEF2" jdbcType="VARCHAR" property="def2" />
+    <result column="DEF3" jdbcType="VARCHAR" property="def3" />
+    <result column="DEF4" jdbcType="VARCHAR" property="def4" />
+    <result column="DEF5" jdbcType="VARCHAR" property="def5" />
+    <result column="DEF6" jdbcType="VARCHAR" property="def6" />
+    <result column="DEF7" jdbcType="VARCHAR" property="def7" />
+    <result column="DEF8" jdbcType="VARCHAR" property="def8" />
+    <result column="DEF9" jdbcType="VARCHAR" property="def9" />
+    <result column="DEF10" jdbcType="VARCHAR" property="def10" />
+    <result column="DEF11" jdbcType="VARCHAR" property="def11" />
+    <result column="DEF12" jdbcType="VARCHAR" property="def12" />
+    <result column="DEF13" jdbcType="VARCHAR" property="def13" />
+    <result column="DEF14" jdbcType="VARCHAR" property="def14" />
+    <result column="DEF15" jdbcType="VARCHAR" property="def15" />
+    <result column="DEF16" jdbcType="VARCHAR" property="def16" />
+    <result column="DEF17" jdbcType="VARCHAR" property="def17" />
+    <result column="DEF18" jdbcType="VARCHAR" property="def18" />
+    <result column="DEF19" jdbcType="VARCHAR" property="def19" />
+    <result column="DEF20" jdbcType="VARCHAR" property="def20" />
+    <result column="PK_COMMISSION_H" jdbcType="CHAR" property="pkCommissionH" />
+    <result column="TS" jdbcType="CHAR" property="ts" />
+    <result column="DR" jdbcType="DECIMAL" property="dr" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    PK_COMMISSION_B, ROWNO, UNIQUEID, PK_PRODUCTSERIAL, PK_ENTERPRISESTANDARD, TYPENO, 
+    PK_PRODUCTSPEC, PK_STRUCTURETYPE, CONTACTTYPE, QUANTITY, MANUFACTURER, PK_CONTACTBRAND, 
+    CONTACTMODEL, PRODUCTSTAGE, PK_SAMPLEGROUP, ANALYSISREF, OTHERINFO, DEF1, DEF2, DEF3, 
+    DEF4, DEF5, DEF6, DEF7, DEF8, DEF9, DEF10, DEF11, DEF12, DEF13, DEF14, DEF15, DEF16, 
+    DEF17, DEF18, DEF19, DEF20, PK_COMMISSION_H, TS, DR
+  </sql>
+  <select id="selectByExample" parameterType="cn.besbing.model.entities.primary.QcCommissionBExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from QC_COMMISSION_B
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from QC_COMMISSION_B
+    where PK_COMMISSION_B = #{pkCommissionB,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from QC_COMMISSION_B
+    where PK_COMMISSION_B = #{pkCommissionB,jdbcType=CHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.besbing.model.entities.primary.QcCommissionBExample">
+    delete from QC_COMMISSION_B
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.besbing.model.entities.primary.QcCommissionB">
+    insert into QC_COMMISSION_B (PK_COMMISSION_B, ROWNO, UNIQUEID, 
+      PK_PRODUCTSERIAL, PK_ENTERPRISESTANDARD, 
+      TYPENO, PK_PRODUCTSPEC, PK_STRUCTURETYPE, 
+      CONTACTTYPE, QUANTITY, MANUFACTURER, 
+      PK_CONTACTBRAND, CONTACTMODEL, PRODUCTSTAGE, 
+      PK_SAMPLEGROUP, ANALYSISREF, OTHERINFO, 
+      DEF1, DEF2, DEF3, DEF4, 
+      DEF5, DEF6, DEF7, DEF8, 
+      DEF9, DEF10, DEF11, 
+      DEF12, DEF13, DEF14, 
+      DEF15, DEF16, DEF17, 
+      DEF18, DEF19, DEF20, 
+      PK_COMMISSION_H, TS, DR)
+    values (#{pkCommissionB,jdbcType=CHAR}, #{rowno,jdbcType=VARCHAR}, #{uniqueid,jdbcType=VARCHAR}, 
+      #{pkProductserial,jdbcType=VARCHAR}, #{pkEnterprisestandard,jdbcType=VARCHAR}, 
+      #{typeno,jdbcType=VARCHAR}, #{pkProductspec,jdbcType=VARCHAR}, #{pkStructuretype,jdbcType=VARCHAR}, 
+      #{contacttype,jdbcType=VARCHAR}, #{quantity,jdbcType=DECIMAL}, #{manufacturer,jdbcType=VARCHAR}, 
+      #{pkContactbrand,jdbcType=VARCHAR}, #{contactmodel,jdbcType=VARCHAR}, #{productstage,jdbcType=VARCHAR}, 
+      #{pkSamplegroup,jdbcType=VARCHAR}, #{analysisref,jdbcType=VARCHAR}, #{otherinfo,jdbcType=VARCHAR}, 
+      #{def1,jdbcType=VARCHAR}, #{def2,jdbcType=VARCHAR}, #{def3,jdbcType=VARCHAR}, #{def4,jdbcType=VARCHAR}, 
+      #{def5,jdbcType=VARCHAR}, #{def6,jdbcType=VARCHAR}, #{def7,jdbcType=VARCHAR}, #{def8,jdbcType=VARCHAR}, 
+      #{def9,jdbcType=VARCHAR}, #{def10,jdbcType=VARCHAR}, #{def11,jdbcType=VARCHAR}, 
+      #{def12,jdbcType=VARCHAR}, #{def13,jdbcType=VARCHAR}, #{def14,jdbcType=VARCHAR}, 
+      #{def15,jdbcType=VARCHAR}, #{def16,jdbcType=VARCHAR}, #{def17,jdbcType=VARCHAR}, 
+      #{def18,jdbcType=VARCHAR}, #{def19,jdbcType=VARCHAR}, #{def20,jdbcType=VARCHAR}, 
+      #{pkCommissionH,jdbcType=CHAR}, #{ts,jdbcType=CHAR}, #{dr,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.besbing.model.entities.primary.QcCommissionB">
+    insert into QC_COMMISSION_B
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pkCommissionB != null">
+        PK_COMMISSION_B,
+      </if>
+      <if test="rowno != null">
+        ROWNO,
+      </if>
+      <if test="uniqueid != null">
+        UNIQUEID,
+      </if>
+      <if test="pkProductserial != null">
+        PK_PRODUCTSERIAL,
+      </if>
+      <if test="pkEnterprisestandard != null">
+        PK_ENTERPRISESTANDARD,
+      </if>
+      <if test="typeno != null">
+        TYPENO,
+      </if>
+      <if test="pkProductspec != null">
+        PK_PRODUCTSPEC,
+      </if>
+      <if test="pkStructuretype != null">
+        PK_STRUCTURETYPE,
+      </if>
+      <if test="contacttype != null">
+        CONTACTTYPE,
+      </if>
+      <if test="quantity != null">
+        QUANTITY,
+      </if>
+      <if test="manufacturer != null">
+        MANUFACTURER,
+      </if>
+      <if test="pkContactbrand != null">
+        PK_CONTACTBRAND,
+      </if>
+      <if test="contactmodel != null">
+        CONTACTMODEL,
+      </if>
+      <if test="productstage != null">
+        PRODUCTSTAGE,
+      </if>
+      <if test="pkSamplegroup != null">
+        PK_SAMPLEGROUP,
+      </if>
+      <if test="analysisref != null">
+        ANALYSISREF,
+      </if>
+      <if test="otherinfo != null">
+        OTHERINFO,
+      </if>
+      <if test="def1 != null">
+        DEF1,
+      </if>
+      <if test="def2 != null">
+        DEF2,
+      </if>
+      <if test="def3 != null">
+        DEF3,
+      </if>
+      <if test="def4 != null">
+        DEF4,
+      </if>
+      <if test="def5 != null">
+        DEF5,
+      </if>
+      <if test="def6 != null">
+        DEF6,
+      </if>
+      <if test="def7 != null">
+        DEF7,
+      </if>
+      <if test="def8 != null">
+        DEF8,
+      </if>
+      <if test="def9 != null">
+        DEF9,
+      </if>
+      <if test="def10 != null">
+        DEF10,
+      </if>
+      <if test="def11 != null">
+        DEF11,
+      </if>
+      <if test="def12 != null">
+        DEF12,
+      </if>
+      <if test="def13 != null">
+        DEF13,
+      </if>
+      <if test="def14 != null">
+        DEF14,
+      </if>
+      <if test="def15 != null">
+        DEF15,
+      </if>
+      <if test="def16 != null">
+        DEF16,
+      </if>
+      <if test="def17 != null">
+        DEF17,
+      </if>
+      <if test="def18 != null">
+        DEF18,
+      </if>
+      <if test="def19 != null">
+        DEF19,
+      </if>
+      <if test="def20 != null">
+        DEF20,
+      </if>
+      <if test="pkCommissionH != null">
+        PK_COMMISSION_H,
+      </if>
+      <if test="ts != null">
+        TS,
+      </if>
+      <if test="dr != null">
+        DR,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pkCommissionB != null">
+        #{pkCommissionB,jdbcType=CHAR},
+      </if>
+      <if test="rowno != null">
+        #{rowno,jdbcType=VARCHAR},
+      </if>
+      <if test="uniqueid != null">
+        #{uniqueid,jdbcType=VARCHAR},
+      </if>
+      <if test="pkProductserial != null">
+        #{pkProductserial,jdbcType=VARCHAR},
+      </if>
+      <if test="pkEnterprisestandard != null">
+        #{pkEnterprisestandard,jdbcType=VARCHAR},
+      </if>
+      <if test="typeno != null">
+        #{typeno,jdbcType=VARCHAR},
+      </if>
+      <if test="pkProductspec != null">
+        #{pkProductspec,jdbcType=VARCHAR},
+      </if>
+      <if test="pkStructuretype != null">
+        #{pkStructuretype,jdbcType=VARCHAR},
+      </if>
+      <if test="contacttype != null">
+        #{contacttype,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null">
+        #{quantity,jdbcType=DECIMAL},
+      </if>
+      <if test="manufacturer != null">
+        #{manufacturer,jdbcType=VARCHAR},
+      </if>
+      <if test="pkContactbrand != null">
+        #{pkContactbrand,jdbcType=VARCHAR},
+      </if>
+      <if test="contactmodel != null">
+        #{contactmodel,jdbcType=VARCHAR},
+      </if>
+      <if test="productstage != null">
+        #{productstage,jdbcType=VARCHAR},
+      </if>
+      <if test="pkSamplegroup != null">
+        #{pkSamplegroup,jdbcType=VARCHAR},
+      </if>
+      <if test="analysisref != null">
+        #{analysisref,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinfo != null">
+        #{otherinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="def1 != null">
+        #{def1,jdbcType=VARCHAR},
+      </if>
+      <if test="def2 != null">
+        #{def2,jdbcType=VARCHAR},
+      </if>
+      <if test="def3 != null">
+        #{def3,jdbcType=VARCHAR},
+      </if>
+      <if test="def4 != null">
+        #{def4,jdbcType=VARCHAR},
+      </if>
+      <if test="def5 != null">
+        #{def5,jdbcType=VARCHAR},
+      </if>
+      <if test="def6 != null">
+        #{def6,jdbcType=VARCHAR},
+      </if>
+      <if test="def7 != null">
+        #{def7,jdbcType=VARCHAR},
+      </if>
+      <if test="def8 != null">
+        #{def8,jdbcType=VARCHAR},
+      </if>
+      <if test="def9 != null">
+        #{def9,jdbcType=VARCHAR},
+      </if>
+      <if test="def10 != null">
+        #{def10,jdbcType=VARCHAR},
+      </if>
+      <if test="def11 != null">
+        #{def11,jdbcType=VARCHAR},
+      </if>
+      <if test="def12 != null">
+        #{def12,jdbcType=VARCHAR},
+      </if>
+      <if test="def13 != null">
+        #{def13,jdbcType=VARCHAR},
+      </if>
+      <if test="def14 != null">
+        #{def14,jdbcType=VARCHAR},
+      </if>
+      <if test="def15 != null">
+        #{def15,jdbcType=VARCHAR},
+      </if>
+      <if test="def16 != null">
+        #{def16,jdbcType=VARCHAR},
+      </if>
+      <if test="def17 != null">
+        #{def17,jdbcType=VARCHAR},
+      </if>
+      <if test="def18 != null">
+        #{def18,jdbcType=VARCHAR},
+      </if>
+      <if test="def19 != null">
+        #{def19,jdbcType=VARCHAR},
+      </if>
+      <if test="def20 != null">
+        #{def20,jdbcType=VARCHAR},
+      </if>
+      <if test="pkCommissionH != null">
+        #{pkCommissionH,jdbcType=CHAR},
+      </if>
+      <if test="ts != null">
+        #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        #{dr,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.besbing.model.entities.primary.QcCommissionBExample" resultType="java.lang.Long">
+    select count(*) from QC_COMMISSION_B
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+    <select id="getQcbByProjectNo" resultMap="BaseResultMap">
+      select * from qc_commission_b
+      where pk_commission_h = #{pkCommissionH,jdbcType=CHAR}
+      and dr = 0 and typeno = #{typeno}
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+    update QC_COMMISSION_B
+    <set>
+      <if test="record.pkCommissionB != null">
+        PK_COMMISSION_B = #{record.pkCommissionB,jdbcType=CHAR},
+      </if>
+      <if test="record.rowno != null">
+        ROWNO = #{record.rowno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uniqueid != null">
+        UNIQUEID = #{record.uniqueid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkProductserial != null">
+        PK_PRODUCTSERIAL = #{record.pkProductserial,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkEnterprisestandard != null">
+        PK_ENTERPRISESTANDARD = #{record.pkEnterprisestandard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.typeno != null">
+        TYPENO = #{record.typeno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkProductspec != null">
+        PK_PRODUCTSPEC = #{record.pkProductspec,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkStructuretype != null">
+        PK_STRUCTURETYPE = #{record.pkStructuretype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contacttype != null">
+        CONTACTTYPE = #{record.contacttype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.quantity != null">
+        QUANTITY = #{record.quantity,jdbcType=DECIMAL},
+      </if>
+      <if test="record.manufacturer != null">
+        MANUFACTURER = #{record.manufacturer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkContactbrand != null">
+        PK_CONTACTBRAND = #{record.pkContactbrand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contactmodel != null">
+        CONTACTMODEL = #{record.contactmodel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productstage != null">
+        PRODUCTSTAGE = #{record.productstage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkSamplegroup != null">
+        PK_SAMPLEGROUP = #{record.pkSamplegroup,jdbcType=VARCHAR},
+      </if>
+      <if test="record.analysisref != null">
+        ANALYSISREF = #{record.analysisref,jdbcType=VARCHAR},
+      </if>
+      <if test="record.otherinfo != null">
+        OTHERINFO = #{record.otherinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def1 != null">
+        DEF1 = #{record.def1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def2 != null">
+        DEF2 = #{record.def2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def3 != null">
+        DEF3 = #{record.def3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def4 != null">
+        DEF4 = #{record.def4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def5 != null">
+        DEF5 = #{record.def5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def6 != null">
+        DEF6 = #{record.def6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def7 != null">
+        DEF7 = #{record.def7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def8 != null">
+        DEF8 = #{record.def8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def9 != null">
+        DEF9 = #{record.def9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def10 != null">
+        DEF10 = #{record.def10,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def11 != null">
+        DEF11 = #{record.def11,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def12 != null">
+        DEF12 = #{record.def12,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def13 != null">
+        DEF13 = #{record.def13,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def14 != null">
+        DEF14 = #{record.def14,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def15 != null">
+        DEF15 = #{record.def15,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def16 != null">
+        DEF16 = #{record.def16,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def17 != null">
+        DEF17 = #{record.def17,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def18 != null">
+        DEF18 = #{record.def18,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def19 != null">
+        DEF19 = #{record.def19,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def20 != null">
+        DEF20 = #{record.def20,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkCommissionH != null">
+        PK_COMMISSION_H = #{record.pkCommissionH,jdbcType=CHAR},
+      </if>
+      <if test="record.ts != null">
+        TS = #{record.ts,jdbcType=CHAR},
+      </if>
+      <if test="record.dr != null">
+        DR = #{record.dr,jdbcType=DECIMAL},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update QC_COMMISSION_B
+    set PK_COMMISSION_B = #{record.pkCommissionB,jdbcType=CHAR},
+      ROWNO = #{record.rowno,jdbcType=VARCHAR},
+      UNIQUEID = #{record.uniqueid,jdbcType=VARCHAR},
+      PK_PRODUCTSERIAL = #{record.pkProductserial,jdbcType=VARCHAR},
+      PK_ENTERPRISESTANDARD = #{record.pkEnterprisestandard,jdbcType=VARCHAR},
+      TYPENO = #{record.typeno,jdbcType=VARCHAR},
+      PK_PRODUCTSPEC = #{record.pkProductspec,jdbcType=VARCHAR},
+      PK_STRUCTURETYPE = #{record.pkStructuretype,jdbcType=VARCHAR},
+      CONTACTTYPE = #{record.contacttype,jdbcType=VARCHAR},
+      QUANTITY = #{record.quantity,jdbcType=DECIMAL},
+      MANUFACTURER = #{record.manufacturer,jdbcType=VARCHAR},
+      PK_CONTACTBRAND = #{record.pkContactbrand,jdbcType=VARCHAR},
+      CONTACTMODEL = #{record.contactmodel,jdbcType=VARCHAR},
+      PRODUCTSTAGE = #{record.productstage,jdbcType=VARCHAR},
+      PK_SAMPLEGROUP = #{record.pkSamplegroup,jdbcType=VARCHAR},
+      ANALYSISREF = #{record.analysisref,jdbcType=VARCHAR},
+      OTHERINFO = #{record.otherinfo,jdbcType=VARCHAR},
+      DEF1 = #{record.def1,jdbcType=VARCHAR},
+      DEF2 = #{record.def2,jdbcType=VARCHAR},
+      DEF3 = #{record.def3,jdbcType=VARCHAR},
+      DEF4 = #{record.def4,jdbcType=VARCHAR},
+      DEF5 = #{record.def5,jdbcType=VARCHAR},
+      DEF6 = #{record.def6,jdbcType=VARCHAR},
+      DEF7 = #{record.def7,jdbcType=VARCHAR},
+      DEF8 = #{record.def8,jdbcType=VARCHAR},
+      DEF9 = #{record.def9,jdbcType=VARCHAR},
+      DEF10 = #{record.def10,jdbcType=VARCHAR},
+      DEF11 = #{record.def11,jdbcType=VARCHAR},
+      DEF12 = #{record.def12,jdbcType=VARCHAR},
+      DEF13 = #{record.def13,jdbcType=VARCHAR},
+      DEF14 = #{record.def14,jdbcType=VARCHAR},
+      DEF15 = #{record.def15,jdbcType=VARCHAR},
+      DEF16 = #{record.def16,jdbcType=VARCHAR},
+      DEF17 = #{record.def17,jdbcType=VARCHAR},
+      DEF18 = #{record.def18,jdbcType=VARCHAR},
+      DEF19 = #{record.def19,jdbcType=VARCHAR},
+      DEF20 = #{record.def20,jdbcType=VARCHAR},
+      PK_COMMISSION_H = #{record.pkCommissionH,jdbcType=CHAR},
+      TS = #{record.ts,jdbcType=CHAR},
+      DR = #{record.dr,jdbcType=DECIMAL}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.besbing.model.entities.primary.QcCommissionB">
+    update QC_COMMISSION_B
+    <set>
+      <if test="rowno != null">
+        ROWNO = #{rowno,jdbcType=VARCHAR},
+      </if>
+      <if test="uniqueid != null">
+        UNIQUEID = #{uniqueid,jdbcType=VARCHAR},
+      </if>
+      <if test="pkProductserial != null">
+        PK_PRODUCTSERIAL = #{pkProductserial,jdbcType=VARCHAR},
+      </if>
+      <if test="pkEnterprisestandard != null">
+        PK_ENTERPRISESTANDARD = #{pkEnterprisestandard,jdbcType=VARCHAR},
+      </if>
+      <if test="typeno != null">
+        TYPENO = #{typeno,jdbcType=VARCHAR},
+      </if>
+      <if test="pkProductspec != null">
+        PK_PRODUCTSPEC = #{pkProductspec,jdbcType=VARCHAR},
+      </if>
+      <if test="pkStructuretype != null">
+        PK_STRUCTURETYPE = #{pkStructuretype,jdbcType=VARCHAR},
+      </if>
+      <if test="contacttype != null">
+        CONTACTTYPE = #{contacttype,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null">
+        QUANTITY = #{quantity,jdbcType=DECIMAL},
+      </if>
+      <if test="manufacturer != null">
+        MANUFACTURER = #{manufacturer,jdbcType=VARCHAR},
+      </if>
+      <if test="pkContactbrand != null">
+        PK_CONTACTBRAND = #{pkContactbrand,jdbcType=VARCHAR},
+      </if>
+      <if test="contactmodel != null">
+        CONTACTMODEL = #{contactmodel,jdbcType=VARCHAR},
+      </if>
+      <if test="productstage != null">
+        PRODUCTSTAGE = #{productstage,jdbcType=VARCHAR},
+      </if>
+      <if test="pkSamplegroup != null">
+        PK_SAMPLEGROUP = #{pkSamplegroup,jdbcType=VARCHAR},
+      </if>
+      <if test="analysisref != null">
+        ANALYSISREF = #{analysisref,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinfo != null">
+        OTHERINFO = #{otherinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="def1 != null">
+        DEF1 = #{def1,jdbcType=VARCHAR},
+      </if>
+      <if test="def2 != null">
+        DEF2 = #{def2,jdbcType=VARCHAR},
+      </if>
+      <if test="def3 != null">
+        DEF3 = #{def3,jdbcType=VARCHAR},
+      </if>
+      <if test="def4 != null">
+        DEF4 = #{def4,jdbcType=VARCHAR},
+      </if>
+      <if test="def5 != null">
+        DEF5 = #{def5,jdbcType=VARCHAR},
+      </if>
+      <if test="def6 != null">
+        DEF6 = #{def6,jdbcType=VARCHAR},
+      </if>
+      <if test="def7 != null">
+        DEF7 = #{def7,jdbcType=VARCHAR},
+      </if>
+      <if test="def8 != null">
+        DEF8 = #{def8,jdbcType=VARCHAR},
+      </if>
+      <if test="def9 != null">
+        DEF9 = #{def9,jdbcType=VARCHAR},
+      </if>
+      <if test="def10 != null">
+        DEF10 = #{def10,jdbcType=VARCHAR},
+      </if>
+      <if test="def11 != null">
+        DEF11 = #{def11,jdbcType=VARCHAR},
+      </if>
+      <if test="def12 != null">
+        DEF12 = #{def12,jdbcType=VARCHAR},
+      </if>
+      <if test="def13 != null">
+        DEF13 = #{def13,jdbcType=VARCHAR},
+      </if>
+      <if test="def14 != null">
+        DEF14 = #{def14,jdbcType=VARCHAR},
+      </if>
+      <if test="def15 != null">
+        DEF15 = #{def15,jdbcType=VARCHAR},
+      </if>
+      <if test="def16 != null">
+        DEF16 = #{def16,jdbcType=VARCHAR},
+      </if>
+      <if test="def17 != null">
+        DEF17 = #{def17,jdbcType=VARCHAR},
+      </if>
+      <if test="def18 != null">
+        DEF18 = #{def18,jdbcType=VARCHAR},
+      </if>
+      <if test="def19 != null">
+        DEF19 = #{def19,jdbcType=VARCHAR},
+      </if>
+      <if test="def20 != null">
+        DEF20 = #{def20,jdbcType=VARCHAR},
+      </if>
+      <if test="pkCommissionH != null">
+        PK_COMMISSION_H = #{pkCommissionH,jdbcType=CHAR},
+      </if>
+      <if test="ts != null">
+        TS = #{ts,jdbcType=CHAR},
+      </if>
+      <if test="dr != null">
+        DR = #{dr,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where PK_COMMISSION_B = #{pkCommissionB,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.besbing.model.entities.primary.QcCommissionB">
+    update QC_COMMISSION_B
+    set ROWNO = #{rowno,jdbcType=VARCHAR},
+      UNIQUEID = #{uniqueid,jdbcType=VARCHAR},
+      PK_PRODUCTSERIAL = #{pkProductserial,jdbcType=VARCHAR},
+      PK_ENTERPRISESTANDARD = #{pkEnterprisestandard,jdbcType=VARCHAR},
+      TYPENO = #{typeno,jdbcType=VARCHAR},
+      PK_PRODUCTSPEC = #{pkProductspec,jdbcType=VARCHAR},
+      PK_STRUCTURETYPE = #{pkStructuretype,jdbcType=VARCHAR},
+      CONTACTTYPE = #{contacttype,jdbcType=VARCHAR},
+      QUANTITY = #{quantity,jdbcType=DECIMAL},
+      MANUFACTURER = #{manufacturer,jdbcType=VARCHAR},
+      PK_CONTACTBRAND = #{pkContactbrand,jdbcType=VARCHAR},
+      CONTACTMODEL = #{contactmodel,jdbcType=VARCHAR},
+      PRODUCTSTAGE = #{productstage,jdbcType=VARCHAR},
+      PK_SAMPLEGROUP = #{pkSamplegroup,jdbcType=VARCHAR},
+      ANALYSISREF = #{analysisref,jdbcType=VARCHAR},
+      OTHERINFO = #{otherinfo,jdbcType=VARCHAR},
+      DEF1 = #{def1,jdbcType=VARCHAR},
+      DEF2 = #{def2,jdbcType=VARCHAR},
+      DEF3 = #{def3,jdbcType=VARCHAR},
+      DEF4 = #{def4,jdbcType=VARCHAR},
+      DEF5 = #{def5,jdbcType=VARCHAR},
+      DEF6 = #{def6,jdbcType=VARCHAR},
+      DEF7 = #{def7,jdbcType=VARCHAR},
+      DEF8 = #{def8,jdbcType=VARCHAR},
+      DEF9 = #{def9,jdbcType=VARCHAR},
+      DEF10 = #{def10,jdbcType=VARCHAR},
+      DEF11 = #{def11,jdbcType=VARCHAR},
+      DEF12 = #{def12,jdbcType=VARCHAR},
+      DEF13 = #{def13,jdbcType=VARCHAR},
+      DEF14 = #{def14,jdbcType=VARCHAR},
+      DEF15 = #{def15,jdbcType=VARCHAR},
+      DEF16 = #{def16,jdbcType=VARCHAR},
+      DEF17 = #{def17,jdbcType=VARCHAR},
+      DEF18 = #{def18,jdbcType=VARCHAR},
+      DEF19 = #{def19,jdbcType=VARCHAR},
+      DEF20 = #{def20,jdbcType=VARCHAR},
+      PK_COMMISSION_H = #{pkCommissionH,jdbcType=CHAR},
+      TS = #{ts,jdbcType=CHAR},
+      DR = #{dr,jdbcType=DECIMAL}
+    where PK_COMMISSION_B = #{pkCommissionB,jdbcType=CHAR}
+  </update>
+</mapper>
