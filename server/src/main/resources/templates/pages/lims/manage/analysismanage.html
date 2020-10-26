@@ -50,7 +50,22 @@
                 <li>条件模板</li>
             </ul>
             <div class="layui-tab-content">
-                <div class="layui-tab-item layui-show">内容1</div>
+                <div class="layui-tab-item layui-show">
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">产品名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="name" required lay-verify="required" placeholder="请输入产品名称" autocomplete="off" class="layui-input">
+                        </div>
+
+                        <label class="layui-form-label">版本号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="version" required lay-verify="required|number" placeholder="请输入产品版本号" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+
+                </div>
                 <div class="layui-tab-item">内容2</div>
                 <div class="layui-tab-item">内容3</div>
             </div>
