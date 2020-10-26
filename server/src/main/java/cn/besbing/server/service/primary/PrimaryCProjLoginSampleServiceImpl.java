@@ -47,4 +47,8 @@ public class PrimaryCProjLoginSampleServiceImpl {
     public CProjLoginSample selectProjectInfobyPrimary(String seqnum) {
         return projLoginSampleMapper.selectByPrimaryKey(BigDecimal.valueOf(Long.parseLong(seqnum)));
     }
+
+    public int save(CProjLoginSample searchCpls) {
+        return projLoginSampleMapper.updateByPrimaryKey(searchCpls);
+    }
 }

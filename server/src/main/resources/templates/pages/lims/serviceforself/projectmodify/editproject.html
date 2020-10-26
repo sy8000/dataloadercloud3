@@ -35,19 +35,19 @@
             <div class="layui-inline">
                 <label class="layui-form-label">规格型号</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="prodname" id='prodname' th:value="${projectInfo.prodname}" lay-verify="required" autocomplete="off" class="layui-input" onblur="setmail()">
+                    <input type="text" name="prodname" id='prodname' th:value="${projectInfo.prodname}"  autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-inline">
                 <label class="layui-form-label">其它说明</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="otherReq" th:value="${projectInfo.otherReq}" lay-verify="required" autocomplete="off" class="layui-input">
+                    <input type="text" name="otherReq" th:value="${projectInfo.otherReq}"  autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-inline">
                 <label class="layui-form-label">英文其它说明</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="enor" name="enOtherReq" th:value="${projectInfo.enOtherReq}" lay-verify="required" autocomplete="off" class="layui-input">
+                    <input type="text" id="enor" name="enOtherReq" th:value="${projectInfo.enOtherReq}"  autocomplete="off" class="layui-input">
                 </div>
             </div>
 

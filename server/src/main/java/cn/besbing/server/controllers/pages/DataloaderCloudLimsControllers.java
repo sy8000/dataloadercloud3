@@ -37,7 +37,7 @@ public class DataloaderCloudLimsControllers extends AbstractLog {
         }catch (Exception e){
             logger.error(this.getClass() + "error:" + e.getStackTrace());
         }
-        return "pages/dataloader/permission/editpermission";
+        return "pages/lims/serviceforself/projectmodify/editproject";
     }
 
 }

@@ -59,7 +59,7 @@ public class LimsLoadControllers {
         }
         if (keyword != null && !"".equals(keyword)) {
             JSONObject jsonObject = JSONObject.parseObject(keyword);
-            keyword = jsonObject.get("name").toString();
+            keyword = jsonObject.get("billno").toString();
         }
         SearchDTO searchDTO = new SearchDTO(page,limit,keyword);
         try {

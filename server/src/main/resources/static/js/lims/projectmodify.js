@@ -1,5 +1,6 @@
 layui.use(['form', 'table','layer'], function () {
     let $ = layui.jquery,
+        form = layui.form,
         table = layui.table,
         layer = layui.layer;
     table.render({
@@ -37,8 +38,27 @@ layui.use(['form', 'table','layer'], function () {
             anim: 2,
             area: ['1000px', '500px'],
             resize: false,
-            content: "/dlcsystem/editproject?seqNum=" + obj.data.seqNum
+            content: "/dlclims/editproject?seqnum=" + obj.data.seqNum
         });
+    });
+
+
+    // 监听搜索操作
+    form.on('submit(data-search-btn)', function (data) {
+        var result = "{'billno':'"+ $("#projname").val() +"'}";
+        //var result = JSON.stringify(resultvalue);
+        console.log(result);
+        //执行搜索重载
+        table.reload('projSampleLoginTableId', {
+            page: {
+                curr: 1
+            }
+            , where: {
+                keyword: result
+            }
+        }, 'list');
+
+        return false;
     });
 
 
