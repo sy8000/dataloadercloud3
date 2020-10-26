@@ -22,6 +22,20 @@
           "target": "_self"
         },
         {
+          "title": "lims设置",
+          "href": "",
+          "icon": "fa fa-cog",
+          "target": "_self",
+          "child": [
+            {
+              "title": "模板设置",
+              "href": "/lims/analysismanage",
+              "icon": "fa fa-file-image-o",
+              "target": "_self"
+            }
+          ]
+        },
+        {
           "title": "自助服务",
           "href": "",
           "icon": "fa fa-cutlery",
@@ -30,7 +44,7 @@
             {
               "title": "委托单变更",
               "href": "/lims/projectmodify",
-              "icon": "fa fa-keyboard-o",
+              "icon": "fa fa-edit",
               "target": "_self"
             }
           ]

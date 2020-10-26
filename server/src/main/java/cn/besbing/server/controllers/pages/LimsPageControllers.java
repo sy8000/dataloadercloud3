@@ -13,5 +13,10 @@ public class LimsPageControllers {
         return "pages/lims/serviceforself/projectmodify";
     }
 
+    @GetMapping("analysismanage")
+    public String analysismanage(){
+        return "pages/lims/manage/analysismanage";
+    }
+
 
 }
