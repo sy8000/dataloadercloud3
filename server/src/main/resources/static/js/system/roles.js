@@ -9,6 +9,8 @@ layui.use(['form', 'table','layer'], function () {
         limit: 10,
         limits: [10, 20, 30, 40, 50],
         page: true,
+        height: 'full-200',
+        cellMinWidth: 50,
         response: {
             statusName: 'code' //数据状态的字段名称，默认：code
             , statusCode: 0 //成功的状态码，默认：0

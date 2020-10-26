@@ -12,6 +12,8 @@ layui.use(['form', 'table','layer'], function () {
         //toolbar: '#toolbarDemo',
         toolbar: 'default',
         totalRow: true, //开启合计行
+        height: 'full-200',
+        cellMinWidth: 50,
         request: {
             pageName: 'page' //页码的参数名称，默认：page
             , limitName: 'limit' //每页数据量的参数名，默认：limit
