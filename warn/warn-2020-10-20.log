@@ -1,0 +1,1393 @@
+[2020-10-20 08:48:31] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 08:48:31] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 08:48:31] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 08:48:32] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 08:48:33] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 08:48:33] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 08:48:33] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 08:48:33] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 08:48:33] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 08:48:33] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 08:48:35] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:02:24] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:02:24] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:02:24] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:02:24] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:02:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:02:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:02:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:02:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:02:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:02:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:02:27] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:04:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:04:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:04:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:04:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:04:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:04:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:12:47] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:12:47] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:12:47] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:12:48] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:12:49] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:12:49] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:12:49] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:12:49] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:12:49] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:12:49] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:12:50] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:13:05] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:13:05] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:13:05] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:13:05] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:13:05] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:13:05] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:25] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:14:25] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:14:25] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:14:25] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:14:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:27] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:14:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:14:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:14] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:16:14] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:16:14] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:16:14] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:16:15] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:15] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:15] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:15] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:15] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:15] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:16] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:16:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:16:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:27] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:17:27] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:17:27] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:17:28] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:17:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:30] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:17:54] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:54] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:54] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:54] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:54] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:17:54] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:19:04] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:19:04] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:19:04] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:19:05] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:19:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:19:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:19:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:19:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:19:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:19:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:19:07] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:20:16] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:20:16] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:20:16] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:20:16] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:20:17] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:17] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:17] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:17] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:17] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:17] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:19] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:20:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:20:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:15] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:22:15] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:22:15] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:22:15] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:22:16] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:16] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:16] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:16] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:16] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:16] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:17] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:22:31] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:31] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:31] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:31] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:31] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:22:31] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:23:39] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:23:39] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:23:39] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:23:40] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:23:41] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:23:41] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:23:41] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:23:41] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:23:41] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:23:41] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:23:42] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:24:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:24:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:24:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:24:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:24:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:24:11] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:02] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:25:02] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:25:02] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:25:02] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:25:03] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:03] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:03] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:03] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:03] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:03] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:05] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:25:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:25:29] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:09] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:28:09] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:28:09] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:28:09] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:28:10] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:10] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:10] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:10] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:10] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:10] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:12] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:28:46] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:46] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:46] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:46] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:46] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:28:46] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:29:16] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:29:16] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:29:16] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:29:17] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:29:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:29:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:29:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:29:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:29:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:29:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:29:19] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:34:49] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:34:49] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:34:49] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:34:50] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:34:51] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:34:51] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:34:51] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:34:51] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:34:51] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:34:51] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:34:52] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:35:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:35:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:35:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:35:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:35:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:35:26] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:18] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:36:18] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:36:18] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:36:18] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:36:19] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:19] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:19] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:19] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:19] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:19] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:21] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:36:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:36:48] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:37:58] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:37:58] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:37:58] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:37:58] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:37:59] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:37:59] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:37:59] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:37:59] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:37:59] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:37:59] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:38:01] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:38:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:38:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:38:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:38:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:38:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:38:18] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:12] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:39:12] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:39:12] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:39:12] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:39:13] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:13] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:13] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:13] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:13] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:13] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:15] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:39:30] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:30] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:30] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:30] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:30] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:39:30] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:23] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:41:23] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:41:23] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:41:24] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:41:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:26] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:41:47] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:47] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:47] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:47] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:47] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:41:47] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:08] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:44:08] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:44:08] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:44:08] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:44:09] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:09] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:09] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:09] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:09] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:09] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:11] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:44:23] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:23] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:23] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:23] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:23] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:44:23] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:45:38] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:45:38] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:45:38] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:45:39] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:45:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:45:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:45:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:45:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:45:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:45:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:45:41] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:47:38] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:47:38] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:47:38] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:47:38] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:47:39] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:47:39] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:47:39] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:47:39] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:47:39] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:47:39] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:47:41] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:48:00] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:00] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:00] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:00] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:00] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:00] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:39] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:48:39] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:48:39] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:48:39] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:48:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:40] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:48:42] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:51:36] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:51:36] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:51:36] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:51:36] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:51:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:37] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:39] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:51:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:51:50] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:21] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:52:21] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:52:21] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:52:21] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:52:22] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:22] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:22] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:22] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:22] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:22] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:24] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 10:52:44] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:44] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:44] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:44] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:44] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:52:44] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:57:41] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 10:57:41] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 10:57:41] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 10:57:41] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 10:57:42] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:57:42] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:57:42] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:57:42] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:57:42] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:57:42] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 10:57:44] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 11:01:06] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 11:01:06] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 11:01:06] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 11:01:06] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 11:01:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:08] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 11:01:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:01:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:23] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 11:02:23] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 11:02:23] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 11:02:23] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 11:02:24] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:24] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:24] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:24] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:24] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:24] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:26] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 11:02:35] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:35] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:35] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:35] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:35] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:02:35] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:05] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 11:06:05] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 11:06:05] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 11:06:06] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 11:06:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:07] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:08] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 11:06:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:06:20] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:05] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- Skipping MapperFactoryBean with name 'primaryCustom' and 'cn.besbing.model.mapper.primary.PrimaryCustom' mapperInterface. Bean already defined with the same name!
+[2020-10-20 11:07:05] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.slave]' package. Please check your configuration.
+[2020-10-20 11:07:05] -- [WARN ]: [org.mybatis.spring.mapper.ClassPathMapperScanner] -- No MyBatis mapper was found in '[cn.besbing.model.besbing.mapper.third]' package. Please check your configuration.
+[2020-10-20 11:07:05] -- [WARN ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+[2020-10-20 11:07:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:06] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:08] -- [WARN ]: [org.thymeleaf.templatemode.TemplateMode] -- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[2020-10-20 11:07:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.
+[2020-10-20 11:07:25] -- [WARN ]: [java.util.jar] -- Duplicate name in Manifest: Sealed.
+Ensure that the manifest does not have duplicate entries, and
+that blank lines separate individual sections in both your
+manifest and in the META-INF/MANIFEST.MF entry in the jar file.

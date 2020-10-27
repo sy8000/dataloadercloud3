@@ -1,0 +1,508 @@
+[2020-10-24 10:17:09] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 12652 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:17:09] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:17:12] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:17:12] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:17:12] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:17:12] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:17:14] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:17:14] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 5.548 seconds (JVM running for 6.603)
+[2020-10-24 10:17:35] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:17:42] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:17:46] -- [INFO ]: [com.alibaba.druid.pool.DruidAbstractDataSource] -- {dataSource-1} failContinuous is true
+[2020-10-24 10:18:13] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 14420 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:18:13] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:18:16] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:18:16] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:18:16] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:18:16] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:18:17] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:18:17] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 5.356 seconds (JVM running for 6.194)
+[2020-10-24 10:18:18] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:18:50] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:27:38] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 15672 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:27:38] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:27:41] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:27:41] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:27:41] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:27:41] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:27:42] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:27:42] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.547 seconds (JVM running for 5.194)
+[2020-10-24 10:27:46] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:27:52] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:33:11] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 4128 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:33:11] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:33:14] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:33:14] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:33:14] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:33:14] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:33:15] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:33:16] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.707 seconds (JVM running for 5.367)
+[2020-10-24 10:33:20] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:33:26] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:34:35] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 14504 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:34:35] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:34:37] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:34:37] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:34:37] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:34:37] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:34:39] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:34:39] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.545 seconds (JVM running for 5.202)
+[2020-10-24 10:34:43] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:34:50] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:36:46] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 15052 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:36:46] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:36:49] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:36:49] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:36:49] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:36:49] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:36:50] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:36:50] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.57 seconds (JVM running for 5.263)
+[2020-10-24 10:36:55] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:37:01] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:38:53] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 15552 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:38:53] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:38:56] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:38:56] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:38:56] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:38:56] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:38:57] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:38:57] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.651 seconds (JVM running for 5.409)
+[2020-10-24 10:38:59] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:39:05] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:40:58] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 11936 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:40:58] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:41:01] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:41:01] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:41:01] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:41:01] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:41:02] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:41:02] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.567 seconds (JVM running for 5.204)
+[2020-10-24 10:41:07] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:41:16] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:43:14] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 13844 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:43:14] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:43:17] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:43:17] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:43:17] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:43:17] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:43:18] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:43:18] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.517 seconds (JVM running for 5.167)
+[2020-10-24 10:43:21] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:43:29] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:50:17] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 12292 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:50:17] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:50:20] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:50:20] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:50:20] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:50:20] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:50:22] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:50:22] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.645 seconds (JVM running for 5.384)
+[2020-10-24 10:50:25] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:50:32] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:53:16] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 10960 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:53:16] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:53:18] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:53:18] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:53:18] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:53:18] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:53:20] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:53:20] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.954 seconds (JVM running for 5.649)
+[2020-10-24 10:53:42] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 10080 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:53:42] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:53:45] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:53:45] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:53:45] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:53:45] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:53:47] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:53:47] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.707 seconds (JVM running for 5.407)
+[2020-10-24 10:53:54] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:54:04] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:57:17] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 11800 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:57:17] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:57:19] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:57:19] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:57:19] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:57:19] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:57:21] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:57:21] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.555 seconds (JVM running for 5.197)
+[2020-10-24 10:57:26] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 10:57:34] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 10:59:11] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 14724 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 10:59:11] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 10:59:13] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:59:13] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 10:59:13] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 10:59:13] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 10:59:15] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 10:59:15] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.554 seconds (JVM running for 5.202)
+[2020-10-24 11:00:48] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 11:00:55] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 11:15:03] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 16260 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 11:15:03] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 11:15:06] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 11:15:06] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 11:15:06] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 11:15:06] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 11:15:07] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 11:15:07] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.548 seconds (JVM running for 5.296)
+[2020-10-24 11:15:13] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 11:15:19] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 11:18:29] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 15464 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 11:18:29] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 11:18:31] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 11:18:31] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 11:18:31] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 11:18:31] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 11:18:33] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 11:18:33] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.567 seconds (JVM running for 5.206)
+[2020-10-24 11:18:36] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 11:18:42] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 11:20:47] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 14176 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 11:20:47] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 11:20:49] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 11:20:49] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 11:20:49] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 11:20:49] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 11:20:51] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 11:20:51] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.592 seconds (JVM running for 5.244)
+[2020-10-24 11:20:53] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 11:20:59] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 11:33:54] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 13276 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 11:33:54] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 11:33:57] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 11:33:57] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 11:33:57] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 11:33:57] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 11:33:58] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 11:33:58] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.572 seconds (JVM running for 5.296)
+[2020-10-24 11:34:07] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 11:34:14] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:09:19] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 12892 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:09:19] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:09:21] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:09:21] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:09:21] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:09:22] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:09:23] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:09:23] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.566 seconds (JVM running for 5.249)
+[2020-10-24 13:09:28] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:09:35] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:18:16] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 4520 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:18:16] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:18:18] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:18:18] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:18:18] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:18:18] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:18:20] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:18:20] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.524 seconds (JVM running for 5.195)
+[2020-10-24 13:18:25] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:18:32] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:20:13] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 13496 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:20:13] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:20:15] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:20:15] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:20:15] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:20:16] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:20:17] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:20:17] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.488 seconds (JVM running for 5.159)
+[2020-10-24 13:24:19] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:24:26] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:25:57] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 8312 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:25:57] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:25:59] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:25:59] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:25:59] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:26:00] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:26:01] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:26:01] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.534 seconds (JVM running for 5.186)
+[2020-10-24 13:26:04] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:26:12] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:32:14] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 15420 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:32:14] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:32:17] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:32:17] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:32:17] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:32:17] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:32:18] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:32:18] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.472 seconds (JVM running for 5.103)
+[2020-10-24 13:33:05] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:33:10] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:37:27] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 12936 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:37:27] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:37:29] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:37:29] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:37:29] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:37:29] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:37:31] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:37:31] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.626 seconds (JVM running for 5.311)
+[2020-10-24 13:37:45] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:37:52] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:40:57] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 11964 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:40:57] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:41:00] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:41:00] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:41:00] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:41:00] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:41:01] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:41:01] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.564 seconds (JVM running for 5.204)
+[2020-10-24 13:41:08] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:41:15] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:43:10] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 15860 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:43:10] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:43:12] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:43:12] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:43:12] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:43:13] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:43:14] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:43:14] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.579 seconds (JVM running for 5.266)
+[2020-10-24 13:43:17] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:43:22] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:43:54] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 1440 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:43:54] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:43:57] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:43:57] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:43:57] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:43:57] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:43:59] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:43:59] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 5.063 seconds (JVM running for 6.48)
+[2020-10-24 13:44:17] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:44:23] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:46:50] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-0} closing ...
+[2020-10-24 13:46:50] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-0} closing ...
+[2020-10-24 13:46:50] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} closing ...
+[2020-10-24 13:46:50] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} closed
+[2020-10-24 13:46:55] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 14748 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:46:55] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:46:57] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:46:57] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:46:57] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:46:57] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:46:59] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:46:59] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.498 seconds (JVM running for 5.154)
+[2020-10-24 13:47:03] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:47:10] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:48:10] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 10484 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:48:10] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:48:13] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:48:13] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:48:13] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:48:13] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:48:14] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:48:14] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 5.221 seconds (JVM running for 6.291)
+[2020-10-24 13:48:22] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:48:29] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 13:57:59] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-0} closing ...
+[2020-10-24 13:57:59] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-0} closing ...
+[2020-10-24 13:57:59] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} closing ...
+[2020-10-24 13:57:59] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} closed
+[2020-10-24 13:58:02] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 6488 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 13:58:02] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 13:58:04] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:58:04] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 13:58:04] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 13:58:04] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 13:58:06] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 13:58:06] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.563 seconds (JVM running for 5.308)
+[2020-10-24 13:58:10] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 13:58:18] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 14:02:18] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 16180 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 14:02:18] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 14:02:20] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:02:20] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 14:02:20] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 14:02:20] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 14:02:22] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:02:22] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.576 seconds (JVM running for 5.32)
+[2020-10-24 14:02:25] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 14:02:32] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 14:07:27] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 5012 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 14:07:27] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 14:07:30] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:07:30] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 14:07:30] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 14:07:30] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 14:07:31] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:07:31] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.483 seconds (JVM running for 5.201)
+[2020-10-24 14:07:42] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 14:07:49] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 14:24:06] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 10796 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 14:24:06] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 14:24:08] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:24:08] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 14:24:08] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 14:24:08] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 14:24:10] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:24:10] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.624 seconds (JVM running for 5.302)
+[2020-10-24 14:24:42] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 14:24:49] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 14:40:31] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 10512 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 14:40:31] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 14:40:34] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:40:34] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 14:40:34] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 14:40:34] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 14:40:36] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:40:36] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.733 seconds (JVM running for 5.45)
+[2020-10-24 14:40:59] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 14:41:05] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 14:43:29] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 15292 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 14:43:29] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 14:43:32] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:43:32] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 14:43:32] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 14:43:32] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 14:43:33] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:43:33] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 5.049 seconds (JVM running for 5.728)
+[2020-10-24 14:43:35] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 14:43:44] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 14:48:02] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 5692 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 14:48:02] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 14:48:04] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:48:04] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 14:48:04] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 14:48:04] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 14:48:06] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:48:06] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.481 seconds (JVM running for 5.181)
+[2020-10-24 14:48:09] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 14:48:15] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 14:49:13] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 3796 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 14:49:13] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 14:49:15] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:49:15] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 14:49:15] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 14:49:15] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 14:49:17] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 14:49:17] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.44 seconds (JVM running for 5.087)
+[2020-10-24 14:49:20] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 14:49:26] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 16:03:14] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 14100 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:03:14] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:03:17] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:03:17] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:03:17] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:03:17] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:03:18] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:03:19] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 5.723 seconds (JVM running for 6.981)
+[2020-10-24 16:03:29] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 16:03:37] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 16:05:24] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-0} closing ...
+[2020-10-24 16:05:24] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-0} closing ...
+[2020-10-24 16:05:24] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} closing ...
+[2020-10-24 16:05:24] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} closed
+[2020-10-24 16:05:30] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 1252 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:05:30] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:05:32] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:05:32] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:05:32] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:05:32] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:05:34] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:05:34] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.728 seconds (JVM running for 5.466)
+[2020-10-24 16:05:37] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 16:05:44] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 16:09:20] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 12916 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:09:20] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:09:23] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:09:23] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:09:23] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:09:23] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:09:24] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:09:24] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.939 seconds (JVM running for 5.668)
+[2020-10-24 16:09:29] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 16:10:09] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 14528 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:10:09] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:10:12] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:10:12] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:10:12] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:10:12] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:10:13] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:10:13] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.99 seconds (JVM running for 5.698)
+[2020-10-24 16:10:22] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 16:10:22] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 16:11:45] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 11096 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:11:45] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:11:48] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:11:48] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:11:48] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:11:48] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:11:49] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:11:49] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.696 seconds (JVM running for 5.335)
+[2020-10-24 16:11:52] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 16:12:13] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 16:17:12] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 12396 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:17:12] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:17:14] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:17:14] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:17:14] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:17:14] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:17:16] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:17:16] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.607 seconds (JVM running for 5.259)
+[2020-10-24 16:17:20] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 16:17:26] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 16:56:22] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 1856 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:56:22] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:56:25] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:56:25] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:56:25] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:56:25] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:56:26] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:56:26] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.841 seconds (JVM running for 5.561)
+[2020-10-24 16:56:31] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 16:56:37] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 16:57:20] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 15404 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:57:20] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:57:22] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:57:22] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:57:22] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:57:23] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:57:24] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:57:24] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 5.037 seconds (JVM running for 5.699)
+[2020-10-24 16:57:38] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 14936 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:57:38] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:57:40] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:57:40] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:57:40] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:57:40] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:57:42] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:57:42] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.938 seconds (JVM running for 5.599)
+[2020-10-24 16:57:43] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 16:57:49] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 16:59:05] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 4940 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 16:59:05] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 16:59:07] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:59:07] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 16:59:07] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 16:59:07] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 16:59:09] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 16:59:09] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.772 seconds (JVM running for 5.536)
+[2020-10-24 16:59:11] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 16:59:17] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 17:00:58] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 13944 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 17:00:58] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 17:01:01] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 17:01:01] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 17:01:01] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 17:01:01] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 17:01:02] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 17:01:02] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.665 seconds (JVM running for 5.32)
+[2020-10-24 17:01:05] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 17:01:12] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 17:02:51] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 14008 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 17:02:51] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 17:02:54] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 17:02:54] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 17:02:54] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 17:02:54] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 17:02:56] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 17:02:56] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 5.39 seconds (JVM running for 6.051)
+[2020-10-24 17:03:01] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 17:03:08] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited
+[2020-10-24 17:07:30] -- [INFO ]: [cn.besbing.ServerApplication] -- Starting ServerApplication on DESKTOP-1G7K14M with PID 3616 (E:\dataloadercloud3\server\target\classes started by Administrator in E:\dataloadercloud3)
+[2020-10-24 17:07:30] -- [INFO ]: [cn.besbing.ServerApplication] -- No active profile set, falling back to default profiles: default
+[2020-10-24 17:07:32] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Initializing ProtocolHandler ["http-nio-80"]
+[2020-10-24 17:07:32] -- [INFO ]: [org.apache.catalina.core.StandardService] -- Starting service [Tomcat]
+[2020-10-24 17:07:32] -- [INFO ]: [org.apache.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.38]
+[2020-10-24 17:07:32] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+[2020-10-24 17:07:34] -- [INFO ]: [org.apache.coyote.http11.Http11NioProtocol] -- Starting ProtocolHandler ["http-nio-80"]
+[2020-10-24 17:07:34] -- [INFO ]: [cn.besbing.ServerApplication] -- Started ServerApplication in 4.611 seconds (JVM running for 5.315)
+[2020-10-24 17:07:44] -- [INFO ]: [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-10-24 17:07:58] -- [INFO ]: [com.alibaba.druid.pool.DruidDataSource] -- {dataSource-1} inited

@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.besbing.model.mapper.primary.BdPsndocMapper">
+  <resultMap id="BaseResultMap" type="cn.besbing.model.entities.primary.BdPsndoc">
+    <id column="PK_PSNDOC" jdbcType="CHAR" property="pkPsndoc" />
+    <result column="ADDR" jdbcType="VARCHAR" property="addr" />
+    <result column="BIRTHDATE" jdbcType="CHAR" property="birthdate" />
+    <result column="CODE" jdbcType="VARCHAR" property="code" />
+    <result column="CREATIONTIME" jdbcType="CHAR" property="creationtime" />
+    <result column="CREATOR" jdbcType="VARCHAR" property="creator" />
+    <result column="DATAORIGINFLAG" jdbcType="DECIMAL" property="dataoriginflag" />
+    <result column="DEF1" jdbcType="VARCHAR" property="def1" />
+    <result column="DEF10" jdbcType="VARCHAR" property="def10" />
+    <result column="DEF11" jdbcType="VARCHAR" property="def11" />
+    <result column="DEF12" jdbcType="VARCHAR" property="def12" />
+    <result column="DEF13" jdbcType="VARCHAR" property="def13" />
+    <result column="DEF14" jdbcType="VARCHAR" property="def14" />
+    <result column="DEF15" jdbcType="VARCHAR" property="def15" />
+    <result column="DEF16" jdbcType="VARCHAR" property="def16" />
+    <result column="DEF17" jdbcType="VARCHAR" property="def17" />
+    <result column="DEF18" jdbcType="VARCHAR" property="def18" />
+    <result column="DEF19" jdbcType="VARCHAR" property="def19" />
+    <result column="DEF2" jdbcType="VARCHAR" property="def2" />
+    <result column="DEF20" jdbcType="VARCHAR" property="def20" />
+    <result column="DEF3" jdbcType="VARCHAR" property="def3" />
+    <result column="DEF4" jdbcType="VARCHAR" property="def4" />
+    <result column="DEF5" jdbcType="VARCHAR" property="def5" />
+    <result column="DEF6" jdbcType="VARCHAR" property="def6" />
+    <result column="DEF7" jdbcType="VARCHAR" property="def7" />
+    <result column="DEF8" jdbcType="VARCHAR" property="def8" />
+    <result column="DEF9" jdbcType="VARCHAR" property="def9" />
+    <result column="DR" jdbcType="DECIMAL" property="dr" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="ENABLESTATE" jdbcType="DECIMAL" property="enablestate" />
+    <result column="FIRSTNAME" jdbcType="VARCHAR" property="firstname" />
+    <result column="HOMEPHONE" jdbcType="VARCHAR" property="homephone" />
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="IDTYPE" jdbcType="VARCHAR" property="idtype" />
+    <result column="JOINWORKDATE" jdbcType="CHAR" property="joinworkdate" />
+    <result column="LASTNAME" jdbcType="VARCHAR" property="lastname" />
+    <result column="MNECODE" jdbcType="VARCHAR" property="mnecode" />
+    <result column="MOBILE" jdbcType="VARCHAR" property="mobile" />
+    <result column="MODIFIEDTIME" jdbcType="CHAR" property="modifiedtime" />
+    <result column="MODIFIER" jdbcType="VARCHAR" property="modifier" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="NAME2" jdbcType="VARCHAR" property="name2" />
+    <result column="NAME3" jdbcType="VARCHAR" property="name3" />
+    <result column="NAME4" jdbcType="VARCHAR" property="name4" />
+    <result column="NAME5" jdbcType="VARCHAR" property="name5" />
+    <result column="NAME6" jdbcType="VARCHAR" property="name6" />
+    <result column="NICKNAME" jdbcType="VARCHAR" property="nickname" />
+    <result column="OFFICEPHONE" jdbcType="VARCHAR" property="officephone" />
+    <result column="PK_GROUP" jdbcType="VARCHAR" property="pkGroup" />
+    <result column="PK_ORG" jdbcType="VARCHAR" property="pkOrg" />
+    <result column="SEX" jdbcType="DECIMAL" property="sex" />
+    <result column="TS" jdbcType="CHAR" property="ts" />
+    <result column="USEDNAME" jdbcType="VARCHAR" property="usedname" />
+    <result column="ISSHOPASSIST" jdbcType="CHAR" property="isshopassist" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    PK_PSNDOC, ADDR, BIRTHDATE, CODE, CREATIONTIME, CREATOR, DATAORIGINFLAG, DEF1, DEF10, 
+    DEF11, DEF12, DEF13, DEF14, DEF15, DEF16, DEF17, DEF18, DEF19, DEF2, DEF20, DEF3, 
+    DEF4, DEF5, DEF6, DEF7, DEF8, DEF9, DR, EMAIL, ENABLESTATE, FIRSTNAME, HOMEPHONE, 
+    ID, IDTYPE, JOINWORKDATE, LASTNAME, MNECODE, MOBILE, MODIFIEDTIME, MODIFIER, NAME, 
+    NAME2, NAME3, NAME4, NAME5, NAME6, NICKNAME, OFFICEPHONE, PK_GROUP, PK_ORG, SEX, 
+    TS, USEDNAME, ISSHOPASSIST
+  </sql>
+  <select id="selectByExample" parameterType="cn.besbing.model.entities.primary.BdPsndocExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from BD_PSNDOC
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from BD_PSNDOC
+    where PK_PSNDOC = #{pkPsndoc,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from BD_PSNDOC
+    where PK_PSNDOC = #{pkPsndoc,jdbcType=CHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.besbing.model.entities.primary.BdPsndocExample">
+    delete from BD_PSNDOC
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.besbing.model.entities.primary.BdPsndoc">
+    insert into BD_PSNDOC (PK_PSNDOC, ADDR, BIRTHDATE, 
+      CODE, CREATIONTIME, CREATOR, 
+      DATAORIGINFLAG, DEF1, DEF10, 
+      DEF11, DEF12, DEF13, 
+      DEF14, DEF15, DEF16, 
+      DEF17, DEF18, DEF19, 
+      DEF2, DEF20, DEF3, 
+      DEF4, DEF5, DEF6, DEF7, 
+      DEF8, DEF9, DR, EMAIL, 
+      ENABLESTATE, FIRSTNAME, HOMEPHONE, 
+      ID, IDTYPE, JOINWORKDATE, 
+      LASTNAME, MNECODE, MOBILE, 
+      MODIFIEDTIME, MODIFIER, NAME, 
+      NAME2, NAME3, NAME4, 
+      NAME5, NAME6, NICKNAME, 
+      OFFICEPHONE, PK_GROUP, PK_ORG, 
+      SEX, TS, USEDNAME, ISSHOPASSIST
+      )
+    values (#{pkPsndoc,jdbcType=CHAR}, #{addr,jdbcType=VARCHAR}, #{birthdate,jdbcType=CHAR}, 
+      #{code,jdbcType=VARCHAR}, #{creationtime,jdbcType=CHAR}, #{creator,jdbcType=VARCHAR}, 
+      #{dataoriginflag,jdbcType=DECIMAL}, #{def1,jdbcType=VARCHAR}, #{def10,jdbcType=VARCHAR}, 
+      #{def11,jdbcType=VARCHAR}, #{def12,jdbcType=VARCHAR}, #{def13,jdbcType=VARCHAR}, 
+      #{def14,jdbcType=VARCHAR}, #{def15,jdbcType=VARCHAR}, #{def16,jdbcType=VARCHAR}, 
+      #{def17,jdbcType=VARCHAR}, #{def18,jdbcType=VARCHAR}, #{def19,jdbcType=VARCHAR}, 
+      #{def2,jdbcType=VARCHAR}, #{def20,jdbcType=VARCHAR}, #{def3,jdbcType=VARCHAR}, 
+      #{def4,jdbcType=VARCHAR}, #{def5,jdbcType=VARCHAR}, #{def6,jdbcType=VARCHAR}, #{def7,jdbcType=VARCHAR}, 
+      #{def8,jdbcType=VARCHAR}, #{def9,jdbcType=VARCHAR}, #{dr,jdbcType=DECIMAL}, #{email,jdbcType=VARCHAR}, 
+      #{enablestate,jdbcType=DECIMAL}, #{firstname,jdbcType=VARCHAR}, #{homephone,jdbcType=VARCHAR}, 
+      #{id,jdbcType=VARCHAR}, #{idtype,jdbcType=VARCHAR}, #{joinworkdate,jdbcType=CHAR}, 
+      #{lastname,jdbcType=VARCHAR}, #{mnecode,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, 
+      #{modifiedtime,jdbcType=CHAR}, #{modifier,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{name2,jdbcType=VARCHAR}, #{name3,jdbcType=VARCHAR}, #{name4,jdbcType=VARCHAR}, 
+      #{name5,jdbcType=VARCHAR}, #{name6,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, 
+      #{officephone,jdbcType=VARCHAR}, #{pkGroup,jdbcType=VARCHAR}, #{pkOrg,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=DECIMAL}, #{ts,jdbcType=CHAR}, #{usedname,jdbcType=VARCHAR}, #{isshopassist,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.besbing.model.entities.primary.BdPsndoc">
+    insert into BD_PSNDOC
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pkPsndoc != null">
+        PK_PSNDOC,
+      </if>
+      <if test="addr != null">
+        ADDR,
+      </if>
+      <if test="birthdate != null">
+        BIRTHDATE,
+      </if>
+      <if test="code != null">
+        CODE,
+      </if>
+      <if test="creationtime != null">
+        CREATIONTIME,
+      </if>
+      <if test="creator != null">
+        CREATOR,
+      </if>
+      <if test="dataoriginflag != null">
+        DATAORIGINFLAG,
+      </if>
+      <if test="def1 != null">
+        DEF1,
+      </if>
+      <if test="def10 != null">
+        DEF10,
+      </if>
+      <if test="def11 != null">
+        DEF11,
+      </if>
+      <if test="def12 != null">
+        DEF12,
+      </if>
+      <if test="def13 != null">
+        DEF13,
+      </if>
+      <if test="def14 != null">
+        DEF14,
+      </if>
+      <if test="def15 != null">
+        DEF15,
+      </if>
+      <if test="def16 != null">
+        DEF16,
+      </if>
+      <if test="def17 != null">
+        DEF17,
+      </if>
+      <if test="def18 != null">
+        DEF18,
+      </if>
+      <if test="def19 != null">
+        DEF19,
+      </if>
+      <if test="def2 != null">
+        DEF2,
+      </if>
+      <if test="def20 != null">
+        DEF20,
+      </if>
+      <if test="def3 != null">
+        DEF3,
+      </if>
+      <if test="def4 != null">
+        DEF4,
+      </if>
+      <if test="def5 != null">
+        DEF5,
+      </if>
+      <if test="def6 != null">
+        DEF6,
+      </if>
+      <if test="def7 != null">
+        DEF7,
+      </if>
+      <if test="def8 != null">
+        DEF8,
+      </if>
+      <if test="def9 != null">
+        DEF9,
+      </if>
+      <if test="dr != null">
+        DR,
+      </if>
+      <if test="email != null">
+        EMAIL,
+      </if>
+      <if test="enablestate != null">
+        ENABLESTATE,
+      </if>
+      <if test="firstname != null">
+        FIRSTNAME,
+      </if>
+      <if test="homephone != null">
+        HOMEPHONE,
+      </if>
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="idtype != null">
+        IDTYPE,
+      </if>
+      <if test="joinworkdate != null">
+        JOINWORKDATE,
+      </if>
+      <if test="lastname != null">
+        LASTNAME,
+      </if>
+      <if test="mnecode != null">
+        MNECODE,
+      </if>
+      <if test="mobile != null">
+        MOBILE,
+      </if>
+      <if test="modifiedtime != null">
+        MODIFIEDTIME,
+      </if>
+      <if test="modifier != null">
+        MODIFIER,
+      </if>
+      <if test="name != null">
+        NAME,
+      </if>
+      <if test="name2 != null">
+        NAME2,
+      </if>
+      <if test="name3 != null">
+        NAME3,
+      </if>
+      <if test="name4 != null">
+        NAME4,
+      </if>
+      <if test="name5 != null">
+        NAME5,
+      </if>
+      <if test="name6 != null">
+        NAME6,
+      </if>
+      <if test="nickname != null">
+        NICKNAME,
+      </if>
+      <if test="officephone != null">
+        OFFICEPHONE,
+      </if>
+      <if test="pkGroup != null">
+        PK_GROUP,
+      </if>
+      <if test="pkOrg != null">
+        PK_ORG,
+      </if>
+      <if test="sex != null">
+        SEX,
+      </if>
+      <if test="ts != null">
+        TS,
+      </if>
+      <if test="usedname != null">
+        USEDNAME,
+      </if>
+      <if test="isshopassist != null">
+        ISSHOPASSIST,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pkPsndoc != null">
+        #{pkPsndoc,jdbcType=CHAR},
+      </if>
+      <if test="addr != null">
+        #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null">
+        #{birthdate,jdbcType=CHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null">
+        #{creationtime,jdbcType=CHAR},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="dataoriginflag != null">
+        #{dataoriginflag,jdbcType=DECIMAL},
+      </if>
+      <if test="def1 != null">
+        #{def1,jdbcType=VARCHAR},
+      </if>
+      <if test="def10 != null">
+        #{def10,jdbcType=VARCHAR},
+      </if>
+      <if test="def11 != null">
+        #{def11,jdbcType=VARCHAR},
+      </if>
+      <if test="def12 != null">
+        #{def12,jdbcType=VARCHAR},
+      </if>
+      <if test="def13 != null">
+        #{def13,jdbcType=VARCHAR},
+      </if>
+      <if test="def14 != null">
+        #{def14,jdbcType=VARCHAR},
+      </if>
+      <if test="def15 != null">
+        #{def15,jdbcType=VARCHAR},
+      </if>
+      <if test="def16 != null">
+        #{def16,jdbcType=VARCHAR},
+      </if>
+      <if test="def17 != null">
+        #{def17,jdbcType=VARCHAR},
+      </if>
+      <if test="def18 != null">
+        #{def18,jdbcType=VARCHAR},
+      </if>
+      <if test="def19 != null">
+        #{def19,jdbcType=VARCHAR},
+      </if>
+      <if test="def2 != null">
+        #{def2,jdbcType=VARCHAR},
+      </if>
+      <if test="def20 != null">
+        #{def20,jdbcType=VARCHAR},
+      </if>
+      <if test="def3 != null">
+        #{def3,jdbcType=VARCHAR},
+      </if>
+      <if test="def4 != null">
+        #{def4,jdbcType=VARCHAR},
+      </if>
+      <if test="def5 != null">
+        #{def5,jdbcType=VARCHAR},
+      </if>
+      <if test="def6 != null">
+        #{def6,jdbcType=VARCHAR},
+      </if>
+      <if test="def7 != null">
+        #{def7,jdbcType=VARCHAR},
+      </if>
+      <if test="def8 != null">
+        #{def8,jdbcType=VARCHAR},
+      </if>
+      <if test="def9 != null">
+        #{def9,jdbcType=VARCHAR},
+      </if>
+      <if test="dr != null">
+        #{dr,jdbcType=DECIMAL},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="enablestate != null">
+        #{enablestate,jdbcType=DECIMAL},
+      </if>
+      <if test="firstname != null">
+        #{firstname,jdbcType=VARCHAR},
+      </if>
+      <if test="homephone != null">
+        #{homephone,jdbcType=VARCHAR},
+      </if>
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null">
+        #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="joinworkdate != null">
+        #{joinworkdate,jdbcType=CHAR},
+      </if>
+      <if test="lastname != null">
+        #{lastname,jdbcType=VARCHAR},
+      </if>
+      <if test="mnecode != null">
+        #{mnecode,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="modifiedtime != null">
+        #{modifiedtime,jdbcType=CHAR},
+      </if>
+      <if test="modifier != null">
+        #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="name2 != null">
+        #{name2,jdbcType=VARCHAR},
+      </if>
+      <if test="name3 != null">
+        #{name3,jdbcType=VARCHAR},
+      </if>
+      <if test="name4 != null">
+        #{name4,jdbcType=VARCHAR},
+      </if>
+      <if test="name5 != null">
+        #{name5,jdbcType=VARCHAR},
+      </if>
+      <if test="name6 != null">
+        #{name6,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="officephone != null">
+        #{officephone,jdbcType=VARCHAR},
+      </if>
+      <if test="pkGroup != null">
+        #{pkGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="pkOrg != null">
+        #{pkOrg,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=DECIMAL},
+      </if>
+      <if test="ts != null">
+        #{ts,jdbcType=CHAR},
+      </if>
+      <if test="usedname != null">
+        #{usedname,jdbcType=VARCHAR},
+      </if>
+      <if test="isshopassist != null">
+        #{isshopassist,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.besbing.model.entities.primary.BdPsndocExample" resultType="java.lang.Long">
+    select count(*) from BD_PSNDOC
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+    <select id="selectPsndocByUsercode" resultType="cn.besbing.model.entities.primary.BdPsndoc">
+      select * from bd_psndoc where code = #{code}
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+    update BD_PSNDOC
+    <set>
+      <if test="record.pkPsndoc != null">
+        PK_PSNDOC = #{record.pkPsndoc,jdbcType=CHAR},
+      </if>
+      <if test="record.addr != null">
+        ADDR = #{record.addr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.birthdate != null">
+        BIRTHDATE = #{record.birthdate,jdbcType=CHAR},
+      </if>
+      <if test="record.code != null">
+        CODE = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creationtime != null">
+        CREATIONTIME = #{record.creationtime,jdbcType=CHAR},
+      </if>
+      <if test="record.creator != null">
+        CREATOR = #{record.creator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dataoriginflag != null">
+        DATAORIGINFLAG = #{record.dataoriginflag,jdbcType=DECIMAL},
+      </if>
+      <if test="record.def1 != null">
+        DEF1 = #{record.def1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def10 != null">
+        DEF10 = #{record.def10,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def11 != null">
+        DEF11 = #{record.def11,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def12 != null">
+        DEF12 = #{record.def12,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def13 != null">
+        DEF13 = #{record.def13,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def14 != null">
+        DEF14 = #{record.def14,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def15 != null">
+        DEF15 = #{record.def15,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def16 != null">
+        DEF16 = #{record.def16,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def17 != null">
+        DEF17 = #{record.def17,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def18 != null">
+        DEF18 = #{record.def18,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def19 != null">
+        DEF19 = #{record.def19,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def2 != null">
+        DEF2 = #{record.def2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def20 != null">
+        DEF20 = #{record.def20,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def3 != null">
+        DEF3 = #{record.def3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def4 != null">
+        DEF4 = #{record.def4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def5 != null">
+        DEF5 = #{record.def5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def6 != null">
+        DEF6 = #{record.def6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def7 != null">
+        DEF7 = #{record.def7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def8 != null">
+        DEF8 = #{record.def8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.def9 != null">
+        DEF9 = #{record.def9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dr != null">
+        DR = #{record.dr,jdbcType=DECIMAL},
+      </if>
+      <if test="record.email != null">
+        EMAIL = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enablestate != null">
+        ENABLESTATE = #{record.enablestate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.firstname != null">
+        FIRSTNAME = #{record.firstname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.homephone != null">
+        HOMEPHONE = #{record.homephone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idtype != null">
+        IDTYPE = #{record.idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.joinworkdate != null">
+        JOINWORKDATE = #{record.joinworkdate,jdbcType=CHAR},
+      </if>
+      <if test="record.lastname != null">
+        LASTNAME = #{record.lastname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mnecode != null">
+        MNECODE = #{record.mnecode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mobile != null">
+        MOBILE = #{record.mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifiedtime != null">
+        MODIFIEDTIME = #{record.modifiedtime,jdbcType=CHAR},
+      </if>
+      <if test="record.modifier != null">
+        MODIFIER = #{record.modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null">
+        NAME = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name2 != null">
+        NAME2 = #{record.name2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name3 != null">
+        NAME3 = #{record.name3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name4 != null">
+        NAME4 = #{record.name4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name5 != null">
+        NAME5 = #{record.name5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name6 != null">
+        NAME6 = #{record.name6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nickname != null">
+        NICKNAME = #{record.nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.officephone != null">
+        OFFICEPHONE = #{record.officephone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkGroup != null">
+        PK_GROUP = #{record.pkGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkOrg != null">
+        PK_ORG = #{record.pkOrg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sex != null">
+        SEX = #{record.sex,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ts != null">
+        TS = #{record.ts,jdbcType=CHAR},
+      </if>
+      <if test="record.usedname != null">
+        USEDNAME = #{record.usedname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isshopassist != null">
+        ISSHOPASSIST = #{record.isshopassist,jdbcType=CHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update BD_PSNDOC
+    set PK_PSNDOC = #{record.pkPsndoc,jdbcType=CHAR},
+      ADDR = #{record.addr,jdbcType=VARCHAR},
+      BIRTHDATE = #{record.birthdate,jdbcType=CHAR},
+      CODE = #{record.code,jdbcType=VARCHAR},
+      CREATIONTIME = #{record.creationtime,jdbcType=CHAR},
+      CREATOR = #{record.creator,jdbcType=VARCHAR},
+      DATAORIGINFLAG = #{record.dataoriginflag,jdbcType=DECIMAL},
+      DEF1 = #{record.def1,jdbcType=VARCHAR},
+      DEF10 = #{record.def10,jdbcType=VARCHAR},
+      DEF11 = #{record.def11,jdbcType=VARCHAR},
+      DEF12 = #{record.def12,jdbcType=VARCHAR},
+      DEF13 = #{record.def13,jdbcType=VARCHAR},
+      DEF14 = #{record.def14,jdbcType=VARCHAR},
+      DEF15 = #{record.def15,jdbcType=VARCHAR},
+      DEF16 = #{record.def16,jdbcType=VARCHAR},
+      DEF17 = #{record.def17,jdbcType=VARCHAR},
+      DEF18 = #{record.def18,jdbcType=VARCHAR},
+      DEF19 = #{record.def19,jdbcType=VARCHAR},
+      DEF2 = #{record.def2,jdbcType=VARCHAR},
+      DEF20 = #{record.def20,jdbcType=VARCHAR},
+      DEF3 = #{record.def3,jdbcType=VARCHAR},
+      DEF4 = #{record.def4,jdbcType=VARCHAR},
+      DEF5 = #{record.def5,jdbcType=VARCHAR},
+      DEF6 = #{record.def6,jdbcType=VARCHAR},
+      DEF7 = #{record.def7,jdbcType=VARCHAR},
+      DEF8 = #{record.def8,jdbcType=VARCHAR},
+      DEF9 = #{record.def9,jdbcType=VARCHAR},
+      DR = #{record.dr,jdbcType=DECIMAL},
+      EMAIL = #{record.email,jdbcType=VARCHAR},
+      ENABLESTATE = #{record.enablestate,jdbcType=DECIMAL},
+      FIRSTNAME = #{record.firstname,jdbcType=VARCHAR},
+      HOMEPHONE = #{record.homephone,jdbcType=VARCHAR},
+      ID = #{record.id,jdbcType=VARCHAR},
+      IDTYPE = #{record.idtype,jdbcType=VARCHAR},
+      JOINWORKDATE = #{record.joinworkdate,jdbcType=CHAR},
+      LASTNAME = #{record.lastname,jdbcType=VARCHAR},
+      MNECODE = #{record.mnecode,jdbcType=VARCHAR},
+      MOBILE = #{record.mobile,jdbcType=VARCHAR},
+      MODIFIEDTIME = #{record.modifiedtime,jdbcType=CHAR},
+      MODIFIER = #{record.modifier,jdbcType=VARCHAR},
+      NAME = #{record.name,jdbcType=VARCHAR},
+      NAME2 = #{record.name2,jdbcType=VARCHAR},
+      NAME3 = #{record.name3,jdbcType=VARCHAR},
+      NAME4 = #{record.name4,jdbcType=VARCHAR},
+      NAME5 = #{record.name5,jdbcType=VARCHAR},
+      NAME6 = #{record.name6,jdbcType=VARCHAR},
+      NICKNAME = #{record.nickname,jdbcType=VARCHAR},
+      OFFICEPHONE = #{record.officephone,jdbcType=VARCHAR},
+      PK_GROUP = #{record.pkGroup,jdbcType=VARCHAR},
+      PK_ORG = #{record.pkOrg,jdbcType=VARCHAR},
+      SEX = #{record.sex,jdbcType=DECIMAL},
+      TS = #{record.ts,jdbcType=CHAR},
+      USEDNAME = #{record.usedname,jdbcType=VARCHAR},
+      ISSHOPASSIST = #{record.isshopassist,jdbcType=CHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.besbing.model.entities.primary.BdPsndoc">
+    update BD_PSNDOC
+    <set>
+      <if test="addr != null">
+        ADDR = #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null">
+        BIRTHDATE = #{birthdate,jdbcType=CHAR},
+      </if>
+      <if test="code != null">
+        CODE = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null">
+        CREATIONTIME = #{creationtime,jdbcType=CHAR},
+      </if>
+      <if test="creator != null">
+        CREATOR = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="dataoriginflag != null">
+        DATAORIGINFLAG = #{dataoriginflag,jdbcType=DECIMAL},
+      </if>
+      <if test="def1 != null">
+        DEF1 = #{def1,jdbcType=VARCHAR},
+      </if>
+      <if test="def10 != null">
+        DEF10 = #{def10,jdbcType=VARCHAR},
+      </if>
+      <if test="def11 != null">
+        DEF11 = #{def11,jdbcType=VARCHAR},
+      </if>
+      <if test="def12 != null">
+        DEF12 = #{def12,jdbcType=VARCHAR},
+      </if>
+      <if test="def13 != null">
+        DEF13 = #{def13,jdbcType=VARCHAR},
+      </if>
+      <if test="def14 != null">
+        DEF14 = #{def14,jdbcType=VARCHAR},
+      </if>
+      <if test="def15 != null">
+        DEF15 = #{def15,jdbcType=VARCHAR},
+      </if>
+      <if test="def16 != null">
+        DEF16 = #{def16,jdbcType=VARCHAR},
+      </if>
+      <if test="def17 != null">
+        DEF17 = #{def17,jdbcType=VARCHAR},
+      </if>
+      <if test="def18 != null">
+        DEF18 = #{def18,jdbcType=VARCHAR},
+      </if>
+      <if test="def19 != null">
+        DEF19 = #{def19,jdbcType=VARCHAR},
+      </if>
+      <if test="def2 != null">
+        DEF2 = #{def2,jdbcType=VARCHAR},
+      </if>
+      <if test="def20 != null">
+        DEF20 = #{def20,jdbcType=VARCHAR},
+      </if>
+      <if test="def3 != null">
+        DEF3 = #{def3,jdbcType=VARCHAR},
+      </if>
+      <if test="def4 != null">
+        DEF4 = #{def4,jdbcType=VARCHAR},
+      </if>
+      <if test="def5 != null">
+        DEF5 = #{def5,jdbcType=VARCHAR},
+      </if>
+      <if test="def6 != null">
+        DEF6 = #{def6,jdbcType=VARCHAR},
+      </if>
+      <if test="def7 != null">
+        DEF7 = #{def7,jdbcType=VARCHAR},
+      </if>
+      <if test="def8 != null">
+        DEF8 = #{def8,jdbcType=VARCHAR},
+      </if>
+      <if test="def9 != null">
+        DEF9 = #{def9,jdbcType=VARCHAR},
+      </if>
+      <if test="dr != null">
+        DR = #{dr,jdbcType=DECIMAL},
+      </if>
+      <if test="email != null">
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="enablestate != null">
+        ENABLESTATE = #{enablestate,jdbcType=DECIMAL},
+      </if>
+      <if test="firstname != null">
+        FIRSTNAME = #{firstname,jdbcType=VARCHAR},
+      </if>
+      <if test="homephone != null">
+        HOMEPHONE = #{homephone,jdbcType=VARCHAR},
+      </if>
+      <if test="id != null">
+        ID = #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null">
+        IDTYPE = #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="joinworkdate != null">
+        JOINWORKDATE = #{joinworkdate,jdbcType=CHAR},
+      </if>
+      <if test="lastname != null">
+        LASTNAME = #{lastname,jdbcType=VARCHAR},
+      </if>
+      <if test="mnecode != null">
+        MNECODE = #{mnecode,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        MOBILE = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="modifiedtime != null">
+        MODIFIEDTIME = #{modifiedtime,jdbcType=CHAR},
+      </if>
+      <if test="modifier != null">
+        MODIFIER = #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="name2 != null">
+        NAME2 = #{name2,jdbcType=VARCHAR},
+      </if>
+      <if test="name3 != null">
+        NAME3 = #{name3,jdbcType=VARCHAR},
+      </if>
+      <if test="name4 != null">
+        NAME4 = #{name4,jdbcType=VARCHAR},
+      </if>
+      <if test="name5 != null">
+        NAME5 = #{name5,jdbcType=VARCHAR},
+      </if>
+      <if test="name6 != null">
+        NAME6 = #{name6,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        NICKNAME = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="officephone != null">
+        OFFICEPHONE = #{officephone,jdbcType=VARCHAR},
+      </if>
+      <if test="pkGroup != null">
+        PK_GROUP = #{pkGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="pkOrg != null">
+        PK_ORG = #{pkOrg,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        SEX = #{sex,jdbcType=DECIMAL},
+      </if>
+      <if test="ts != null">
+        TS = #{ts,jdbcType=CHAR},
+      </if>
+      <if test="usedname != null">
+        USEDNAME = #{usedname,jdbcType=VARCHAR},
+      </if>
+      <if test="isshopassist != null">
+        ISSHOPASSIST = #{isshopassist,jdbcType=CHAR},
+      </if>
+    </set>
+    where PK_PSNDOC = #{pkPsndoc,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.besbing.model.entities.primary.BdPsndoc">
+    update BD_PSNDOC
+    set ADDR = #{addr,jdbcType=VARCHAR},
+      BIRTHDATE = #{birthdate,jdbcType=CHAR},
+      CODE = #{code,jdbcType=VARCHAR},
+      CREATIONTIME = #{creationtime,jdbcType=CHAR},
+      CREATOR = #{creator,jdbcType=VARCHAR},
+      DATAORIGINFLAG = #{dataoriginflag,jdbcType=DECIMAL},
+      DEF1 = #{def1,jdbcType=VARCHAR},
+      DEF10 = #{def10,jdbcType=VARCHAR},
+      DEF11 = #{def11,jdbcType=VARCHAR},
+      DEF12 = #{def12,jdbcType=VARCHAR},
+      DEF13 = #{def13,jdbcType=VARCHAR},
+      DEF14 = #{def14,jdbcType=VARCHAR},
+      DEF15 = #{def15,jdbcType=VARCHAR},
+      DEF16 = #{def16,jdbcType=VARCHAR},
+      DEF17 = #{def17,jdbcType=VARCHAR},
+      DEF18 = #{def18,jdbcType=VARCHAR},
+      DEF19 = #{def19,jdbcType=VARCHAR},
+      DEF2 = #{def2,jdbcType=VARCHAR},
+      DEF20 = #{def20,jdbcType=VARCHAR},
+      DEF3 = #{def3,jdbcType=VARCHAR},
+      DEF4 = #{def4,jdbcType=VARCHAR},
+      DEF5 = #{def5,jdbcType=VARCHAR},
+      DEF6 = #{def6,jdbcType=VARCHAR},
+      DEF7 = #{def7,jdbcType=VARCHAR},
+      DEF8 = #{def8,jdbcType=VARCHAR},
+      DEF9 = #{def9,jdbcType=VARCHAR},
+      DR = #{dr,jdbcType=DECIMAL},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      ENABLESTATE = #{enablestate,jdbcType=DECIMAL},
+      FIRSTNAME = #{firstname,jdbcType=VARCHAR},
+      HOMEPHONE = #{homephone,jdbcType=VARCHAR},
+      ID = #{id,jdbcType=VARCHAR},
+      IDTYPE = #{idtype,jdbcType=VARCHAR},
+      JOINWORKDATE = #{joinworkdate,jdbcType=CHAR},
+      LASTNAME = #{lastname,jdbcType=VARCHAR},
+      MNECODE = #{mnecode,jdbcType=VARCHAR},
+      MOBILE = #{mobile,jdbcType=VARCHAR},
+      MODIFIEDTIME = #{modifiedtime,jdbcType=CHAR},
+      MODIFIER = #{modifier,jdbcType=VARCHAR},
+      NAME = #{name,jdbcType=VARCHAR},
+      NAME2 = #{name2,jdbcType=VARCHAR},
+      NAME3 = #{name3,jdbcType=VARCHAR},
+      NAME4 = #{name4,jdbcType=VARCHAR},
+      NAME5 = #{name5,jdbcType=VARCHAR},
+      NAME6 = #{name6,jdbcType=VARCHAR},
+      NICKNAME = #{nickname,jdbcType=VARCHAR},
+      OFFICEPHONE = #{officephone,jdbcType=VARCHAR},
+      PK_GROUP = #{pkGroup,jdbcType=VARCHAR},
+      PK_ORG = #{pkOrg,jdbcType=VARCHAR},
+      SEX = #{sex,jdbcType=DECIMAL},
+      TS = #{ts,jdbcType=CHAR},
+      USEDNAME = #{usedname,jdbcType=VARCHAR},
+      ISSHOPASSIST = #{isshopassist,jdbcType=CHAR}
+    where PK_PSNDOC = #{pkPsndoc,jdbcType=CHAR}
+  </update>
+</mapper>
