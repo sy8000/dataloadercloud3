@@ -20,229 +20,72 @@
     <script src="../../../../static/struct/layuimini/js/lay-config.js?v=1.0.4" charset="utf-8"></script>
     <script src="../../../../static/js/lims/createproject.js" charset="utf-8"></script>
 </head>
-<body onload="addWaterMarker()">
+<body onload="addWaterMarker()" style="margin: 10px 10px 10px 10px" >
 <!--
 <p>Hello, <shiro:principal/>, how are you today?</p>
 <p><shiro:user>guest</shiro:user></p>
-<span th:text="${session.usercode}">人员工号</span>
+<span th:text="${session.usercode}">人员工号</span>.
+<option th:each="proj:${projType}"  th:value="${proj}" th:text="${proj}"  ></option>
 -->
-<div class="layuimini-container">
-    <div class="layuimini-main">
-
-        <div class="layui-fluid">
-            <div class="layui-card">
-                <div class="layui-card-body" style="padding-top: 40px;">
-                    <div class="layui-carousel" id="stepForm" lay-filter="stepForm" style="margin: 0 auto;">
-                        <div carousel-item>
-
-
-                            <div>
-                                <form class="layui-form" style="margin: 0 auto;max-width: 460px;padding-top: 40px;">
-
-                                    <div class="layui-collapse" lay-accordion="">
-                                        <div class="layui-colla-item">
-                                            <h2 class="layui-colla-title">委托单基本信息</h2>
-
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">委托类型:</label>
-                                        <div class="layui-input-block">
-                                            <select lay-verify="required" name="projectType">
-                                                <option th:each="proj:${projType}"  th:value="${proj}" th:text="${proj}"  ></option>
-                                            </select>
-                                        </div>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body" style="padding-top: 40px;">
+            <div class="layui-carousel" id="stepForm" lay-filter="stepForm" style="margin: 0 auto;">
+                <div carousel-item>
+                    <!--第一页-->
+                    <div>
+                        <form class="layui-form" style="margin: 0 auto;max-width: 80%;padding-top: 40px;">
+                            <div class="layui-collapse" lay-accordion>
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">委托单基本信息填写</h2>
+                                    <div class="layui-colla-content layui-show">
+                                        <!--第一个百叶窗内-->
                                     </div>
-
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">委托单名称:</label>
-                                        <div class="layui-input-block">
-                                            <input type="text" placeholder="请填写委托单名称" class="layui-input"  required />
-                                        </div>
-                                    </div>
-
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">联系人:</label>
-                                        <div class="layui-input-block">
-                                            <input type="text" th:value="${session.username}" placeholder="请填写联系人姓名" class="layui-input"  required />
-                                        </div>
-                                    </div>
-
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">联系电话:</label>
-                                        <div class="layui-input-block">
-                                            <input type="text" th:value="${session.phone}" placeholder="请填写联系人电话" class="layui-input"  required />
-                                        </div>
-                                    </div>
-
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">电子邮件:</label>
-                                        <div class="layui-input-block">
-                                            <input type="text" th:value="${session.email}" placeholder="请填写联系人email" class="layui-input"  required />
-                                        </div>
-                                    </div>
-
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">委托单位:</label>
-                                        <div class="layui-input-block">
-                                            <select lay-verify="required" name="projectType">
-                                                <option th:each="org:${orgs}"  th:value="${org.name}" th:text="${org.name}"  ></option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">付款单位:</label>
-                                        <div class="layui-input-block">
-                                            <select lay-verify="required" name="projectType">
-                                                <option th:each="org:${orgs}"  th:value="${org.name}" th:text="${org.name}"  ></option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                        </div></div>
-
-
-                                    <div class="layui-collapse" lay-accordion="">
-                                        <div class="layui-colla-item">
-                                            <h2 class="layui-colla-title">样品信息</h2>
-                                        </div></div>
-
-                                    <div class="layui-collapse" lay-accordion="">
-                                        <div class="layui-colla-item">
-                                            <h2 class="layui-colla-title">任务信息</h2>
-                                        </div></div>
-
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">入款金额:</label>
-                                        <div class="layui-input-block">
-                                            <input type="number" placeholder="请填写入款金额" value="" class="layui-input" lay-verify="number" required>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">入款类型:</label>
-                                        <div class="layui-input-block">
-                                            <select lay-verify="required">
-                                                <option value="1" selected>保险箱</option>
-                                                <option value="2">现金</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">入款方式:</label>
-                                        <div class="layui-input-block">
-                                            <select lay-verify="required">
-                                                <option value="1" selected>人工入款</option>
-                                                <option value="2">修正</option>
-                                                <option value="3">活动</option>
-                                                <option value="4">佣金</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">备注说明:</label>
-                                        <div class="layui-input-block">
-                                            <textarea placeholder="入款备注" value="" class="layui-textarea"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <div class="layui-input-block">
-                                            <button class="layui-btn" lay-submit lay-filter="formStep">
-                                                &emsp;下一步&emsp;
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
-
-
-
-
-
-
-                            <div>
-                                <form class="layui-form" style="margin: 0 auto;max-width: 460px;padding-top: 40px;">
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">游戏ID:</label>
-                                        <div class="layui-input-block">
-                                            <div class="layui-form-mid layui-word-aux">639537</div>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">账户余额:</label>
-                                        <div class="layui-input-block">
-                                            <div class="layui-form-mid layui-word-aux">3000 元（保险箱：1000，现金：2000）</div>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">入款金额:</label>
-                                        <div class="layui-input-block">
-                                            <div class="layui-form-mid layui-word-aux">
-                                                <span style="font-size: 18px;color: #333;">1800 元</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">入款类型:</label>
-                                        <div class="layui-input-block">
-                                            <div class="layui-form-mid layui-word-aux">保险箱</div>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">入款方式:</label>
-                                        <div class="layui-input-block">
-                                            <div class="layui-form-mid layui-word-aux">人工入款</div>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <label class="layui-form-label">备注说明:</label>
-                                        <div class="layui-input-block">
-                                            <div class="layui-form-mid layui-word-aux">备注说明</div>
-                                        </div>
-                                    </div>
-                                    <div class="layui-form-item">
-                                        <div class="layui-input-block">
-                                            <button type="button" class="layui-btn layui-btn-primary pre">上一步</button>
-                                            <button class="layui-btn" lay-submit lay-filter="formStep2">
-                                                &emsp;下一步&emsp;
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
-
-
-
-
-
-                            <div>
-                                <div style="text-align: center;margin-top: 90px;">
-                                    <i class="layui-icon layui-circle"
-                                       style="color: white;font-size:30px;font-weight:bold;background: #52C41A;padding: 20px;line-height: 80px;">&#xe605;</i>
-                                    <div style="font-size: 24px;color: #333;font-weight: 500;margin-top: 30px;">
-                                        入款成功
-                                    </div>
-                                    <div style="font-size: 14px;color: #666;margin-top: 20px;">预计两小时到账</div>
                                 </div>
-                                <div style="text-align: center;margin-top: 50px;">
-                                    <button class="layui-btn next">再入一笔</button>
-                                    <button class="layui-btn layui-btn-primary">查看账单</button>
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">样品基本信息填写</h2>
+                                    <div class="layui-colla-content">
+                                        <!--第二个百叶窗内-->
+                                    </div>
+                                </div>
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">任务基本信息填写</h2>
+                                    <div class="layui-colla-content">
+                                        <!--第三个百叶窗内-->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="layui-form-item">
+                                <div class="layui-input-block">
+                                    <button class="layui-btn" lay-submit lay-filter="formStep">
+                                        &emsp;下一步&emsp;
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <hr>
-                    <div style="color: #666;margin-top: 30px;margin-bottom: 40px;padding-left: 30px;">
-                        <h3>说明</h3><br>
-                        <h4>入款到保险箱</h4>
-                        <p>如果需要，这里可以放一些关于产品的常见问题说明。</p>
-                        <br><h4>入款到现金</h4>
-                        <p>如果需要，这里可以放一些关于产品的常见问题说明。</p>
+                    <!--第二页-->
+                    <div>
+                        <form class="layui-form" style="margin: 0 auto;max-width: 80%;padding-top: 40px;">
+
+
+
+
+                        </form>
                     </div>
+                    <!--第三页-->
+                    <div>
+                        <form class="layui-form" style="margin: 0 auto;max-width: 80%;padding-top: 40px;">
+
+
+
+
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 

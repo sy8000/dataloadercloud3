@@ -1,20 +1,25 @@
-layui.use([ 'form', 'step'], function () {
+layui.use([ 'form', 'step','element', 'layer'], function () {
     var $ = layui.$,
         form = layui.form,
+        element = layui.element;
+        layer = layui.layer
         step = layui.step;
+
+
+
 
     step.render({
         elem: '#stepForm',
         filter: 'stepForm',
         width: '100%', //设置容器宽度
-        stepWidth: '750px',
+        stepWidth: '95%',
         height: '100%',
         stepItems: [{
-            title: '委托单基本信息'
+            title: '填写委托单信息'
         }, {
-            title: '试验及样品信息维护'
+            title: '单据预览'
         }, {
-            title: '完成'
+            title: '提交审核'
         }]
     });
 
