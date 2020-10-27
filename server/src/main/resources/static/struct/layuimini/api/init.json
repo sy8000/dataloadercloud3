@@ -22,7 +22,7 @@
           "target": "_self"
         },
         {
-          "title": "lims设置",
+          "title": "模块设置",
           "href": "",
           "icon": "fa fa-cog",
           "target": "_self",
@@ -31,6 +31,20 @@
               "title": "模板设置",
               "href": "/lims/analysismanage",
               "icon": "fa fa-file-image-o",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "lims",
+          "href": "",
+          "icon": "fa fa-flask",
+          "target": "_self",
+          "child": [
+            {
+              "title": "新建委托单",
+              "href": "/lims/newproject",
+              "icon": "fa fa-file",
               "target": "_self"
             }
           ]

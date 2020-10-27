@@ -61,7 +61,7 @@ public class PrimarySmuserServiceImpl implements  SmUserMapper{
 
     @Override
     public SmUser selectByUserCode(String userCode) {
-        return null;
+        return smUserMapper.selectByUserCode(userCode);
     }
 
     @Override

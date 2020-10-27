@@ -1,12 +1,25 @@
 package cn.besbing.server.controllers.pages;
 
+import cn.besbing.server.service.primary.PrimaryListEntryServiceImpl;
+import cn.besbing.server.service.primary.PrimaryOrgOrgsServiceImpl;
+import org.apache.shiro.SecurityUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @RequestMapping("lims")
 @Controller
 public class LimsPageControllers {
+
+    @Autowired
+    PrimaryListEntryServiceImpl listEntryService;
+
+    @Autowired
+    PrimaryOrgOrgsServiceImpl orgOrgsService;
 
     @GetMapping("projectmodify")
     public String projectmodify(){
@@ -16,6 +29,31 @@ public class LimsPageControllers {
     @GetMapping("analysismanage")
     public String analysismanage(){
         return "pages/lims/manage/analysismanage";
+    }
+
+
+    /**
+     * 跳转时直接带入委托单初始值
+     * @return
+     */
+    @GetMapping("newproject")
+    public String newproject(Model model){
+        /**
+         * 开始获取所有预设的参照值
+         */
+        model.addAttribute("projType",listEntryService.getListValueByListName("C_APPLY_TYPE"));
+        model.addAttribute("reportType",listEntryService.getListValueByListName("C_COA_FORMAT"));
+        model.addAttribute("reportLang",listEntryService.getListValueByListName("C_COA_LANGUAGE"));
+        model.addAttribute("sampleAfterTestProcess",listEntryService.getListValueByListName("C_RATAIN_HANDLE"));
+        model.addAttribute("productProperty",listEntryService.getListValueByListName("产品属性"));
+        model.addAttribute("requiredType",listEntryService.getListValueByListName("客户要求-需求类型"));
+        model.addAttribute("testType",listEntryService.getListValueByListName("客户要求-测试类型"));
+        model.addAttribute("testNatrueType",listEntryService.getListValueByListName("检验性质类型"));
+        model.addAttribute("productIdentificationType",listEntryService.getListValueByListName("产品鉴定类型"));
+        model.addAttribute("safetyCertificationType",listEntryService.getListValueByListName("安全认证类型"));
+        model.addAttribute("orgs",orgOrgsService.getAllorg());
+        model.addAttribute("myorg",orgOrgsService.getOrgByUsercode(SecurityUtils.getSubject().getSession().getAttribute("usercode").toString()));
+        return "pages/lims/limsweb/createproject";
     }
 
 

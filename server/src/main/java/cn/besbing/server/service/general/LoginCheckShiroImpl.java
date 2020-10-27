@@ -10,7 +10,13 @@ package cn.besbing.server.service.general;/*
 
 import cn.besbing.client.enums.BaseResponse;
 import cn.besbing.client.enums.StatusCode;
+import cn.besbing.model.entities.primary.BdPsndoc;
+import cn.besbing.model.entities.primary.OrgOrgs;
+import cn.besbing.model.entities.primary.SmUser;
 import cn.besbing.server.config.shiro.CustomRealm;
+import cn.besbing.server.service.primary.PrimaryBdPsndocServiceImpl;
+import cn.besbing.server.service.primary.PrimaryOrgOrgsServiceImpl;
+import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -30,6 +36,10 @@ public class LoginCheckShiroImpl {
     @Autowired(required = false)
     private GeneratedEncryptionAndDecryptionImpl generatedEncryptionAndDecryption;
 
+    @Autowired(required = false)
+    private PrimaryBdPsndocServiceImpl psndocService;
+
+
     public BaseResponse checkShiro(Map<String,Object> userinfo){
         BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
         CustomRealm customRealm = new CustomRealm();
@@ -42,9 +52,13 @@ public class LoginCheckShiroImpl {
             UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(userinfo.get("username").toString(), encryptionPwd);
             subject.login(usernamePasswordToken);
             //将subject存进session
+            BdPsndoc bdPsndoc = psndocService.selectPsndocByUsercode(userinfo.get("username").toString());
             Session session = subject.getSession();
             session.touch();
             session.setAttribute("usercode",userinfo.get("username").toString());
+            session.setAttribute("username",subject.getPrincipal());
+            session.setAttribute("email",bdPsndoc.getEmail());
+            session.setAttribute("phone",bdPsndoc.getMobile());
         }catch (
                 UnknownAccountException e){
             //用户名不存在
