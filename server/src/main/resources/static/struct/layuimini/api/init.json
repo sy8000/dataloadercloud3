@@ -50,6 +50,20 @@
           ]
         },
         {
+          "title": "查询统计",
+          "href": "",
+          "icon": "fa fa-search",
+          "target": "_self",
+          "child": [
+            {
+              "title": "任务结果明细",
+              "href": "/lims/confirmcharge",
+              "icon": "fa fa-search-plus",
+              "target": "_self"
+            }
+          ]
+        },
+        {
           "title": "自助服务",
           "href": "",
           "icon": "fa fa-cutlery",

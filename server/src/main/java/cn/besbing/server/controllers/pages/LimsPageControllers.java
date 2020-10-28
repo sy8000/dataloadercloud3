@@ -26,6 +26,11 @@ public class LimsPageControllers {
         return "pages/lims/serviceforself/projectmodify";
     }
 
+    @GetMapping("confirmcharge")
+    public String confirmcharge(){
+        return "pages/lims/serviceforself/confirmcharge";
+    }
+
     @GetMapping("analysismanage")
     public String analysismanage(){
         return "pages/lims/manage/analysismanage";
