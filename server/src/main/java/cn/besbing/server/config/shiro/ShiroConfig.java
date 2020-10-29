@@ -32,6 +32,7 @@ public class ShiroConfig {
         /**
          * 暂时放出的费用确认
          */
+
         filterChainDefinitionMap.put("/lims/confirmcharge", "anon");
         filterChainDefinitionMap.put("/loading/getConfirmChargeData", "anon");
         filterChainDefinitionMap.put("/dlclims/viewcharge", "anon");

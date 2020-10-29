@@ -6,6 +6,7 @@ import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.entities.primary.DlRole;
 import cn.besbing.model.entities.primary.SmUser;
 import cn.besbing.server.service.general.GeneratedPrimaryKeysImpl;
+import cn.besbing.server.service.general.GeneratedTranslateImpl;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
 import cn.besbing.server.service.primary.PrimaryDlRoleServiceImpl;
 import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
@@ -44,6 +45,9 @@ public class SystemActionControllers {
 
     @Autowired
     PrimarySmuserServiceImpl primarySmuserService;
+
+    @Autowired
+    GeneratedTranslateImpl generatedTranslate;
 
     /**
      * 添加权限
@@ -178,6 +182,17 @@ public class SystemActionControllers {
             primarySmuserService.deletebyPrimary(cuserid.trim());
         }catch (Exception e){
             baseResponse = new BaseResponse(StatusCode.DBDELETEFAILED.getCode(),e.getMessage());
+        }
+        return baseResponse;
+    }
+
+    @GetMapping("translate")
+    public BaseResponse translate(Map<String,Object> map ){
+        BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
+        try{
+            baseResponse.setData(generatedTranslate.translateText(map.get("content").toString(),map.get("lang").toString()));
+        }catch (Exception e){
+            baseResponse = new BaseResponse(StatusCode.BAIDUAPISEARCHFAILED.getCode(),e.getMessage());
         }
         return baseResponse;
     }

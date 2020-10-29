@@ -169,4 +169,13 @@ public class DataloaderCloudSystemControllers extends AbstractLog {
         return "pages/dataloader/user/edituser";
     }
 
+
+    /**
+     * 翻译页面
+     */
+    @GetMapping("translate")
+    public String maincontent(){
+        return "pages/dataloader/translatepopright";
+    }
+
 }

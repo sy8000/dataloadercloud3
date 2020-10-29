@@ -16,7 +16,8 @@ public enum StatusCode {
     DBSELECTFAILED(-6,"数据库查询失败"),
     DBUPDATEFAILED(-7,"数据库更新失败"),
     DBDELETEFAILED(-8,"数据库更新失败"),
-    DBSELECTSEARCHFAILED(-9,"获取那个天才的人员信息失败^_^")
+    DBSELECTSEARCHFAILED(-9,"获取那个天才的人员信息失败^_^"),
+    BAIDUAPISEARCHFAILED(-10,"百度API翻译转换失败")
     ;
 
     private Integer code;
