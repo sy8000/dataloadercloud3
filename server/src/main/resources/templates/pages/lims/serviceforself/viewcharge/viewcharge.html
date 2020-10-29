@@ -16,26 +16,22 @@
     <link rel="stylesheet" href="../../../static/css/generalcss/layuitablecheckboxfix.css">
     <script src="../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
 </head>
-<body onload="addWaterMarker()">
+<body onload="addWaterMarker()" style="margin: 10px 10px 10px 10px">
 <!--
 <p>Hello, <shiro:principal/>, how are you today?</p>
 <p><shiro:user>guest</shiro:user></p>
 <span th:text="${session.usercode}">人员工号</span>
 -->
-<br/>
-<table class="layui-table" id="testDetail">
-    <tr th:each="data : ${tabledata}">
-        　　<td th:text="${data.1}">Onions</td>
-        　　<td th:text="${data.2}">2.41</td>
-        　　<td th:text="${data.3}">yes</td>
-    </tr>
+<fieldset class="table-search-fieldset">
+    <legend>任务进度综合统计</legend>
+    <div style="margin: 10px 10px 10px 10px">
+        <div th:each="condition:${conditions}">
+            <p th:text="${condition.name}"></p>
+        </div>
+    </div>
+</fieldset>
 
-
-</table>
-
-
-
-
+<div th:utext="${htmlTable}">测试表格数据</div>
 </body>
 
 <script>

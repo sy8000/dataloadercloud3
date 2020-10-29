@@ -2,6 +2,7 @@ package cn.besbing.server.controllers.pages;
 
 import cn.besbing.model.entities.primary.CProjLoginSample;
 import cn.besbing.model.entities.primary.DlPermission;
+import cn.besbing.model.entities.primary.ListObject;
 import cn.besbing.model.entities.primary.ResultView;
 import cn.besbing.server.service.primary.PrimaryCProjLoginSampleServiceImpl;
 import cn.besbing.server.service.primary.PrimaryCProjTaskCoreServiceImpl;
@@ -13,6 +14,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -37,6 +41,9 @@ public class DataloaderCloudLimsControllers extends AbstractLog {
     @Autowired
     private PrimaryResultViewServiceImple resultViewServiceImple;
 
+    @Autowired
+    private PrimaryCProjTaskCoreServiceImpl taskCoreService;
+
     @GetMapping("editproject")
     public String editproject(Model model, String seqnum) {
         try{
@@ -55,6 +62,21 @@ public class DataloaderCloudLimsControllers extends AbstractLog {
             List<String> resultnames = resultViewServiceImple.getDistinctResultNameByTaskid(taskId);
             List<String> resultsamples = resultViewServiceImple.getDistinctResultSampleByTaskid(taskId);
             List<ResultView> resultViews = resultViewServiceImple.getResultViewByTaskid(taskId);
+
+
+            /**
+             * 组装测试条件
+             */
+            List<ListObject> conditions = new ArrayList<>();
+            try {
+                conditions = taskCoreService.getTestConditionsByTaskid(taskId);
+                Collections.sort(conditions);
+            }catch (Exception e){
+                e.getStackTrace();
+            }
+
+
+
 
             String tableData[][] = new String[resultsamples.size()+1][resultnames.size()+1];
             tableData[0][0] = "试验详细数据";
@@ -77,7 +99,20 @@ public class DataloaderCloudLimsControllers extends AbstractLog {
                 }
             }
 
+            /**
+             * 组装返回的表格数据
+             */
+            String htmlTable = "<table class='layui-table'><tbody>";
 
+            for (int i = 0;i < tableData.length; i++){
+                htmlTable += "<tr>";
+                for (int j = 0; j< tableData[0].length; j++){
+                    htmlTable += "<td>" + tableData[i][j] + "</td>";
+                }
+                htmlTable += "</tr>";
+            }
+
+            htmlTable += "</tbody></table>";
 
 
 
@@ -86,7 +121,9 @@ public class DataloaderCloudLimsControllers extends AbstractLog {
              */
             model.addAttribute("tableX",resultnames.size() + 1);
             model.addAttribute("tableY",resultsamples.size());
-            model.addAttribute("tabledata",tableData);
+            model.addAttribute("tabledata", Arrays.asList(tableData));
+            model.addAttribute("htmlTable",htmlTable);
+            model.addAttribute("conditions",conditions);
 
 
         }catch (Exception e){

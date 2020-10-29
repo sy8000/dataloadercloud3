@@ -36,7 +36,7 @@ layui.use(['form', 'table','layer'], function () {
             type: 2,
             title: '试验结果明细',
             anim: 2,
-            area: ['1000px', '500px'],
+            area: ['1000px', '600px'],
             resize: false,
             content: "/dlclims/viewcharge?taskId=" + obj.data.taskId
         });

@@ -29,6 +29,13 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/loading/**", "anon");
         filterChainDefinitionMap.put("/action/login", "anon");
         filterChainDefinitionMap.put("/test/**", "anon");
+        /**
+         * 暂时放出的费用确认
+         */
+        filterChainDefinitionMap.put("/lims/confirmcharge", "anon");
+        filterChainDefinitionMap.put("/loading/getConfirmChargeData", "anon");
+        filterChainDefinitionMap.put("/dlclims/viewcharge", "anon");
+        /**  暂时放出结束  */
 
         filterChainDefinitionMap.put("/forgetPass", "anon");
         filterChainDefinitionMap.put("/resetPwd", "anon");

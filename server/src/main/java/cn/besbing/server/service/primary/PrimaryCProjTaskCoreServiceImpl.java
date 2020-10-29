@@ -2,6 +2,7 @@ package cn.besbing.server.service.primary;
 
 import cn.besbing.model.entities.primary.CProjLoginSample;
 import cn.besbing.model.entities.primary.CProjTask;
+import cn.besbing.model.entities.primary.ListObject;
 import cn.besbing.model.mapper.primary.CProjTaskMapper;
 import cn.besbing.model.utils.SearchDTO;
 import com.github.pagehelper.PageHelper;
@@ -42,5 +43,8 @@ public class PrimaryCProjTaskCoreServiceImpl {
         return list;
     }
 
+    public List<ListObject> getTestConditionsByTaskid(String taskId){
+        return projTaskMapper.selectSortList(taskId);
+    }
 
 }
