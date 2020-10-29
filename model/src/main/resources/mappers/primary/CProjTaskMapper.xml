@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.besbing.model.mapper.primary.CProjTaskMapper">
+  <resultMap id="BaseResultMap" type="cn.besbing.model.entities.primary.CProjTask">
+    <id column="SEQ_NUM" jdbcType="DECIMAL" property="seqNum" />
+    <result column="PROJECT" jdbcType="VARCHAR" property="project" />
+    <result column="ORDER_NUMBER" jdbcType="DECIMAL" property="orderNumber" />
+    <result column="ANALYSIS" jdbcType="VARCHAR" property="analysis" />
+    <result column="CHANGED_ON" jdbcType="DATE" property="changedOn" />
+    <result column="CHANGED_BY" jdbcType="VARCHAR" property="changedBy" />
+    <result column="DESCRIPTION" jdbcType="VARCHAR" property="description" />
+    <result column="SAMPLE_GROUP" jdbcType="VARCHAR" property="sampleGroup" />
+    <result column="TASK_ID" jdbcType="VARCHAR" property="taskId" />
+    <result column="STARTED_DATE" jdbcType="DATE" property="startedDate" />
+    <result column="CREATED_DATE" jdbcType="DATE" property="createdDate" />
+    <result column="COMPLETED_DATE" jdbcType="DATE" property="completedDate" />
+    <result column="TEST_NUMBER" jdbcType="DECIMAL" property="testNumber" />
+    <result column="IS_ENTERED" jdbcType="VARCHAR" property="isEntered" />
+    <result column="TEST_VARIATION" jdbcType="VARCHAR" property="testVariation" />
+    <result column="PLAN_TEST_TIME" jdbcType="DECIMAL" property="planTestTime" />
+    <result column="ACTUAL_TEST_TIME" jdbcType="DECIMAL" property="actualTestTime" />
+    <result column="MAX_NUM_BATCH" jdbcType="DECIMAL" property="maxNumBatch" />
+    <result column="BASE_FEE" jdbcType="DECIMAL" property="baseFee" />
+    <result column="TEST_FEE" jdbcType="DECIMAL" property="testFee" />
+    <result column="QUOTES" jdbcType="DECIMAL" property="quotes" />
+    <result column="ACTUAL_TEST_FEE" jdbcType="DECIMAL" property="actualTestFee" />
+    <result column="ACTUAL_TOTAL_COST" jdbcType="DECIMAL" property="actualTotalCost" />
+    <result column="ANALYSIS_VERSION" jdbcType="DECIMAL" property="analysisVersion" />
+    <result column="IS_RECHECK" jdbcType="VARCHAR" property="isRecheck" />
+    <result column="RECHECK_TO" jdbcType="VARCHAR" property="recheckTo" />
+    <result column="EXT_LINK" jdbcType="VARCHAR" property="extLink" />
+    <result column="IF_PASS" jdbcType="VARCHAR" property="ifPass" />
+    <result column="COMMENT_TECH" jdbcType="VARCHAR" property="commentTech" />
+    <result column="TEST_QUANTITY" jdbcType="DECIMAL" property="testQuantity" />
+    <result column="TASK_REPORTED_NAME" jdbcType="VARCHAR" property="taskReportedName" />
+    <result column="EXPIRY_DATE" jdbcType="DATE" property="expiryDate" />
+    <result column="ASSGIN_TO" jdbcType="VARCHAR" property="assginTo" />
+    <result column="LAB" jdbcType="VARCHAR" property="lab" />
+    <result column="REDATE" jdbcType="DECIMAL" property="redate" />
+    <result column="READY_FOR_REVIEW" jdbcType="VARCHAR" property="readyForReview" />
+    <result column="RPT_ASSGIN_TO" jdbcType="VARCHAR" property="rptAssginTo" />
+    <result column="READY_FOR_DRAFT" jdbcType="VARCHAR" property="readyForDraft" />
+    <result column="DRAFT_APPLY_ON" jdbcType="DATE" property="draftApplyOn" />
+    <result column="DRAFT_APPLY_BY" jdbcType="VARCHAR" property="draftApplyBy" />
+    <result column="REPORT_NUMBER" jdbcType="DECIMAL" property="reportNumber" />
+    <result column="ASSIGNED_SAMPLE" jdbcType="VARCHAR" property="assignedSample" />
+    <result column="ASSIGNED_SAMPLE_DISPLAY" jdbcType="VARCHAR" property="assignedSampleDisplay" />
+    <result column="ASSIGNED_SAMPLE_QUANTITY" jdbcType="DECIMAL" property="assignedSampleQuantity" />
+    <result column="ADDITIONAL_WORK_HOURS" jdbcType="DECIMAL" property="additionalWorkHours" />
+    <result column="SURCHARGE" jdbcType="DECIMAL" property="surcharge" />
+    <result column="ACTUAL_BASE_FEE" jdbcType="DECIMAL" property="actualBaseFee" />
+    <result column="ACTUAL_SURCHARGE" jdbcType="DECIMAL" property="actualSurcharge" />
+    <result column="ACTUAL_TEST_QTY" jdbcType="DECIMAL" property="actualTestQty" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="CONCLUSION" jdbcType="VARCHAR" property="conclusion" />
+    <result column="REVIEWED_ON" jdbcType="DATE" property="reviewedOn" />
+    <result column="RPT_AUTHORIZED_BY" jdbcType="VARCHAR" property="rptAuthorizedBy" />
+    <result column="RPT_AUTHORIZED_ON" jdbcType="DATE" property="rptAuthorizedOn" />
+    <result column="RPT_AUTHORIZED" jdbcType="VARCHAR" property="rptAuthorized" />
+    <result column="RPT_REJECT_COMMENT_C" jdbcType="VARCHAR" property="rptRejectCommentC" />
+    <result column="RPT_REJECT_COMMENT_S" jdbcType="VARCHAR" property="rptRejectCommentS" />
+    <result column="RPT_CONCLUSION" jdbcType="VARCHAR" property="rptConclusion" />
+    <result column="C_SUBMIT_BY" jdbcType="VARCHAR" property="cSubmitBy" />
+    <result column="C_SUBMIT_DATE" jdbcType="DATE" property="cSubmitDate" />
+    <result column="C_CUSTOMERMANAGER_BY" jdbcType="VARCHAR" property="cCustomermanagerBy" />
+    <result column="C_CUSTOMERMANAGER_DATE" jdbcType="DATE" property="cCustomermanagerDate" />
+    <result column="C_TECHSUPERVISOR_BY" jdbcType="VARCHAR" property="cTechsupervisorBy" />
+    <result column="C_TECHSUPERVISOR_DATE" jdbcType="DATE" property="cTechsupervisorDate" />
+    <result column="C_QUOTECREATE_BY" jdbcType="VARCHAR" property="cQuotecreateBy" />
+    <result column="C_QUOTECREATE_DATE" jdbcType="DATE" property="cQuotecreateDate" />
+    <result column="C_QUOTESIGNATURE_BY" jdbcType="VARCHAR" property="cQuotesignatureBy" />
+    <result column="C_QUOTESIGNATURE_DATE" jdbcType="DATE" property="cQuotesignatureDate" />
+    <result column="C_QUOTESEND_BY" jdbcType="VARCHAR" property="cQuotesendBy" />
+    <result column="C_QUOTESEND_DATE" jdbcType="DATE" property="cQuotesendDate" />
+    <result column="C_SAMPLERECEIVE_BY" jdbcType="VARCHAR" property="cSamplereceiveBy" />
+    <result column="C_SAMPLERECEIVE_DATE" jdbcType="DATE" property="cSamplereceiveDate" />
+    <result column="C_ARRANGEMENT_BY" jdbcType="VARCHAR" property="cArrangementBy" />
+    <result column="C_ARRANGEMENT_DATE" jdbcType="DATE" property="cArrangementDate" />
+    <result column="C_MONITORPROCESS_BY" jdbcType="VARCHAR" property="cMonitorprocessBy" />
+    <result column="C_MONITORPROCESS_DATE" jdbcType="DATE" property="cMonitorprocessDate" />
+    <result column="C_ANALYST_START_BY" jdbcType="VARCHAR" property="cAnalystStartBy" />
+    <result column="C_ANALYST_START_DATE" jdbcType="DATE" property="cAnalystStartDate" />
+    <result column="C_ANALYST_END_BY" jdbcType="VARCHAR" property="cAnalystEndBy" />
+    <result column="C_ANALYST_END_DATE" jdbcType="DATE" property="cAnalystEndDate" />
+    <result column="C_ANALYST_SUBMIT_BY" jdbcType="VARCHAR" property="cAnalystSubmitBy" />
+    <result column="C_ANALYST_SUBMIT_DATE" jdbcType="DATE" property="cAnalystSubmitDate" />
+    <result column="C_TECHENGINEER_CREATE_BY" jdbcType="VARCHAR" property="cTechengineerCreateBy" />
+    <result column="C_TECHENGINEER_CREATE_DATE" jdbcType="DATE" property="cTechengineerCreateDate" />
+    <result column="C_TECHENGINEER_SUBMIT_BY" jdbcType="VARCHAR" property="cTechengineerSubmitBy" />
+    <result column="C_TECHENGINEER_SUBMIT_DATE" jdbcType="DATE" property="cTechengineerSubmitDate" />
+    <result column="C_REPORTCREATE_BY" jdbcType="VARCHAR" property="cReportcreateBy" />
+    <result column="C_REPORTCREATE_DATE" jdbcType="DATE" property="cReportcreateDate" />
+    <result column="C_REPORTSIGNATURE_BY" jdbcType="VARCHAR" property="cReportsignatureBy" />
+    <result column="C_REPORTSIGNATURE_DATE" jdbcType="DATE" property="cReportsignatureDate" />
+    <result column="C_CHARGESEND_BY" jdbcType="VARCHAR" property="cChargesendBy" />
+    <result column="C_CHARGESEND_DATE" jdbcType="DATE" property="cChargesendDate" />
+    <result column="C_CHARGECREATE_BY" jdbcType="VARCHAR" property="cChargecreateBy" />
+    <result column="C_CHARGECREATE_DATE" jdbcType="DATE" property="cChargecreateDate" />
+    <result column="C_CHARGESIGNATURE_BY" jdbcType="VARCHAR" property="cChargesignatureBy" />
+    <result column="C_CHARGESIGNATURE_DATE" jdbcType="DATE" property="cChargesignatureDate" />
+    <result column="C_NEXT_PERSON" jdbcType="VARCHAR" property="cNextPerson" />
+    <result column="C_CURRENT_PROCESS" jdbcType="VARCHAR" property="cCurrentProcess" />
+    <result column="C_SAMPLE_OUT_BY" jdbcType="VARCHAR" property="cSampleOutBy" />
+    <result column="C_SAMPLE_OUT_DATE" jdbcType="DATE" property="cSampleOutDate" />
+    <result column="C_SAMPLE_IN_BY" jdbcType="VARCHAR" property="cSampleInBy" />
+    <result column="C_SAMPLE_IN_DATE" jdbcType="DATE" property="cSampleInDate" />
+    <result column="C_SAMPLE_BORROW_BY" jdbcType="VARCHAR" property="cSampleBorrowBy" />
+    <result column="C_SAMPLE_BORROW_DATE" jdbcType="DATE" property="cSampleBorrowDate" />
+    <result column="C_SAMPLE_RETURN_BY" jdbcType="VARCHAR" property="cSampleReturnBy" />
+    <result column="C_SAMPLE_RETURN_DATE" jdbcType="DATE" property="cSampleReturnDate" />
+    <result column="REPORT_NUMBER_BAK" jdbcType="DECIMAL" property="reportNumberBak" />
+    <result column="TS" jdbcType="CHAR" property="ts" />
+    <result column="C_IS_DOWNPARAM" jdbcType="CHAR" property="cIsDownparam" />
+    <result column="C_ADDRESS" jdbcType="VARCHAR" property="cAddress" />
+  </resultMap>
+  <resultMap id="ListObjectMap" type="cn.besbing.model.entities.primary.ListObject" >
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="ORDER" jdbcType="DECIMAL" property="ordernumber" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    SEQ_NUM, PROJECT, ORDER_NUMBER, ANALYSIS, CHANGED_ON, CHANGED_BY, DESCRIPTION, SAMPLE_GROUP, 
+    TASK_ID, STARTED_DATE, CREATED_DATE, COMPLETED_DATE, TEST_NUMBER, IS_ENTERED, TEST_VARIATION, 
+    PLAN_TEST_TIME, ACTUAL_TEST_TIME, MAX_NUM_BATCH, BASE_FEE, TEST_FEE, QUOTES, ACTUAL_TEST_FEE, 
+    ACTUAL_TOTAL_COST, ANALYSIS_VERSION, IS_RECHECK, RECHECK_TO, EXT_LINK, IF_PASS, COMMENT_TECH, 
+    TEST_QUANTITY, TASK_REPORTED_NAME, EXPIRY_DATE, ASSGIN_TO, LAB, REDATE, READY_FOR_REVIEW, 
+    RPT_ASSGIN_TO, READY_FOR_DRAFT, DRAFT_APPLY_ON, DRAFT_APPLY_BY, REPORT_NUMBER, ASSIGNED_SAMPLE, 
+    ASSIGNED_SAMPLE_DISPLAY, ASSIGNED_SAMPLE_QUANTITY, ADDITIONAL_WORK_HOURS, SURCHARGE, 
+    ACTUAL_BASE_FEE, ACTUAL_SURCHARGE, ACTUAL_TEST_QTY, STATUS, CONCLUSION, REVIEWED_ON, 
+    RPT_AUTHORIZED_BY, RPT_AUTHORIZED_ON, RPT_AUTHORIZED, RPT_REJECT_COMMENT_C, RPT_REJECT_COMMENT_S, 
+    RPT_CONCLUSION, C_SUBMIT_BY, C_SUBMIT_DATE, C_CUSTOMERMANAGER_BY, C_CUSTOMERMANAGER_DATE, 
+    C_TECHSUPERVISOR_BY, C_TECHSUPERVISOR_DATE, C_QUOTECREATE_BY, C_QUOTECREATE_DATE, 
+    C_QUOTESIGNATURE_BY, C_QUOTESIGNATURE_DATE, C_QUOTESEND_BY, C_QUOTESEND_DATE, C_SAMPLERECEIVE_BY, 
+    C_SAMPLERECEIVE_DATE, C_ARRANGEMENT_BY, C_ARRANGEMENT_DATE, C_MONITORPROCESS_BY, 
+    C_MONITORPROCESS_DATE, C_ANALYST_START_BY, C_ANALYST_START_DATE, C_ANALYST_END_BY, 
+    C_ANALYST_END_DATE, C_ANALYST_SUBMIT_BY, C_ANALYST_SUBMIT_DATE, C_TECHENGINEER_CREATE_BY, 
+    C_TECHENGINEER_CREATE_DATE, C_TECHENGINEER_SUBMIT_BY, C_TECHENGINEER_SUBMIT_DATE, 
+    C_REPORTCREATE_BY, C_REPORTCREATE_DATE, C_REPORTSIGNATURE_BY, C_REPORTSIGNATURE_DATE, 
+    C_CHARGESEND_BY, C_CHARGESEND_DATE, C_CHARGECREATE_BY, C_CHARGECREATE_DATE, C_CHARGESIGNATURE_BY, 
+    C_CHARGESIGNATURE_DATE, C_NEXT_PERSON, C_CURRENT_PROCESS, C_SAMPLE_OUT_BY, C_SAMPLE_OUT_DATE, 
+    C_SAMPLE_IN_BY, C_SAMPLE_IN_DATE, C_SAMPLE_BORROW_BY, C_SAMPLE_BORROW_DATE, C_SAMPLE_RETURN_BY, 
+    C_SAMPLE_RETURN_DATE, REPORT_NUMBER_BAK, TS, C_IS_DOWNPARAM, C_ADDRESS
+  </sql>
+  <select id="selectByExample" parameterType="cn.besbing.model.entities.primary.CProjTaskExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from C_PROJ_TASK
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from C_PROJ_TASK
+    where SEQ_NUM = #{seqNum,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from C_PROJ_TASK
+    where SEQ_NUM = #{seqNum,jdbcType=DECIMAL}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.besbing.model.entities.primary.CProjTaskExample">
+    delete from C_PROJ_TASK
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.besbing.model.entities.primary.CProjTask">
+    insert into C_PROJ_TASK (SEQ_NUM, PROJECT, ORDER_NUMBER, 
+      ANALYSIS, CHANGED_ON, CHANGED_BY, 
+      DESCRIPTION, SAMPLE_GROUP, TASK_ID, 
+      STARTED_DATE, CREATED_DATE, COMPLETED_DATE, 
+      TEST_NUMBER, IS_ENTERED, TEST_VARIATION, 
+      PLAN_TEST_TIME, ACTUAL_TEST_TIME, MAX_NUM_BATCH, 
+      BASE_FEE, TEST_FEE, QUOTES, 
+      ACTUAL_TEST_FEE, ACTUAL_TOTAL_COST, ANALYSIS_VERSION, 
+      IS_RECHECK, RECHECK_TO, EXT_LINK, 
+      IF_PASS, COMMENT_TECH, TEST_QUANTITY, 
+      TASK_REPORTED_NAME, EXPIRY_DATE, ASSGIN_TO, 
+      LAB, REDATE, READY_FOR_REVIEW, 
+      RPT_ASSGIN_TO, READY_FOR_DRAFT, DRAFT_APPLY_ON, 
+      DRAFT_APPLY_BY, REPORT_NUMBER, ASSIGNED_SAMPLE, 
+      ASSIGNED_SAMPLE_DISPLAY, ASSIGNED_SAMPLE_QUANTITY, 
+      ADDITIONAL_WORK_HOURS, SURCHARGE, ACTUAL_BASE_FEE, 
+      ACTUAL_SURCHARGE, ACTUAL_TEST_QTY, STATUS, 
+      CONCLUSION, REVIEWED_ON, RPT_AUTHORIZED_BY, 
+      RPT_AUTHORIZED_ON, RPT_AUTHORIZED, RPT_REJECT_COMMENT_C, 
+      RPT_REJECT_COMMENT_S, RPT_CONCLUSION, C_SUBMIT_BY, 
+      C_SUBMIT_DATE, C_CUSTOMERMANAGER_BY, C_CUSTOMERMANAGER_DATE, 
+      C_TECHSUPERVISOR_BY, C_TECHSUPERVISOR_DATE, C_QUOTECREATE_BY, 
+      C_QUOTECREATE_DATE, C_QUOTESIGNATURE_BY, C_QUOTESIGNATURE_DATE, 
+      C_QUOTESEND_BY, C_QUOTESEND_DATE, C_SAMPLERECEIVE_BY, 
+      C_SAMPLERECEIVE_DATE, C_ARRANGEMENT_BY, C_ARRANGEMENT_DATE, 
+      C_MONITORPROCESS_BY, C_MONITORPROCESS_DATE, C_ANALYST_START_BY, 
+      C_ANALYST_START_DATE, C_ANALYST_END_BY, C_ANALYST_END_DATE, 
+      C_ANALYST_SUBMIT_BY, C_ANALYST_SUBMIT_DATE, C_TECHENGINEER_CREATE_BY, 
+      C_TECHENGINEER_CREATE_DATE, C_TECHENGINEER_SUBMIT_BY, 
+      C_TECHENGINEER_SUBMIT_DATE, C_REPORTCREATE_BY, 
+      C_REPORTCREATE_DATE, C_REPORTSIGNATURE_BY, C_REPORTSIGNATURE_DATE, 
+      C_CHARGESEND_BY, C_CHARGESEND_DATE, C_CHARGECREATE_BY, 
+      C_CHARGECREATE_DATE, C_CHARGESIGNATURE_BY, C_CHARGESIGNATURE_DATE, 
+      C_NEXT_PERSON, C_CURRENT_PROCESS, C_SAMPLE_OUT_BY, 
+      C_SAMPLE_OUT_DATE, C_SAMPLE_IN_BY, C_SAMPLE_IN_DATE, 
+      C_SAMPLE_BORROW_BY, C_SAMPLE_BORROW_DATE, C_SAMPLE_RETURN_BY, 
+      C_SAMPLE_RETURN_DATE, REPORT_NUMBER_BAK, TS, 
+      C_IS_DOWNPARAM, C_ADDRESS)
+    values (#{seqNum,jdbcType=DECIMAL}, #{project,jdbcType=VARCHAR}, #{orderNumber,jdbcType=DECIMAL}, 
+      #{analysis,jdbcType=VARCHAR}, #{changedOn,jdbcType=DATE}, #{changedBy,jdbcType=VARCHAR}, 
+      #{description,jdbcType=VARCHAR}, #{sampleGroup,jdbcType=VARCHAR}, #{taskId,jdbcType=VARCHAR}, 
+      #{startedDate,jdbcType=DATE}, #{createdDate,jdbcType=DATE}, #{completedDate,jdbcType=DATE}, 
+      #{testNumber,jdbcType=DECIMAL}, #{isEntered,jdbcType=VARCHAR}, #{testVariation,jdbcType=VARCHAR}, 
+      #{planTestTime,jdbcType=DECIMAL}, #{actualTestTime,jdbcType=DECIMAL}, #{maxNumBatch,jdbcType=DECIMAL}, 
+      #{baseFee,jdbcType=DECIMAL}, #{testFee,jdbcType=DECIMAL}, #{quotes,jdbcType=DECIMAL}, 
+      #{actualTestFee,jdbcType=DECIMAL}, #{actualTotalCost,jdbcType=DECIMAL}, #{analysisVersion,jdbcType=DECIMAL}, 
+      #{isRecheck,jdbcType=VARCHAR}, #{recheckTo,jdbcType=VARCHAR}, #{extLink,jdbcType=VARCHAR}, 
+      #{ifPass,jdbcType=VARCHAR}, #{commentTech,jdbcType=VARCHAR}, #{testQuantity,jdbcType=DECIMAL}, 
+      #{taskReportedName,jdbcType=VARCHAR}, #{expiryDate,jdbcType=DATE}, #{assginTo,jdbcType=VARCHAR}, 
+      #{lab,jdbcType=VARCHAR}, #{redate,jdbcType=DECIMAL}, #{readyForReview,jdbcType=VARCHAR}, 
+      #{rptAssginTo,jdbcType=VARCHAR}, #{readyForDraft,jdbcType=VARCHAR}, #{draftApplyOn,jdbcType=DATE}, 
+      #{draftApplyBy,jdbcType=VARCHAR}, #{reportNumber,jdbcType=DECIMAL}, #{assignedSample,jdbcType=VARCHAR}, 
+      #{assignedSampleDisplay,jdbcType=VARCHAR}, #{assignedSampleQuantity,jdbcType=DECIMAL}, 
+      #{additionalWorkHours,jdbcType=DECIMAL}, #{surcharge,jdbcType=DECIMAL}, #{actualBaseFee,jdbcType=DECIMAL}, 
+      #{actualSurcharge,jdbcType=DECIMAL}, #{actualTestQty,jdbcType=DECIMAL}, #{status,jdbcType=VARCHAR}, 
+      #{conclusion,jdbcType=VARCHAR}, #{reviewedOn,jdbcType=DATE}, #{rptAuthorizedBy,jdbcType=VARCHAR}, 
+      #{rptAuthorizedOn,jdbcType=DATE}, #{rptAuthorized,jdbcType=VARCHAR}, #{rptRejectCommentC,jdbcType=VARCHAR}, 
+      #{rptRejectCommentS,jdbcType=VARCHAR}, #{rptConclusion,jdbcType=VARCHAR}, #{cSubmitBy,jdbcType=VARCHAR}, 
+      #{cSubmitDate,jdbcType=DATE}, #{cCustomermanagerBy,jdbcType=VARCHAR}, #{cCustomermanagerDate,jdbcType=DATE}, 
+      #{cTechsupervisorBy,jdbcType=VARCHAR}, #{cTechsupervisorDate,jdbcType=DATE}, #{cQuotecreateBy,jdbcType=VARCHAR}, 
+      #{cQuotecreateDate,jdbcType=DATE}, #{cQuotesignatureBy,jdbcType=VARCHAR}, #{cQuotesignatureDate,jdbcType=DATE}, 
+      #{cQuotesendBy,jdbcType=VARCHAR}, #{cQuotesendDate,jdbcType=DATE}, #{cSamplereceiveBy,jdbcType=VARCHAR}, 
+      #{cSamplereceiveDate,jdbcType=DATE}, #{cArrangementBy,jdbcType=VARCHAR}, #{cArrangementDate,jdbcType=DATE}, 
+      #{cMonitorprocessBy,jdbcType=VARCHAR}, #{cMonitorprocessDate,jdbcType=DATE}, #{cAnalystStartBy,jdbcType=VARCHAR}, 
+      #{cAnalystStartDate,jdbcType=DATE}, #{cAnalystEndBy,jdbcType=VARCHAR}, #{cAnalystEndDate,jdbcType=DATE}, 
+      #{cAnalystSubmitBy,jdbcType=VARCHAR}, #{cAnalystSubmitDate,jdbcType=DATE}, #{cTechengineerCreateBy,jdbcType=VARCHAR}, 
+      #{cTechengineerCreateDate,jdbcType=DATE}, #{cTechengineerSubmitBy,jdbcType=VARCHAR}, 
+      #{cTechengineerSubmitDate,jdbcType=DATE}, #{cReportcreateBy,jdbcType=VARCHAR}, 
+      #{cReportcreateDate,jdbcType=DATE}, #{cReportsignatureBy,jdbcType=VARCHAR}, #{cReportsignatureDate,jdbcType=DATE}, 
+      #{cChargesendBy,jdbcType=VARCHAR}, #{cChargesendDate,jdbcType=DATE}, #{cChargecreateBy,jdbcType=VARCHAR}, 
+      #{cChargecreateDate,jdbcType=DATE}, #{cChargesignatureBy,jdbcType=VARCHAR}, #{cChargesignatureDate,jdbcType=DATE}, 
+      #{cNextPerson,jdbcType=VARCHAR}, #{cCurrentProcess,jdbcType=VARCHAR}, #{cSampleOutBy,jdbcType=VARCHAR}, 
+      #{cSampleOutDate,jdbcType=DATE}, #{cSampleInBy,jdbcType=VARCHAR}, #{cSampleInDate,jdbcType=DATE}, 
+      #{cSampleBorrowBy,jdbcType=VARCHAR}, #{cSampleBorrowDate,jdbcType=DATE}, #{cSampleReturnBy,jdbcType=VARCHAR}, 
+      #{cSampleReturnDate,jdbcType=DATE}, #{reportNumberBak,jdbcType=DECIMAL}, #{ts,jdbcType=CHAR}, 
+      #{cIsDownparam,jdbcType=CHAR}, #{cAddress,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.besbing.model.entities.primary.CProjTask">
+    insert into C_PROJ_TASK
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="seqNum != null">
+        SEQ_NUM,
+      </if>
+      <if test="project != null">
+        PROJECT,
+      </if>
+      <if test="orderNumber != null">
+        ORDER_NUMBER,
+      </if>
+      <if test="analysis != null">
+        ANALYSIS,
+      </if>
+      <if test="changedOn != null">
+        CHANGED_ON,
+      </if>
+      <if test="changedBy != null">
+        CHANGED_BY,
+      </if>
+      <if test="description != null">
+        DESCRIPTION,
+      </if>
+      <if test="sampleGroup != null">
+        SAMPLE_GROUP,
+      </if>
+      <if test="taskId != null">
+        TASK_ID,
+      </if>
+      <if test="startedDate != null">
+        STARTED_DATE,
+      </if>
+      <if test="createdDate != null">
+        CREATED_DATE,
+      </if>
+      <if test="completedDate != null">
+        COMPLETED_DATE,
+      </if>
+      <if test="testNumber != null">
+        TEST_NUMBER,
+      </if>
+      <if test="isEntered != null">
+        IS_ENTERED,
+      </if>
+      <if test="testVariation != null">
+        TEST_VARIATION,
+      </if>
+      <if test="planTestTime != null">
+        PLAN_TEST_TIME,
+      </if>
+      <if test="actualTestTime != null">
+        ACTUAL_TEST_TIME,
+      </if>
+      <if test="maxNumBatch != null">
+        MAX_NUM_BATCH,
+      </if>
+      <if test="baseFee != null">
+        BASE_FEE,
+      </if>
+      <if test="testFee != null">
+        TEST_FEE,
+      </if>
+      <if test="quotes != null">
+        QUOTES,
+      </if>
+      <if test="actualTestFee != null">
+        ACTUAL_TEST_FEE,
+      </if>
+      <if test="actualTotalCost != null">
+        ACTUAL_TOTAL_COST,
+      </if>
+      <if test="analysisVersion != null">
+        ANALYSIS_VERSION,
+      </if>
+      <if test="isRecheck != null">
+        IS_RECHECK,
+      </if>
+      <if test="recheckTo != null">
+        RECHECK_TO,
+      </if>
+      <if test="extLink != null">
+        EXT_LINK,
+      </if>
+      <if test="ifPass != null">
+        IF_PASS,
+      </if>
+      <if test="commentTech != null">
+        COMMENT_TECH,
+      </if>
+      <if test="testQuantity != null">
+        TEST_QUANTITY,
+      </if>
+      <if test="taskReportedName != null">
+        TASK_REPORTED_NAME,
+      </if>
+      <if test="expiryDate != null">
+        EXPIRY_DATE,
+      </if>
+      <if test="assginTo != null">
+        ASSGIN_TO,
+      </if>
+      <if test="lab != null">
+        LAB,
+      </if>
+      <if test="redate != null">
+        REDATE,
+      </if>
+      <if test="readyForReview != null">
+        READY_FOR_REVIEW,
+      </if>
+      <if test="rptAssginTo != null">
+        RPT_ASSGIN_TO,
+      </if>
+      <if test="readyForDraft != null">
+        READY_FOR_DRAFT,
+      </if>
+      <if test="draftApplyOn != null">
+        DRAFT_APPLY_ON,
+      </if>
+      <if test="draftApplyBy != null">
+        DRAFT_APPLY_BY,
+      </if>
+      <if test="reportNumber != null">
+        REPORT_NUMBER,
+      </if>
+      <if test="assignedSample != null">
+        ASSIGNED_SAMPLE,
+      </if>
+      <if test="assignedSampleDisplay != null">
+        ASSIGNED_SAMPLE_DISPLAY,
+      </if>
+      <if test="assignedSampleQuantity != null">
+        ASSIGNED_SAMPLE_QUANTITY,
+      </if>
+      <if test="additionalWorkHours != null">
+        ADDITIONAL_WORK_HOURS,
+      </if>
+      <if test="surcharge != null">
+        SURCHARGE,
+      </if>
+      <if test="actualBaseFee != null">
+        ACTUAL_BASE_FEE,
+      </if>
+      <if test="actualSurcharge != null">
+        ACTUAL_SURCHARGE,
+      </if>
+      <if test="actualTestQty != null">
+        ACTUAL_TEST_QTY,
+      </if>
+      <if test="status != null">
+        STATUS,
+      </if>
+      <if test="conclusion != null">
+        CONCLUSION,
+      </if>
+      <if test="reviewedOn != null">
+        REVIEWED_ON,
+      </if>
+      <if test="rptAuthorizedBy != null">
+        RPT_AUTHORIZED_BY,
+      </if>
+      <if test="rptAuthorizedOn != null">
+        RPT_AUTHORIZED_ON,
+      </if>
+      <if test="rptAuthorized != null">
+        RPT_AUTHORIZED,
+      </if>
+      <if test="rptRejectCommentC != null">
+        RPT_REJECT_COMMENT_C,
+      </if>
+      <if test="rptRejectCommentS != null">
+        RPT_REJECT_COMMENT_S,
+      </if>
+      <if test="rptConclusion != null">
+        RPT_CONCLUSION,
+      </if>
+      <if test="cSubmitBy != null">
+        C_SUBMIT_BY,
+      </if>
+      <if test="cSubmitDate != null">
+        C_SUBMIT_DATE,
+      </if>
+      <if test="cCustomermanagerBy != null">
+        C_CUSTOMERMANAGER_BY,
+      </if>
+      <if test="cCustomermanagerDate != null">
+        C_CUSTOMERMANAGER_DATE,
+      </if>
+      <if test="cTechsupervisorBy != null">
+        C_TECHSUPERVISOR_BY,
+      </if>
+      <if test="cTechsupervisorDate != null">
+        C_TECHSUPERVISOR_DATE,
+      </if>
+      <if test="cQuotecreateBy != null">
+        C_QUOTECREATE_BY,
+      </if>
+      <if test="cQuotecreateDate != null">
+        C_QUOTECREATE_DATE,
+      </if>
+      <if test="cQuotesignatureBy != null">
+        C_QUOTESIGNATURE_BY,
+      </if>
+      <if test="cQuotesignatureDate != null">
+        C_QUOTESIGNATURE_DATE,
+      </if>
+      <if test="cQuotesendBy != null">
+        C_QUOTESEND_BY,
+      </if>
+      <if test="cQuotesendDate != null">
+        C_QUOTESEND_DATE,
+      </if>
+      <if test="cSamplereceiveBy != null">
+        C_SAMPLERECEIVE_BY,
+      </if>
+      <if test="cSamplereceiveDate != null">
+        C_SAMPLERECEIVE_DATE,
+      </if>
+      <if test="cArrangementBy != null">
+        C_ARRANGEMENT_BY,
+      </if>
+      <if test="cArrangementDate != null">
+        C_ARRANGEMENT_DATE,
+      </if>
+      <if test="cMonitorprocessBy != null">
+        C_MONITORPROCESS_BY,
+      </if>
+      <if test="cMonitorprocessDate != null">
+        C_MONITORPROCESS_DATE,
+      </if>
+      <if test="cAnalystStartBy != null">
+        C_ANALYST_START_BY,
+      </if>
+      <if test="cAnalystStartDate != null">
+        C_ANALYST_START_DATE,
+      </if>
+      <if test="cAnalystEndBy != null">
+        C_ANALYST_END_BY,
+      </if>
+      <if test="cAnalystEndDate != null">
+        C_ANALYST_END_DATE,
+      </if>
+      <if test="cAnalystSubmitBy != null">
+        C_ANALYST_SUBMIT_BY,
+      </if>
+      <if test="cAnalystSubmitDate != null">
+        C_ANALYST_SUBMIT_DATE,
+      </if>
+      <if test="cTechengineerCreateBy != null">
+        C_TECHENGINEER_CREATE_BY,
+      </if>
+      <if test="cTechengineerCreateDate != null">
+        C_TECHENGINEER_CREATE_DATE,
+      </if>
+      <if test="cTechengineerSubmitBy != null">
+        C_TECHENGINEER_SUBMIT_BY,
+      </if>
+      <if test="cTechengineerSubmitDate != null">
+        C_TECHENGINEER_SUBMIT_DATE,
+      </if>
+      <if test="cReportcreateBy != null">
+        C_REPORTCREATE_BY,
+      </if>
+      <if test="cReportcreateDate != null">
+        C_REPORTCREATE_DATE,
+      </if>
+      <if test="cReportsignatureBy != null">
+        C_REPORTSIGNATURE_BY,
+      </if>
+      <if test="cReportsignatureDate != null">
+        C_REPORTSIGNATURE_DATE,
+      </if>
+      <if test="cChargesendBy != null">
+        C_CHARGESEND_BY,
+      </if>
+      <if test="cChargesendDate != null">
+        C_CHARGESEND_DATE,
+      </if>
+      <if test="cChargecreateBy != null">
+        C_CHARGECREATE_BY,
+      </if>
+      <if test="cChargecreateDate != null">
+        C_CHARGECREATE_DATE,
+      </if>
+      <if test="cChargesignatureBy != null">
+        C_CHARGESIGNATURE_BY,
+      </if>
+      <if test="cChargesignatureDate != null">
+        C_CHARGESIGNATURE_DATE,
+      </if>
+      <if test="cNextPerson != null">
+        C_NEXT_PERSON,
+      </if>
+      <if test="cCurrentProcess != null">
+        C_CURRENT_PROCESS,
+      </if>
+      <if test="cSampleOutBy != null">
+        C_SAMPLE_OUT_BY,
+      </if>
+      <if test="cSampleOutDate != null">
+        C_SAMPLE_OUT_DATE,
+      </if>
+      <if test="cSampleInBy != null">
+        C_SAMPLE_IN_BY,
+      </if>
+      <if test="cSampleInDate != null">
+        C_SAMPLE_IN_DATE,
+      </if>
+      <if test="cSampleBorrowBy != null">
+        C_SAMPLE_BORROW_BY,
+      </if>
+      <if test="cSampleBorrowDate != null">
+        C_SAMPLE_BORROW_DATE,
+      </if>
+      <if test="cSampleReturnBy != null">
+        C_SAMPLE_RETURN_BY,
+      </if>
+      <if test="cSampleReturnDate != null">
+        C_SAMPLE_RETURN_DATE,
+      </if>
+      <if test="reportNumberBak != null">
+        REPORT_NUMBER_BAK,
+      </if>
+      <if test="ts != null">
+        TS,
+      </if>
+      <if test="cIsDownparam != null">
+        C_IS_DOWNPARAM,
+      </if>
+      <if test="cAddress != null">
+        C_ADDRESS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="seqNum != null">
+        #{seqNum,jdbcType=DECIMAL},
+      </if>
+      <if test="project != null">
+        #{project,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNumber != null">
+        #{orderNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="analysis != null">
+        #{analysis,jdbcType=VARCHAR},
+      </if>
+      <if test="changedOn != null">
+        #{changedOn,jdbcType=DATE},
+      </if>
+      <if test="changedBy != null">
+        #{changedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleGroup != null">
+        #{sampleGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="taskId != null">
+        #{taskId,jdbcType=VARCHAR},
+      </if>
+      <if test="startedDate != null">
+        #{startedDate,jdbcType=DATE},
+      </if>
+      <if test="createdDate != null">
+        #{createdDate,jdbcType=DATE},
+      </if>
+      <if test="completedDate != null">
+        #{completedDate,jdbcType=DATE},
+      </if>
+      <if test="testNumber != null">
+        #{testNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="isEntered != null">
+        #{isEntered,jdbcType=VARCHAR},
+      </if>
+      <if test="testVariation != null">
+        #{testVariation,jdbcType=VARCHAR},
+      </if>
+      <if test="planTestTime != null">
+        #{planTestTime,jdbcType=DECIMAL},
+      </if>
+      <if test="actualTestTime != null">
+        #{actualTestTime,jdbcType=DECIMAL},
+      </if>
+      <if test="maxNumBatch != null">
+        #{maxNumBatch,jdbcType=DECIMAL},
+      </if>
+      <if test="baseFee != null">
+        #{baseFee,jdbcType=DECIMAL},
+      </if>
+      <if test="testFee != null">
+        #{testFee,jdbcType=DECIMAL},
+      </if>
+      <if test="quotes != null">
+        #{quotes,jdbcType=DECIMAL},
+      </if>
+      <if test="actualTestFee != null">
+        #{actualTestFee,jdbcType=DECIMAL},
+      </if>
+      <if test="actualTotalCost != null">
+        #{actualTotalCost,jdbcType=DECIMAL},
+      </if>
+      <if test="analysisVersion != null">
+        #{analysisVersion,jdbcType=DECIMAL},
+      </if>
+      <if test="isRecheck != null">
+        #{isRecheck,jdbcType=VARCHAR},
+      </if>
+      <if test="recheckTo != null">
+        #{recheckTo,jdbcType=VARCHAR},
+      </if>
+      <if test="extLink != null">
+        #{extLink,jdbcType=VARCHAR},
+      </if>
+      <if test="ifPass != null">
+        #{ifPass,jdbcType=VARCHAR},
+      </if>
+      <if test="commentTech != null">
+        #{commentTech,jdbcType=VARCHAR},
+      </if>
+      <if test="testQuantity != null">
+        #{testQuantity,jdbcType=DECIMAL},
+      </if>
+      <if test="taskReportedName != null">
+        #{taskReportedName,jdbcType=VARCHAR},
+      </if>
+      <if test="expiryDate != null">
+        #{expiryDate,jdbcType=DATE},
+      </if>
+      <if test="assginTo != null">
+        #{assginTo,jdbcType=VARCHAR},
+      </if>
+      <if test="lab != null">
+        #{lab,jdbcType=VARCHAR},
+      </if>
+      <if test="redate != null">
+        #{redate,jdbcType=DECIMAL},
+      </if>
+      <if test="readyForReview != null">
+        #{readyForReview,jdbcType=VARCHAR},
+      </if>
+      <if test="rptAssginTo != null">
+        #{rptAssginTo,jdbcType=VARCHAR},
+      </if>
+      <if test="readyForDraft != null">
+        #{readyForDraft,jdbcType=VARCHAR},
+      </if>
+      <if test="draftApplyOn != null">
+        #{draftApplyOn,jdbcType=DATE},
+      </if>
+      <if test="draftApplyBy != null">
+        #{draftApplyBy,jdbcType=VARCHAR},
+      </if>
+      <if test="reportNumber != null">
+        #{reportNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="assignedSample != null">
+        #{assignedSample,jdbcType=VARCHAR},
+      </if>
+      <if test="assignedSampleDisplay != null">
+        #{assignedSampleDisplay,jdbcType=VARCHAR},
+      </if>
+      <if test="assignedSampleQuantity != null">
+        #{assignedSampleQuantity,jdbcType=DECIMAL},
+      </if>
+      <if test="additionalWorkHours != null">
+        #{additionalWorkHours,jdbcType=DECIMAL},
+      </if>
+      <if test="surcharge != null">
+        #{surcharge,jdbcType=DECIMAL},
+      </if>
+      <if test="actualBaseFee != null">
+        #{actualBaseFee,jdbcType=DECIMAL},
+      </if>
+      <if test="actualSurcharge != null">
+        #{actualSurcharge,jdbcType=DECIMAL},
+      </if>
+      <if test="actualTestQty != null">
+        #{actualTestQty,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="conclusion != null">
+        #{conclusion,jdbcType=VARCHAR},
+      </if>
+      <if test="reviewedOn != null">
+        #{reviewedOn,jdbcType=DATE},
+      </if>
+      <if test="rptAuthorizedBy != null">
+        #{rptAuthorizedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="rptAuthorizedOn != null">
+        #{rptAuthorizedOn,jdbcType=DATE},
+      </if>
+      <if test="rptAuthorized != null">
+        #{rptAuthorized,jdbcType=VARCHAR},
+      </if>
+      <if test="rptRejectCommentC != null">
+        #{rptRejectCommentC,jdbcType=VARCHAR},
+      </if>
+      <if test="rptRejectCommentS != null">
+        #{rptRejectCommentS,jdbcType=VARCHAR},
+      </if>
+      <if test="rptConclusion != null">
+        #{rptConclusion,jdbcType=VARCHAR},
+      </if>
+      <if test="cSubmitBy != null">
+        #{cSubmitBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSubmitDate != null">
+        #{cSubmitDate,jdbcType=DATE},
+      </if>
+      <if test="cCustomermanagerBy != null">
+        #{cCustomermanagerBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cCustomermanagerDate != null">
+        #{cCustomermanagerDate,jdbcType=DATE},
+      </if>
+      <if test="cTechsupervisorBy != null">
+        #{cTechsupervisorBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cTechsupervisorDate != null">
+        #{cTechsupervisorDate,jdbcType=DATE},
+      </if>
+      <if test="cQuotecreateBy != null">
+        #{cQuotecreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cQuotecreateDate != null">
+        #{cQuotecreateDate,jdbcType=DATE},
+      </if>
+      <if test="cQuotesignatureBy != null">
+        #{cQuotesignatureBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cQuotesignatureDate != null">
+        #{cQuotesignatureDate,jdbcType=DATE},
+      </if>
+      <if test="cQuotesendBy != null">
+        #{cQuotesendBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cQuotesendDate != null">
+        #{cQuotesendDate,jdbcType=DATE},
+      </if>
+      <if test="cSamplereceiveBy != null">
+        #{cSamplereceiveBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSamplereceiveDate != null">
+        #{cSamplereceiveDate,jdbcType=DATE},
+      </if>
+      <if test="cArrangementBy != null">
+        #{cArrangementBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cArrangementDate != null">
+        #{cArrangementDate,jdbcType=DATE},
+      </if>
+      <if test="cMonitorprocessBy != null">
+        #{cMonitorprocessBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cMonitorprocessDate != null">
+        #{cMonitorprocessDate,jdbcType=DATE},
+      </if>
+      <if test="cAnalystStartBy != null">
+        #{cAnalystStartBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cAnalystStartDate != null">
+        #{cAnalystStartDate,jdbcType=DATE},
+      </if>
+      <if test="cAnalystEndBy != null">
+        #{cAnalystEndBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cAnalystEndDate != null">
+        #{cAnalystEndDate,jdbcType=DATE},
+      </if>
+      <if test="cAnalystSubmitBy != null">
+        #{cAnalystSubmitBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cAnalystSubmitDate != null">
+        #{cAnalystSubmitDate,jdbcType=DATE},
+      </if>
+      <if test="cTechengineerCreateBy != null">
+        #{cTechengineerCreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cTechengineerCreateDate != null">
+        #{cTechengineerCreateDate,jdbcType=DATE},
+      </if>
+      <if test="cTechengineerSubmitBy != null">
+        #{cTechengineerSubmitBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cTechengineerSubmitDate != null">
+        #{cTechengineerSubmitDate,jdbcType=DATE},
+      </if>
+      <if test="cReportcreateBy != null">
+        #{cReportcreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cReportcreateDate != null">
+        #{cReportcreateDate,jdbcType=DATE},
+      </if>
+      <if test="cReportsignatureBy != null">
+        #{cReportsignatureBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cReportsignatureDate != null">
+        #{cReportsignatureDate,jdbcType=DATE},
+      </if>
+      <if test="cChargesendBy != null">
+        #{cChargesendBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cChargesendDate != null">
+        #{cChargesendDate,jdbcType=DATE},
+      </if>
+      <if test="cChargecreateBy != null">
+        #{cChargecreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cChargecreateDate != null">
+        #{cChargecreateDate,jdbcType=DATE},
+      </if>
+      <if test="cChargesignatureBy != null">
+        #{cChargesignatureBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cChargesignatureDate != null">
+        #{cChargesignatureDate,jdbcType=DATE},
+      </if>
+      <if test="cNextPerson != null">
+        #{cNextPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="cCurrentProcess != null">
+        #{cCurrentProcess,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleOutBy != null">
+        #{cSampleOutBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleOutDate != null">
+        #{cSampleOutDate,jdbcType=DATE},
+      </if>
+      <if test="cSampleInBy != null">
+        #{cSampleInBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleInDate != null">
+        #{cSampleInDate,jdbcType=DATE},
+      </if>
+      <if test="cSampleBorrowBy != null">
+        #{cSampleBorrowBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleBorrowDate != null">
+        #{cSampleBorrowDate,jdbcType=DATE},
+      </if>
+      <if test="cSampleReturnBy != null">
+        #{cSampleReturnBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleReturnDate != null">
+        #{cSampleReturnDate,jdbcType=DATE},
+      </if>
+      <if test="reportNumberBak != null">
+        #{reportNumberBak,jdbcType=DECIMAL},
+      </if>
+      <if test="ts != null">
+        #{ts,jdbcType=CHAR},
+      </if>
+      <if test="cIsDownparam != null">
+        #{cIsDownparam,jdbcType=CHAR},
+      </if>
+      <if test="cAddress != null">
+        #{cAddress,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.besbing.model.entities.primary.CProjTaskExample" resultType="java.lang.Long">
+    select count(*) from C_PROJ_TASK
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+    <select id="selectAllTask" resultMap="BaseResultMap" parameterType="cn.besbing.model.utils.SearchDTO">
+      select * from c_proj_task where status != 'F' and 1=1
+      <if test="_parameter != null">
+        and task_id like '%'||#{taskId}||'%'
+      </if>
+    </select>
+  <select id="selectSortList" parameterType="String" resultMap="ListObjectMap">
+    select distinct (r.name   || ' : ' ||
+       r.formatted_entry || ' ' || (case
+         when r.units = 'NONE' then
+          ''
+         else
+          u.display_string
+       end)) name,r.order_number ordernumber
+  from c_proj_task cpt
+  left join result r on cpt.test_number = r.test_number
+  left join units u on r.units = u.unit_code where 
+   cpt.task_id = #{taskId} order by ordernumber asc
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update C_PROJ_TASK
+    <set>
+      <if test="record.seqNum != null">
+        SEQ_NUM = #{record.seqNum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.project != null">
+        PROJECT = #{record.project,jdbcType=VARCHAR},
+      </if>
+      <if test="record.orderNumber != null">
+        ORDER_NUMBER = #{record.orderNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="record.analysis != null">
+        ANALYSIS = #{record.analysis,jdbcType=VARCHAR},
+      </if>
+      <if test="record.changedOn != null">
+        CHANGED_ON = #{record.changedOn,jdbcType=DATE},
+      </if>
+      <if test="record.changedBy != null">
+        CHANGED_BY = #{record.changedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.description != null">
+        DESCRIPTION = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sampleGroup != null">
+        SAMPLE_GROUP = #{record.sampleGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="record.taskId != null">
+        TASK_ID = #{record.taskId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.startedDate != null">
+        STARTED_DATE = #{record.startedDate,jdbcType=DATE},
+      </if>
+      <if test="record.createdDate != null">
+        CREATED_DATE = #{record.createdDate,jdbcType=DATE},
+      </if>
+      <if test="record.completedDate != null">
+        COMPLETED_DATE = #{record.completedDate,jdbcType=DATE},
+      </if>
+      <if test="record.testNumber != null">
+        TEST_NUMBER = #{record.testNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="record.isEntered != null">
+        IS_ENTERED = #{record.isEntered,jdbcType=VARCHAR},
+      </if>
+      <if test="record.testVariation != null">
+        TEST_VARIATION = #{record.testVariation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planTestTime != null">
+        PLAN_TEST_TIME = #{record.planTestTime,jdbcType=DECIMAL},
+      </if>
+      <if test="record.actualTestTime != null">
+        ACTUAL_TEST_TIME = #{record.actualTestTime,jdbcType=DECIMAL},
+      </if>
+      <if test="record.maxNumBatch != null">
+        MAX_NUM_BATCH = #{record.maxNumBatch,jdbcType=DECIMAL},
+      </if>
+      <if test="record.baseFee != null">
+        BASE_FEE = #{record.baseFee,jdbcType=DECIMAL},
+      </if>
+      <if test="record.testFee != null">
+        TEST_FEE = #{record.testFee,jdbcType=DECIMAL},
+      </if>
+      <if test="record.quotes != null">
+        QUOTES = #{record.quotes,jdbcType=DECIMAL},
+      </if>
+      <if test="record.actualTestFee != null">
+        ACTUAL_TEST_FEE = #{record.actualTestFee,jdbcType=DECIMAL},
+      </if>
+      <if test="record.actualTotalCost != null">
+        ACTUAL_TOTAL_COST = #{record.actualTotalCost,jdbcType=DECIMAL},
+      </if>
+      <if test="record.analysisVersion != null">
+        ANALYSIS_VERSION = #{record.analysisVersion,jdbcType=DECIMAL},
+      </if>
+      <if test="record.isRecheck != null">
+        IS_RECHECK = #{record.isRecheck,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recheckTo != null">
+        RECHECK_TO = #{record.recheckTo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extLink != null">
+        EXT_LINK = #{record.extLink,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ifPass != null">
+        IF_PASS = #{record.ifPass,jdbcType=VARCHAR},
+      </if>
+      <if test="record.commentTech != null">
+        COMMENT_TECH = #{record.commentTech,jdbcType=VARCHAR},
+      </if>
+      <if test="record.testQuantity != null">
+        TEST_QUANTITY = #{record.testQuantity,jdbcType=DECIMAL},
+      </if>
+      <if test="record.taskReportedName != null">
+        TASK_REPORTED_NAME = #{record.taskReportedName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expiryDate != null">
+        EXPIRY_DATE = #{record.expiryDate,jdbcType=DATE},
+      </if>
+      <if test="record.assginTo != null">
+        ASSGIN_TO = #{record.assginTo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lab != null">
+        LAB = #{record.lab,jdbcType=VARCHAR},
+      </if>
+      <if test="record.redate != null">
+        REDATE = #{record.redate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.readyForReview != null">
+        READY_FOR_REVIEW = #{record.readyForReview,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rptAssginTo != null">
+        RPT_ASSGIN_TO = #{record.rptAssginTo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.readyForDraft != null">
+        READY_FOR_DRAFT = #{record.readyForDraft,jdbcType=VARCHAR},
+      </if>
+      <if test="record.draftApplyOn != null">
+        DRAFT_APPLY_ON = #{record.draftApplyOn,jdbcType=DATE},
+      </if>
+      <if test="record.draftApplyBy != null">
+        DRAFT_APPLY_BY = #{record.draftApplyBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reportNumber != null">
+        REPORT_NUMBER = #{record.reportNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="record.assignedSample != null">
+        ASSIGNED_SAMPLE = #{record.assignedSample,jdbcType=VARCHAR},
+      </if>
+      <if test="record.assignedSampleDisplay != null">
+        ASSIGNED_SAMPLE_DISPLAY = #{record.assignedSampleDisplay,jdbcType=VARCHAR},
+      </if>
+      <if test="record.assignedSampleQuantity != null">
+        ASSIGNED_SAMPLE_QUANTITY = #{record.assignedSampleQuantity,jdbcType=DECIMAL},
+      </if>
+      <if test="record.additionalWorkHours != null">
+        ADDITIONAL_WORK_HOURS = #{record.additionalWorkHours,jdbcType=DECIMAL},
+      </if>
+      <if test="record.surcharge != null">
+        SURCHARGE = #{record.surcharge,jdbcType=DECIMAL},
+      </if>
+      <if test="record.actualBaseFee != null">
+        ACTUAL_BASE_FEE = #{record.actualBaseFee,jdbcType=DECIMAL},
+      </if>
+      <if test="record.actualSurcharge != null">
+        ACTUAL_SURCHARGE = #{record.actualSurcharge,jdbcType=DECIMAL},
+      </if>
+      <if test="record.actualTestQty != null">
+        ACTUAL_TEST_QTY = #{record.actualTestQty,jdbcType=DECIMAL},
+      </if>
+      <if test="record.status != null">
+        STATUS = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.conclusion != null">
+        CONCLUSION = #{record.conclusion,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reviewedOn != null">
+        REVIEWED_ON = #{record.reviewedOn,jdbcType=DATE},
+      </if>
+      <if test="record.rptAuthorizedBy != null">
+        RPT_AUTHORIZED_BY = #{record.rptAuthorizedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rptAuthorizedOn != null">
+        RPT_AUTHORIZED_ON = #{record.rptAuthorizedOn,jdbcType=DATE},
+      </if>
+      <if test="record.rptAuthorized != null">
+        RPT_AUTHORIZED = #{record.rptAuthorized,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rptRejectCommentC != null">
+        RPT_REJECT_COMMENT_C = #{record.rptRejectCommentC,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rptRejectCommentS != null">
+        RPT_REJECT_COMMENT_S = #{record.rptRejectCommentS,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rptConclusion != null">
+        RPT_CONCLUSION = #{record.rptConclusion,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSubmitBy != null">
+        C_SUBMIT_BY = #{record.cSubmitBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSubmitDate != null">
+        C_SUBMIT_DATE = #{record.cSubmitDate,jdbcType=DATE},
+      </if>
+      <if test="record.cCustomermanagerBy != null">
+        C_CUSTOMERMANAGER_BY = #{record.cCustomermanagerBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cCustomermanagerDate != null">
+        C_CUSTOMERMANAGER_DATE = #{record.cCustomermanagerDate,jdbcType=DATE},
+      </if>
+      <if test="record.cTechsupervisorBy != null">
+        C_TECHSUPERVISOR_BY = #{record.cTechsupervisorBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTechsupervisorDate != null">
+        C_TECHSUPERVISOR_DATE = #{record.cTechsupervisorDate,jdbcType=DATE},
+      </if>
+      <if test="record.cQuotecreateBy != null">
+        C_QUOTECREATE_BY = #{record.cQuotecreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cQuotecreateDate != null">
+        C_QUOTECREATE_DATE = #{record.cQuotecreateDate,jdbcType=DATE},
+      </if>
+      <if test="record.cQuotesignatureBy != null">
+        C_QUOTESIGNATURE_BY = #{record.cQuotesignatureBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cQuotesignatureDate != null">
+        C_QUOTESIGNATURE_DATE = #{record.cQuotesignatureDate,jdbcType=DATE},
+      </if>
+      <if test="record.cQuotesendBy != null">
+        C_QUOTESEND_BY = #{record.cQuotesendBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cQuotesendDate != null">
+        C_QUOTESEND_DATE = #{record.cQuotesendDate,jdbcType=DATE},
+      </if>
+      <if test="record.cSamplereceiveBy != null">
+        C_SAMPLERECEIVE_BY = #{record.cSamplereceiveBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSamplereceiveDate != null">
+        C_SAMPLERECEIVE_DATE = #{record.cSamplereceiveDate,jdbcType=DATE},
+      </if>
+      <if test="record.cArrangementBy != null">
+        C_ARRANGEMENT_BY = #{record.cArrangementBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cArrangementDate != null">
+        C_ARRANGEMENT_DATE = #{record.cArrangementDate,jdbcType=DATE},
+      </if>
+      <if test="record.cMonitorprocessBy != null">
+        C_MONITORPROCESS_BY = #{record.cMonitorprocessBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cMonitorprocessDate != null">
+        C_MONITORPROCESS_DATE = #{record.cMonitorprocessDate,jdbcType=DATE},
+      </if>
+      <if test="record.cAnalystStartBy != null">
+        C_ANALYST_START_BY = #{record.cAnalystStartBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cAnalystStartDate != null">
+        C_ANALYST_START_DATE = #{record.cAnalystStartDate,jdbcType=DATE},
+      </if>
+      <if test="record.cAnalystEndBy != null">
+        C_ANALYST_END_BY = #{record.cAnalystEndBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cAnalystEndDate != null">
+        C_ANALYST_END_DATE = #{record.cAnalystEndDate,jdbcType=DATE},
+      </if>
+      <if test="record.cAnalystSubmitBy != null">
+        C_ANALYST_SUBMIT_BY = #{record.cAnalystSubmitBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cAnalystSubmitDate != null">
+        C_ANALYST_SUBMIT_DATE = #{record.cAnalystSubmitDate,jdbcType=DATE},
+      </if>
+      <if test="record.cTechengineerCreateBy != null">
+        C_TECHENGINEER_CREATE_BY = #{record.cTechengineerCreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTechengineerCreateDate != null">
+        C_TECHENGINEER_CREATE_DATE = #{record.cTechengineerCreateDate,jdbcType=DATE},
+      </if>
+      <if test="record.cTechengineerSubmitBy != null">
+        C_TECHENGINEER_SUBMIT_BY = #{record.cTechengineerSubmitBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cTechengineerSubmitDate != null">
+        C_TECHENGINEER_SUBMIT_DATE = #{record.cTechengineerSubmitDate,jdbcType=DATE},
+      </if>
+      <if test="record.cReportcreateBy != null">
+        C_REPORTCREATE_BY = #{record.cReportcreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cReportcreateDate != null">
+        C_REPORTCREATE_DATE = #{record.cReportcreateDate,jdbcType=DATE},
+      </if>
+      <if test="record.cReportsignatureBy != null">
+        C_REPORTSIGNATURE_BY = #{record.cReportsignatureBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cReportsignatureDate != null">
+        C_REPORTSIGNATURE_DATE = #{record.cReportsignatureDate,jdbcType=DATE},
+      </if>
+      <if test="record.cChargesendBy != null">
+        C_CHARGESEND_BY = #{record.cChargesendBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cChargesendDate != null">
+        C_CHARGESEND_DATE = #{record.cChargesendDate,jdbcType=DATE},
+      </if>
+      <if test="record.cChargecreateBy != null">
+        C_CHARGECREATE_BY = #{record.cChargecreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cChargecreateDate != null">
+        C_CHARGECREATE_DATE = #{record.cChargecreateDate,jdbcType=DATE},
+      </if>
+      <if test="record.cChargesignatureBy != null">
+        C_CHARGESIGNATURE_BY = #{record.cChargesignatureBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cChargesignatureDate != null">
+        C_CHARGESIGNATURE_DATE = #{record.cChargesignatureDate,jdbcType=DATE},
+      </if>
+      <if test="record.cNextPerson != null">
+        C_NEXT_PERSON = #{record.cNextPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cCurrentProcess != null">
+        C_CURRENT_PROCESS = #{record.cCurrentProcess,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSampleOutBy != null">
+        C_SAMPLE_OUT_BY = #{record.cSampleOutBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSampleOutDate != null">
+        C_SAMPLE_OUT_DATE = #{record.cSampleOutDate,jdbcType=DATE},
+      </if>
+      <if test="record.cSampleInBy != null">
+        C_SAMPLE_IN_BY = #{record.cSampleInBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSampleInDate != null">
+        C_SAMPLE_IN_DATE = #{record.cSampleInDate,jdbcType=DATE},
+      </if>
+      <if test="record.cSampleBorrowBy != null">
+        C_SAMPLE_BORROW_BY = #{record.cSampleBorrowBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSampleBorrowDate != null">
+        C_SAMPLE_BORROW_DATE = #{record.cSampleBorrowDate,jdbcType=DATE},
+      </if>
+      <if test="record.cSampleReturnBy != null">
+        C_SAMPLE_RETURN_BY = #{record.cSampleReturnBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cSampleReturnDate != null">
+        C_SAMPLE_RETURN_DATE = #{record.cSampleReturnDate,jdbcType=DATE},
+      </if>
+      <if test="record.reportNumberBak != null">
+        REPORT_NUMBER_BAK = #{record.reportNumberBak,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ts != null">
+        TS = #{record.ts,jdbcType=CHAR},
+      </if>
+      <if test="record.cIsDownparam != null">
+        C_IS_DOWNPARAM = #{record.cIsDownparam,jdbcType=CHAR},
+      </if>
+      <if test="record.cAddress != null">
+        C_ADDRESS = #{record.cAddress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update C_PROJ_TASK
+    set SEQ_NUM = #{record.seqNum,jdbcType=DECIMAL},
+      PROJECT = #{record.project,jdbcType=VARCHAR},
+      ORDER_NUMBER = #{record.orderNumber,jdbcType=DECIMAL},
+      ANALYSIS = #{record.analysis,jdbcType=VARCHAR},
+      CHANGED_ON = #{record.changedOn,jdbcType=DATE},
+      CHANGED_BY = #{record.changedBy,jdbcType=VARCHAR},
+      DESCRIPTION = #{record.description,jdbcType=VARCHAR},
+      SAMPLE_GROUP = #{record.sampleGroup,jdbcType=VARCHAR},
+      TASK_ID = #{record.taskId,jdbcType=VARCHAR},
+      STARTED_DATE = #{record.startedDate,jdbcType=DATE},
+      CREATED_DATE = #{record.createdDate,jdbcType=DATE},
+      COMPLETED_DATE = #{record.completedDate,jdbcType=DATE},
+      TEST_NUMBER = #{record.testNumber,jdbcType=DECIMAL},
+      IS_ENTERED = #{record.isEntered,jdbcType=VARCHAR},
+      TEST_VARIATION = #{record.testVariation,jdbcType=VARCHAR},
+      PLAN_TEST_TIME = #{record.planTestTime,jdbcType=DECIMAL},
+      ACTUAL_TEST_TIME = #{record.actualTestTime,jdbcType=DECIMAL},
+      MAX_NUM_BATCH = #{record.maxNumBatch,jdbcType=DECIMAL},
+      BASE_FEE = #{record.baseFee,jdbcType=DECIMAL},
+      TEST_FEE = #{record.testFee,jdbcType=DECIMAL},
+      QUOTES = #{record.quotes,jdbcType=DECIMAL},
+      ACTUAL_TEST_FEE = #{record.actualTestFee,jdbcType=DECIMAL},
+      ACTUAL_TOTAL_COST = #{record.actualTotalCost,jdbcType=DECIMAL},
+      ANALYSIS_VERSION = #{record.analysisVersion,jdbcType=DECIMAL},
+      IS_RECHECK = #{record.isRecheck,jdbcType=VARCHAR},
+      RECHECK_TO = #{record.recheckTo,jdbcType=VARCHAR},
+      EXT_LINK = #{record.extLink,jdbcType=VARCHAR},
+      IF_PASS = #{record.ifPass,jdbcType=VARCHAR},
+      COMMENT_TECH = #{record.commentTech,jdbcType=VARCHAR},
+      TEST_QUANTITY = #{record.testQuantity,jdbcType=DECIMAL},
+      TASK_REPORTED_NAME = #{record.taskReportedName,jdbcType=VARCHAR},
+      EXPIRY_DATE = #{record.expiryDate,jdbcType=DATE},
+      ASSGIN_TO = #{record.assginTo,jdbcType=VARCHAR},
+      LAB = #{record.lab,jdbcType=VARCHAR},
+      REDATE = #{record.redate,jdbcType=DECIMAL},
+      READY_FOR_REVIEW = #{record.readyForReview,jdbcType=VARCHAR},
+      RPT_ASSGIN_TO = #{record.rptAssginTo,jdbcType=VARCHAR},
+      READY_FOR_DRAFT = #{record.readyForDraft,jdbcType=VARCHAR},
+      DRAFT_APPLY_ON = #{record.draftApplyOn,jdbcType=DATE},
+      DRAFT_APPLY_BY = #{record.draftApplyBy,jdbcType=VARCHAR},
+      REPORT_NUMBER = #{record.reportNumber,jdbcType=DECIMAL},
+      ASSIGNED_SAMPLE = #{record.assignedSample,jdbcType=VARCHAR},
+      ASSIGNED_SAMPLE_DISPLAY = #{record.assignedSampleDisplay,jdbcType=VARCHAR},
+      ASSIGNED_SAMPLE_QUANTITY = #{record.assignedSampleQuantity,jdbcType=DECIMAL},
+      ADDITIONAL_WORK_HOURS = #{record.additionalWorkHours,jdbcType=DECIMAL},
+      SURCHARGE = #{record.surcharge,jdbcType=DECIMAL},
+      ACTUAL_BASE_FEE = #{record.actualBaseFee,jdbcType=DECIMAL},
+      ACTUAL_SURCHARGE = #{record.actualSurcharge,jdbcType=DECIMAL},
+      ACTUAL_TEST_QTY = #{record.actualTestQty,jdbcType=DECIMAL},
+      STATUS = #{record.status,jdbcType=VARCHAR},
+      CONCLUSION = #{record.conclusion,jdbcType=VARCHAR},
+      REVIEWED_ON = #{record.reviewedOn,jdbcType=DATE},
+      RPT_AUTHORIZED_BY = #{record.rptAuthorizedBy,jdbcType=VARCHAR},
+      RPT_AUTHORIZED_ON = #{record.rptAuthorizedOn,jdbcType=DATE},
+      RPT_AUTHORIZED = #{record.rptAuthorized,jdbcType=VARCHAR},
+      RPT_REJECT_COMMENT_C = #{record.rptRejectCommentC,jdbcType=VARCHAR},
+      RPT_REJECT_COMMENT_S = #{record.rptRejectCommentS,jdbcType=VARCHAR},
+      RPT_CONCLUSION = #{record.rptConclusion,jdbcType=VARCHAR},
+      C_SUBMIT_BY = #{record.cSubmitBy,jdbcType=VARCHAR},
+      C_SUBMIT_DATE = #{record.cSubmitDate,jdbcType=DATE},
+      C_CUSTOMERMANAGER_BY = #{record.cCustomermanagerBy,jdbcType=VARCHAR},
+      C_CUSTOMERMANAGER_DATE = #{record.cCustomermanagerDate,jdbcType=DATE},
+      C_TECHSUPERVISOR_BY = #{record.cTechsupervisorBy,jdbcType=VARCHAR},
+      C_TECHSUPERVISOR_DATE = #{record.cTechsupervisorDate,jdbcType=DATE},
+      C_QUOTECREATE_BY = #{record.cQuotecreateBy,jdbcType=VARCHAR},
+      C_QUOTECREATE_DATE = #{record.cQuotecreateDate,jdbcType=DATE},
+      C_QUOTESIGNATURE_BY = #{record.cQuotesignatureBy,jdbcType=VARCHAR},
+      C_QUOTESIGNATURE_DATE = #{record.cQuotesignatureDate,jdbcType=DATE},
+      C_QUOTESEND_BY = #{record.cQuotesendBy,jdbcType=VARCHAR},
+      C_QUOTESEND_DATE = #{record.cQuotesendDate,jdbcType=DATE},
+      C_SAMPLERECEIVE_BY = #{record.cSamplereceiveBy,jdbcType=VARCHAR},
+      C_SAMPLERECEIVE_DATE = #{record.cSamplereceiveDate,jdbcType=DATE},
+      C_ARRANGEMENT_BY = #{record.cArrangementBy,jdbcType=VARCHAR},
+      C_ARRANGEMENT_DATE = #{record.cArrangementDate,jdbcType=DATE},
+      C_MONITORPROCESS_BY = #{record.cMonitorprocessBy,jdbcType=VARCHAR},
+      C_MONITORPROCESS_DATE = #{record.cMonitorprocessDate,jdbcType=DATE},
+      C_ANALYST_START_BY = #{record.cAnalystStartBy,jdbcType=VARCHAR},
+      C_ANALYST_START_DATE = #{record.cAnalystStartDate,jdbcType=DATE},
+      C_ANALYST_END_BY = #{record.cAnalystEndBy,jdbcType=VARCHAR},
+      C_ANALYST_END_DATE = #{record.cAnalystEndDate,jdbcType=DATE},
+      C_ANALYST_SUBMIT_BY = #{record.cAnalystSubmitBy,jdbcType=VARCHAR},
+      C_ANALYST_SUBMIT_DATE = #{record.cAnalystSubmitDate,jdbcType=DATE},
+      C_TECHENGINEER_CREATE_BY = #{record.cTechengineerCreateBy,jdbcType=VARCHAR},
+      C_TECHENGINEER_CREATE_DATE = #{record.cTechengineerCreateDate,jdbcType=DATE},
+      C_TECHENGINEER_SUBMIT_BY = #{record.cTechengineerSubmitBy,jdbcType=VARCHAR},
+      C_TECHENGINEER_SUBMIT_DATE = #{record.cTechengineerSubmitDate,jdbcType=DATE},
+      C_REPORTCREATE_BY = #{record.cReportcreateBy,jdbcType=VARCHAR},
+      C_REPORTCREATE_DATE = #{record.cReportcreateDate,jdbcType=DATE},
+      C_REPORTSIGNATURE_BY = #{record.cReportsignatureBy,jdbcType=VARCHAR},
+      C_REPORTSIGNATURE_DATE = #{record.cReportsignatureDate,jdbcType=DATE},
+      C_CHARGESEND_BY = #{record.cChargesendBy,jdbcType=VARCHAR},
+      C_CHARGESEND_DATE = #{record.cChargesendDate,jdbcType=DATE},
+      C_CHARGECREATE_BY = #{record.cChargecreateBy,jdbcType=VARCHAR},
+      C_CHARGECREATE_DATE = #{record.cChargecreateDate,jdbcType=DATE},
+      C_CHARGESIGNATURE_BY = #{record.cChargesignatureBy,jdbcType=VARCHAR},
+      C_CHARGESIGNATURE_DATE = #{record.cChargesignatureDate,jdbcType=DATE},
+      C_NEXT_PERSON = #{record.cNextPerson,jdbcType=VARCHAR},
+      C_CURRENT_PROCESS = #{record.cCurrentProcess,jdbcType=VARCHAR},
+      C_SAMPLE_OUT_BY = #{record.cSampleOutBy,jdbcType=VARCHAR},
+      C_SAMPLE_OUT_DATE = #{record.cSampleOutDate,jdbcType=DATE},
+      C_SAMPLE_IN_BY = #{record.cSampleInBy,jdbcType=VARCHAR},
+      C_SAMPLE_IN_DATE = #{record.cSampleInDate,jdbcType=DATE},
+      C_SAMPLE_BORROW_BY = #{record.cSampleBorrowBy,jdbcType=VARCHAR},
+      C_SAMPLE_BORROW_DATE = #{record.cSampleBorrowDate,jdbcType=DATE},
+      C_SAMPLE_RETURN_BY = #{record.cSampleReturnBy,jdbcType=VARCHAR},
+      C_SAMPLE_RETURN_DATE = #{record.cSampleReturnDate,jdbcType=DATE},
+      REPORT_NUMBER_BAK = #{record.reportNumberBak,jdbcType=DECIMAL},
+      TS = #{record.ts,jdbcType=CHAR},
+      C_IS_DOWNPARAM = #{record.cIsDownparam,jdbcType=CHAR},
+      C_ADDRESS = #{record.cAddress,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.besbing.model.entities.primary.CProjTask">
+    update C_PROJ_TASK
+    <set>
+      <if test="project != null">
+        PROJECT = #{project,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNumber != null">
+        ORDER_NUMBER = #{orderNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="analysis != null">
+        ANALYSIS = #{analysis,jdbcType=VARCHAR},
+      </if>
+      <if test="changedOn != null">
+        CHANGED_ON = #{changedOn,jdbcType=DATE},
+      </if>
+      <if test="changedBy != null">
+        CHANGED_BY = #{changedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        DESCRIPTION = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleGroup != null">
+        SAMPLE_GROUP = #{sampleGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="taskId != null">
+        TASK_ID = #{taskId,jdbcType=VARCHAR},
+      </if>
+      <if test="startedDate != null">
+        STARTED_DATE = #{startedDate,jdbcType=DATE},
+      </if>
+      <if test="createdDate != null">
+        CREATED_DATE = #{createdDate,jdbcType=DATE},
+      </if>
+      <if test="completedDate != null">
+        COMPLETED_DATE = #{completedDate,jdbcType=DATE},
+      </if>
+      <if test="testNumber != null">
+        TEST_NUMBER = #{testNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="isEntered != null">
+        IS_ENTERED = #{isEntered,jdbcType=VARCHAR},
+      </if>
+      <if test="testVariation != null">
+        TEST_VARIATION = #{testVariation,jdbcType=VARCHAR},
+      </if>
+      <if test="planTestTime != null">
+        PLAN_TEST_TIME = #{planTestTime,jdbcType=DECIMAL},
+      </if>
+      <if test="actualTestTime != null">
+        ACTUAL_TEST_TIME = #{actualTestTime,jdbcType=DECIMAL},
+      </if>
+      <if test="maxNumBatch != null">
+        MAX_NUM_BATCH = #{maxNumBatch,jdbcType=DECIMAL},
+      </if>
+      <if test="baseFee != null">
+        BASE_FEE = #{baseFee,jdbcType=DECIMAL},
+      </if>
+      <if test="testFee != null">
+        TEST_FEE = #{testFee,jdbcType=DECIMAL},
+      </if>
+      <if test="quotes != null">
+        QUOTES = #{quotes,jdbcType=DECIMAL},
+      </if>
+      <if test="actualTestFee != null">
+        ACTUAL_TEST_FEE = #{actualTestFee,jdbcType=DECIMAL},
+      </if>
+      <if test="actualTotalCost != null">
+        ACTUAL_TOTAL_COST = #{actualTotalCost,jdbcType=DECIMAL},
+      </if>
+      <if test="analysisVersion != null">
+        ANALYSIS_VERSION = #{analysisVersion,jdbcType=DECIMAL},
+      </if>
+      <if test="isRecheck != null">
+        IS_RECHECK = #{isRecheck,jdbcType=VARCHAR},
+      </if>
+      <if test="recheckTo != null">
+        RECHECK_TO = #{recheckTo,jdbcType=VARCHAR},
+      </if>
+      <if test="extLink != null">
+        EXT_LINK = #{extLink,jdbcType=VARCHAR},
+      </if>
+      <if test="ifPass != null">
+        IF_PASS = #{ifPass,jdbcType=VARCHAR},
+      </if>
+      <if test="commentTech != null">
+        COMMENT_TECH = #{commentTech,jdbcType=VARCHAR},
+      </if>
+      <if test="testQuantity != null">
+        TEST_QUANTITY = #{testQuantity,jdbcType=DECIMAL},
+      </if>
+      <if test="taskReportedName != null">
+        TASK_REPORTED_NAME = #{taskReportedName,jdbcType=VARCHAR},
+      </if>
+      <if test="expiryDate != null">
+        EXPIRY_DATE = #{expiryDate,jdbcType=DATE},
+      </if>
+      <if test="assginTo != null">
+        ASSGIN_TO = #{assginTo,jdbcType=VARCHAR},
+      </if>
+      <if test="lab != null">
+        LAB = #{lab,jdbcType=VARCHAR},
+      </if>
+      <if test="redate != null">
+        REDATE = #{redate,jdbcType=DECIMAL},
+      </if>
+      <if test="readyForReview != null">
+        READY_FOR_REVIEW = #{readyForReview,jdbcType=VARCHAR},
+      </if>
+      <if test="rptAssginTo != null">
+        RPT_ASSGIN_TO = #{rptAssginTo,jdbcType=VARCHAR},
+      </if>
+      <if test="readyForDraft != null">
+        READY_FOR_DRAFT = #{readyForDraft,jdbcType=VARCHAR},
+      </if>
+      <if test="draftApplyOn != null">
+        DRAFT_APPLY_ON = #{draftApplyOn,jdbcType=DATE},
+      </if>
+      <if test="draftApplyBy != null">
+        DRAFT_APPLY_BY = #{draftApplyBy,jdbcType=VARCHAR},
+      </if>
+      <if test="reportNumber != null">
+        REPORT_NUMBER = #{reportNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="assignedSample != null">
+        ASSIGNED_SAMPLE = #{assignedSample,jdbcType=VARCHAR},
+      </if>
+      <if test="assignedSampleDisplay != null">
+        ASSIGNED_SAMPLE_DISPLAY = #{assignedSampleDisplay,jdbcType=VARCHAR},
+      </if>
+      <if test="assignedSampleQuantity != null">
+        ASSIGNED_SAMPLE_QUANTITY = #{assignedSampleQuantity,jdbcType=DECIMAL},
+      </if>
+      <if test="additionalWorkHours != null">
+        ADDITIONAL_WORK_HOURS = #{additionalWorkHours,jdbcType=DECIMAL},
+      </if>
+      <if test="surcharge != null">
+        SURCHARGE = #{surcharge,jdbcType=DECIMAL},
+      </if>
+      <if test="actualBaseFee != null">
+        ACTUAL_BASE_FEE = #{actualBaseFee,jdbcType=DECIMAL},
+      </if>
+      <if test="actualSurcharge != null">
+        ACTUAL_SURCHARGE = #{actualSurcharge,jdbcType=DECIMAL},
+      </if>
+      <if test="actualTestQty != null">
+        ACTUAL_TEST_QTY = #{actualTestQty,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null">
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="conclusion != null">
+        CONCLUSION = #{conclusion,jdbcType=VARCHAR},
+      </if>
+      <if test="reviewedOn != null">
+        REVIEWED_ON = #{reviewedOn,jdbcType=DATE},
+      </if>
+      <if test="rptAuthorizedBy != null">
+        RPT_AUTHORIZED_BY = #{rptAuthorizedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="rptAuthorizedOn != null">
+        RPT_AUTHORIZED_ON = #{rptAuthorizedOn,jdbcType=DATE},
+      </if>
+      <if test="rptAuthorized != null">
+        RPT_AUTHORIZED = #{rptAuthorized,jdbcType=VARCHAR},
+      </if>
+      <if test="rptRejectCommentC != null">
+        RPT_REJECT_COMMENT_C = #{rptRejectCommentC,jdbcType=VARCHAR},
+      </if>
+      <if test="rptRejectCommentS != null">
+        RPT_REJECT_COMMENT_S = #{rptRejectCommentS,jdbcType=VARCHAR},
+      </if>
+      <if test="rptConclusion != null">
+        RPT_CONCLUSION = #{rptConclusion,jdbcType=VARCHAR},
+      </if>
+      <if test="cSubmitBy != null">
+        C_SUBMIT_BY = #{cSubmitBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSubmitDate != null">
+        C_SUBMIT_DATE = #{cSubmitDate,jdbcType=DATE},
+      </if>
+      <if test="cCustomermanagerBy != null">
+        C_CUSTOMERMANAGER_BY = #{cCustomermanagerBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cCustomermanagerDate != null">
+        C_CUSTOMERMANAGER_DATE = #{cCustomermanagerDate,jdbcType=DATE},
+      </if>
+      <if test="cTechsupervisorBy != null">
+        C_TECHSUPERVISOR_BY = #{cTechsupervisorBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cTechsupervisorDate != null">
+        C_TECHSUPERVISOR_DATE = #{cTechsupervisorDate,jdbcType=DATE},
+      </if>
+      <if test="cQuotecreateBy != null">
+        C_QUOTECREATE_BY = #{cQuotecreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cQuotecreateDate != null">
+        C_QUOTECREATE_DATE = #{cQuotecreateDate,jdbcType=DATE},
+      </if>
+      <if test="cQuotesignatureBy != null">
+        C_QUOTESIGNATURE_BY = #{cQuotesignatureBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cQuotesignatureDate != null">
+        C_QUOTESIGNATURE_DATE = #{cQuotesignatureDate,jdbcType=DATE},
+      </if>
+      <if test="cQuotesendBy != null">
+        C_QUOTESEND_BY = #{cQuotesendBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cQuotesendDate != null">
+        C_QUOTESEND_DATE = #{cQuotesendDate,jdbcType=DATE},
+      </if>
+      <if test="cSamplereceiveBy != null">
+        C_SAMPLERECEIVE_BY = #{cSamplereceiveBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSamplereceiveDate != null">
+        C_SAMPLERECEIVE_DATE = #{cSamplereceiveDate,jdbcType=DATE},
+      </if>
+      <if test="cArrangementBy != null">
+        C_ARRANGEMENT_BY = #{cArrangementBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cArrangementDate != null">
+        C_ARRANGEMENT_DATE = #{cArrangementDate,jdbcType=DATE},
+      </if>
+      <if test="cMonitorprocessBy != null">
+        C_MONITORPROCESS_BY = #{cMonitorprocessBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cMonitorprocessDate != null">
+        C_MONITORPROCESS_DATE = #{cMonitorprocessDate,jdbcType=DATE},
+      </if>
+      <if test="cAnalystStartBy != null">
+        C_ANALYST_START_BY = #{cAnalystStartBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cAnalystStartDate != null">
+        C_ANALYST_START_DATE = #{cAnalystStartDate,jdbcType=DATE},
+      </if>
+      <if test="cAnalystEndBy != null">
+        C_ANALYST_END_BY = #{cAnalystEndBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cAnalystEndDate != null">
+        C_ANALYST_END_DATE = #{cAnalystEndDate,jdbcType=DATE},
+      </if>
+      <if test="cAnalystSubmitBy != null">
+        C_ANALYST_SUBMIT_BY = #{cAnalystSubmitBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cAnalystSubmitDate != null">
+        C_ANALYST_SUBMIT_DATE = #{cAnalystSubmitDate,jdbcType=DATE},
+      </if>
+      <if test="cTechengineerCreateBy != null">
+        C_TECHENGINEER_CREATE_BY = #{cTechengineerCreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cTechengineerCreateDate != null">
+        C_TECHENGINEER_CREATE_DATE = #{cTechengineerCreateDate,jdbcType=DATE},
+      </if>
+      <if test="cTechengineerSubmitBy != null">
+        C_TECHENGINEER_SUBMIT_BY = #{cTechengineerSubmitBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cTechengineerSubmitDate != null">
+        C_TECHENGINEER_SUBMIT_DATE = #{cTechengineerSubmitDate,jdbcType=DATE},
+      </if>
+      <if test="cReportcreateBy != null">
+        C_REPORTCREATE_BY = #{cReportcreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cReportcreateDate != null">
+        C_REPORTCREATE_DATE = #{cReportcreateDate,jdbcType=DATE},
+      </if>
+      <if test="cReportsignatureBy != null">
+        C_REPORTSIGNATURE_BY = #{cReportsignatureBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cReportsignatureDate != null">
+        C_REPORTSIGNATURE_DATE = #{cReportsignatureDate,jdbcType=DATE},
+      </if>
+      <if test="cChargesendBy != null">
+        C_CHARGESEND_BY = #{cChargesendBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cChargesendDate != null">
+        C_CHARGESEND_DATE = #{cChargesendDate,jdbcType=DATE},
+      </if>
+      <if test="cChargecreateBy != null">
+        C_CHARGECREATE_BY = #{cChargecreateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cChargecreateDate != null">
+        C_CHARGECREATE_DATE = #{cChargecreateDate,jdbcType=DATE},
+      </if>
+      <if test="cChargesignatureBy != null">
+        C_CHARGESIGNATURE_BY = #{cChargesignatureBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cChargesignatureDate != null">
+        C_CHARGESIGNATURE_DATE = #{cChargesignatureDate,jdbcType=DATE},
+      </if>
+      <if test="cNextPerson != null">
+        C_NEXT_PERSON = #{cNextPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="cCurrentProcess != null">
+        C_CURRENT_PROCESS = #{cCurrentProcess,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleOutBy != null">
+        C_SAMPLE_OUT_BY = #{cSampleOutBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleOutDate != null">
+        C_SAMPLE_OUT_DATE = #{cSampleOutDate,jdbcType=DATE},
+      </if>
+      <if test="cSampleInBy != null">
+        C_SAMPLE_IN_BY = #{cSampleInBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleInDate != null">
+        C_SAMPLE_IN_DATE = #{cSampleInDate,jdbcType=DATE},
+      </if>
+      <if test="cSampleBorrowBy != null">
+        C_SAMPLE_BORROW_BY = #{cSampleBorrowBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleBorrowDate != null">
+        C_SAMPLE_BORROW_DATE = #{cSampleBorrowDate,jdbcType=DATE},
+      </if>
+      <if test="cSampleReturnBy != null">
+        C_SAMPLE_RETURN_BY = #{cSampleReturnBy,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleReturnDate != null">
+        C_SAMPLE_RETURN_DATE = #{cSampleReturnDate,jdbcType=DATE},
+      </if>
+      <if test="reportNumberBak != null">
+        REPORT_NUMBER_BAK = #{reportNumberBak,jdbcType=DECIMAL},
+      </if>
+      <if test="ts != null">
+        TS = #{ts,jdbcType=CHAR},
+      </if>
+      <if test="cIsDownparam != null">
+        C_IS_DOWNPARAM = #{cIsDownparam,jdbcType=CHAR},
+      </if>
+      <if test="cAddress != null">
+        C_ADDRESS = #{cAddress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where SEQ_NUM = #{seqNum,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.besbing.model.entities.primary.CProjTask">
+    update C_PROJ_TASK
+    set PROJECT = #{project,jdbcType=VARCHAR},
+      ORDER_NUMBER = #{orderNumber,jdbcType=DECIMAL},
+      ANALYSIS = #{analysis,jdbcType=VARCHAR},
+      CHANGED_ON = #{changedOn,jdbcType=DATE},
+      CHANGED_BY = #{changedBy,jdbcType=VARCHAR},
+      DESCRIPTION = #{description,jdbcType=VARCHAR},
+      SAMPLE_GROUP = #{sampleGroup,jdbcType=VARCHAR},
+      TASK_ID = #{taskId,jdbcType=VARCHAR},
+      STARTED_DATE = #{startedDate,jdbcType=DATE},
+      CREATED_DATE = #{createdDate,jdbcType=DATE},
+      COMPLETED_DATE = #{completedDate,jdbcType=DATE},
+      TEST_NUMBER = #{testNumber,jdbcType=DECIMAL},
+      IS_ENTERED = #{isEntered,jdbcType=VARCHAR},
+      TEST_VARIATION = #{testVariation,jdbcType=VARCHAR},
+      PLAN_TEST_TIME = #{planTestTime,jdbcType=DECIMAL},
+      ACTUAL_TEST_TIME = #{actualTestTime,jdbcType=DECIMAL},
+      MAX_NUM_BATCH = #{maxNumBatch,jdbcType=DECIMAL},
+      BASE_FEE = #{baseFee,jdbcType=DECIMAL},
+      TEST_FEE = #{testFee,jdbcType=DECIMAL},
+      QUOTES = #{quotes,jdbcType=DECIMAL},
+      ACTUAL_TEST_FEE = #{actualTestFee,jdbcType=DECIMAL},
+      ACTUAL_TOTAL_COST = #{actualTotalCost,jdbcType=DECIMAL},
+      ANALYSIS_VERSION = #{analysisVersion,jdbcType=DECIMAL},
+      IS_RECHECK = #{isRecheck,jdbcType=VARCHAR},
+      RECHECK_TO = #{recheckTo,jdbcType=VARCHAR},
+      EXT_LINK = #{extLink,jdbcType=VARCHAR},
+      IF_PASS = #{ifPass,jdbcType=VARCHAR},
+      COMMENT_TECH = #{commentTech,jdbcType=VARCHAR},
+      TEST_QUANTITY = #{testQuantity,jdbcType=DECIMAL},
+      TASK_REPORTED_NAME = #{taskReportedName,jdbcType=VARCHAR},
+      EXPIRY_DATE = #{expiryDate,jdbcType=DATE},
+      ASSGIN_TO = #{assginTo,jdbcType=VARCHAR},
+      LAB = #{lab,jdbcType=VARCHAR},
+      REDATE = #{redate,jdbcType=DECIMAL},
+      READY_FOR_REVIEW = #{readyForReview,jdbcType=VARCHAR},
+      RPT_ASSGIN_TO = #{rptAssginTo,jdbcType=VARCHAR},
+      READY_FOR_DRAFT = #{readyForDraft,jdbcType=VARCHAR},
+      DRAFT_APPLY_ON = #{draftApplyOn,jdbcType=DATE},
+      DRAFT_APPLY_BY = #{draftApplyBy,jdbcType=VARCHAR},
+      REPORT_NUMBER = #{reportNumber,jdbcType=DECIMAL},
+      ASSIGNED_SAMPLE = #{assignedSample,jdbcType=VARCHAR},
+      ASSIGNED_SAMPLE_DISPLAY = #{assignedSampleDisplay,jdbcType=VARCHAR},
+      ASSIGNED_SAMPLE_QUANTITY = #{assignedSampleQuantity,jdbcType=DECIMAL},
+      ADDITIONAL_WORK_HOURS = #{additionalWorkHours,jdbcType=DECIMAL},
+      SURCHARGE = #{surcharge,jdbcType=DECIMAL},
+      ACTUAL_BASE_FEE = #{actualBaseFee,jdbcType=DECIMAL},
+      ACTUAL_SURCHARGE = #{actualSurcharge,jdbcType=DECIMAL},
+      ACTUAL_TEST_QTY = #{actualTestQty,jdbcType=DECIMAL},
+      STATUS = #{status,jdbcType=VARCHAR},
+      CONCLUSION = #{conclusion,jdbcType=VARCHAR},
+      REVIEWED_ON = #{reviewedOn,jdbcType=DATE},
+      RPT_AUTHORIZED_BY = #{rptAuthorizedBy,jdbcType=VARCHAR},
+      RPT_AUTHORIZED_ON = #{rptAuthorizedOn,jdbcType=DATE},
+      RPT_AUTHORIZED = #{rptAuthorized,jdbcType=VARCHAR},
+      RPT_REJECT_COMMENT_C = #{rptRejectCommentC,jdbcType=VARCHAR},
+      RPT_REJECT_COMMENT_S = #{rptRejectCommentS,jdbcType=VARCHAR},
+      RPT_CONCLUSION = #{rptConclusion,jdbcType=VARCHAR},
+      C_SUBMIT_BY = #{cSubmitBy,jdbcType=VARCHAR},
+      C_SUBMIT_DATE = #{cSubmitDate,jdbcType=DATE},
+      C_CUSTOMERMANAGER_BY = #{cCustomermanagerBy,jdbcType=VARCHAR},
+      C_CUSTOMERMANAGER_DATE = #{cCustomermanagerDate,jdbcType=DATE},
+      C_TECHSUPERVISOR_BY = #{cTechsupervisorBy,jdbcType=VARCHAR},
+      C_TECHSUPERVISOR_DATE = #{cTechsupervisorDate,jdbcType=DATE},
+      C_QUOTECREATE_BY = #{cQuotecreateBy,jdbcType=VARCHAR},
+      C_QUOTECREATE_DATE = #{cQuotecreateDate,jdbcType=DATE},
+      C_QUOTESIGNATURE_BY = #{cQuotesignatureBy,jdbcType=VARCHAR},
+      C_QUOTESIGNATURE_DATE = #{cQuotesignatureDate,jdbcType=DATE},
+      C_QUOTESEND_BY = #{cQuotesendBy,jdbcType=VARCHAR},
+      C_QUOTESEND_DATE = #{cQuotesendDate,jdbcType=DATE},
+      C_SAMPLERECEIVE_BY = #{cSamplereceiveBy,jdbcType=VARCHAR},
+      C_SAMPLERECEIVE_DATE = #{cSamplereceiveDate,jdbcType=DATE},
+      C_ARRANGEMENT_BY = #{cArrangementBy,jdbcType=VARCHAR},
+      C_ARRANGEMENT_DATE = #{cArrangementDate,jdbcType=DATE},
+      C_MONITORPROCESS_BY = #{cMonitorprocessBy,jdbcType=VARCHAR},
+      C_MONITORPROCESS_DATE = #{cMonitorprocessDate,jdbcType=DATE},
+      C_ANALYST_START_BY = #{cAnalystStartBy,jdbcType=VARCHAR},
+      C_ANALYST_START_DATE = #{cAnalystStartDate,jdbcType=DATE},
+      C_ANALYST_END_BY = #{cAnalystEndBy,jdbcType=VARCHAR},
+      C_ANALYST_END_DATE = #{cAnalystEndDate,jdbcType=DATE},
+      C_ANALYST_SUBMIT_BY = #{cAnalystSubmitBy,jdbcType=VARCHAR},
+      C_ANALYST_SUBMIT_DATE = #{cAnalystSubmitDate,jdbcType=DATE},
+      C_TECHENGINEER_CREATE_BY = #{cTechengineerCreateBy,jdbcType=VARCHAR},
+      C_TECHENGINEER_CREATE_DATE = #{cTechengineerCreateDate,jdbcType=DATE},
+      C_TECHENGINEER_SUBMIT_BY = #{cTechengineerSubmitBy,jdbcType=VARCHAR},
+      C_TECHENGINEER_SUBMIT_DATE = #{cTechengineerSubmitDate,jdbcType=DATE},
+      C_REPORTCREATE_BY = #{cReportcreateBy,jdbcType=VARCHAR},
+      C_REPORTCREATE_DATE = #{cReportcreateDate,jdbcType=DATE},
+      C_REPORTSIGNATURE_BY = #{cReportsignatureBy,jdbcType=VARCHAR},
+      C_REPORTSIGNATURE_DATE = #{cReportsignatureDate,jdbcType=DATE},
+      C_CHARGESEND_BY = #{cChargesendBy,jdbcType=VARCHAR},
+      C_CHARGESEND_DATE = #{cChargesendDate,jdbcType=DATE},
+      C_CHARGECREATE_BY = #{cChargecreateBy,jdbcType=VARCHAR},
+      C_CHARGECREATE_DATE = #{cChargecreateDate,jdbcType=DATE},
+      C_CHARGESIGNATURE_BY = #{cChargesignatureBy,jdbcType=VARCHAR},
+      C_CHARGESIGNATURE_DATE = #{cChargesignatureDate,jdbcType=DATE},
+      C_NEXT_PERSON = #{cNextPerson,jdbcType=VARCHAR},
+      C_CURRENT_PROCESS = #{cCurrentProcess,jdbcType=VARCHAR},
+      C_SAMPLE_OUT_BY = #{cSampleOutBy,jdbcType=VARCHAR},
+      C_SAMPLE_OUT_DATE = #{cSampleOutDate,jdbcType=DATE},
+      C_SAMPLE_IN_BY = #{cSampleInBy,jdbcType=VARCHAR},
+      C_SAMPLE_IN_DATE = #{cSampleInDate,jdbcType=DATE},
+      C_SAMPLE_BORROW_BY = #{cSampleBorrowBy,jdbcType=VARCHAR},
+      C_SAMPLE_BORROW_DATE = #{cSampleBorrowDate,jdbcType=DATE},
+      C_SAMPLE_RETURN_BY = #{cSampleReturnBy,jdbcType=VARCHAR},
+      C_SAMPLE_RETURN_DATE = #{cSampleReturnDate,jdbcType=DATE},
+      REPORT_NUMBER_BAK = #{reportNumberBak,jdbcType=DECIMAL},
+      TS = #{ts,jdbcType=CHAR},
+      C_IS_DOWNPARAM = #{cIsDownparam,jdbcType=CHAR},
+      C_ADDRESS = #{cAddress,jdbcType=VARCHAR}
+    where SEQ_NUM = #{seqNum,jdbcType=DECIMAL}
+  </update>
+</mapper>
