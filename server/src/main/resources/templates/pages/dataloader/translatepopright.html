@@ -36,11 +36,13 @@
             /**
              * 开始get数据结果
              */
-            let data = "{content:"+ $('#sourceText') +",lang:"+ $('#tolang') +"}";
+            let data = [];
+            data.push($('#sourceText').val());
+            data.push($('#tolang').val());
             $.ajax({
                 url: "/action/translate",
-                type: 'get',
-                data: data,
+                type: 'post',
+                data: JSON.stringify(data),
                 contentType:"application/json",
                 success: function(result) {
                     if (result.code == 200){

@@ -10,6 +10,9 @@ import cn.besbing.server.service.general.GeneratedTranslateImpl;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
 import cn.besbing.server.service.primary.PrimaryDlRoleServiceImpl;
 import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -186,11 +189,12 @@ public class SystemActionControllers {
         return baseResponse;
     }
 
-    @GetMapping("translate")
-    public BaseResponse translate(Map<String,Object> map ){
+    @PostMapping("translate")
+    public BaseResponse translate(@RequestBody String translateStr){
         BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
+        JSONArray jsonArray = JSONArray.parseArray(translateStr);
         try{
-            baseResponse.setData(generatedTranslate.translateText(map.get("content").toString(),map.get("lang").toString()));
+            baseResponse.setData(generatedTranslate.translateText(jsonArray.getString(0),jsonArray.getString(1)));
         }catch (Exception e){
             baseResponse = new BaseResponse(StatusCode.BAIDUAPISEARCHFAILED.getCode(),e.getMessage());
         }

@@ -158,6 +158,21 @@
               "target": "_self"
             }
           ]
+        },
+        {
+          "title": "系统工具",
+          "href": "",
+          "icon": "fa fa-list-alt",
+          "target": "_self",
+          "child": [
+            {
+              "title": "在线翻译",
+              "href": "/dlcsystem/translate",
+              "icon": "fa fa-search",
+              "target": "_self",
+              "alt": "在线翻译"
+            }
+          ]
         }
       ]
     }
