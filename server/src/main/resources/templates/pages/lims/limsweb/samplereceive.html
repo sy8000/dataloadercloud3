@@ -1,0 +1,70 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css " media="all">
+    <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
+    <script src="../../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="../../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../../../static/css/generalcss/layuitablecheckboxfix.css">
+    <script src="../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../../../../static/struct/layuimini/css/public.css" media="all">
+    <link rel="stylesheet" href="../../../../static/struct/layuimini/js/lay-module/step-lay/step.css" media="all">
+    <script src="../../../../static/struct/layuimini/js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+</head>
+<body onload="addWaterMarker()" style="margin: 10px 10px 10px 10px" >
+<!--
+<p>Hello, <shiro:principal/>, how are you today?</p>
+<p><shiro:user>guest</shiro:user></p>
+<span th:text="${session.usercode}">人员工号</span>
+-->
+<br/>
+<blockquote class="layui-elem-quote layui-quote-nm">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <div class="layui-input-inline">
+                <input type="text" id="projno" placeholder="委托单号" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-inline">
+                <button type="submit" class="layui-btn"  lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <div class="layui-btn-group">
+                <button type="button" class="layui-btn layui-btn-disabled">接收</button>
+                <button type="button" class="layui-btn layui-btn-disabled">驳回</button>
+            </div>
+            <div class="layui-btn-group">
+                <button type="button" class="layui-btn">查询</button>
+            </div>
+            <div class="layui-btn-group">
+                <button type="button" class="layui-btn">入库</button>
+                <button type="button" class="layui-btn">出库</button>
+                <button type="button" class="layui-btn">借出</button>
+                <button type="button" class="layui-btn">归还</button>
+            </div>
+            <div class="layui-btn-group">
+                <button type="button" class="layui-btn">库位清空</button>
+                <button type="button" class="layui-btn ">样品移库</button>
+            </div>
+
+        </div>
+    </div>
+</blockquote>
+<table class="layui-hide" id="sampleReceiveId" lay-filter="sampleReceiveFilter" ></table>
+
+
+</body>
+<script src="../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../../../../static/js/lims/sampleReceive.js" ></script>
+
+</html>

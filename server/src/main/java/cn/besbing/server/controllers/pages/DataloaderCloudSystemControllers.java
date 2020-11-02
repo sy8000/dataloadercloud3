@@ -7,10 +7,13 @@ import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
 import cn.besbing.server.service.primary.PrimaryDlRoleServiceImpl;
 import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
 import cn.besbing.server.utils.AbstractLog;
+import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequestMapping("dlcsystem")
 @Controller
@@ -176,6 +179,18 @@ public class DataloaderCloudSystemControllers extends AbstractLog {
     @GetMapping("translate")
     public String maincontent(){
         return "pages/dataloader/translatepopright";
+    }
+
+
+    /**
+     * 问题反馈页面
+     */
+    @GetMapping("offline")
+    public String offline(Model model){
+        //获取有接收消息权限的人，填充页面的select
+        List<SmUser> userList = smuserService.selectUserForDlpSelect();
+        model.addAttribute("userList",userList);
+        return "pages/dataloader/dlp/offline";
     }
 
 }

@@ -32,4 +32,6 @@ public interface SmUserMapper {
     int updateByPrimaryKey(SmUser record);
 
     List<SmUser> selectUserForTable(String keyword);
+
+    List<SmUser> selectUserForDlpSelect();
 }

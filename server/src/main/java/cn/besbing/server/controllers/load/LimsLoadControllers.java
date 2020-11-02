@@ -6,6 +6,7 @@ import cn.besbing.model.utils.SearchDTO;
 import cn.besbing.server.service.general.GeneratedPageDataResult;
 import cn.besbing.server.service.primary.PrimaryCProjLoginSampleServiceImpl;
 import cn.besbing.server.service.primary.PrimaryCProjTaskCoreServiceImpl;
+import cn.besbing.server.service.primary.PrimaryLwSampleReceiveViewServiceImpl;
 import cn.besbing.server.service.primary.PrimaryProjectServiceImpl;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,9 @@ public class LimsLoadControllers {
 
     @Autowired
     private PrimaryCProjTaskCoreServiceImpl taskCoreService;
+
+    @Autowired
+    private PrimaryLwSampleReceiveViewServiceImpl sampleReceiveViewService;
 
     /**
      * 自助服务：获取待修改委托单列表
@@ -98,5 +102,26 @@ public class LimsLoadControllers {
         }
     }
 
+    @GetMapping("sampleReceive")
+    public PageDataResult getsampleReceiveData(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit, @RequestParam(value = "keyword", required = false) String keyword){
+        if (null == page){
+            page = 1;
+        }
+        if (null == limit){
+            limit = 10;
+        }
+        if (keyword != null && !"".equals(keyword)) {
+            JSONObject jsonObject = JSONObject.parseObject(keyword);
+            keyword = jsonObject.get("project").toString();
+        }
+        SearchDTO searchDTO = new SearchDTO(page,limit,keyword);
+        try {
+            PageDataResult pdr = generatedPageDataResult.createFormatedTableData(searchDTO,sampleReceiveViewService.getSampleReceiveForTable(searchDTO));
+            return pdr;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 }

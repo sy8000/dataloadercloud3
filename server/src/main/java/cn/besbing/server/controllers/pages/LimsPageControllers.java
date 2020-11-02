@@ -61,5 +61,9 @@ public class LimsPageControllers {
         return "pages/lims/limsweb/createproject";
     }
 
+    @GetMapping("samplereceive")
+    public String samplereceive(){
+        return "pages/lims/limsweb/samplereceive";
+    }
 
 }

@@ -46,7 +46,44 @@
               "href": "/lims/newproject",
               "icon": "fa fa-file",
               "target": "_self"
+            },
+            {
+              "title": "样品接收",
+              "href": "/lims/samplereceive",
+              "icon": "fa fa-registered",
+              "target": "_self"
+            },
+            {
+              "title": "计划排程",
+              "href": "/lims/plantask",
+              "icon": "fa fa-paper-plane",
+              "target": "_self"
+            },
+            {
+              "title": "任务分配",
+              "href": "/lims/taskassign",
+              "icon": "fa fa-pencil-square",
+              "target": "_self"
+            },
+            {
+              "title": "详细测试",
+              "href": "/lims/testing",
+              "icon": "fa fa-balance-scale",
+              "target": "_self"
+            },
+            {
+              "title": "工程师复核",
+              "href": "/lims/engeneer",
+              "icon": "fa fa-building",
+              "target": "_self"
+            },
+            {
+              "title": "报告签发",
+              "href": "/lims/sign",
+              "icon": "fa fa-map-signs",
+              "target": "_self"
             }
+
           ]
         },
         {
@@ -85,26 +122,28 @@
           "child": [
             {
               "title": "在线提问",
-              "href": "/",
+              "href": "/dlcsystem/online",
               "icon": "fa fa-comments",
               "target": "_self",
               "alt": "DLP在线提问"
             },
             {
               "title": "问题反馈",
-              "href": "/",
+              "href": "/dlcsystem/offline",
               "icon": "fa fa-edit",
-              "target": "_self"
+              "target": "_self",
+              "alt": "DLP问题反馈"
             },
             {
               "title": "问题处理",
-              "href": "/",
+              "href": "/dlcsystem/processing",
               "icon": "fa fa-gears",
-              "target": "_self"
+              "target": "_self",
+              "alt": "DLP问题处理"
             },
             {
               "title": "处理进度查询",
-              "href": "/analysis",
+              "href": "/dlcsystem/dlpsearch",
               "icon": "fa fa-search",
               "target": "_self",
               "alt": "DLP问题处理进度查询"
@@ -124,6 +163,28 @@
           "href": "/analysis",
           "icon": "fa fa-list-alt",
           "target": "_self"
+        },
+        {
+          "title": "系统工具",
+          "href": "",
+          "icon": "fa fa-anchor",
+          "target": "_self",
+          "child": [
+            {
+              "title": "在线翻译",
+              "href": "/dlcsystem/translate",
+              "icon": "fa fa-asl-interpreting",
+              "target": "_self",
+              "alt": "在线翻译"
+            },
+            {
+              "title": "消息管理",
+              "href": "/dlcsystem/messagemanage",
+              "icon": "fa fa-commenting-o",
+              "target": "_self",
+              "alt": "消息管理"
+            }
+          ]
         }
       ]
     },
@@ -156,21 +217,6 @@
               "href": "/dlcsystem/usersmanage",
               "icon": "fa fa-user",
               "target": "_self"
-            }
-          ]
-        },
-        {
-          "title": "系统工具",
-          "href": "",
-          "icon": "fa fa-list-alt",
-          "target": "_self",
-          "child": [
-            {
-              "title": "在线翻译",
-              "href": "/dlcsystem/translate",
-              "icon": "fa fa-search",
-              "target": "_self",
-              "alt": "在线翻译"
             }
           ]
         }

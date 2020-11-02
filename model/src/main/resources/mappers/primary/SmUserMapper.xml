@@ -765,4 +765,10 @@
       and userName like '%'||#{_parameter}||'%' or userCode like '%'||#{_parameter}||'%'
     </if>
   </select>
+    <select id="selectUserForDlpSelect" resultMap="BaseResultMap">
+      select s.* from  sm_user s
+        left join dl_user_role dur on  s.cuserid = dur.cuserid
+        left join dl_role dr on dur.roleid = dr.roleid
+        where dr.available = 0 and dr.description = 'lims:admin'
+    </select>
 </mapper>

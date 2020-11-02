@@ -106,6 +106,10 @@ public class PrimarySmuserServiceImpl implements  SmUserMapper{
         return list;
     }
 
+    public List<SmUser> selectUserForDlpSelect(){
+        return smUserMapper.selectUserForDlpSelect();
+    }
+
     public int save(SmUser smUser) {
         return smUserMapper.insert(smUser);
     }
