@@ -59,10 +59,39 @@ layui.use(['form', 'table','layer'], function () {
     /**监听radio***/
     table.on('radio(receiveFilter)', function(obj){
         //console.log(obj);
-        radiocheck = obj.data.project;
-        console.log('新radio选择:' + radiocheck);
+        radiocheck = obj.data.locationNumber;
+        console.log('radio选择:' + radiocheck);
         $('#confirmReceiveBtn').removeAttr("disabled");
         $('#confirmReceiveBtn').removeClass("layui-btn-disabled");
+    });
+
+    /**监听接收按钮***/
+    $('#confirmReceiveBtn').click(function () {
+        let projno=$("#projno").val();
+        console.log('隐藏域值:' + projno);
+        //let json = '{"project":"'+ projno +'","locationNumber":"'+ radiocheck +'"}';
+        //console.log(json)
+        /*let json = [];
+        json.push(projno);
+        json.push(radiocheck);*/
+        $.ajax({
+            url: "/limsaction/getSample",
+            type: 'post',
+            contentType: "application/json",
+            data: JSON.stringify({"project": projno ,"locationNumber":radiocheck }),
+            success: function(result) {
+                if (result.code == 200){
+                    layer.msg('接收成功');
+                    /*
+                    checkStatus.data[0].del();
+                    console.log(obj);
+                    console.log(data[0]);
+                     */
+                }else {
+                    layer.msg('接收失败');
+                }
+            }
+        })
     });
 
 
