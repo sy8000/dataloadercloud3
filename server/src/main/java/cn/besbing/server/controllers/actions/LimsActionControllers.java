@@ -3,14 +3,11 @@ package cn.besbing.server.controllers.actions;
 import cn.besbing.client.enums.BaseResponse;
 import cn.besbing.client.enums.StatusCode;
 import cn.besbing.model.entities.primary.CProjLoginSample;
-import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.entities.primary.QcCommissionB;
-import cn.besbing.server.service.lims.SampleReceiveServiceImpl;
 import cn.besbing.server.service.primary.PrimaryCProjLoginSampleServiceImpl;
 import cn.besbing.server.service.primary.PrimaryQcCmmissionHServiceImpl;
 import cn.besbing.server.service.primary.PrimaryQcCommissionB;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
+import cn.besbing.server.service.primary.PrimarySampleServiceImpl;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,10 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Xiamen HLYY Network Technology Co., Ltd.
@@ -48,14 +42,15 @@ public class LimsActionControllers {
     PrimaryQcCmmissionHServiceImpl primaryQcCmmissionHService;
 
     @Autowired
-    SampleReceiveServiceImpl sampleReceiveService;
+    PrimarySampleServiceImpl primarySampleService;
 
     @PostMapping(value = "getSample")
     public BaseResponse getSample(@RequestBody String jsonStr) {
         /**样品接收按钮控制器**/
         BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
         JSONObject jsonObject = JSONObject.parseObject(jsonStr);
-        sampleReceiveService.sampleReceive(jsonObject.get("project").toString(),jsonObject.get("locationNumber").toString());
+        //sample标志位
+        primarySampleService.sampleReceive(jsonObject.get("project").toString(),jsonObject.get("locationNumber").toString());
         return baseResponse;
     }
 
