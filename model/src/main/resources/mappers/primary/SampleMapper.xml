@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.besbing.model.mapper.primary.SampleMapper">
+  <resultMap id="BaseResultMap" type="cn.besbing.model.entities.primary.Sample">
+    <id column="SAMPLE_NUMBER" jdbcType="DECIMAL" property="sampleNumber" />
+    <result column="TEXT_ID" jdbcType="VARCHAR" property="textId" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="OLD_STATUS" jdbcType="VARCHAR" property="oldStatus" />
+    <result column="DISP_FLDS" jdbcType="VARCHAR" property="dispFlds" />
+    <result column="LABEL_MASK" jdbcType="VARCHAR" property="labelMask" />
+    <result column="IN_SPEC" jdbcType="VARCHAR" property="inSpec" />
+    <result column="IN_CAL" jdbcType="VARCHAR" property="inCal" />
+    <result column="CHANGED_ON" jdbcType="DATE" property="changedOn" />
+    <result column="RE_SAMPLE" jdbcType="VARCHAR" property="reSample" />
+    <result column="ALIQUOT" jdbcType="VARCHAR" property="aliquot" />
+    <result column="ORIGINAL_SAMPLE" jdbcType="DECIMAL" property="originalSample" />
+    <result column="PARENT_SAMPLE" jdbcType="DECIMAL" property="parentSample" />
+    <result column="PARENT_ALIQUOT" jdbcType="DECIMAL" property="parentAliquot" />
+    <result column="ALIQUOT_GROUP" jdbcType="VARCHAR" property="aliquotGroup" />
+    <result column="SAMPLE_VOLUME" jdbcType="DECIMAL" property="sampleVolume" />
+    <result column="SAMPLE_UNITS" jdbcType="VARCHAR" property="sampleUnits" />
+    <result column="LOGIN_DATE" jdbcType="DATE" property="loginDate" />
+    <result column="LOGIN_BY" jdbcType="VARCHAR" property="loginBy" />
+    <result column="SAMPLED_DATE" jdbcType="DATE" property="sampledDate" />
+    <result column="RECD_DATE" jdbcType="DATE" property="recdDate" />
+    <result column="RECEIVED_BY" jdbcType="VARCHAR" property="receivedBy" />
+    <result column="DATE_STARTED" jdbcType="DATE" property="dateStarted" />
+    <result column="STARTED" jdbcType="VARCHAR" property="started" />
+    <result column="ASSIGNED_OPERATOR" jdbcType="VARCHAR" property="assignedOperator" />
+    <result column="DUE_DATE" jdbcType="DATE" property="dueDate" />
+    <result column="DATE_COMPLETED" jdbcType="DATE" property="dateCompleted" />
+    <result column="DATE_REVIEWED" jdbcType="DATE" property="dateReviewed" />
+    <result column="PREP" jdbcType="VARCHAR" property="prep" />
+    <result column="PREP_DATE" jdbcType="DATE" property="prepDate" />
+    <result column="PREP_BY" jdbcType="VARCHAR" property="prepBy" />
+    <result column="REVIEWER" jdbcType="VARCHAR" property="reviewer" />
+    <result column="REVIEW_NOTE" jdbcType="VARCHAR" property="reviewNote" />
+    <result column="PRODUCT_CODE" jdbcType="VARCHAR" property="productCode" />
+    <result column="PRODUCT" jdbcType="VARCHAR" property="product" />
+    <result column="PRODUCT_VERSION" jdbcType="DECIMAL" property="productVersion" />
+    <result column="PRODUCT_GRADE" jdbcType="VARCHAR" property="productGrade" />
+    <result column="SAMPLING_POINT" jdbcType="VARCHAR" property="samplingPoint" />
+    <result column="SAMPLE_TYPE" jdbcType="VARCHAR" property="sampleType" />
+    <result column="PROJECT" jdbcType="VARCHAR" property="project" />
+    <result column="BATCH_NAME" jdbcType="VARCHAR" property="batchName" />
+    <result column="BATCH_TEMPLATE" jdbcType="VARCHAR" property="batchTemplate" />
+    <result column="STEP" jdbcType="VARCHAR" property="step" />
+    <result column="SAMPLE_NAME" jdbcType="VARCHAR" property="sampleName" />
+    <result column="DESCRIPTION" jdbcType="VARCHAR" property="description" />
+    <result column="PRIORITY" jdbcType="DECIMAL" property="priority" />
+    <result column="LOCATION" jdbcType="VARCHAR" property="location" />
+    <result column="CUSTOMER" jdbcType="VARCHAR" property="customer" />
+    <result column="TEST_LIST" jdbcType="VARCHAR" property="testList" />
+    <result column="TEMPLATE" jdbcType="VARCHAR" property="template" />
+    <result column="RECIPIENT" jdbcType="VARCHAR" property="recipient" />
+    <result column="STANDARD" jdbcType="VARCHAR" property="standard" />
+    <result column="EXT_LINK" jdbcType="VARCHAR" property="extLink" />
+    <result column="CONDITION" jdbcType="VARCHAR" property="condition" />
+    <result column="TIMEPOINT" jdbcType="VARCHAR" property="timepoint" />
+    <result column="LOT" jdbcType="DECIMAL" property="lot" />
+    <result column="BASE_DATE" jdbcType="DATE" property="baseDate" />
+    <result column="AVAILABLE_DATE" jdbcType="DATE" property="availableDate" />
+    <result column="REQUIRED_DATE" jdbcType="DATE" property="requiredDate" />
+    <result column="TARGET_DATE" jdbcType="DATE" property="targetDate" />
+    <result column="PARTIAL_SPEC" jdbcType="VARCHAR" property="partialSpec" />
+    <result column="SPEC_TYPE" jdbcType="VARCHAR" property="specType" />
+    <result column="STAGE" jdbcType="VARCHAR" property="stage" />
+    <result column="PRIMARY_IN_SPEC" jdbcType="VARCHAR" property="primaryInSpec" />
+    <result column="BATCH" jdbcType="VARCHAR" property="batch" />
+    <result column="CHARGE_CODE" jdbcType="VARCHAR" property="chargeCode" />
+    <result column="FORMULATION" jdbcType="VARCHAR" property="formulation" />
+    <result column="PROTOCOL_LEVEL" jdbcType="VARCHAR" property="protocolLevel" />
+    <result column="RELEASED" jdbcType="VARCHAR" property="released" />
+    <result column="RELEASED_BY" jdbcType="VARCHAR" property="releasedBy" />
+    <result column="RELEASED_ON" jdbcType="DATE" property="releasedOn" />
+    <result column="IN_CONTROL" jdbcType="VARCHAR" property="inControl" />
+    <result column="INVESTIGATION" jdbcType="VARCHAR" property="investigation" />
+    <result column="INVESTIGATED" jdbcType="VARCHAR" property="investigated" />
+    <result column="APPROVED" jdbcType="VARCHAR" property="approved" />
+    <result column="APPROVAL_GROUP" jdbcType="VARCHAR" property="approvalGroup" />
+    <result column="READY_FOR_APPROVAL" jdbcType="VARCHAR" property="readyForApproval" />
+    <result column="APPROVAL_ID" jdbcType="DECIMAL" property="approvalId" />
+    <result column="APPROVAL_ROUTING" jdbcType="VARCHAR" property="approvalRouting" />
+    <result column="MODIFIED_RESULTS" jdbcType="VARCHAR" property="modifiedResults" />
+    <result column="REPORT_NUMBER" jdbcType="DECIMAL" property="reportNumber" />
+    <result column="COMPOSITE" jdbcType="VARCHAR" property="composite" />
+    <result column="PARENT_COMPOSITE" jdbcType="DECIMAL" property="parentComposite" />
+    <result column="COMPOSITE_TEMPLATE" jdbcType="VARCHAR" property="compositeTemplate" />
+    <result column="SEASON_DATE" jdbcType="DATE" property="seasonDate" />
+    <result column="PEOPLE" jdbcType="DECIMAL" property="people" />
+    <result column="TEST_LOCATION" jdbcType="VARCHAR" property="testLocation" />
+    <result column="OWNER_LOCATION" jdbcType="VARCHAR" property="ownerLocation" />
+    <result column="CHK_ALIQUOT_STATUS" jdbcType="VARCHAR" property="chkAliquotStatus" />
+    <result column="CHK_ALIQUOT_SPECS" jdbcType="VARCHAR" property="chkAliquotSpecs" />
+    <result column="ALIQUOT_TEMPLATE" jdbcType="VARCHAR" property="aliquotTemplate" />
+    <result column="CALC_GROUP" jdbcType="VARCHAR" property="calcGroup" />
+    <result column="SAMPLE_EVENT" jdbcType="DECIMAL" property="sampleEvent" />
+    <result column="LABEL_ID" jdbcType="VARCHAR" property="labelId" />
+    <result column="HAS_FLAGS" jdbcType="VARCHAR" property="hasFlags" />
+    <result column="VARIATION" jdbcType="VARCHAR" property="variation" />
+    <result column="SAMPLED_BY" jdbcType="VARCHAR" property="sampledBy" />
+    <result column="SAMPLED" jdbcType="VARCHAR" property="sampled" />
+    <result column="ORDER_NUM" jdbcType="VARCHAR" property="orderNum" />
+    <result column="LAST_ORDER_NUM" jdbcType="VARCHAR" property="lastOrderNum" />
+    <result column="STORAGE_CONDITION" jdbcType="VARCHAR" property="storageCondition" />
+    <result column="CONTAINER_TYPE" jdbcType="VARCHAR" property="containerType" />
+    <result column="NUM_CONTAINERS" jdbcType="DECIMAL" property="numContainers" />
+    <result column="IMPORTANT_MESSAGE" jdbcType="VARCHAR" property="importantMessage" />
+    <result column="OBSERVATIONS" jdbcType="VARCHAR" property="observations" />
+    <result column="LAB" jdbcType="VARCHAR" property="lab" />
+    <result column="EXPIRATION_DATE" jdbcType="DATE" property="expirationDate" />
+    <result column="REQD_VOLUME" jdbcType="DECIMAL" property="reqdVolume" />
+    <result column="COLLECTION_METHOD" jdbcType="VARCHAR" property="collectionMethod" />
+    <result column="COLLECTION_OFFSET" jdbcType="DECIMAL" property="collectionOffset" />
+    <result column="SIGNED" jdbcType="VARCHAR" property="signed" />
+    <result column="ALLOW_CHLD_ALQTS" jdbcType="VARCHAR" property="allowChldAlqts" />
+    <result column="CONTRACT_NUMBER" jdbcType="DECIMAL" property="contractNumber" />
+    <result column="BILLING_ITEM_DESC" jdbcType="VARCHAR" property="billingItemDesc" />
+    <result column="STORAGE_LOC_NO" jdbcType="DECIMAL" property="storageLocNo" />
+    <result column="EXTERNAL_LOCATION" jdbcType="VARCHAR" property="externalLocation" />
+    <result column="STORAGE_TEMPLATE" jdbcType="VARCHAR" property="storageTemplate" />
+    <result column="CONVERSION_GROUPS" jdbcType="VARCHAR" property="conversionGroups" />
+    <result column="REPORTED_RSLT_OOS" jdbcType="VARCHAR" property="reportedRsltOos" />
+    <result column="T_CONTRACT_TESTS" jdbcType="VARCHAR" property="tContractTests" />
+    <result column="T_CUSTOMER_GROUP" jdbcType="VARCHAR" property="tCustomerGroup" />
+    <result column="T_DEPTH" jdbcType="VARCHAR" property="tDepth" />
+    <result column="T_DISPOSAL_DATE" jdbcType="DATE" property="tDisposalDate" />
+    <result column="T_INSTRUMENT" jdbcType="VARCHAR" property="tInstrument" />
+    <result column="T_LOGIN_VERIFIED" jdbcType="VARCHAR" property="tLoginVerified" />
+    <result column="T_NOTE" jdbcType="DECIMAL" property="tNote" />
+    <result column="T_RETURN_DATE" jdbcType="DATE" property="tReturnDate" />
+    <result column="T_SAMPLE_ID" jdbcType="VARCHAR" property="tSampleId" />
+    <result column="C_SAMPLE_GROUP" jdbcType="VARCHAR" property="cSampleGroup" />
+    <result column="C_IS_SEQUNCE" jdbcType="VARCHAR" property="cIsSequnce" />
+    <result column="C_CONTACT_TYPE" jdbcType="VARCHAR" property="cContactType" />
+    <result column="TRANS_NUM" jdbcType="DECIMAL" property="transNum" />
+    <result column="CLONED_FROM" jdbcType="DECIMAL" property="clonedFrom" />
+    <result column="AUDIT" jdbcType="VARCHAR" property="audit" />
+    <result column="TS" jdbcType="CHAR" property="ts" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    SAMPLE_NUMBER, TEXT_ID, STATUS, OLD_STATUS, DISP_FLDS, LABEL_MASK, IN_SPEC, IN_CAL, 
+    CHANGED_ON, RE_SAMPLE, ALIQUOT, ORIGINAL_SAMPLE, PARENT_SAMPLE, PARENT_ALIQUOT, ALIQUOT_GROUP, 
+    SAMPLE_VOLUME, SAMPLE_UNITS, LOGIN_DATE, LOGIN_BY, SAMPLED_DATE, RECD_DATE, RECEIVED_BY, 
+    DATE_STARTED, STARTED, ASSIGNED_OPERATOR, DUE_DATE, DATE_COMPLETED, DATE_REVIEWED, 
+    PREP, PREP_DATE, PREP_BY, REVIEWER, REVIEW_NOTE, PRODUCT_CODE, PRODUCT, PRODUCT_VERSION, 
+    PRODUCT_GRADE, SAMPLING_POINT, SAMPLE_TYPE, PROJECT, BATCH_NAME, BATCH_TEMPLATE, 
+    STEP, SAMPLE_NAME, DESCRIPTION, PRIORITY, LOCATION, CUSTOMER, TEST_LIST, TEMPLATE, 
+    RECIPIENT, STANDARD, EXT_LINK, CONDITION, TIMEPOINT, LOT, BASE_DATE, AVAILABLE_DATE, 
+    REQUIRED_DATE, TARGET_DATE, PARTIAL_SPEC, SPEC_TYPE, STAGE, PRIMARY_IN_SPEC, BATCH, 
+    CHARGE_CODE, FORMULATION, PROTOCOL_LEVEL, RELEASED, RELEASED_BY, RELEASED_ON, IN_CONTROL, 
+    INVESTIGATION, INVESTIGATED, APPROVED, APPROVAL_GROUP, READY_FOR_APPROVAL, APPROVAL_ID, 
+    APPROVAL_ROUTING, MODIFIED_RESULTS, REPORT_NUMBER, COMPOSITE, PARENT_COMPOSITE, COMPOSITE_TEMPLATE, 
+    SEASON_DATE, PEOPLE, TEST_LOCATION, OWNER_LOCATION, CHK_ALIQUOT_STATUS, CHK_ALIQUOT_SPECS, 
+    ALIQUOT_TEMPLATE, CALC_GROUP, SAMPLE_EVENT, LABEL_ID, HAS_FLAGS, VARIATION, SAMPLED_BY, 
+    SAMPLED, ORDER_NUM, LAST_ORDER_NUM, STORAGE_CONDITION, CONTAINER_TYPE, NUM_CONTAINERS, 
+    IMPORTANT_MESSAGE, OBSERVATIONS, LAB, EXPIRATION_DATE, REQD_VOLUME, COLLECTION_METHOD, 
+    COLLECTION_OFFSET, SIGNED, ALLOW_CHLD_ALQTS, CONTRACT_NUMBER, BILLING_ITEM_DESC, 
+    STORAGE_LOC_NO, EXTERNAL_LOCATION, STORAGE_TEMPLATE, CONVERSION_GROUPS, REPORTED_RSLT_OOS, 
+    T_CONTRACT_TESTS, T_CUSTOMER_GROUP, T_DEPTH, T_DISPOSAL_DATE, T_INSTRUMENT, T_LOGIN_VERIFIED, 
+    T_NOTE, T_RETURN_DATE, T_SAMPLE_ID, C_SAMPLE_GROUP, C_IS_SEQUNCE, C_CONTACT_TYPE, 
+    TRANS_NUM, CLONED_FROM, AUDIT, TS
+  </sql>
+  <select id="selectByExample" parameterType="cn.besbing.model.entities.primary.SampleExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from SAMPLE
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from SAMPLE
+    where SAMPLE_NUMBER = #{sampleNumber,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from SAMPLE
+    where SAMPLE_NUMBER = #{sampleNumber,jdbcType=DECIMAL}
+  </delete>
+
+  <update id="updateByPrimaryKeySelective" parameterType="cn.besbing.model.entities.primary.Sample">
+    update SAMPLE
+    <set>
+      <if test="textId != null">
+        TEXT_ID = #{textId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="oldStatus != null">
+        OLD_STATUS = #{oldStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="dispFlds != null">
+        DISP_FLDS = #{dispFlds,jdbcType=VARCHAR},
+      </if>
+      <if test="labelMask != null">
+        LABEL_MASK = #{labelMask,jdbcType=VARCHAR},
+      </if>
+      <if test="inSpec != null">
+        IN_SPEC = #{inSpec,jdbcType=VARCHAR},
+      </if>
+      <if test="inCal != null">
+        IN_CAL = #{inCal,jdbcType=VARCHAR},
+      </if>
+      <if test="changedOn != null">
+        CHANGED_ON = #{changedOn,jdbcType=DATE},
+      </if>
+      <if test="reSample != null">
+        RE_SAMPLE = #{reSample,jdbcType=VARCHAR},
+      </if>
+      <if test="aliquot != null">
+        ALIQUOT = #{aliquot,jdbcType=VARCHAR},
+      </if>
+      <if test="originalSample != null">
+        ORIGINAL_SAMPLE = #{originalSample,jdbcType=DECIMAL},
+      </if>
+      <if test="parentSample != null">
+        PARENT_SAMPLE = #{parentSample,jdbcType=DECIMAL},
+      </if>
+      <if test="parentAliquot != null">
+        PARENT_ALIQUOT = #{parentAliquot,jdbcType=DECIMAL},
+      </if>
+      <if test="aliquotGroup != null">
+        ALIQUOT_GROUP = #{aliquotGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleVolume != null">
+        SAMPLE_VOLUME = #{sampleVolume,jdbcType=DECIMAL},
+      </if>
+      <if test="sampleUnits != null">
+        SAMPLE_UNITS = #{sampleUnits,jdbcType=VARCHAR},
+      </if>
+      <if test="loginDate != null">
+        LOGIN_DATE = #{loginDate,jdbcType=DATE},
+      </if>
+      <if test="loginBy != null">
+        LOGIN_BY = #{loginBy,jdbcType=VARCHAR},
+      </if>
+      <if test="sampledDate != null">
+        SAMPLED_DATE = #{sampledDate,jdbcType=DATE},
+      </if>
+      <if test="recdDate != null">
+        RECD_DATE = #{recdDate,jdbcType=DATE},
+      </if>
+      <if test="receivedBy != null">
+        RECEIVED_BY = #{receivedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="dateStarted != null">
+        DATE_STARTED = #{dateStarted,jdbcType=DATE},
+      </if>
+      <if test="started != null">
+        STARTED = #{started,jdbcType=VARCHAR},
+      </if>
+      <if test="assignedOperator != null">
+        ASSIGNED_OPERATOR = #{assignedOperator,jdbcType=VARCHAR},
+      </if>
+      <if test="dueDate != null">
+        DUE_DATE = #{dueDate,jdbcType=DATE},
+      </if>
+      <if test="dateCompleted != null">
+        DATE_COMPLETED = #{dateCompleted,jdbcType=DATE},
+      </if>
+      <if test="dateReviewed != null">
+        DATE_REVIEWED = #{dateReviewed,jdbcType=DATE},
+      </if>
+      <if test="prep != null">
+        PREP = #{prep,jdbcType=VARCHAR},
+      </if>
+      <if test="prepDate != null">
+        PREP_DATE = #{prepDate,jdbcType=DATE},
+      </if>
+      <if test="prepBy != null">
+        PREP_BY = #{prepBy,jdbcType=VARCHAR},
+      </if>
+      <if test="reviewer != null">
+        REVIEWER = #{reviewer,jdbcType=VARCHAR},
+      </if>
+      <if test="reviewNote != null">
+        REVIEW_NOTE = #{reviewNote,jdbcType=VARCHAR},
+      </if>
+      <if test="productCode != null">
+        PRODUCT_CODE = #{productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="product != null">
+        PRODUCT = #{product,jdbcType=VARCHAR},
+      </if>
+      <if test="productVersion != null">
+        PRODUCT_VERSION = #{productVersion,jdbcType=DECIMAL},
+      </if>
+      <if test="productGrade != null">
+        PRODUCT_GRADE = #{productGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="samplingPoint != null">
+        SAMPLING_POINT = #{samplingPoint,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleType != null">
+        SAMPLE_TYPE = #{sampleType,jdbcType=VARCHAR},
+      </if>
+      <if test="project != null">
+        PROJECT = #{project,jdbcType=VARCHAR},
+      </if>
+      <if test="batchName != null">
+        BATCH_NAME = #{batchName,jdbcType=VARCHAR},
+      </if>
+      <if test="batchTemplate != null">
+        BATCH_TEMPLATE = #{batchTemplate,jdbcType=VARCHAR},
+      </if>
+      <if test="step != null">
+        STEP = #{step,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleName != null">
+        SAMPLE_NAME = #{sampleName,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        DESCRIPTION = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="priority != null">
+        PRIORITY = #{priority,jdbcType=DECIMAL},
+      </if>
+      <if test="location != null">
+        LOCATION = #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="customer != null">
+        CUSTOMER = #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="testList != null">
+        TEST_LIST = #{testList,jdbcType=VARCHAR},
+      </if>
+      <if test="template != null">
+        TEMPLATE = #{template,jdbcType=VARCHAR},
+      </if>
+      <if test="recipient != null">
+        RECIPIENT = #{recipient,jdbcType=VARCHAR},
+      </if>
+      <if test="standard != null">
+        STANDARD = #{standard,jdbcType=VARCHAR},
+      </if>
+      <if test="extLink != null">
+        EXT_LINK = #{extLink,jdbcType=VARCHAR},
+      </if>
+      <if test="condition != null">
+        CONDITION = #{condition,jdbcType=VARCHAR},
+      </if>
+      <if test="timepoint != null">
+        TIMEPOINT = #{timepoint,jdbcType=VARCHAR},
+      </if>
+      <if test="lot != null">
+        LOT = #{lot,jdbcType=DECIMAL},
+      </if>
+      <if test="baseDate != null">
+        BASE_DATE = #{baseDate,jdbcType=DATE},
+      </if>
+      <if test="availableDate != null">
+        AVAILABLE_DATE = #{availableDate,jdbcType=DATE},
+      </if>
+      <if test="requiredDate != null">
+        REQUIRED_DATE = #{requiredDate,jdbcType=DATE},
+      </if>
+      <if test="targetDate != null">
+        TARGET_DATE = #{targetDate,jdbcType=DATE},
+      </if>
+      <if test="partialSpec != null">
+        PARTIAL_SPEC = #{partialSpec,jdbcType=VARCHAR},
+      </if>
+      <if test="specType != null">
+        SPEC_TYPE = #{specType,jdbcType=VARCHAR},
+      </if>
+      <if test="stage != null">
+        STAGE = #{stage,jdbcType=VARCHAR},
+      </if>
+      <if test="primaryInSpec != null">
+        PRIMARY_IN_SPEC = #{primaryInSpec,jdbcType=VARCHAR},
+      </if>
+      <if test="batch != null">
+        BATCH = #{batch,jdbcType=VARCHAR},
+      </if>
+      <if test="chargeCode != null">
+        CHARGE_CODE = #{chargeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="formulation != null">
+        FORMULATION = #{formulation,jdbcType=VARCHAR},
+      </if>
+      <if test="protocolLevel != null">
+        PROTOCOL_LEVEL = #{protocolLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="released != null">
+        RELEASED = #{released,jdbcType=VARCHAR},
+      </if>
+      <if test="releasedBy != null">
+        RELEASED_BY = #{releasedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="releasedOn != null">
+        RELEASED_ON = #{releasedOn,jdbcType=DATE},
+      </if>
+      <if test="inControl != null">
+        IN_CONTROL = #{inControl,jdbcType=VARCHAR},
+      </if>
+      <if test="investigation != null">
+        INVESTIGATION = #{investigation,jdbcType=VARCHAR},
+      </if>
+      <if test="investigated != null">
+        INVESTIGATED = #{investigated,jdbcType=VARCHAR},
+      </if>
+      <if test="approved != null">
+        APPROVED = #{approved,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalGroup != null">
+        APPROVAL_GROUP = #{approvalGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="readyForApproval != null">
+        READY_FOR_APPROVAL = #{readyForApproval,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalId != null">
+        APPROVAL_ID = #{approvalId,jdbcType=DECIMAL},
+      </if>
+      <if test="approvalRouting != null">
+        APPROVAL_ROUTING = #{approvalRouting,jdbcType=VARCHAR},
+      </if>
+      <if test="modifiedResults != null">
+        MODIFIED_RESULTS = #{modifiedResults,jdbcType=VARCHAR},
+      </if>
+      <if test="reportNumber != null">
+        REPORT_NUMBER = #{reportNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="composite != null">
+        COMPOSITE = #{composite,jdbcType=VARCHAR},
+      </if>
+      <if test="parentComposite != null">
+        PARENT_COMPOSITE = #{parentComposite,jdbcType=DECIMAL},
+      </if>
+      <if test="compositeTemplate != null">
+        COMPOSITE_TEMPLATE = #{compositeTemplate,jdbcType=VARCHAR},
+      </if>
+      <if test="seasonDate != null">
+        SEASON_DATE = #{seasonDate,jdbcType=DATE},
+      </if>
+      <if test="people != null">
+        PEOPLE = #{people,jdbcType=DECIMAL},
+      </if>
+      <if test="testLocation != null">
+        TEST_LOCATION = #{testLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="ownerLocation != null">
+        OWNER_LOCATION = #{ownerLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="chkAliquotStatus != null">
+        CHK_ALIQUOT_STATUS = #{chkAliquotStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="chkAliquotSpecs != null">
+        CHK_ALIQUOT_SPECS = #{chkAliquotSpecs,jdbcType=VARCHAR},
+      </if>
+      <if test="aliquotTemplate != null">
+        ALIQUOT_TEMPLATE = #{aliquotTemplate,jdbcType=VARCHAR},
+      </if>
+      <if test="calcGroup != null">
+        CALC_GROUP = #{calcGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="sampleEvent != null">
+        SAMPLE_EVENT = #{sampleEvent,jdbcType=DECIMAL},
+      </if>
+      <if test="labelId != null">
+        LABEL_ID = #{labelId,jdbcType=VARCHAR},
+      </if>
+      <if test="hasFlags != null">
+        HAS_FLAGS = #{hasFlags,jdbcType=VARCHAR},
+      </if>
+      <if test="variation != null">
+        VARIATION = #{variation,jdbcType=VARCHAR},
+      </if>
+      <if test="sampledBy != null">
+        SAMPLED_BY = #{sampledBy,jdbcType=VARCHAR},
+      </if>
+      <if test="sampled != null">
+        SAMPLED = #{sampled,jdbcType=VARCHAR},
+      </if>
+      <if test="orderNum != null">
+        ORDER_NUM = #{orderNum,jdbcType=VARCHAR},
+      </if>
+      <if test="lastOrderNum != null">
+        LAST_ORDER_NUM = #{lastOrderNum,jdbcType=VARCHAR},
+      </if>
+      <if test="storageCondition != null">
+        STORAGE_CONDITION = #{storageCondition,jdbcType=VARCHAR},
+      </if>
+      <if test="containerType != null">
+        CONTAINER_TYPE = #{containerType,jdbcType=VARCHAR},
+      </if>
+      <if test="numContainers != null">
+        NUM_CONTAINERS = #{numContainers,jdbcType=DECIMAL},
+      </if>
+      <if test="importantMessage != null">
+        IMPORTANT_MESSAGE = #{importantMessage,jdbcType=VARCHAR},
+      </if>
+      <if test="observations != null">
+        OBSERVATIONS = #{observations,jdbcType=VARCHAR},
+      </if>
+      <if test="lab != null">
+        LAB = #{lab,jdbcType=VARCHAR},
+      </if>
+      <if test="expirationDate != null">
+        EXPIRATION_DATE = #{expirationDate,jdbcType=DATE},
+      </if>
+      <if test="reqdVolume != null">
+        REQD_VOLUME = #{reqdVolume,jdbcType=DECIMAL},
+      </if>
+      <if test="collectionMethod != null">
+        COLLECTION_METHOD = #{collectionMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="collectionOffset != null">
+        COLLECTION_OFFSET = #{collectionOffset,jdbcType=DECIMAL},
+      </if>
+      <if test="signed != null">
+        SIGNED = #{signed,jdbcType=VARCHAR},
+      </if>
+      <if test="allowChldAlqts != null">
+        ALLOW_CHLD_ALQTS = #{allowChldAlqts,jdbcType=VARCHAR},
+      </if>
+      <if test="contractNumber != null">
+        CONTRACT_NUMBER = #{contractNumber,jdbcType=DECIMAL},
+      </if>
+      <if test="billingItemDesc != null">
+        BILLING_ITEM_DESC = #{billingItemDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="storageLocNo != null">
+        STORAGE_LOC_NO = #{storageLocNo,jdbcType=DECIMAL},
+      </if>
+      <if test="externalLocation != null">
+        EXTERNAL_LOCATION = #{externalLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="storageTemplate != null">
+        STORAGE_TEMPLATE = #{storageTemplate,jdbcType=VARCHAR},
+      </if>
+      <if test="conversionGroups != null">
+        CONVERSION_GROUPS = #{conversionGroups,jdbcType=VARCHAR},
+      </if>
+      <if test="reportedRsltOos != null">
+        REPORTED_RSLT_OOS = #{reportedRsltOos,jdbcType=VARCHAR},
+      </if>
+      <if test="tContractTests != null">
+        T_CONTRACT_TESTS = #{tContractTests,jdbcType=VARCHAR},
+      </if>
+      <if test="tCustomerGroup != null">
+        T_CUSTOMER_GROUP = #{tCustomerGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="tDepth != null">
+        T_DEPTH = #{tDepth,jdbcType=VARCHAR},
+      </if>
+      <if test="tDisposalDate != null">
+        T_DISPOSAL_DATE = #{tDisposalDate,jdbcType=DATE},
+      </if>
+      <if test="tInstrument != null">
+        T_INSTRUMENT = #{tInstrument,jdbcType=VARCHAR},
+      </if>
+      <if test="tLoginVerified != null">
+        T_LOGIN_VERIFIED = #{tLoginVerified,jdbcType=VARCHAR},
+      </if>
+      <if test="tNote != null">
+        T_NOTE = #{tNote,jdbcType=DECIMAL},
+      </if>
+      <if test="tReturnDate != null">
+        T_RETURN_DATE = #{tReturnDate,jdbcType=DATE},
+      </if>
+      <if test="tSampleId != null">
+        T_SAMPLE_ID = #{tSampleId,jdbcType=VARCHAR},
+      </if>
+      <if test="cSampleGroup != null">
+        C_SAMPLE_GROUP = #{cSampleGroup,jdbcType=VARCHAR},
+      </if>
+      <if test="cIsSequnce != null">
+        C_IS_SEQUNCE = #{cIsSequnce,jdbcType=VARCHAR},
+      </if>
+      <if test="cContactType != null">
+        C_CONTACT_TYPE = #{cContactType,jdbcType=VARCHAR},
+      </if>
+      <if test="transNum != null">
+        TRANS_NUM = #{transNum,jdbcType=DECIMAL},
+      </if>
+      <if test="clonedFrom != null">
+        CLONED_FROM = #{clonedFrom,jdbcType=DECIMAL},
+      </if>
+      <if test="audit != null">
+        AUDIT = #{audit,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null">
+        TS = #{ts,jdbcType=CHAR},
+      </if>
+    </set>
+    where SAMPLE_NUMBER = #{sampleNumber,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.besbing.model.entities.primary.Sample">
+    update SAMPLE
+    set TEXT_ID = #{textId,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      OLD_STATUS = #{oldStatus,jdbcType=VARCHAR},
+      DISP_FLDS = #{dispFlds,jdbcType=VARCHAR},
+      LABEL_MASK = #{labelMask,jdbcType=VARCHAR},
+      IN_SPEC = #{inSpec,jdbcType=VARCHAR},
+      IN_CAL = #{inCal,jdbcType=VARCHAR},
+      CHANGED_ON = #{changedOn,jdbcType=DATE},
+      RE_SAMPLE = #{reSample,jdbcType=VARCHAR},
+      ALIQUOT = #{aliquot,jdbcType=VARCHAR},
+      ORIGINAL_SAMPLE = #{originalSample,jdbcType=DECIMAL},
+      PARENT_SAMPLE = #{parentSample,jdbcType=DECIMAL},
+      PARENT_ALIQUOT = #{parentAliquot,jdbcType=DECIMAL},
+      ALIQUOT_GROUP = #{aliquotGroup,jdbcType=VARCHAR},
+      SAMPLE_VOLUME = #{sampleVolume,jdbcType=DECIMAL},
+      SAMPLE_UNITS = #{sampleUnits,jdbcType=VARCHAR},
+      LOGIN_DATE = #{loginDate,jdbcType=DATE},
+      LOGIN_BY = #{loginBy,jdbcType=VARCHAR},
+      SAMPLED_DATE = #{sampledDate,jdbcType=DATE},
+      RECD_DATE = #{recdDate,jdbcType=DATE},
+      RECEIVED_BY = #{receivedBy,jdbcType=VARCHAR},
+      DATE_STARTED = #{dateStarted,jdbcType=DATE},
+      STARTED = #{started,jdbcType=VARCHAR},
+      ASSIGNED_OPERATOR = #{assignedOperator,jdbcType=VARCHAR},
+      DUE_DATE = #{dueDate,jdbcType=DATE},
+      DATE_COMPLETED = #{dateCompleted,jdbcType=DATE},
+      DATE_REVIEWED = #{dateReviewed,jdbcType=DATE},
+      PREP = #{prep,jdbcType=VARCHAR},
+      PREP_DATE = #{prepDate,jdbcType=DATE},
+      PREP_BY = #{prepBy,jdbcType=VARCHAR},
+      REVIEWER = #{reviewer,jdbcType=VARCHAR},
+      REVIEW_NOTE = #{reviewNote,jdbcType=VARCHAR},
+      PRODUCT_CODE = #{productCode,jdbcType=VARCHAR},
+      PRODUCT = #{product,jdbcType=VARCHAR},
+      PRODUCT_VERSION = #{productVersion,jdbcType=DECIMAL},
+      PRODUCT_GRADE = #{productGrade,jdbcType=VARCHAR},
+      SAMPLING_POINT = #{samplingPoint,jdbcType=VARCHAR},
+      SAMPLE_TYPE = #{sampleType,jdbcType=VARCHAR},
+      PROJECT = #{project,jdbcType=VARCHAR},
+      BATCH_NAME = #{batchName,jdbcType=VARCHAR},
+      BATCH_TEMPLATE = #{batchTemplate,jdbcType=VARCHAR},
+      STEP = #{step,jdbcType=VARCHAR},
+      SAMPLE_NAME = #{sampleName,jdbcType=VARCHAR},
+      DESCRIPTION = #{description,jdbcType=VARCHAR},
+      PRIORITY = #{priority,jdbcType=DECIMAL},
+      LOCATION = #{location,jdbcType=VARCHAR},
+      CUSTOMER = #{customer,jdbcType=VARCHAR},
+      TEST_LIST = #{testList,jdbcType=VARCHAR},
+      TEMPLATE = #{template,jdbcType=VARCHAR},
+      RECIPIENT = #{recipient,jdbcType=VARCHAR},
+      STANDARD = #{standard,jdbcType=VARCHAR},
+      EXT_LINK = #{extLink,jdbcType=VARCHAR},
+      CONDITION = #{condition,jdbcType=VARCHAR},
+      TIMEPOINT = #{timepoint,jdbcType=VARCHAR},
+      LOT = #{lot,jdbcType=DECIMAL},
+      BASE_DATE = #{baseDate,jdbcType=DATE},
+      AVAILABLE_DATE = #{availableDate,jdbcType=DATE},
+      REQUIRED_DATE = #{requiredDate,jdbcType=DATE},
+      TARGET_DATE = #{targetDate,jdbcType=DATE},
+      PARTIAL_SPEC = #{partialSpec,jdbcType=VARCHAR},
+      SPEC_TYPE = #{specType,jdbcType=VARCHAR},
+      STAGE = #{stage,jdbcType=VARCHAR},
+      PRIMARY_IN_SPEC = #{primaryInSpec,jdbcType=VARCHAR},
+      BATCH = #{batch,jdbcType=VARCHAR},
+      CHARGE_CODE = #{chargeCode,jdbcType=VARCHAR},
+      FORMULATION = #{formulation,jdbcType=VARCHAR},
+      PROTOCOL_LEVEL = #{protocolLevel,jdbcType=VARCHAR},
+      RELEASED = #{released,jdbcType=VARCHAR},
+      RELEASED_BY = #{releasedBy,jdbcType=VARCHAR},
+      RELEASED_ON = #{releasedOn,jdbcType=DATE},
+      IN_CONTROL = #{inControl,jdbcType=VARCHAR},
+      INVESTIGATION = #{investigation,jdbcType=VARCHAR},
+      INVESTIGATED = #{investigated,jdbcType=VARCHAR},
+      APPROVED = #{approved,jdbcType=VARCHAR},
+      APPROVAL_GROUP = #{approvalGroup,jdbcType=VARCHAR},
+      READY_FOR_APPROVAL = #{readyForApproval,jdbcType=VARCHAR},
+      APPROVAL_ID = #{approvalId,jdbcType=DECIMAL},
+      APPROVAL_ROUTING = #{approvalRouting,jdbcType=VARCHAR},
+      MODIFIED_RESULTS = #{modifiedResults,jdbcType=VARCHAR},
+      REPORT_NUMBER = #{reportNumber,jdbcType=DECIMAL},
+      COMPOSITE = #{composite,jdbcType=VARCHAR},
+      PARENT_COMPOSITE = #{parentComposite,jdbcType=DECIMAL},
+      COMPOSITE_TEMPLATE = #{compositeTemplate,jdbcType=VARCHAR},
+      SEASON_DATE = #{seasonDate,jdbcType=DATE},
+      PEOPLE = #{people,jdbcType=DECIMAL},
+      TEST_LOCATION = #{testLocation,jdbcType=VARCHAR},
+      OWNER_LOCATION = #{ownerLocation,jdbcType=VARCHAR},
+      CHK_ALIQUOT_STATUS = #{chkAliquotStatus,jdbcType=VARCHAR},
+      CHK_ALIQUOT_SPECS = #{chkAliquotSpecs,jdbcType=VARCHAR},
+      ALIQUOT_TEMPLATE = #{aliquotTemplate,jdbcType=VARCHAR},
+      CALC_GROUP = #{calcGroup,jdbcType=VARCHAR},
+      SAMPLE_EVENT = #{sampleEvent,jdbcType=DECIMAL},
+      LABEL_ID = #{labelId,jdbcType=VARCHAR},
+      HAS_FLAGS = #{hasFlags,jdbcType=VARCHAR},
+      VARIATION = #{variation,jdbcType=VARCHAR},
+      SAMPLED_BY = #{sampledBy,jdbcType=VARCHAR},
+      SAMPLED = #{sampled,jdbcType=VARCHAR},
+      ORDER_NUM = #{orderNum,jdbcType=VARCHAR},
+      LAST_ORDER_NUM = #{lastOrderNum,jdbcType=VARCHAR},
+      STORAGE_CONDITION = #{storageCondition,jdbcType=VARCHAR},
+      CONTAINER_TYPE = #{containerType,jdbcType=VARCHAR},
+      NUM_CONTAINERS = #{numContainers,jdbcType=DECIMAL},
+      IMPORTANT_MESSAGE = #{importantMessage,jdbcType=VARCHAR},
+      OBSERVATIONS = #{observations,jdbcType=VARCHAR},
+      LAB = #{lab,jdbcType=VARCHAR},
+      EXPIRATION_DATE = #{expirationDate,jdbcType=DATE},
+      REQD_VOLUME = #{reqdVolume,jdbcType=DECIMAL},
+      COLLECTION_METHOD = #{collectionMethod,jdbcType=VARCHAR},
+      COLLECTION_OFFSET = #{collectionOffset,jdbcType=DECIMAL},
+      SIGNED = #{signed,jdbcType=VARCHAR},
+      ALLOW_CHLD_ALQTS = #{allowChldAlqts,jdbcType=VARCHAR},
+      CONTRACT_NUMBER = #{contractNumber,jdbcType=DECIMAL},
+      BILLING_ITEM_DESC = #{billingItemDesc,jdbcType=VARCHAR},
+      STORAGE_LOC_NO = #{storageLocNo,jdbcType=DECIMAL},
+      EXTERNAL_LOCATION = #{externalLocation,jdbcType=VARCHAR},
+      STORAGE_TEMPLATE = #{storageTemplate,jdbcType=VARCHAR},
+      CONVERSION_GROUPS = #{conversionGroups,jdbcType=VARCHAR},
+      REPORTED_RSLT_OOS = #{reportedRsltOos,jdbcType=VARCHAR},
+      T_CONTRACT_TESTS = #{tContractTests,jdbcType=VARCHAR},
+      T_CUSTOMER_GROUP = #{tCustomerGroup,jdbcType=VARCHAR},
+      T_DEPTH = #{tDepth,jdbcType=VARCHAR},
+      T_DISPOSAL_DATE = #{tDisposalDate,jdbcType=DATE},
+      T_INSTRUMENT = #{tInstrument,jdbcType=VARCHAR},
+      T_LOGIN_VERIFIED = #{tLoginVerified,jdbcType=VARCHAR},
+      T_NOTE = #{tNote,jdbcType=DECIMAL},
+      T_RETURN_DATE = #{tReturnDate,jdbcType=DATE},
+      T_SAMPLE_ID = #{tSampleId,jdbcType=VARCHAR},
+      C_SAMPLE_GROUP = #{cSampleGroup,jdbcType=VARCHAR},
+      C_IS_SEQUNCE = #{cIsSequnce,jdbcType=VARCHAR},
+      C_CONTACT_TYPE = #{cContactType,jdbcType=VARCHAR},
+      TRANS_NUM = #{transNum,jdbcType=DECIMAL},
+      CLONED_FROM = #{clonedFrom,jdbcType=DECIMAL},
+      AUDIT = #{audit,jdbcType=VARCHAR},
+      TS = #{ts,jdbcType=CHAR}
+    where SAMPLE_NUMBER = #{sampleNumber,jdbcType=DECIMAL}
+  </update>
+
+  <select id="selectSamplesByProject" resultMap="BaseResultMap" parameterType="String">
+
+        select * from sample where project = #{project} order by sample_number
+
+    </select>
+</mapper>
