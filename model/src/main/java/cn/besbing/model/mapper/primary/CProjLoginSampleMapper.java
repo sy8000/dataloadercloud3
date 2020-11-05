@@ -33,4 +33,6 @@ public interface CProjLoginSampleMapper {
     int updateByPrimaryKey(CProjLoginSample record);
 
     List<CProjLoginSample> selectProject(@RequestParam(value = "project", required = false) String project);
+
+    List<CProjLoginSample> selectProjectInfoByProject(@Param("project") String project);
 }

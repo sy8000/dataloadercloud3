@@ -1,9 +1,10 @@
 layui.use(['form', 'table','layer'], function () {
-    var $ = layui.jquery,
+    let $ = layui.jquery,
         form = layui.form,
         table = layui.table,
         util = layui.util,
         layer = layui.layer;
+    let radiocheck = '';
     table.render({
         elem: '#sampleReceiveId',
         url: '/loading/sampleReceive',
@@ -75,74 +76,33 @@ layui.use(['form', 'table','layer'], function () {
         //even: true
     });
 
-
-
-    /*
-    //监听头工具栏事件
-    table.on('toolbar(sampleReceiveFilter)', function(obj){
-        var checkStatus = table.checkStatus(obj.config.id)
-            ,data = checkStatus.data; //获取选中的数据
-        switch(obj.event){
-            case 'add':
-                parent.layer.open({
-                    type: 2,
-                    title: '权限维护',
-                    anim: 2,
-                    area: ['1000px', '500px'],
-                    resize: false,
-                    content: "/dlcsystem/addpermission", //注意，如果str是object，那么需要字符拼接。
-                    btn: '关闭全部',
-                    btnAlign: 'c',
-                    yes:function () {
-                        parent.layer.closeAll();
-                    }
-                });
-                break;
-            case 'update':
-                if(data.length === 0){
-                    layer.msg('请选择一行');
-                } else if(data.length > 1){
-                    layer.msg('只能同时编辑一个');
-                } else {
-                    //layer.alert('编辑 [permissionid]：'+ checkStatus.data[0].permissionid);
-                    parent.layer.open({
-                        type: 2,
-                        title: '权限编辑',
-                        anim: 2,
-                        area: ['1000px', '500px'],
-                        resize: false,
-                        content: "/dlcsystem/editpermission?dlpermissionid=" + checkStatus.data[0].permissionid,
-                        btn: '关闭全部',
-                        btnAlign: 'c',
-                        yes:function () {
-                            parent.layer.closeAll();
-                        }
-                    });
-                }
-                break;
-            case 'delete':
-                if(data.length === 0){
-                    layer.msg('请选择一行');
-                } else {
-                    //layer.msg('删除');
-                    $.ajax({
-                        url: "/action/delpermission?dlpermissionid=" + checkStatus.data[0].permissionid,
-                        type: 'delete',
-                        contentType:"application/json",
-                        success: function(data) {
-                            if (data.code == 200){
-                                layer.msg('删除成功');
-                                obj.del();
-                            }else {
-                                layer.msg('删除失败');
-                            }
-                        }
-                    })
-                }
-                break;
-        };
+    /**监听radio***/
+    table.on('radio(sampleReceiveFilter)', function(obj){
+        //console.log(obj);
+        radiocheck = obj.data.project;
+        console.log('新radio选择:' + radiocheck);
+        $('#receiveBtnId').removeAttr("disabled");
+        $('#rejectBtnId').removeAttr("disabled");
+        $('#receiveBtnId').removeClass("layui-btn-disabled");
+        $('#rejectBtnId').removeClass("layui-btn-disabled");
     });
-     */
+
+    /**样品接收按钮**/
+    $("#receiveBtnId").click(function(){
+        $("#receiveBtnId").addClass("layui-btn-disabled");
+        $("#receiveBtnId").attr("disabled", true);
+        //layer.msg('选中了委托单：' + radiocheck);
+        parent.layer.open({
+            type: 2,
+            title: '库位选择',
+            anim: 2,
+            area: ['1000px', '500px'],
+            resize: false,
+            content: "/dlclims/receive?projno=" + radiocheck
+        });
+    });
+
+
 
     // 监听搜索操作
     form.on('submit(data-search-btn)', function (data) {
@@ -170,7 +130,7 @@ layui.use(['form', 'table','layer'], function () {
             anim: 2,
             area: ['1000px', '500px'],
             resize: false,
-            content: "/dlcsystem/viewpermission?dlpermissionid=" + obj.data.permissionid,
+            content: "/dlclims/viewsample?project=" + obj.data.project,
             btn: '关闭全部',
             btnAlign: 'c',
             yes:function () {

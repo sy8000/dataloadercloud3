@@ -51,4 +51,8 @@ public class PrimaryCProjLoginSampleServiceImpl {
     public int save(CProjLoginSample searchCpls) {
         return projLoginSampleMapper.updateByPrimaryKey(searchCpls);
     }
+
+    public List<CProjLoginSample>  getProjectInfoByProject(String project) {
+        return projLoginSampleMapper.selectProjectInfoByProject(project);
+    }
 }

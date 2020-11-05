@@ -283,7 +283,15 @@
         and project like '%'||#{_parameter}||'%'
       </if>
   </select>
-  <update id="updateByExampleSelective" parameterType="map">
+    <select id="selectProjectInfoByProject" resultType="cn.besbing.model.entities.primary.CProjLoginSample">
+      select *
+      from c_proj_login_sample where 1=1
+      <if test="_parameter != null">
+        and project = #{project}
+      </if>
+      order by sample_group
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
     update C_PROJ_LOGIN_SAMPLE
     <set>
       <if test="record.seqNum != null">

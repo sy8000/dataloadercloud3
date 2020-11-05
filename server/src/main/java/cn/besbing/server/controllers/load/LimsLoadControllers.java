@@ -4,10 +4,7 @@ import cn.besbing.model.entities.primary.Project;
 import cn.besbing.model.utils.PageDataResult;
 import cn.besbing.model.utils.SearchDTO;
 import cn.besbing.server.service.general.GeneratedPageDataResult;
-import cn.besbing.server.service.primary.PrimaryCProjLoginSampleServiceImpl;
-import cn.besbing.server.service.primary.PrimaryCProjTaskCoreServiceImpl;
-import cn.besbing.server.service.primary.PrimaryLwSampleReceiveViewServiceImpl;
-import cn.besbing.server.service.primary.PrimaryProjectServiceImpl;
+import cn.besbing.server.service.primary.*;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -52,6 +49,36 @@ public class LimsLoadControllers {
 
     @Autowired
     private PrimaryLwSampleReceiveViewServiceImpl sampleReceiveViewService;
+
+    @Autowired
+    private PrimaryStorageLocationServiceImpl storageLocationService;
+
+    /**
+     * 样品接收仓库选择页
+     */
+    @GetMapping("receiveConfirm")
+    public PageDataResult receiveConfirm(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit, @RequestParam(value = "keyword", required = false) String keyword){
+        //自助服务：修改委托单load
+        if (null == page){
+            page = 1;
+        }
+        if (null == limit){
+            limit = 10;
+        }
+        if (keyword != null && !"".equals(keyword)) {
+            JSONObject jsonObject = JSONObject.parseObject(keyword);
+            keyword = jsonObject.get("name").toString();
+        }
+        SearchDTO searchDTO = new SearchDTO(page,limit,keyword);
+        try {
+            PageDataResult pdr = generatedPageDataResult.createFormatedTableData(searchDTO,storageLocationService.getSampleReceiveList(searchDTO));
+            return pdr;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
     /**
      * 自助服务：获取待修改委托单列表

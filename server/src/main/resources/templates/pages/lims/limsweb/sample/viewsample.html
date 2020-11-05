@@ -1,0 +1,55 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css " media="all">
+    <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
+    <script src="../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../../../static/css/generalcss/layuitablecheckboxfix.css">
+    <script src="../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+</head>
+<body onload="addWaterMarker()" style="margin: 10px 10px 10px 10px">
+<br />
+<table class="layui-table">
+    <colgroup>
+        <col width="150">
+        <col width="150">
+        <col width="80">
+        <col width="80">
+        <col width="150">
+        <col>
+    </colgroup>
+    <thead>
+    <tr>
+        <th>委托单号</th>
+        <th>企业标准</th>
+        <th>样品组别</th>
+        <th>样品数量</th>
+        <th>制造商</th>
+        <th>其它信息</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="proj:${project}">
+            <td th:text="${proj.project}">委托单号</td>
+            <td th:text="${proj.productStandard}">企业标准</td>
+            <td th:text="${proj.sampleGroup}">样品组别</td>
+            <td th:text="${proj.sampleQuantity}">样品数量</td>
+            <td th:text="${proj.manufacturer}">制造商</td>
+            <td th:text="${proj.otherReq}">其它信息</td>
+        </tr>
+    </tbody>
+</table>
+
+
+</body>
+
+</html>

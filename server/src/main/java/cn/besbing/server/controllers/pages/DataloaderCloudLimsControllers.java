@@ -8,6 +8,7 @@ import cn.besbing.server.service.primary.PrimaryCProjLoginSampleServiceImpl;
 import cn.besbing.server.service.primary.PrimaryCProjTaskCoreServiceImpl;
 import cn.besbing.server.service.primary.PrimaryResultViewServiceImple;
 import cn.besbing.server.utils.AbstractLog;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -55,6 +56,14 @@ public class DataloaderCloudLimsControllers extends AbstractLog {
         return "pages/lims/serviceforself/projectmodify/editproject";
     }
 
+    @GetMapping("viewsample")
+    public String viewsample(Model model,String project){
+        /**样品接收*/
+        List<CProjLoginSample> list = primaryCProjLoginSampleService.getProjectInfoByProject(project);
+        model.addAttribute("project",list);
+        return "pages/lims/limsweb/sample/viewsample";
+    }
+
     @GetMapping("viewcharge")
     public String viewcharge(Model model, String taskId) {
         try{
@@ -74,9 +83,6 @@ public class DataloaderCloudLimsControllers extends AbstractLog {
             }catch (Exception e){
                 e.getStackTrace();
             }
-
-
-
 
             String tableData[][] = new String[resultsamples.size()+1][resultnames.size()+1];
             tableData[0][0] = "试验详细数据";
@@ -131,5 +137,13 @@ public class DataloaderCloudLimsControllers extends AbstractLog {
         }
         return "pages/lims/serviceforself/viewcharge/viewcharge";
     }
+
+
+    @GetMapping("receive")
+    public String receive(Model model,String projno){
+        model.addAttribute("projno",projno);
+        return "pages/lims/limsweb/sample/receive";
+    }
+
 
 }
