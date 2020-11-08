@@ -34,4 +34,6 @@ public interface SmUserMapper {
     List<SmUser> selectUserForTable(String keyword);
 
     List<SmUser> selectUserForDlpSelect();
+
+    String selectUserByName(@Param("userName") String userName);
 }

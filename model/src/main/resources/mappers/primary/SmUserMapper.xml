@@ -771,4 +771,8 @@
         left join dl_role dr on dur.roleid = dr.roleid
         where dr.available = 0 and dr.description = 'lims:admin'
     </select>
+    <select id="selectUserByName" resultType="java.lang.String" parameterType="String">
+      select cuserid from sm_user
+      where user_name = #{userName} and rownum = 1
+    </select>
 </mapper>

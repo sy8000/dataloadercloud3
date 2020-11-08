@@ -4,6 +4,8 @@ import cn.besbing.client.enums.BaseResponse;
 import cn.besbing.client.enums.StatusCode;
 import cn.besbing.model.entities.primary.CProjLoginSample;
 import cn.besbing.model.entities.primary.QcCommissionB;
+import cn.besbing.server.service.lims.LabWareLimsFlowJump;
+import cn.besbing.server.service.lims.LabWareLimsFlowProcess;
 import cn.besbing.server.service.primary.PrimaryCProjLoginSampleServiceImpl;
 import cn.besbing.server.service.primary.PrimaryQcCmmissionHServiceImpl;
 import cn.besbing.server.service.primary.PrimaryQcCommissionB;
@@ -44,13 +46,16 @@ public class LimsActionControllers {
     @Autowired
     PrimarySampleServiceImpl primarySampleService;
 
+    @Autowired
+    private LabWareLimsFlowProcess limsFlowProcess;
+
     @PostMapping(value = "getSample")
     public BaseResponse getSample(@RequestBody String jsonStr) {
         /**样品接收按钮控制器**/
         BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
         JSONObject jsonObject = JSONObject.parseObject(jsonStr);
         //sample标志位
-        primarySampleService.sampleReceive(jsonObject.get("project").toString(),jsonObject.get("locationNumber").toString());
+        limsFlowProcess.sampleReceive(jsonObject.get("project").toString(),jsonObject.get("locationNumber").toString());
         return baseResponse;
     }
 

@@ -121,4 +121,8 @@ public class PrimarySmuserServiceImpl implements  SmUserMapper{
     public int deletebyPrimary(String cuserid) {
         return smUserMapper.deleteByPrimaryKey(cuserid);
     }
+
+    public String selectUserByName(String userName) {
+        return smUserMapper.selectUserByName(userName);
+    }
 }
