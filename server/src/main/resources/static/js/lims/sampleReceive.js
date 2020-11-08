@@ -80,7 +80,7 @@ layui.use(['form', 'table','layer'], function () {
     table.on('radio(sampleReceiveFilter)', function(obj){
         //console.log(obj);
         radiocheck = obj.data.project;
-        console.log('新radio选择:' + radiocheck);
+        console.log(table.checkStatus('sampleReceiveFilter').data);
         $('#receiveBtnId').removeAttr("disabled");
         $('#rejectBtnId').removeAttr("disabled");
         $('#receiveBtnId').removeClass("layui-btn-disabled");

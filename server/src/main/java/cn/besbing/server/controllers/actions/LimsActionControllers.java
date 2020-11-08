@@ -49,6 +49,12 @@ public class LimsActionControllers {
     @Autowired
     private LabWareLimsFlowProcess limsFlowProcess;
 
+
+    /**
+     * 样品接收动作
+     * @param jsonStr
+     * @return
+     */
     @PostMapping(value = "getSample")
     public BaseResponse getSample(@RequestBody String jsonStr) {
         /**样品接收按钮控制器**/

@@ -58,7 +58,7 @@ layui.use(['form', 'table','layer'], function () {
 
     /**监听radio***/
     table.on('radio(receiveFilter)', function(obj){
-        //console.log(obj);
+        console.log(obj);
         radiocheck = obj.data.locationNumber;
         console.log('radio选择:' + radiocheck);
         $('#confirmReceiveBtn').removeAttr("disabled");
