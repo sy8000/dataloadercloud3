@@ -81,7 +81,8 @@ layui.use(['form', 'table','layer'], function () {
             data: JSON.stringify({"project": projno ,"locationNumber":radiocheck }),
             success: function(result) {
                 if (result.code == 200){
-                    layer.msg('接收成功');
+                    parent.layer.closeAll();
+                    parent.layer.msg('接收成功');
                     /*
                     checkStatus.data[0].del();
                     console.log(obj);

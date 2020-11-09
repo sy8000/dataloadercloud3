@@ -5,6 +5,7 @@ import cn.besbing.client.enums.StatusCode;
 import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.entities.primary.DlRole;
 import cn.besbing.model.entities.primary.SmUser;
+import cn.besbing.server.service.general.ForgetPWDImpl;
 import cn.besbing.server.service.general.GeneratedPrimaryKeysImpl;
 import cn.besbing.server.service.general.GeneratedTranslateImpl;
 import cn.besbing.server.service.primary.PrimaryDlPermissionServiceImpl;
@@ -51,6 +52,9 @@ public class SystemActionControllers {
 
     @Autowired
     GeneratedTranslateImpl generatedTranslate;
+
+    @Autowired
+    ForgetPWDImpl forgetPWD;
 
     /**
      * 添加权限
@@ -199,6 +203,37 @@ public class SystemActionControllers {
             baseResponse = new BaseResponse(StatusCode.BAIDUAPISEARCHFAILED.getCode(),e.getMessage());
         }
         return baseResponse;
+    }
+
+
+
+
+    @RequestMapping(value = "resetPwd",method = RequestMethod.POST)
+    @ResponseBody
+    public JSONObject resetPwd(@RequestBody String usercode){
+        System.out.println(usercode);
+        JSONObject returnJson = new JSONObject();
+        returnJson.put("status",forgetPWD.sendMailWhenForgetPassword(usercode.toString()));
+        return returnJson;
+
+    }
+
+    @RequestMapping(value = "confirmPassword",method = RequestMethod.POST)
+    @ResponseBody
+    public JSONObject confirmPassword(@RequestBody String newPassword){
+        JSONObject returnJson = new JSONObject();
+        returnJson = forgetPWD.confirmNewPassword(newPassword);
+        return returnJson;
+
+    }
+
+    @RequestMapping(value = "validurl",method = RequestMethod.POST)
+    @ResponseBody
+    public JSONObject validurl(@RequestBody String timestampStr){
+        JSONObject returnJson = new JSONObject();
+        returnJson = forgetPWD.checkTimeValid(timestampStr);
+        return returnJson;
+
     }
 
 }

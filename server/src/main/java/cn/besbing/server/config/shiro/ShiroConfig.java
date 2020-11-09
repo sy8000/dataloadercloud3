@@ -29,6 +29,11 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/loading/**", "anon");
         filterChainDefinitionMap.put("/action/login", "anon");
         filterChainDefinitionMap.put("/test/**", "anon");
+        filterChainDefinitionMap.put("/dlcsystem/forgetPass", "anon");
+        filterChainDefinitionMap.put("/action/resetPwd", "anon");
+        filterChainDefinitionMap.put("/dlcsystem/resetPass", "anon");
+        filterChainDefinitionMap.put("/action/confirmPassword", "anon");
+        filterChainDefinitionMap.put("/action/validurl", "anon");
         /**
          * 暂时放出的费用确认
          */
@@ -38,12 +43,11 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/dlclims/viewcharge", "anon");
         /**  暂时放出结束  */
 
-        filterChainDefinitionMap.put("/forgetPass", "anon");
-        filterChainDefinitionMap.put("/resetPwd", "anon");
-        filterChainDefinitionMap.put("/resetPass", "anon");
+
+
+
         filterChainDefinitionMap.put("/report", "anon");
-        filterChainDefinitionMap.put("/confirmPassword", "anon");
-        filterChainDefinitionMap.put("/validurl", "anon");
+
         filterChainDefinitionMap.put("/taskProcess", "anon");
         filterChainDefinitionMap.put("/AllTaskProgess", "anon");
         filterChainDefinitionMap.put("/getParameters", "anon");

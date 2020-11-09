@@ -19,7 +19,7 @@ public interface SmUserMapper {
 
     List<SmUser> selectByExample(SmUserExample example);
 
-    SmUser selectByUserCode( String userCode);
+    SmUser selectByUserCode(@Param("userCode") String userCode);
 
     SmUser selectByPrimaryKey(String cuserid);
 
@@ -36,4 +36,7 @@ public interface SmUserMapper {
     List<SmUser> selectUserForDlpSelect();
 
     String selectUserByName(@Param("userName") String userName);
+
+
+    SmUser getUserByCode(@Param("userCode") String userCode);
 }

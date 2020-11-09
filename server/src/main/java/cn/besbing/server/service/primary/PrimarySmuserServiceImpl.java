@@ -64,6 +64,10 @@ public class PrimarySmuserServiceImpl implements  SmUserMapper{
         return smUserMapper.selectByUserCode(userCode);
     }
 
+    public SmUser getUserByCode(String userCode){
+        return smUserMapper.getUserByCode(userCode);
+    }
+
     @Override
     public SmUser selectByPrimaryKey(String cuserid) {
         return smUserMapper.selectByPrimaryKey(cuserid);
@@ -124,5 +128,9 @@ public class PrimarySmuserServiceImpl implements  SmUserMapper{
 
     public String selectUserByName(String userName) {
         return smUserMapper.selectUserByName(userName);
+    }
+
+    public int updateUserByCuserid(SmUser smUser){
+        return smUserMapper.updateByPrimaryKey(smUser);
     }
 }

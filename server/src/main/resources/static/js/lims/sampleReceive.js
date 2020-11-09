@@ -5,6 +5,7 @@ layui.use(['form', 'table','layer'], function () {
         util = layui.util,
         layer = layui.layer;
     let radiocheck = '';
+    let rowdata = '';
     table.render({
         elem: '#sampleReceiveId',
         url: '/loading/sampleReceive',
@@ -80,27 +81,15 @@ layui.use(['form', 'table','layer'], function () {
     table.on('radio(sampleReceiveFilter)', function(obj){
         //console.log(obj);
         radiocheck = obj.data.project;
-        console.log(table.checkStatus('sampleReceiveFilter').data);
+        rowdata = obj.data;
+        //console.log($(".tbody tr data-index").val());
         $('#receiveBtnId').removeAttr("disabled");
         $('#rejectBtnId').removeAttr("disabled");
         $('#receiveBtnId').removeClass("layui-btn-disabled");
         $('#rejectBtnId').removeClass("layui-btn-disabled");
     });
 
-    /**样品接收按钮**/
-    $("#receiveBtnId").click(function(){
-        $("#receiveBtnId").addClass("layui-btn-disabled");
-        $("#receiveBtnId").attr("disabled", true);
-        //layer.msg('选中了委托单：' + radiocheck);
-        parent.layer.open({
-            type: 2,
-            title: '库位选择',
-            anim: 2,
-            area: ['1000px', '500px'],
-            resize: false,
-            content: "/dlclims/receive?projno=" + radiocheck
-        });
-    });
+
 
 
 
@@ -122,6 +111,8 @@ layui.use(['form', 'table','layer'], function () {
         return false;
     });
 
+
+
     //监听行双击事件
     table.on('rowDouble(sampleReceiveFilter)', function(obj){
         parent.layer.open({
@@ -140,7 +131,48 @@ layui.use(['form', 'table','layer'], function () {
     });
 
 
+    /**样品接收按钮**/
+    $("#receiveBtnId").click(function(){
+        $("#receiveBtnId").addClass("layui-btn-disabled");
+        $("#receiveBtnId").attr("disabled", true);
+        //layer.msg('选中了委托单：' + radiocheck);
+        parent.layer.open({
+            type: 2,
+            title: '库位选择',
+            anim: 2,
+            area: ['1000px', '500px'],
+            resize: false,
+            content: "/dlclims/receive?projno=" + radiocheck
+        });
+    });
 
+    /**委托单在样品接收阶段直接驳回，需要理由**/
+    $("#rejectBtnId").click(function(){
+        console.log(rowdata);
+        console.log(rowdata.project);
+        parent.layer.prompt({
+            formType: 2,
+            value: '',
+            title: '请输入驳回原因（必填）',
+            area: ['500px', '350px'] //自定义文本域宽高
+        }, function(value, index, elem){
+            //alert(value); //得到value
+            //parent.layer.close(index);
+            let loading = parent.layer.load(2);
+            $.ajax({
+                type:"post",
+                url:"/limsaction/sampleRejectControllerAction",
+                data:JSON.stringify(rowdata),
+                contentType:"application/json;charset=utf-8",
+                dataType:"json",
+                success:function(res){
+                    console.log(res);
+                    parent.layer.close(loading);
+                    parent.layer.msg('驳回成功');
+                }
+            });
+        });
+    });
 
 
 

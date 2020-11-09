@@ -193,4 +193,19 @@ public class DataloaderCloudSystemControllers extends AbstractLog {
         return "pages/dataloader/dlp/offline";
     }
 
+
+    /**
+     * 重置密码跳转
+     * @return
+     */
+    @RequestMapping(value = "/resetPass",method = RequestMethod.GET)
+    public String validurl(){
+        return "/pages/dataloader/mail/ResetPassword";
+    }
+
+    @RequestMapping(value = "forgetPass",method = RequestMethod.GET)
+    public String forgetPass(){
+        return "/pages/dataloader/mail/ForgetPassword";
+    }
+
 }

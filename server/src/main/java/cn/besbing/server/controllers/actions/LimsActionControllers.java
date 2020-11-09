@@ -91,5 +91,14 @@ public class LimsActionControllers {
         return baseResponse;
     }
 
+    /**
+     * 样品驳回动作
+     */
+    @PostMapping("sampleRejectControllerAction")
+    public BaseResponse sampleRejectControllerAction(@RequestBody String jsonStr) {
+        BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
+        System.out.println(jsonStr);
+        return baseResponse;
+    }
 
 }

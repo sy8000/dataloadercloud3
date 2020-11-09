@@ -115,7 +115,7 @@
       This element was generated on Tue Apr 14 11:55:41 CST 2020.
     -->
     select
-    <include refid="Base_Column_List" />
+    *
     from SM_USER
     where USER_CODE = #{userCode,jdbcType=VARCHAR}
 
@@ -775,4 +775,7 @@
       select cuserid from sm_user
       where user_name = #{userName} and rownum = 1
     </select>
+  <select id="getUserByCode" parameterType="String" resultMap="BaseResultMap">
+    select * from sm_user where user_code like #{userCode,jdbcType=VARCHAR}
+  </select>
 </mapper>
