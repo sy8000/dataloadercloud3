@@ -4,12 +4,10 @@ import cn.besbing.client.enums.BaseResponse;
 import cn.besbing.client.enums.StatusCode;
 import cn.besbing.model.entities.primary.CProjLoginSample;
 import cn.besbing.model.entities.primary.QcCommissionB;
+import cn.besbing.model.entities.primary.StorageLocation;
 import cn.besbing.server.service.lims.LabWareLimsFlowJump;
 import cn.besbing.server.service.lims.LabWareLimsFlowProcess;
-import cn.besbing.server.service.primary.PrimaryCProjLoginSampleServiceImpl;
-import cn.besbing.server.service.primary.PrimaryQcCmmissionHServiceImpl;
-import cn.besbing.server.service.primary.PrimaryQcCommissionB;
-import cn.besbing.server.service.primary.PrimarySampleServiceImpl;
+import cn.besbing.server.service.primary.*;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -49,6 +47,8 @@ public class LimsActionControllers {
     @Autowired
     private LabWareLimsFlowProcess limsFlowProcess;
 
+    @Autowired
+    private PrimaryStorageLocationServiceImpl storageLocationService;
 
     /**
      * 样品接收动作
@@ -95,10 +95,17 @@ public class LimsActionControllers {
      * 样品驳回动作
      */
     @PostMapping("sampleRejectControllerAction")
-    public BaseResponse sampleRejectControllerAction(@RequestBody String jsonStr) {
-        BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
-        System.out.println(jsonStr);
-        return baseResponse;
+    public BaseResponse sampleRejectControllerAction(@RequestBody String jsonStr,String textValue) {
+        //System.out.println(jsonStr);
+        return limsFlowProcess.projectSampleReject(JSONObject.parseObject(jsonStr),textValue);
+    }
+
+    /**
+     * 库位清空
+     */
+    @PostMapping("clearLocationStorage")
+    public BaseResponse clearLocationStorage(@RequestBody StorageLocation storageLocation) {
+        return storageLocationService.clearLocationStorage(storageLocation);
     }
 
 }

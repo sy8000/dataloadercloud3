@@ -30,4 +30,6 @@ public interface StorageLocationMapper {
     int updateByPrimaryKey(StorageLocation record);
 
     List<StorageLocation> selectAllEmptySampleListSL(@RequestParam(value = "name", required = false) String name);
+
+    List<StorageLocation>  selectAllNotEmptyLocationStorage(@RequestParam(value = "name", required = false) String name);
 }

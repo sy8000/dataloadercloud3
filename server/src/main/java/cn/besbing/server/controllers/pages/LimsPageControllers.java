@@ -66,4 +66,8 @@ public class LimsPageControllers {
         return "pages/lims/limsweb/samplereceive";
     }
 
+    @GetMapping("clearLocationStorage")
+    public String clearLocationStorage(){
+        return "pages/lims/limsweb/sample/clearlocationstorage";
+    }
 }

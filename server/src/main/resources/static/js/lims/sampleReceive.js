@@ -161,18 +161,36 @@ layui.use(['form', 'table','layer'], function () {
             let loading = parent.layer.load(2);
             $.ajax({
                 type:"post",
-                url:"/limsaction/sampleRejectControllerAction",
+                url:"/limsaction/sampleRejectControllerAction?textValue=" + value,
                 data:JSON.stringify(rowdata),
                 contentType:"application/json;charset=utf-8",
                 dataType:"json",
                 success:function(res){
                     console.log(res);
                     parent.layer.close(loading);
-                    parent.layer.msg('驳回成功');
+                    parent.layer.msg(res.msg,{icon:1,time:3000, shade:0.4},function () {
+                        parent.layer.closeAll();
+                    });
+                    //parent.layer.closeAll();
                 }
             });
         });
     });
+
+    /**
+     * 库位清空
+     */
+    $("#clearLocationStorage").click(function(){
+        parent.layer.open({
+            type: 2,
+            title: '库位选择',
+            anim: 2,
+            area: ['1000px', '500px'],
+            resize: false,
+            content: "/lims/clearLocationStorage"
+        });
+    });
+
 
 
 

@@ -565,6 +565,14 @@
       </if>
       order by sl.location_number,sl.order_number
     </select>
+  <select id="selectAllNotEmptyLocationStorage" parameterType="cn.besbing.model.utils.SearchDTO" resultMap="BaseResultMap">
+      select * from storage_location sl
+      where sl.removed = 'F' and  sl.template = 'HF_SHELF_A' and reserved_for is not null
+      <if test="_parameter != null">
+        and name like '%'||#{name}||'%'
+      </if>
+      order by sl.location_number,sl.order_number
+    </select>
     <update id="updateByExampleSelective" parameterType="map">
     update STORAGE_LOCATION
     <set>

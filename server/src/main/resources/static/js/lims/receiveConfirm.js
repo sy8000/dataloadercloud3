@@ -81,15 +81,20 @@ layui.use(['form', 'table','layer'], function () {
             data: JSON.stringify({"project": projno ,"locationNumber":radiocheck }),
             success: function(result) {
                 if (result.code == 200){
-                    parent.layer.closeAll();
-                    parent.layer.msg('接收成功');
+                    //parent.layer.closeAll();
+                    //parent.layer.msg('接收成功');
+                    parent.layer.msg('接收成功',{icon:1,time:3000, shade:0.4},function () {
+                        parent.layer.closeAll();
+                    });
                     /*
                     checkStatus.data[0].del();
                     console.log(obj);
                     console.log(data[0]);
                      */
                 }else {
-                    layer.msg('接收失败');
+                    parent.layer.msg('接收失败',{icon:1,time:3000, shade:0.4},function () {
+                        parent.layer.closeAll();
+                    });
                 }
             }
         })
