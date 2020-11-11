@@ -42,6 +42,21 @@
           "target": "_self",
           "child": [
             {
+              "title": "lims设置",
+              "href": "",
+              "icon": "fa fa-envira",
+              "target": "_self",
+              "child": [
+                  {
+                    "title": "出入库类型",
+                    "href": "/lims/sampleType",
+                    "icon": "fa fa-firefox",
+                    "target": "_self",
+                    "alt": "样品出入库类型"
+                  }
+                ]
+            },
+            {
               "title": "新建委托单",
               "href": "/lims/newproject",
               "icon": "fa fa-file",

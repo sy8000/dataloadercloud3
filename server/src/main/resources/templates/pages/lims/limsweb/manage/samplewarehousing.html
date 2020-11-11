@@ -1,0 +1,83 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css " media="all">
+    <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
+    <script src="../../../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="../../../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../../../../../static/css/generalcss/layuitablecheckboxfix.css">
+    <script src="../../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+    <style>
+        .layui-form-radio {
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body onload="addWaterMarker()" style="margin: 10px 10px 10px 10px">
+
+<br />
+<div class="layui-form">
+<div class="layui-form-item">
+    <div class="layui-inline">
+        <div class="layui-inline">
+            <div class="layui-input-block">
+            <button type="submit" class="layui-btn"  lay-submit lay-filter="data-search-btn" id="save">保存</button>
+            </div>
+        </div>
+    </div>
+    <br />
+    <hr class="layui-bg-gray">
+    <br />
+    <div class="layui-inline">
+        <div class="layui-inline">
+            <div class="layui-input-block" th:each="type:${sampleType}" >
+                <input type="radio" name="warehousing" th:value="${type.value}"  th:title="${type.title}" th:checked="${type.ischeck eq 'Y'}">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    layui.use(['form'], function() {
+        let form = layui.form
+            , layer = layui.layer;
+        form.render('radio');
+
+
+        $('#save').click(function () {
+            var param = $("input[name='warehousing']:checked").val();
+            let loading = parent.layer.load(2);
+            $.ajax({
+                type:"post",
+                url:"/limsaction/saveSampleType?sampleType=" + param,
+                //data:JSON.stringify(data),
+                contentType:"application/json;charset=utf-8",
+                //dataType:"json",
+                success:function(res){
+                    console.log(res);
+                    parent.layer.close(loading);
+                    parent.layer.msg(res.msg);
+                    //parent.layer.closeAll();
+                }
+            });
+        });
+
+
+
+
+
+    });
+
+
+</script>
+
+</html>

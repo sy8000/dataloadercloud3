@@ -10,10 +10,7 @@ import cn.besbing.server.service.lims.LabWareLimsFlowProcess;
 import cn.besbing.server.service.primary.*;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -49,6 +46,9 @@ public class LimsActionControllers {
 
     @Autowired
     private PrimaryStorageLocationServiceImpl storageLocationService;
+
+    @Autowired
+    private PrimaryDlSampleTypeServiceImpl sampleTypeService;
 
     /**
      * 样品接收动作
@@ -106,6 +106,23 @@ public class LimsActionControllers {
     @PostMapping("clearLocationStorage")
     public BaseResponse clearLocationStorage(@RequestBody StorageLocation storageLocation) {
         return storageLocationService.clearLocationStorage(storageLocation);
+    }
+
+    /**
+     * 出入库类型设置
+     */
+    @PostMapping("saveSampleType")
+    public BaseResponse saveSampleType(String sampleType){
+        //System.out.println(sampleType);
+        return sampleTypeService.saveType(sampleType);
+    }
+
+    /**
+     * 取出入库类型
+     */
+    @GetMapping("getSampleType")
+    public BaseResponse getSampleType(){
+        return sampleTypeService.getSampleType();
     }
 
 }

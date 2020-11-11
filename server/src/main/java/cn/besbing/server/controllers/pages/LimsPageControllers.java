@@ -1,5 +1,7 @@
 package cn.besbing.server.controllers.pages;
 
+import cn.besbing.model.entities.primary.DlSampleType;
+import cn.besbing.server.service.primary.PrimaryDlSampleTypeServiceImpl;
 import cn.besbing.server.service.primary.PrimaryListEntryServiceImpl;
 import cn.besbing.server.service.primary.PrimaryOrgOrgsServiceImpl;
 import org.apache.shiro.SecurityUtils;
@@ -20,6 +22,9 @@ public class LimsPageControllers {
 
     @Autowired
     PrimaryOrgOrgsServiceImpl orgOrgsService;
+
+    @Autowired
+    PrimaryDlSampleTypeServiceImpl sampleTypeService;
 
     @GetMapping("projectmodify")
     public String projectmodify(){
@@ -69,5 +74,18 @@ public class LimsPageControllers {
     @GetMapping("clearLocationStorage")
     public String clearLocationStorage(){
         return "pages/lims/limsweb/sample/clearlocationstorage";
+    }
+
+
+    /**
+     * 样品出入库设置
+     * @param model
+     * @return
+     */
+    @GetMapping("sampleType")
+    public String sampleType(Model model){
+        List<DlSampleType> list = sampleTypeService.getAllSampleType();
+        model.addAttribute("sampleType",list);
+        return "pages/lims/limsweb/manage/samplewarehousing";
     }
 }

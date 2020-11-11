@@ -192,6 +192,32 @@ layui.use(['form', 'table','layer'], function () {
     });
 
 
+    function getSampleType() {
+        let housingType = '';
+        $.ajax({
+            type:"get",
+            url:"/limsaction/getSampleType",
+            contentType:"application/json;charset=utf-8",
+            async:false,
+            success:function(res){
+                console.log(res);
+                console.log(res.data);
+                housingType = res.data;
+            }
+        });
+        console.log(housingType);
+        return housingType;
+    }
+
+    $('#groupreceive').click(function () {
+        let housingType = getSampleType();
+        if (housingType == 'handle'){
+            console.log('手动');
+        }else {
+            console.log('扫码');
+        }
+    });
+
 
 
 });
