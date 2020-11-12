@@ -10,15 +10,13 @@ package cn.besbing.server.service.lims;/*
 
 import cn.besbing.client.enums.BaseResponse;
 import cn.besbing.client.enums.StatusCode;
-import cn.besbing.model.entities.primary.DlLimsFlow;
-import cn.besbing.model.entities.primary.DlSamplerecAudit;
-import cn.besbing.model.entities.primary.Sample;
-import cn.besbing.model.entities.primary.SmUser;
+import cn.besbing.model.entities.primary.*;
 import cn.besbing.server.service.general.GeneratedPrimaryKeysImpl;
 import cn.besbing.server.service.general.MailServiceImpl;
 import cn.besbing.server.service.primary.PrimaryCustomServiceImpl;
 import cn.besbing.server.service.primary.PrimarySampleServiceImpl;
 import cn.besbing.server.service.primary.PrimarySmuserServiceImpl;
+import cn.besbing.server.service.primary.PrimaryStorageLocationServiceImpl;
 import cn.besbing.server.utils.AbstractLog;
 import cn.besbing.server.utils.MailDTO;
 import com.alibaba.fastjson.JSONObject;
@@ -27,6 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -63,6 +62,12 @@ public class LabWareLimsFlowProcess extends AbstractLog {
     @Autowired
     private MailServiceImpl mailService;
 
+    @Autowired
+    private PrimaryStorageLocationServiceImpl storageLocationService;
+
+
+    Date date = new Date();
+    Timestamp timestamp = new Timestamp(date.getTime());
 
     /**
      * 样品接收服务
@@ -79,6 +84,7 @@ public class LabWareLimsFlowProcess extends AbstractLog {
          * samplenumber = selectedsamples[i]
          * 	status = ReceiveSample(samplenumber)
          * 	移动sample到指定库位
+         * 	对库位进行相关操作
          * 	sample表storage_loc_no和status为I
          * 	分别写入流程表和样品审计表
          */
@@ -90,6 +96,13 @@ public class LabWareLimsFlowProcess extends AbstractLog {
                     s.setStorageLocNo(Long.valueOf(locationNumber));
                     sampleService.updateByPrimary(s);
                 }
+                Integer sampleTotals = Integer.valueOf(customService.selectOne("select sum(cpls.sample_quantity) sample_total from c_proj_login_sample cpls where cpls.project = '" + project + "' "));
+                StorageLocation storageLocation = storageLocationService.getStorageLocationByLocationNumber(Long.valueOf(locationNumber));
+                storageLocation.setReservedOn(timestamp);
+                storageLocation.setReservedFor(SecurityUtils.getSubject().getPrincipal().toString());
+                storageLocation.setReservedFor(project);
+                storageLocation.setParentLocation10(Long.valueOf(sampleTotals));
+                storageLocationService.save(storageLocation);
             }catch (Exception e){
                 //其它未知错误
                 baseResponse = new BaseResponse(StatusCode.OTHERUNKOWERROR.getCode(),"此委托单样品接收失败");
@@ -122,7 +135,7 @@ public class LabWareLimsFlowProcess extends AbstractLog {
                 limsFlow.setCuserid(smuserService.selectUserByName(SecurityUtils.getSubject().getPrincipal().toString()));
                 limsFlow.setPkLimsFlow(generatedPrimaryKeys.getPrimary(20));
                 limsFlow.setFlowAction("样品接收");
-                limsFlow.setOpratdate(new java.sql.Timestamp(new Date().getTime()));
+                limsFlow.setOpratdate(timestamp);
                 limsFlow.setVdef1(project);
                 limsFlow.setOprator(SecurityUtils.getSubject().getPrincipal().toString());
                 newlimsAuditWriterService.insertLimsAudit(limsFlow);
@@ -194,7 +207,7 @@ public class LabWareLimsFlowProcess extends AbstractLog {
             limsFlow.setCuserid(smuserService.selectUserByName(SecurityUtils.getSubject().getPrincipal().toString()));
             limsFlow.setPkLimsFlow(generatedPrimaryKeys.getPrimary(20));
             limsFlow.setFlowAction("样品接收");
-            limsFlow.setOpratdate(new java.sql.Timestamp(new Date().getTime()));
+            limsFlow.setOpratdate(timestamp);
             limsFlow.setVdef1(projectInfoJson.get("project").toString());
             limsFlow.setOprator(SecurityUtils.getSubject().getPrincipal().toString());
             newlimsAuditWriterService.insertLimsAudit(limsFlow);

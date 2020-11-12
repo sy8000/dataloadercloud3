@@ -74,4 +74,12 @@ public class PrimaryStorageLocationServiceImpl extends AbstractLog {
         }
         return baseResponse;
     }
+
+    public StorageLocation getStorageLocationByLocationNumber(Long locationNumber) {
+        return storageLocationMapper.selectByPrimaryKey(locationNumber);
+    }
+
+    public int save(StorageLocation storageLocation) {
+        return storageLocationMapper.updateByPrimaryKey(storageLocation);
+    }
 }
