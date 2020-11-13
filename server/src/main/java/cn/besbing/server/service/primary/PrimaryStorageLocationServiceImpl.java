@@ -82,4 +82,5 @@ public class PrimaryStorageLocationServiceImpl extends AbstractLog {
     public int save(StorageLocation storageLocation) {
         return storageLocationMapper.updateByPrimaryKey(storageLocation);
     }
+
 }

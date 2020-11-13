@@ -210,12 +210,20 @@ layui.use(['form', 'table','layer'], function () {
     }
 
     $('#groupreceive').click(function () {
-        let housingType = getSampleType();
+        /*let housingType = getSampleType();
         if (housingType == 'handle'){
             console.log('手动');
         }else {
             console.log('扫码');
-        }
+        }*/
+        parent.layer.open({
+            type: 2,
+            title: '测试组领取样品',
+            anim: 2,
+            area: ['1000px', '500px'],
+            resize: false,
+            content: "/dlclims/grouprecevesample"
+        });
     });
 
 

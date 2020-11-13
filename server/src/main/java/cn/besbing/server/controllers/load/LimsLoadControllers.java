@@ -53,6 +53,9 @@ public class LimsLoadControllers {
     @Autowired
     private PrimaryStorageLocationServiceImpl storageLocationService;
 
+    @Autowired
+    private PrimaryTesterGroupReceiveviewServiceImpl testerGroupReceiveviewService;
+
     /**
      * 样品接收仓库选择页
      */
@@ -167,6 +170,28 @@ public class LimsLoadControllers {
         SearchDTO searchDTO = new SearchDTO(page,limit,keyword);
         try {
             PageDataResult pdr = generatedPageDataResult.createFormatedTableData(searchDTO,storageLocationService.getAllNotEmptyLocationStorage(searchDTO));
+            return pdr;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @GetMapping("getTestGroupReceive")
+    public PageDataResult getTestGroupReceive(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit, @RequestParam(value = "keyword", required = false) String keyword) {
+        if (null == page) {
+            page = 1;
+        }
+        if (null == limit) {
+            limit = 10;
+        }
+        if (keyword != null && !"".equals(keyword)) {
+            JSONObject jsonObject = JSONObject.parseObject(keyword);
+            keyword = jsonObject.get("taskId").toString().toUpperCase();
+        }
+        SearchDTO searchDTO = new SearchDTO(page, limit, keyword);
+        try {
+            PageDataResult pdr = generatedPageDataResult.createFormatedTableData(searchDTO,testerGroupReceiveviewService.getTestergroupreceiveview(searchDTO));
             return pdr;
         }catch (Exception e){
             e.printStackTrace();
