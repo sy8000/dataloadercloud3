@@ -35,4 +35,6 @@ public interface CProjLoginSampleMapper {
     List<CProjLoginSample> selectProject(@RequestParam(value = "project", required = false) String project);
 
     List<CProjLoginSample> selectProjectInfoByProject(@Param("project") String project);
+
+    CProjLoginSample selectProjectInfoByProjectAndSampleGroup(@Param("project") String project, @Param("sampleGroup") String sampleGroup);
 }

@@ -29,10 +29,58 @@
         </div>
     </div>
     <br/>
-    <table class="layui-hide" id="groupReceiveId" lay-filter="groupReceiveFilter" ></table>
-    <script type="text/html" id="clearToolBar">
-        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="clear">样品出库</a>
-    </script>
+    <fieldset class="layui-elem-field">
+        <legend>测试组领取样品</legend>
+        <div class="layui-field-box">
+            <div class="layui-form">
+                <form class="layui-form" action="#" method="post" id="formid">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">任务编号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="taskidname" id="taskid" readonly autocomplete="off" class="layui-input"  >
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">任务名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="taskname" id="tasknameid" readonly autocomplete="off" class="layui-input"  >
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">样品信息</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="sampleinfo" id="sampleinfoid" readonly autocomplete="off" class="layui-input"  >
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">样品库存</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="samplenum" id="samplenumid" readonly autocomplete="off" class="layui-input"  >
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">测试组</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="labname" id="labid" readonly autocomplete="off" class="layui-input"  >
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">领取人</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="testor" id="testorid" readonly autocomplete="off" class="layui-input"  >
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">领取人</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="samplemanager" id="samplemanagerid" readonly autocomplete="off" class="layui-input"  >
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <button type="button" name="comfirmname" id="confirmid" class="layui-btn layui-btn-lg">确认领取</button>
+    </fieldset>
 </div>
 
 </body>

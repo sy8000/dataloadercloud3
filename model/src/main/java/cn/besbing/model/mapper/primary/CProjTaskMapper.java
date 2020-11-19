@@ -34,4 +34,6 @@ public interface CProjTaskMapper {
     List<CProjTask> selectAllTask(@RequestParam(value = "taskId", required = false) String taskId);
 
     List<ListObject> selectSortList(@Param("taskId") String taskId);
+
+    CProjTask selectSingleTaskById(@Param("taskId") String taskId);
 }

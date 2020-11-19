@@ -291,6 +291,11 @@
       </if>
       order by sample_group
     </select>
+    <select id="selectProjectInfoByProjectAndSampleGroup"
+            resultType="cn.besbing.model.entities.primary.CProjLoginSample">
+      select *
+      from c_proj_login_sample where project = #{project} and sample_group = #{sampleGroup}
+    </select>
     <update id="updateByExampleSelective" parameterType="map">
     update C_PROJ_LOGIN_SAMPLE
     <set>

@@ -146,5 +146,11 @@ public class DataloaderCloudLimsControllers extends AbstractLog {
     }
 
 
+    @GetMapping("grouprecevesample")
+    public String grouprecevesample(){
+        return "pages/lims/limsweb/sample/groupreceivebyhandle";
+    }
+
+
 
 }

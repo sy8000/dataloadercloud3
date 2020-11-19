@@ -47,4 +47,7 @@ public class PrimaryCProjTaskCoreServiceImpl {
         return projTaskMapper.selectSortList(taskId);
     }
 
+    public CProjTask selectSingleTaskInfoById(String taskId) {
+        return projTaskMapper.selectSingleTaskById(taskId);
+    }
 }

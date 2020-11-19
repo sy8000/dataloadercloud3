@@ -998,7 +998,10 @@
   left join units u on r.units = u.unit_code where 
    cpt.task_id = #{taskId} order by ordernumber asc
   </select>
-  <update id="updateByExampleSelective" parameterType="map">
+    <select id="selectSingleTaskById" resultType="cn.besbing.model.entities.primary.CProjTask" parameterType="String">
+      select * from c_proj_task where task_id = #{taskId}
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
     update C_PROJ_TASK
     <set>
       <if test="record.seqNum != null">

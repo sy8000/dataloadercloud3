@@ -5,6 +5,7 @@ import cn.besbing.model.entities.primary.DlPermission;
 import cn.besbing.model.mapper.primary.CProjLoginSampleMapper;
 import cn.besbing.model.utils.SearchDTO;
 import com.github.pagehelper.PageHelper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -54,5 +55,9 @@ public class PrimaryCProjLoginSampleServiceImpl {
 
     public List<CProjLoginSample>  getProjectInfoByProject(String project) {
         return projLoginSampleMapper.selectProjectInfoByProject(project);
+    }
+
+    public CProjLoginSample  getProjectInfoByProjectAndSampleGroup(String project, String sampleGroup) {
+        return projLoginSampleMapper.selectProjectInfoByProjectAndSampleGroup(project,sampleGroup);
     }
 }
