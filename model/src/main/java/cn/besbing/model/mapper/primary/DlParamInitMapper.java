@@ -19,4 +19,6 @@ public interface DlParamInitMapper {
     int updateByExampleSelective(@Param("record") DlParamInit record, @Param("example") DlParamInitExample example);
 
     int updateByExample(@Param("record") DlParamInit record, @Param("example") DlParamInitExample example);
+
+    List<DlParamInit>  customSearchInit(@Param("record") DlParamInit record);
 }

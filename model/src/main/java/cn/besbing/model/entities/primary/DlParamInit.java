@@ -19,6 +19,8 @@ public class DlParamInit {
 
     private String minimum;
 
+    private String cContactType;
+
     private Long orderNumber;
 
     public String getAnalysis() {
@@ -91,6 +93,14 @@ public class DlParamInit {
 
     public void setMinimum(String minimum) {
         this.minimum = minimum;
+    }
+
+    public String getcContactType() {
+        return cContactType;
+    }
+
+    public void setcContactType(String cContactType) {
+        this.cContactType = cContactType;
     }
 
     public Long getOrderNumber() {

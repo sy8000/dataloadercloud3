@@ -18,6 +18,7 @@ import cn.besbing.model.mapper.primary.DlParamAfterMapper;
 import cn.besbing.model.mapper.primary.DlParamInitMapper;
 import cn.besbing.server.service.primary.PrimaryCProjLoginSampleServiceImpl;
 import cn.besbing.server.service.primary.PrimaryCProjTaskCoreServiceImpl;
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,11 +62,20 @@ public class LimsParamService {
         List<String> sampleGroupList = removeRepeat(taskInfo.getAssignedSampleDisplay());
         JSONObject jsonObject = new JSONObject();
         for (String sampleGroup : sampleGroupList){
-            JSONObject jsonObject1 = new JSONObject();
+            //JSONObject jsonObject1 = new JSONObject();
             JSONArray jsonArray = new JSONArray();
             CProjLoginSample loginSampleList = loginSampleService.getProjectInfoByProjectAndSampleGroup(taskInfo.getProject(),sampleGroup);
-
+            DlParamInit dlParamInit = new DlParamInit();
+            dlParamInit.setProduct(loginSampleList.getProductStandard());
+            dlParamInit.setSamplingPoint(loginSampleList.getProductionSpec());
+            dlParamInit.setGrade(loginSampleList.getStructureType());
+            dlParamInit.setStage(loginSampleList.getProductStage());
+            dlParamInit.setcContactType(loginSampleList.getContactType());
+            List<DlParamInit> inits = initMapper.customSearchInit(dlParamInit);
+            jsonArray = JSONArray.parseArray(JSON.toJSON(inits).toString());
+            jsonObject.put(sampleGroup,jsonArray);
         }
+        System.out.println(jsonObject);
         return jsonObject;
     }
 

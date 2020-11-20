@@ -734,6 +734,76 @@ public class DlParamAfterExample {
             return (Criteria) this;
         }
 
+        public Criteria andCContactTypeIsNull() {
+            addCriterion("C_CONTACT_TYPE is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeIsNotNull() {
+            addCriterion("C_CONTACT_TYPE is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeEqualTo(String value) {
+            addCriterion("C_CONTACT_TYPE =", value, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeNotEqualTo(String value) {
+            addCriterion("C_CONTACT_TYPE <>", value, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeGreaterThan(String value) {
+            addCriterion("C_CONTACT_TYPE >", value, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeGreaterThanOrEqualTo(String value) {
+            addCriterion("C_CONTACT_TYPE >=", value, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeLessThan(String value) {
+            addCriterion("C_CONTACT_TYPE <", value, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeLessThanOrEqualTo(String value) {
+            addCriterion("C_CONTACT_TYPE <=", value, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeLike(String value) {
+            addCriterion("C_CONTACT_TYPE like", value, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeNotLike(String value) {
+            addCriterion("C_CONTACT_TYPE not like", value, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeIn(List<String> values) {
+            addCriterion("C_CONTACT_TYPE in", values, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeNotIn(List<String> values) {
+            addCriterion("C_CONTACT_TYPE not in", values, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeBetween(String value1, String value2) {
+            addCriterion("C_CONTACT_TYPE between", value1, value2, "cContactType");
+            return (Criteria) this;
+        }
+
+        public Criteria andCContactTypeNotBetween(String value1, String value2) {
+            addCriterion("C_CONTACT_TYPE not between", value1, value2, "cContactType");
+            return (Criteria) this;
+        }
+
         public Criteria andOrderNumberIsNull() {
             addCriterion("ORDER_NUMBER is null");
             return (Criteria) this;
