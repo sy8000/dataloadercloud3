@@ -3,6 +3,8 @@ package cn.besbing.model.mapper.primary;
 import cn.besbing.model.entities.primary.DlParamAfter;
 import cn.besbing.model.entities.primary.DlParamAfterExample;
 import java.util.List;
+
+import cn.besbing.model.entities.primary.DlParamInit;
 import org.apache.ibatis.annotations.Param;
 
 public interface DlParamAfterMapper {
@@ -19,4 +21,6 @@ public interface DlParamAfterMapper {
     int updateByExampleSelective(@Param("record") DlParamAfter record, @Param("example") DlParamAfterExample example);
 
     int updateByExample(@Param("record") DlParamAfter record, @Param("example") DlParamAfterExample example);
+
+    List<DlParamAfter> customSearchAfter(@Param("record") DlParamAfter record);
 }

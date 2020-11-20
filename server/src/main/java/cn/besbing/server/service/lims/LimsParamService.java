@@ -24,6 +24,8 @@ import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -43,6 +45,8 @@ public class LimsParamService {
     @Autowired(required = false)
     PrimaryCProjLoginSampleServiceImpl loginSampleService;
 
+
+
     protected List<String> removeRepeat(String str){
         StringBuffer sb = new StringBuffer(str);
         String rs = sb.reverse().toString().replaceAll("[^a-zA-Z]", "");
@@ -56,13 +60,29 @@ public class LimsParamService {
         return list;
     }
 
+    protected List<String> assigenSampleToSampleTextNum(String assignedSample,String projectName,String sampleGroup){
+        String samplemodel = projectName.substring(2,4) + projectName.substring(9,13);
+        String assignedSampleArr[] = assignedSample.split(",");
+        List<String> assignedSampleList = Arrays.asList(assignedSampleArr);
+        List<String> sampleTextIdList = new ArrayList<>();
+        for (String sampleName : assignedSampleList){
+            if (sampleGroup.equals(sampleName.substring(0,1)) || sampleGroup == sampleName.substring(0,1)){
+                sampleTextIdList.add(samplemodel + "-" + sampleName);
+            }
+        }
+        return sampleTextIdList;
+    }
+
 
     public JSONObject getInitParam(String taskId){
         CProjTask taskInfo = taskCoreService.selectSingleTaskInfoById(taskId);
         List<String> sampleGroupList = removeRepeat(taskInfo.getAssignedSampleDisplay());
         JSONObject jsonObject = new JSONObject();
+        //JSONArray jsonArray1 = new JSONArray();
+        //jsonArray1.add(assigenSampleToSampleTextNum(taskInfo.getAssignedSample(),taskInfo.getProject()));
+        //jsonObject.put("sampleTextName",jsonArray1);
         for (String sampleGroup : sampleGroupList){
-            //JSONObject jsonObject1 = new JSONObject();
+            JSONObject jsonObject1 = new JSONObject();
             JSONArray jsonArray = new JSONArray();
             CProjLoginSample loginSampleList = loginSampleService.getProjectInfoByProjectAndSampleGroup(taskInfo.getProject(),sampleGroup);
             DlParamInit dlParamInit = new DlParamInit();
@@ -72,16 +92,43 @@ public class LimsParamService {
             dlParamInit.setStage(loginSampleList.getProductStage());
             dlParamInit.setcContactType(loginSampleList.getContactType());
             List<DlParamInit> inits = initMapper.customSearchInit(dlParamInit);
-            jsonArray = JSONArray.parseArray(JSON.toJSON(inits).toString());
+            for (DlParamInit dpi : inits){
+                dpi.setcContactType(loginSampleList.getContactType());
+            }
+            jsonArray.add(JSONArray.parseArray(JSON.toJSON(inits).toString()));
+            jsonObject1.put("sampleTextName",assigenSampleToSampleTextNum(taskInfo.getAssignedSample(),taskInfo.getProject(),sampleGroup));
+            jsonArray.add(jsonObject1);
             jsonObject.put(sampleGroup,jsonArray);
         }
         System.out.println(jsonObject);
         return jsonObject;
     }
 
-    public List<DlParamAfter> getAfterParam(String taskId){
-
-        return null;
+    public JSONObject getAfterParam(String taskId){
+        CProjTask taskInfo = taskCoreService.selectSingleTaskInfoById(taskId);
+        List<String> sampleGroupList = removeRepeat(taskInfo.getAssignedSampleDisplay());
+        JSONObject jsonObject = new JSONObject();
+        for (String sampleGroup : sampleGroupList){
+            JSONObject jsonObject1 = new JSONObject();
+            JSONArray jsonArray = new JSONArray();
+            CProjLoginSample loginSampleList = loginSampleService.getProjectInfoByProjectAndSampleGroup(taskInfo.getProject(),sampleGroup);
+            DlParamAfter dlParamAfter = new DlParamAfter();
+            dlParamAfter.setProduct(loginSampleList.getProductStandard());
+            dlParamAfter.setSamplingPoint(loginSampleList.getProductionSpec());
+            dlParamAfter.setGrade(loginSampleList.getStructureType());
+            dlParamAfter.setStage(loginSampleList.getProductStage());
+            dlParamAfter.setcContactType(loginSampleList.getContactType());
+            List<DlParamAfter> afters =  afterMapper.customSearchAfter(dlParamAfter);
+            for (DlParamAfter dpa : afters){
+                dpa.setcContactType(loginSampleList.getContactType());
+            }
+            jsonArray.add(JSONArray.parseArray(JSON.toJSON(afters).toString()));
+            jsonObject1.put("sampleTextName",assigenSampleToSampleTextNum(taskInfo.getAssignedSample(),taskInfo.getProject(),sampleGroup));
+            jsonArray.add(jsonObject1);
+            jsonObject.put(sampleGroup,jsonArray);
+        }
+        System.out.println(jsonObject);
+        return jsonObject;
     }
 
 }

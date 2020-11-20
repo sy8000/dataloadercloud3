@@ -185,7 +185,13 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <update id="updateByExampleSelective" parameterType="map">
+    <select id="customSearchAfter" resultMap="BaseResultMap" parameterType="map">
+      select <include refid="Base_Column_List" /> from dl_param_after
+      where product = #{record.product,jdbcType=VARCHAR}  and sampling_point = #{record.samplingPoint,jdbcType=VARCHAR}
+      and grade = #{record.grade,jdbcType=VARCHAR} and stage = #{record.stage,jdbcType=VARCHAR}
+      and (c_contact_type like '%' || #{record.cContactType,jdbcType=VARCHAR} || '%' or component = '温度' or component = '湿度' )
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
     update DL_PARAM_AFTER
     <set>
       <if test="record.analysis != null">
