@@ -74,6 +74,7 @@
             table = layui.table,
             layer = layui.layer;
 
+        //产品系列选择后联动
         form.on('select(cpxl)', function(data){
             //console.log(data.value); //得到被选中的产品系列，更新企业标准选项框
             $.ajax({
@@ -85,6 +86,9 @@
                 success: function(result) {
                     if (result.code == 200){
                         $("#qybzid").empty();
+                        $("#gghid").empty();
+                        $("#jglxid").empty();
+                        $("#cdlxid").empty();
                         let obj = result.data;
                         let arr = [];
                         for (let i in obj){
@@ -103,6 +107,15 @@
                     }
                 }
             });
+        });
+
+
+
+        //企标选择后联动
+        form.on('select(quiz)', function(data){
+            //定义参数及格式：  产品系列:版本:企标
+            let param = $("#product").val() + ':' + data.value;
+            console.log(param);
         });
 
 
