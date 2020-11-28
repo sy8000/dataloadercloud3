@@ -126,6 +126,12 @@
               "href": "/lims/projectmodify",
               "icon": "fa fa-edit",
               "target": "_self"
+            },
+            {
+              "title": "NC组态预览",
+              "href": "/lims/ncpreview",
+              "icon": "fa fa-edit",
+              "target": "_self"
             }
           ]
         },

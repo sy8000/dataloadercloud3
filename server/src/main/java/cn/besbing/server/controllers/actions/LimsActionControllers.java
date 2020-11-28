@@ -125,4 +125,14 @@ public class LimsActionControllers {
         return sampleTypeService.getSampleType();
     }
 
+
+    /**
+     * 测试组领取样品信息
+     */
+    @PostMapping("getTaskInfoForGroupReceive")
+    public BaseResponse getTaskInfoForGroupReceive(@RequestBody String taskId){
+        JSONObject jsonObject = JSONObject.parseObject(taskId.replace("\"",""));
+        return new BaseResponse(404,"aaa");
+    }
+
 }

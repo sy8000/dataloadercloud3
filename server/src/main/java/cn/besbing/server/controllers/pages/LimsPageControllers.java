@@ -1,9 +1,11 @@
 package cn.besbing.server.controllers.pages;
 
 import cn.besbing.model.entities.primary.DlSampleType;
+import cn.besbing.server.service.primary.PrimaryCustomServiceImpl;
 import cn.besbing.server.service.primary.PrimaryDlSampleTypeServiceImpl;
 import cn.besbing.server.service.primary.PrimaryListEntryServiceImpl;
 import cn.besbing.server.service.primary.PrimaryOrgOrgsServiceImpl;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,6 +27,10 @@ public class LimsPageControllers {
 
     @Autowired
     PrimaryDlSampleTypeServiceImpl sampleTypeService;
+
+
+    @Autowired
+    PrimaryCustomServiceImpl customService;
 
     @GetMapping("projectmodify")
     public String projectmodify(){
@@ -88,4 +94,20 @@ public class LimsPageControllers {
         model.addAttribute("sampleType",list);
         return "pages/lims/limsweb/manage/samplewarehousing";
     }
+
+
+    /**
+     * nc模板传输预加载数据
+     * @param model
+     * @return
+     */
+    @GetMapping("ncpreview")
+    public String ncPreviewLoad(Model model){
+        List<String> listProduct = customService.selectAsList("select pu.description || ':' || pu.version des " +
+                "from product pu where  pu.active = 'T' order by pu.description ");
+        model.addAttribute("productList",listProduct);
+        return "pages/lims/serviceforself/ncpreview";
+    }
+
+
 }

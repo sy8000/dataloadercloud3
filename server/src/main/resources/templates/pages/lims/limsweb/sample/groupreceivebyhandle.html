@@ -15,6 +15,7 @@
     <script src="../../../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
     <link rel="stylesheet" href="../../../../../static/css/generalcss/layuitablecheckboxfix.css">
     <script src="../../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+
 </head>
 <body onload="addWaterMarker()" style="margin: 10px 10px 10px 10px">
 
@@ -22,10 +23,10 @@
 <div class="layui-form-item">
     <div class="layui-inline">
         <div class="layui-input-inline">
-            <input type="text" id="name" placeholder="任务单号" lay-verify="required" autocomplete="off" class="layui-input">
+            <input type="text" id="taskIdName" placeholder="任务单号" lay-verify="required" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-inline">
-            <button type="submit" class="layui-btn"  lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
+            <button type="submit" class="layui-btn" id="searchTask" lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
         </div>
     </div>
     <br/>
@@ -71,7 +72,7 @@
                         </div>
                     </div>
                     <div class="layui-inline">
-                        <label class="layui-form-label">领取人</label>
+                        <label class="layui-form-label">操作人</label>
                         <div class="layui-input-inline">
                             <input type="text" name="samplemanager" id="samplemanagerid" readonly autocomplete="off" class="layui-input"  >
                         </div>
@@ -79,11 +80,73 @@
                 </form>
             </div>
         </div>
-        <button type="button" name="comfirmname" id="confirmid" class="layui-btn layui-btn-lg">确认领取</button>
     </fieldset>
+    <br />
+    <button type="button" name="comfirmname" id="confirmid" class="layui-btn layui-btn-lg">确认领取</button>
 </div>
 
 </body>
 <script src="../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form', 'table','layer'], function () {
 
+
+        $(document).ready(function () {
+            $("#taskIdName").focus();
+        });
+
+        $(document).keypress(function (e) {
+            // 回车键事件
+            if (e.which == 13) {
+                clickSearch();
+            }
+        });
+
+
+        $("#searchTask").click(function () {
+            clickSearch();
+        });
+
+
+        function clickSearch(){
+            /**
+             * 获取input中的任务单号，精确匹配
+             * 填充各字段
+             */
+
+            let inputTaskId = $("#taskIdName").val();
+
+            if (inputTaskId.replace(/(^\s*)|(\s*$)/g, "") == ""){
+                parent.layer.msg("未录入任务单号");
+                $("#taskIdName").focus();
+                return;
+            }
+
+            let data = '{"taskid":"' + inputTaskId + '"}';
+            let loading = parent.layer.load(2);
+            $.ajax({
+                url : "/limsaction/getTaskInfoForGroupReceive",
+                //data : JSON.stringify(data),
+                data : data,
+                type : "post",
+                contentType:"application/json",
+                dataType:"json",
+                success:function(res){
+                    //若成功，向各字段填入信息
+                    parent.layer.close(loading);
+                    parent.layer.msg(res.msg);
+                },
+                error:function(e){
+                    parent.layer.close(loading);
+                    parent.layer.msg("网络错误，请稍候再试");
+                }
+            });
+
+        }
+
+
+    });
+
+
+</script>
 </html>

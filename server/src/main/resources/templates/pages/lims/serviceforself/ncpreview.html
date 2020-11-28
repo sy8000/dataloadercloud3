@@ -1,0 +1,122 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NC端模板自助维护</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css " media="all">
+    <!--<script type="text/javascript" src="../../static/js/login/jquery.min.js"></script>-->
+    <script src="../../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="../../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../../../../static/css/generalcss/layuitablecheckboxfix.css">
+
+</head>
+<body onload="addWaterMarker()" style="margin: 10px 10px 10px 10px">
+    <form class="layui-form" action="">
+        <blockquote class="layui-elem-quote layui-quote-nm">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <select name="modules" lay-verify="required" lay-search="" id="product" lay-filter="cpxl">
+                                <option value="">直接选择或搜索产品系列</option>
+                                <option th:each="pList:${productList}" th:value="${pList}" th:text="${pList}"></option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <select name="qybzname" lay-verify="required" lay-search="" id="qybzid" lay-filter="quiz">
+                            <option value="">企业标准</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <select name="gghname" lay-verify="required" lay-search="" id="gghid" lay-filter="gghfilter">
+                            <option value="">规格号</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <select name="jglxname" lay-verify="required" lay-search="" id="jglxid" lay-filter="jglxfilter">
+                            <option value="">结构类型</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <select name="cdlxname" lay-verify="required" lay-search="" id="cdlxid" lay-filter="cdlxfilter">
+                            <option value="">触点类型</option>
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="submit" class="layui-btn layui-btn"  lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="confirm" class="layui-btn layui-btn"  lay-submit lay-filter="data-search-btn">确认传输</button>
+                    </div>
+                </div>
+            </div>
+        </blockquote>
+        <hr class="layui-bg-gray">
+
+
+    </form>
+</body>
+<script src="../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script type="text/javascript">
+    //watermark({"watermark_txt": initpro()});
+    $(document).ready(function(){
+
+    });
+
+    layui.use(['form', 'table','layer'], function () {
+        let $ = layui.jquery,
+            form = layui.form,
+            table = layui.table,
+            layer = layui.layer;
+
+        form.on('select(cpxl)', function(data){
+            //console.log(data.value); //得到被选中的产品系列，更新企业标准选项框
+            $.ajax({
+                url: "/loading/getqybz?param=" + data.value,
+                type: 'get',
+                contentType: "application/json",
+                async:false,
+                //data: JSON.stringify({"param": data.value }),
+                success: function(result) {
+                    if (result.code == 200){
+                        $("#qybzid").empty();
+                        let obj = result.data;
+                        let arr = [];
+                        for (let i in obj){
+                            arr.push(obj[i]);
+                        }
+                        for (let j = 0; j < arr.length ; j++){
+                            //给企业标准加text和value
+                            console.log(arr[j]);
+                            //$("#qybzid").append('<option value = "' + arr[j] + '">' + arr[j] + '</option>');
+                            $("#qybzid").append(new Option(arr[j], arr[j]));
+                            form.render('select');
+                        }
+
+                    }else {
+                        parent.layer.msg('查询企业标准失败，当前产品系列及版本，没有可用的企标');
+                    }
+                }
+            });
+        });
+
+
+
+
+
+
+            /*$("#product").blur(function(){
+                //焦点离开产品系列后，更新后面四个框
+                $("#product").css("background-color","#D6D6FF");
+            });*/
+
+
+    });
+
+</script>
+</html>

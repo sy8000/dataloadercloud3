@@ -1,16 +1,17 @@
 package cn.besbing.server.controllers.load;
 
+import cn.besbing.client.enums.BaseResponse;
+import cn.besbing.client.enums.StatusCode;
 import cn.besbing.model.entities.primary.Project;
 import cn.besbing.model.utils.PageDataResult;
 import cn.besbing.model.utils.SearchDTO;
 import cn.besbing.server.service.general.GeneratedPageDataResult;
 import cn.besbing.server.service.primary.*;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,6 +56,9 @@ public class LimsLoadControllers {
 
     @Autowired
     private PrimaryTesterGroupReceiveviewServiceImpl testerGroupReceiveviewService;
+
+    @Autowired
+    PrimaryCustomServiceImpl customService;
 
     /**
      * 样品接收仓库选择页
@@ -198,5 +202,44 @@ public class LimsLoadControllers {
             return null;
         }
     }
+
+
+    @GetMapping("getqybz")
+    public BaseResponse getqybz(@RequestParam("param") String param) {
+        BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
+        JSONObject jsonObject = new JSONObject();
+        try {
+            String[] paramArr = param.split(":");
+            List<String> qybzList = customService.selectAsList("select p.name from product p where p.description = '" + paramArr[0] + "' and p.version = " + paramArr[1] );
+            for (int i = 0 ; i < qybzList.size() ;i++){
+                jsonObject.put(String.valueOf(i),qybzList.get(i));
+            }
+            baseResponse.setData(jsonObject);
+        }catch (Exception e){
+            baseResponse = new BaseResponse(StatusCode.DBSELECTFAILED.getCode(),e.getMessage());
+        }
+        return baseResponse;
+    }
+
+    @GetMapping("getggh")
+    public BaseResponse getggh(@RequestParam("param") String param) {
+        BaseResponse baseResponse = new BaseResponse(StatusCode.SUCCESS);
+        JSONObject jsonObject = new JSONObject();
+        try {
+            String[] paramArr = param.split(":");
+            //select pg.sampling_point  product_grade pg where pg.product = '传进来的企票' and pg.version = '产品系列:后的版本'
+            List<String> qybzList = customService.selectAsList("select pg.sampling_point  product_grade pg where pg.product = '" + paramArr[2] + "' and pg.version =  " + paramArr[1] );
+            for (int i = 0 ; i < qybzList.size() ;i++){
+                jsonObject.put(String.valueOf(i),qybzList.get(i));
+            }
+            baseResponse.setData(jsonObject);
+        }catch (Exception e){
+            baseResponse = new BaseResponse(StatusCode.DBSELECTFAILED.getCode(),e.getMessage());
+        }
+        return baseResponse;
+    }
+
+
+
 
 }
