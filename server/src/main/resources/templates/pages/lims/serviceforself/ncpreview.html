@@ -48,16 +48,28 @@
                         </select>
                     </div>
                     <div class="layui-inline">
-                        <button type="submit" class="layui-btn layui-btn"  lay-submit lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
+                        <button type="button" class="layui-btn layui-btn"  lay-submit lay-filter="data-search-btn" id="clickToShow"><i class="layui-icon"></i> 抽 样</button>
                     </div>
                     <div class="layui-inline">
-                        <button type="confirm" class="layui-btn layui-btn"  lay-submit lay-filter="data-search-btn">确认传输</button>
+                        <button type="button" class="layui-btn layui-btn"  lay-submit lay-filter="data-search-btn" id="transToNc">确认传输</button>
                     </div>
                 </div>
             </div>
         </blockquote>
         <hr class="layui-bg-gray">
 
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">可能存在的问题</li>
+                <li>试验前参数</li>
+                <li>试验后参数</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show" id="problemshow">问题清单:<br/></div>
+                <div class="layui-tab-item" id="initshowdiv">试验前参数清单:<br/></div>
+                <div class="layui-tab-item" id="aftershowdiv">试验后参数清单:<br/></div>
+            </div>
+        </div>
 
     </form>
 </body>
@@ -68,11 +80,12 @@
 
     });
 
-    layui.use(['form', 'table','layer'], function () {
+    layui.use(['form', 'table','layer','element'], function () {
         let $ = layui.jquery,
             form = layui.form,
             table = layui.table,
-            layer = layui.layer;
+            layer = layui.layer,
+            element = layui.element;
 
         //产品系列选择后联动
         form.on('select(cpxl)', function(data){
@@ -115,7 +128,143 @@
         form.on('select(quiz)', function(data){
             //定义参数及格式：  产品系列:版本:企标
             let param = $("#product").val() + ':' + data.value;
-            console.log(param);
+            $.ajax({
+                url: "/loading/getggh?param=" + param,
+                type: 'get',
+                contentType: "application/json",
+                async:false,
+                //data: JSON.stringify({"param": data.value }),
+                success: function(result) {
+                    if (result.code == 200){
+                        $("#gghid").empty();
+                        $("#jglxid").empty();
+                        $("#cdlxid").empty();
+                        let obj = result.data;
+                        let arr = [];
+                        for (let i in obj){
+                            arr.push(obj[i]);
+                        }
+                        for (let j = 0; j < arr.length ; j++){
+                            //给企业标准加text和value
+                            console.log(arr[j]);
+                            //$("#qybzid").append('<option value = "' + arr[j] + '">' + arr[j] + '</option>');
+                            $("#gghid").append(new Option(arr[j], arr[j]));
+                            form.render('select');
+                        }
+
+                    }else {
+                        parent.layer.msg('查询规格号失败，当前产品系列及企标下，没有可用的规格号');
+                    }
+                }
+            });
+        });
+
+
+        //规格号选择后联动结构类型(单双稳等)
+        form.on('select(gghfilter)', function(data){
+            //定义参数及格式：  产品系列:版本:企标
+            let param = $("#product").val() + ':' + $("#qybzid").val() + ':' + data.value;
+            $.ajax({
+                url: "/loading/getjglx?param=" + param,
+                type: 'get',
+                contentType: "application/json",
+                async:false,
+                //data: JSON.stringify({"param": data.value }),
+                success: function(result) {
+                    if (result.code == 200){
+                        $("#jglxid").empty();
+                        $("#cdlxid").empty();
+                        let obj = result.data;
+                        let arr = [];
+                        for (let i in obj){
+                            arr.push(obj[i]);
+                        }
+                        //$("#jglxid").append(new Option('结构类型', '结构类型'));
+                        for (let j = 0; j < arr.length ; j++){
+                            //给企业标准加text和value
+                            console.log(arr[j]);
+                            //$("#qybzid").append('<option value = "' + arr[j] + '">' + arr[j] + '</option>');
+                            $("#jglxid").append(new Option(arr[j], arr[j]));
+                            form.render('select');
+                        }
+
+                    }else {
+                        parent.layer.msg('查询结构类型失败，当前产品系列及企标下，没有可用的结构类型');
+                    }
+                }
+            });
+        });
+
+
+
+        //选择结构类型后，获取触点类型并显示
+        form.on('select(jglxfilter)', function(data){
+            //定义参数及格式：  产品系列:版本:企标
+            let param = $("#product").val() + ':' + $("#qybzid").val() + ':' + $("#gghid").val() + ':' + data.value ;
+            $.ajax({
+                url: "/loading/getcdlx?param=" + param,
+                type: 'get',
+                contentType: "application/json",
+                async:false,
+                //data: JSON.stringify({"param": data.value }),
+                success: function(result) {
+                    if (result.code == 200){
+                        $("#cdlxid").empty();
+                        let obj = result.data;
+                        let arr = [];
+                        for (let i in obj){
+                            arr.push(obj[i]);
+                        }
+                        for (let j = 0; j < arr.length ; j++){
+                            //给企业标准加text和value
+                            console.log(arr[j]);
+                            //$("#qybzid").append('<option value = "' + arr[j] + '">' + arr[j] + '</option>');
+                            $("#cdlxid").append(new Option(arr[j], arr[j]));
+                            form.render('select');
+                        }
+
+                    }else {
+                        parent.layer.msg('查询触点类型失败，当前产品系列及企标下，没有可用的触点类型');
+                    }
+                }
+            });
+        });
+
+
+        //抽样按钮点击事件
+        $("#clickToShow").click(function () {
+            //定义参数及格式：  产品系列:版本:企标:规格：结构：触点
+            let param = $("#product").val() + ':' + $("#qybzid").val() + ':' + $("#gghid").val() + ':' + $("#jglxid").val() + ':' + $("#cdlxid").val() ;
+            var loading = layer.load(2);
+            $.ajax({
+                url: "/loading/showAllAction?param=" + param,
+                type: 'get',
+                contentType: "application/json",
+                async:false,
+                //data: JSON.stringify({"param": data.value }),
+                success: function(result) {
+                    if (result.code == 200){
+                        //console.log(result.data.init);
+                        //$("#initshowdiv")
+                        for (let i = 0; i < result.data.problems.length ; i ++){
+                            $("#problemshow").append("<p>" + result.data.problems[i] + "</p>" );
+                            console.log(result.data.problems[i]);
+                        }
+                        for (let i = 0; i < result.data.init.length ; i ++){
+                            $("#initshowdiv").append("<p>" + result.data.init[i] + "</p>" );
+                            console.log(result.data.init[i]);
+                        }
+                        for (let i = 0; i < result.data.after.length ; i ++){
+                            $("#aftershowdiv").append("<p>" + result.data.after[i] + "</p>" );
+                            console.log(result.data.after[i]);
+                        }
+                        layer.close(loading);
+                    }else {
+                        parent.layer.msg('抽样查询失败，请检查网络');
+                        layer.close(loading);
+                    }
+                }
+            });
         });
 
 
