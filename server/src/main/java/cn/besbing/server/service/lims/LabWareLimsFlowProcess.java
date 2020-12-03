@@ -167,6 +167,9 @@ public class LabWareLimsFlowProcess extends AbstractLog {
             customService.update("update qc_task_h h set h.approvestatus = -1 , h.approver = null , " +
                     "h.approvenote = null , h.approvedate = null " +
                     "where h.billno = '" + projectInfoJson.get("project") + "' and dr = 0");
+            //删除labware里的流程
+            customService.update("update project p set p.c_nc_to_lims = 'F' where p.name = '" + projectInfoJson.get("project") + "'");
+            customService.delete("delete project p set p.name = '" + projectInfoJson.get("project") + "'");
         }catch (Exception e){
             logger.error("样品接收委托单模块{}驳回失败，原因：{}",projectInfoJson.get("project"),e.getMessage());
             baseResponse = new BaseResponse(StatusCode.OTHERUNKOWERROR.getCode(),"样品接收委托单模块" +
