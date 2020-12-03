@@ -164,8 +164,10 @@ public class LabWareLimsFlowProcess extends AbstractLog {
          * 流程：首先驳回委托托单，发送邮件，最后记录两个事件的事务日志
          * */
         String context = "";
+        String mailTo = "";
         try {
             context = "尊敬的委托人， " + customService.selectOne("select p.customer_contact from project p where p.name = '" + projectInfoJson.get("project").toString() + "'") + "先生/女士：";
+            mailTo = customService.selectOne("select p.c_email_address from project p where p.name = '" + projectInfoJson.get("project").toString() + "'");
             customService.update("update qc_task_h h set h.approvestatus = -1 , h.approver = null , " +
                     "h.approvenote = null , h.approvedate = null " +
                     "where h.billno = '" + projectInfoJson.get("project") + "' and dr = 0");
@@ -188,7 +190,8 @@ public class LabWareLimsFlowProcess extends AbstractLog {
             context += "我们抱歉的通知您，您单号为《"+ projectInfoJson.get("project") +"》的委托单被退回了。退回原因：" + rejectText + "。为保证流程运转，请尽快登录Lims Web端根据驳回信息修改和提交委托单。";
             mailDTO.setSubject("关于委托单《" + projectInfoJson.get("project") + "》退回的通知");
             mailDTO.setContext(context);
-            mailDTO.setToUsers(new String[] {customService.selectOne("select p.c_email_address from project p where p.name = '" + projectInfoJson.get("project").toString() + "'")});
+            mailDTO.setToUsers(new String[] {mailTo});
+
             //mailDTO.setToUsers(new String[] {"1002437@hongfa.cn"});
             mailService.sendMail(mailDTO);
         }catch (Exception e){
