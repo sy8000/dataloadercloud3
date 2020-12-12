@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报告重签</title>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="../../../../static/js/login/jquery.min.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../../static/struct/layuimini/css/public.css" media="all">
+    <script src="../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+    <script src="../../../../static/js/lims/ReportReSignJs.js" charset="utf-8"></script>
+</head>
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+    <legend>报告重签</legend>
+    <div class="layui-timeline-content layui-text"><p>此功能为处理宏发检测中心lims中流程异常所导致无法签发的报告。</p></div>
+</fieldset>
+<ul class="layui-timeline">
+    <br />
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis"></i>
+        <div class="layui-timeline-content layui-text">
+            <h3 class="layui-timeline-title">步骤一 下载报告</h3>
+            <p>
+                步骤一，将有问题的报告依次下载到本地进行编辑。
+                <br /><br />
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">委托/任务单</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="taskidinput" id="taskidinput" autocomplete="off" placeholder="支持模糊查询" class="layui-input" oninput="changeBtnable()">
+                    </div>
+                    <button type="button" class="layui-btn layui-btn-disabled" id="downloadReport">查询报告</button>
+                </div>
+            </div>
+            </p>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis"></i>
+        <div class="layui-timeline-content layui-text">
+            <h3 class="layui-timeline-title">步骤二 上传报告</h3>
+            <p>将步骤一中下载的报告(Excel)本地编辑后，在此批量上传：</p>
+            <ul>
+                <li>上传的报告大小请控制在50M以内</li>
+                <li>多报告时，请注意排列好报告序号</li>
+                <li>程序处理时，不会对上传的报告进行任何修改，只是会对报告的格式进行转换</li>
+            </ul>
+            <br />
+            <div class="layui-form-item">
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn layui-btn-normal" id="testList">选择文件(支持文件类型：xls、xlsx)</button>
+                    <div class="layui-upload-list">
+                        <table class="layui-table" id="tableupload">
+                            <thead>
+                            <tr><th>文件名</th>
+                                <th>大小</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr></thead>
+                            <tbody id="demoList"></tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="layui-btn" id="testListAction">开始上传</button>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis"></i>
+        <div class="layui-timeline-content layui-text">
+            <h3 class="layui-timeline-title">步骤三 合成报告并下载</h3>
+            <p>
+                请注意：
+                <br>此处在合成转换报告的同时，将会结束lims中报告相关流程
+                <br /><br />
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <button type="button" class="layui-btn layui-btn-disabled" id="TransReport">报告合成</button>
+                    <a id="dd"><button type="button" class="layui-btn layui-btn-disabled" id="ddd">报告下载</button></a>
+                </div>
+            </div>
+            </p>
+        </div>
+    </li>
+    <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis"></i>
+        <div class="layui-timeline-content layui-text">
+            <div class="layui-timeline-title">完成</div>
+        </div>
+    </li>
+</ul>
+
+<div>
+    <button id="hiddenBtn" style="background-color:#666666; display:none;">download</button>
+</div>
+</body>
+</html>

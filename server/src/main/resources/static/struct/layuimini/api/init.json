@@ -32,6 +32,12 @@
               "href": "/lims/analysismanage",
               "icon": "fa fa-file-image-o",
               "target": "_self"
+            },
+            {
+              "title": "报告重签",
+              "href": "/lims/reportResign",
+              "icon": "fa fa-file-image-o",
+              "target": "_self"
             }
           ]
         },
@@ -111,6 +117,38 @@
               "title": "任务结果明细",
               "href": "/lims/confirmcharge",
               "icon": "fa fa-search-plus",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "统计看板",
+          "href": "",
+          "icon": "fa fa-cutlery",
+          "target": "_self",
+          "child": [
+            {
+              "title": "任务管理看板",
+              "href": "http://report.hongfa.cn:9001/fine-report/view/form?viewlet=1010/tc/Engineer_Kanban.frm&op=view",
+              "icon": "fa fa-edit",
+              "target": "_self"
+            },
+            {
+              "title": "报告审核看板",
+              "href": "http://report.hongfa.cn:9001/fine-report/view/form?viewlet=1010/tc/Laboratory_Kanban.frm&op=view",
+              "icon": "fa fa-edit",
+              "target": "_self"
+            },
+            {
+              "title": "任务积压看板",
+              "href": "http://report.hongfa.cn:9001/fine-report/view/report?viewlet=1010/tc/Taskoverstock_Kanban.cpt&op=view",
+              "icon": "fa fa-edit",
+              "target": "_self"
+            },
+            {
+              "title": "任务积压列表",
+              "href": "http://report.hongfa.cn:9001/fine-report/view/form?viewlet=1010/tc/Testor_Kanban.frm&op=view",
+              "icon": "fa fa-edit",
               "target": "_self"
             }
           ]

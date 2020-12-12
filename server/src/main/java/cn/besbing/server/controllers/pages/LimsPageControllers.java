@@ -47,6 +47,9 @@ public class LimsPageControllers {
         return "pages/lims/manage/analysismanage";
     }
 
+    @GetMapping("reportResign")
+    public String reportResign(){return "pages/lims/limsweb/reports/ReportReSign";}
+
 
     /**
      * 跳转时直接带入委托单初始值
