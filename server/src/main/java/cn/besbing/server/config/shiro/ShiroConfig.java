@@ -34,6 +34,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/dlcsystem/resetPass", "anon");
         filterChainDefinitionMap.put("/action/confirmPassword", "anon");
         filterChainDefinitionMap.put("/action/validurl", "anon");
+        filterChainDefinitionMap.put("/report", "anon");
         filterChainDefinitionMap.put("/service/getParameter", "anon");
         /**
          * 暂时放出的费用确认

@@ -39,6 +39,14 @@ public class PageControllers {
         return "pages/maincontent";
     }
 
+    /**
+     * 老王外放报告看板
+     */
+    @GetMapping("report")
+    public String report(){
+        return "pages/lims/limsweb/finereport/ShowTaskButton";
+    }
+
 
 
 

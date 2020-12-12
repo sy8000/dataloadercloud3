@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检测中心LIMS</title>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" href="../../../../../static/struct/layuimini/lib/layui-v2.5.5/css/layui.css " media="all">
+    <link rel="stylesheet" href="../../../../../static/struct/layuimini/css/public.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../../../../../static/struct/layuimini/css/main.css ">
+    <script src="../../../../../static/struct/layuimini/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="../../../../../static/js/generaljs/watermarkbycanvas.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../../../../../static/css/generalcss/layuitablecheckboxfix.css">
+    <script src="../../../../../static/struct/layuimini/lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+</head>
+<body>
+<!-- header -->
+<div class="header_box">
+    <div class="header">
+        <ul class="app-header">
+            <li class="app-header-menuicon">
+                <i class="layui-icon layui-icon-more-vertical"></i>
+            </li>
+        </ul>
+        <h1 class="logo">
+            <a href="#">DataLoader</a>
+        </h1>
+        <div class="nav"  style="visibility: visible">
+            <a href="index.html" class="active">首页</a>
+            <a href="login.html">登录</a>
+            <a href="regedit.html">注册</a>
+        </div>
+        <ul class="layui-nav header-down-nav">
+            <li class="layui-nav-item"><a href="index.html" class="active">首页</a></li>
+            <li class="layui-nav-item"><a href="login.html">登录</a></li>
+            <li class="layui-nav-item"><a href="regedit.html">注册</a></li>
+        </ul>
+    </div>
+</div>
+<!-- end-header -->
+
+
+<!-- content -->
+<div class="content">
+    <div class="layui-carousel imgbox"  id="test1" style="height: 200px">
+        <div carousel-item  class="imgH">
+            <div><img style="width: 100%;height: 200px" src="../../../../../../static/img/finereport/sy_banner1.png"></div>
+            <div><img style="width: 100%;height: 200px" src="../../../../../../static/img/finereport/sy_banner2.jpg"></div>
+        </div>
+    </div>
+    <div class="title">
+        <h5>LIMS 3.0</h5>
+        <h3>检测中心实验室信息管理系统</h3>
+        <h4>Laboratory Information Management System </h4>
+    </div>
+    <div class="prod-show">
+        <div class="layui-fluid">
+            <div class="row layui-col-space12 layui-clear">
+                <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                    <div class="img-txt">
+                        <!--
+                        <img style="width: 100%;" src="../res/static/images/sy_img1.jpg" alt="">
+                        <h3>食品包装</h3>
+                        -->
+                        <!--
+                        <a href="http://10.0.11.82:8080/webroot/decision/view/form?viewlet=Laboratory_Kanban.frm" class="layui-btn layui-btn-lg layui-btn-normal">任务管理看板</a>
+                        -->
+                        <a href="http://report.hongfa.cn:9001/fine-report/view/form?viewlet=1010/tc/Engineer_Kanban.frm&op=view" target="_blank" class="layui-btn layui-btn-lg layui-btn-normal">任务管理看板</a>
+                    </div>
+                </div>
+                <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                    <div class="img-txt">
+                        <!--
+                        <img style="width: 100%;" src="../res/static/images/sy_img2.jpg" alt="">
+                        <h3>食品包装</h3>
+                        -->
+                        <a href="http://report.hongfa.cn:9001/fine-report/view/form?viewlet=1010/tc/Laboratory_Kanban.frm&op=view" target="_blank" class="layui-btn layui-btn-lg layui-btn-normal">报告审核看板</a>
+                    </div>
+                </div>
+                <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                    <div class="img-txt">
+                        <!--
+                        <img style="width: 100%;" src="../res/static/images/sy_img3.jpg" alt="">
+                        <h3>食品包装</h3>
+                        -->
+                        <a href="http://report.hongfa.cn:9001/fine-report/view/report?viewlet=1010/tc/Taskoverstock_Kanban.cpt&op=view" target="_blank" class="layui-btn layui-btn-lg layui-btn-normal">任务积压列表</a>
+                    </div>
+                </div>
+                <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                    <div class="img-txt">
+                        <!--
+                        <img style="width: 100%;" src="../res/static/images/sy_img4.jpg" alt="">
+                        <h3>食品包装</h3>
+                        -->
+                        <a href="http://report.hongfa.cn:9001/fine-report/view/form?viewlet=1010/tc/Testor_Kanban.frm&op=view" target="_blank" class="layui-btn layui-btn-lg layui-btn-normal">测试员看板</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end-content -->
+<div style="position: fixed;right:0px;bottom: 0px;">
+    <a id="close" style="font-size: 14px;" οnclick="$(this).parent().remove();" hidden="javascripe:void(0)" shape="">关闭</a><br>
+    <!--<img width="50" height="50" src="../../static/images/qrcode.png"></img>-->
+</div>
+
+
+<!-- footer -->
+<!-- end-footer -->
+<script>
+    layui.use(['carousel','jquery','element'],function(){
+        var carousel = layui.carousel,$ = layui.$;
+        //建造实例
+        carousel.render({
+            elem: '#test1'
+            ,width: '100%' //设置容器宽度
+            ,arrow: 'always'
+            ,height:'auto'
+            //,anim: 'updown' //切换动画方式
+        });
+        $('.app-header-menuicon').on('click',function(){
+            $('.header-down-nav').toggleClass('down-nav')
+        })
+        var imgH = $('.imgbox div.layui-this').outerHeight();
+        $('.imgH').css('height',imgH+'px')
+        //$('.imgH').css('height','50%')
+        window.onresize = function () {
+            var imgH = $('.imgbox div.layui-this').outerHeight();
+            $('.imgH').css('height',imgH+'px')
+            //$('.imgH').css('height','50%')
+        };
+
+    });
+</script>
+</body>
+
+</html>
